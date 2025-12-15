@@ -93,6 +93,8 @@
 \newcommand{\Ker}{\operatorname{Ker}}
 \newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\divergence}[1]{\left(\pder{#1}{x}\right)^2 + \left(\pder{#1}{y}\right)^2 + \left(\pder{#1}{z}\right)^2}
+\newcommand{\Iint}{\displaystyle\iint}
+\newcommand{\Iiint}{\displaystyle\iiint}
 
 \allowdisplaybreaks
 \frenchspacing
@@ -1197,152 +1199,143 @@ We must finally mention the first attempts at ``Functional Analysis'' of the you
 \section{The passage ``from finiteness to infinity''}
 \label{sec:4.4}
 
-% The urge to deal with "infinity" has been present from the very beginnings of Greek mathematics, in spite of all philo sophical preconceptions and objections, and has taken wvarious forms, The simplest and most "matural" passage "from finite-
+The urge to deal with ``infinity'' has been present from the very beginnings of Greek mathematics, in spite of all philosophical preconceptions and objections, and has taken various forms. The simplest and most "matural" passage ``from finiteness to infinity'' is the ``indefinite repetition'' of the arithmetical operation of addition, on smaller and smaller summands, giving birth to the concept of convergent series, of which one can already find examples in Archimedes. Replace addition by multiplication, and you have the infinite product, born with Calculus in the XVII\supth{} century; and still more sophisticated algebraic manipulations would lead to continued fractions and to the infinite determinants which we have discussed in \ref{sec:4.2}.
 
-% 88 CHAPTER IV
-% ness to infinity" is the "indefinite repetition" of the arith metical operation of addition, on smaller and smaller summands, giving birth to the concept of convergent series, of which one can already find examplzs in Archimedes. Replace addition by
-% multiplication, and you have the ianfinite product, born with Calculus in the XVIIth century; and still more sophisticated algebraic manipulations would lead to continued fractions and to the infinite determinants which we have discussed in 2,
-% Another line of thought goes back at least to Eudoxus's "method of exhaustion", and was to lead in the first place to the concept of integral, But in the hands of the mathemati cians of the XVIIth and XVI[Ith century, this idea of decom posing an object into "infinitesimal" parts in which the phe nomenon they stndied became much easier to describe "in a first approximation", was developed into a more and more so phisticated method to discover the differential or partial differential equations which governed the phenomenon "in the large", It is in that way that the equation of vibrating strings (chap.I, 2, formula (7)) was established, either by
-% considering, as D, Bernoulli, a massive string as a limit (for n tending to infinity) of a system of n massive points distributed on a massless string, or by analyzing, as d'Alem bert, the forces which are exerted on an "infinitesimal" por tion of the string by its neighbors,
-% It is this second method that Fourier applied to obtain the heat equation; he takes for granted that in a system of small "molecules", a given molecule M 1receives in an "infinite simal" time dt a quantity of heat from another molecule M’ equal to the difference of temperatures of M and M’, mul-
-% THE IDEA OF INFINITE DIMENSION 89
-% tiplied by dt and by a coefficient depending only on the distance MM'; +the molecule M, if situated at the surface separating the system of molecules from the exteraal world, also radiates a quantity of heat equal to the difference of its temperature and of the external temperature, multiplied by dt and another coefficient depending on M, He then de rives the equation of the "cooling off" process (chap.III, 2, equation (21)) by decomposing the solid body V in "in
-% finitesimal" cubes and evaluating the amount of heat received by one of them from its 6 neighbors in time dt, which he takes as proportional (with a constant coefficient) to the variation du of the temperature of that cubej the boundary condition (chap.ITI, 2, equation (22)) is similarly obtained by evaluating the amount of heat lost (by radiation) by an in finitesimal cube at the surface of V,
-% At the end of his 1890 paper on the cooling off problem (chap.III, 2), Poincaré suggests another method reminiscent of D, Bernoulli's procedure, He first considers a large num-=- ber N of molecules Mi; following Fourievr's physical consi derations, and denoting by Vi(t) the temperature of Mi at
-% time t, these functions satisfy the system of linear differ dv.i .
-% ential equations
-% (10) el Y Cik(vi-vk) + C;v, =0 (1< i < N), k#£i
-% Cik(vi-vk) being the quantity of heat received from M, and Civi the quantity of heat radiated by Mi outside the system, But instead of letting the number of molecules increase to in
-% finity, Poincaré first integrates the system (10) by the clas sical Euler-Lagrange method: he writes vi(t) = uie-at, and,
-% 90 CHAPTER IV
-% using the fact thaf the matrix (Cik) is symmetric, he re cognizes in the equation he obtains for @ the equation giving the eigenvalues of the symmetric matrix corresponding
-% to the non degenerate positive quadratic form
-% 2 2
-% )T+ L Ciul .
-% i#k i
-% Let €l < 2 €eee< N be these eigenvalues; the classical
-% theory of quadratic forms shows that one may write 2 2
-% where the ®, are linear forms in the variables Ugyeee,Uy . 2 2 2 2 .
-% such that @, +eee+ Py = U, +ees+ U, 3 1if for two such forms 1 N 1 N £o=a,u; +eonk By, & =B u; +eee+ Byuy one writes (flg)=
-% = 3 @kBk’ the N forums @i are mutually orthogonal for that k
-% scalar prnduct. It is then clear that 1 is the smallest value of the function of Upseeeyly
-% (13) 5 2 2 =3 5
-% (U yeee,u) 1 N )
-% ul+u2+o . o+uN Cpl+o . 0+CpN
-% where the u, are arbitrary; similarly €2 is the minimum of (13) for v, = o, the minimum for P, =9, = O as 55 relations between the u. ; and so on, This is of course the
-% analgous procedure in N dimensions to the classical deter mination of the "axes" of an ellipsoid in 3-dimensional space. Poincaré's idea is that the expression (13) corresponds exact
-% ly to the quotient
-% m (GH*° + & T AD%au + hflvzdo
+Another line of thought goes back at least to Eudoxus's ``method of exhaustion'', and was to lead in the first place to the concept of integral. But in the hands of the mathematicians of the XVII\supth{} and XVIII\supth{} century, this idea of decomposing an object into ``infinitesimal'' parts in which the phenomenon they studied became much easier to describe ``in a first approximation'', was developed into a more and more sophisticated method to discover the differential or partial differential equations which governed the phenomenon ``in the large''. It is in that way that the equation of vibrating strings (chap. \ref{ch:1}, \ref{sec:1.2}, formula \eqref{eq:1.7}) was established, either by considering, as D. Bernoulli, a massive string as a limit (for \(n\) tending to infinity) of a system of \(n\) massive points distributed on a massless string, or by analyzing, as d'Alembert, the forces which are exerted on an ``infinitesimal'' portion of the string by its neighbors.
 
-% : [f[[ v=du
-% >
+It is this second method that Fourier applied to obtain the heat equation; he takes for granted that in a system of small ``molecules'', a given molecule \(M\) receives in an ``infinite simal'' time \(dt\) a quantity of heat from another molecule \(M'\) equal to the difference of temperatures of \(M\) and \(M'\), multiplied by \(dt\) and by a coefficient depending only on the distance \(MM'\); the molecule \(M\), if situated at the surface separating the system of molecules from the external world, also radiates a quantity of heat equal to the difference of its temperature and of the external temperature, multiplied by \(dt\) and another coefficient depending on \(M\). He then derives the equation of the ``cooling off'' process (chap. \ref{ch:3}, \ref{sec:3.2}, equation \eqref{eq:3.21}) by decomposing the solid body \(V\) in ``infinitesimal'' cubes and evaluating the amount of heat received by one of them from its 6 neighbors in time \(dt\), which he takes as proportional (with a constant coefficient) to the variation \(du\) of the temperature of that cube the boundary condition (chap. \ref{ch:3}, \ref{sec:3.2}, equation \eqref{eq:3.22}) is similarly obtained by evaluating the amount of heat lost (by radiation) by an in finitesimal cube at the surface of \(V\).
 
-% THE IDEA OF INFINITE DIMENSION 91
-% in his (or rather Weber's) procedure for the definition of the eigenvalues in the cooling off problem; these eigenvalues (the poles Xm of his function [f,€] (chap.III, 2)) correspond
-% to the j in (12) and the eigenfunctions Um(M) = P(M,xm) to the @j, the orthogonality of the mj corresponding to the relations
-% between the Ufi' Finally, he realizes that the same ideas
-% apply as well to other problems and gives as an example the i
-% theory of elasticity, and he suggests that a rigorbus proof of the existence of the km and the Um, which he had not been able to give, might be obtained by simply letting N tend to +» in the formula (12), He never came back to the question; but we cannot fail to see that this is exactly the program which Hilbert in 1904 followed to its successful con clusion for integral equations with symmetric kernel (chap.V, 2).
-% A similar "passage from finiteness to infinity" emerged in
-% the first general theory of integral equations, beginning with the papers of Le Roux in 1894 and Volterra in 1896, In addi
-% tion to the particular integral equations which had been met by Liouville in the Sturm--Liouville problem (chap.I, 3, equa tion (34) and chap.II, 1, equation (6)) and by Beer and Neumann in the Dirichlet problem (chap.IT, 4, equation (23)) (not to speak of what we have called "crypto-integral" equa tions, where the equation is not written down explicitly but the method exactly amounts to solving it), other particular equations involving integrals had come up in connection with
-% 92 CHAPTER IV
-% problems not directly related to differential or partial dif ferential equations, The first one (chronologically) was the "inversion" problem for the "transform" introduced by Fourier in 1822 (and to which we shall return in chap, VII, 6); it
-% associates to a function f in [O,+o[ +the function (14) p(t) = f(x)cos tx dx
-% 0
-% and the problem consisted in finding f when the transform ¢ is a given function, It was solved by Fourier's inversion (15) f(x) = %— o (x)cos tx dt
-% formula ([67], vol.I, p.392)
-% 0
-% where, as usual with Fourier, both formulas are obtained by a purely formal calculation, A little later, one of the first published papers of Abel ([1], vol.I, p.11-27 and 97-101) was devoted to a problem of mechanics, which amounted (16) 2(Y)dy _ y (x)
-% to finding a function ¢ such that
-% X
-% o NX-Yy
-% (17) p(x) = L ‘”;-(Z_)_d”
-% is a given function; he obtains the solution by the formula X
-% X-y
-% and extends his result to the case in which ,/x=-y 4is replac ed by (x-y)g for 0< @ < 1., In a letter to Holmboe, he
-% even hinted at more general results, but nothing was found on the subject in his papers, After Abel, a few papers, giving partial generalizations of his results, were published until
-% THE IDEA OF INFINITE DIMENSTION 93
-% *
-% 1890( ); but it was only in 1894 that Le Roux attacked the
-% general problem of "inversion of a definite integral" (as it was called), i.e. finding a Cl function ¢ din an interval [a,b] satisfying an eguation
-% (18) o(x)H(x,y)dx = £(vy)
-% y
-% (%%) ]
-% where f and H are CT (in [a,b] and [a,b] x [a,b] respectively) and f(a) = O « In contrast with his pre
-% decessors, Le Roux is not trying to find a "closed formula" similar to (15) and (17) for the unknown function., He assu mes that h(y) = H(y,y) does not vanish in [a,b], takes the | 2H : (19) h(m)o(v) + | 22 (x,y)e(x)ax = £ ()
-% derivative of both sides of (18), obtaining
-% /y'
-% a
-% and then applies the method of successive approximations which
-% Picard had popularized a few years earlier:
-% () = H w0 = - By, (ax
-% for n = 1,
-% proving easily- the convergence of the sequence (un) to a solution of (18) ([143], p.24k-246),
-% In 1896, Volterra (who apparently was unaware of Le Roux's paper) tackles exactly the same problem by the same method,
-% *
-% ( )See the long historical introduction given by Volterra in his 1897 paper on integral equations ([219], vol,II,p.279-287)
-% ( )As these conditions are not satisfied for Abel's equation,
-% * ¥
-% Le Roux's results (which for him are auxiliary properties which he needs in a study of partial differential equations) do not directly generalize those of Abel,
-% ol CHAPTER IV
-% in a series of 4 notes ([219], vol.II, p.216-262), He goes a little beyond Le Roux, by giving an explicit expression of the solution
-% (20) p(y) = *‘H%,rj) " H(y) (:'E-o 5, (x,y))r’ (x)dx
-% il 1 >
-% y
-% , i=
-% where the Si are defined by induction:
-% X
-% 1 dH (21) s, (x¥) = 375 3y (%:¥)s S;(x,y) =) S (,y)s; ;(x8)dE
+At the end of his 1890 paper on the cooling off problem (chap. \ref{ch:3}, \ref{sec:3.2}), Poincaré suggests another method reminiscent of D. Bernoulli's procedure. He first considers a large number \(N\) of molecules \(M_i\); following Fourier's physical considerations, and denoting by \(v_i(t)\) the temperature of \(M_i\) at time \(t\), these functions satisfy the system of linear differential equations
+\begin{equation}
+    \label{eq:4.10}
+    \frac{dv_i}{dt} + \sum_{k \neq i} C_{ik} (v_i - v_k) + C_i v_i = 0 \qquad (1 \leq i \leq N),
+\end{equation}
+\(C_{ik} (v_i - v_k)\) being the quantity of heat received from \(M_k\), and \(C_i v_i\) the quantity of heat radiated by \(M_i\) outside the system. But instead of letting the number of molecules increase to infinity, Poincaré \emph{first} integrates the system \eqref{eq:4.10} by the classical Euler--Lagrange method: he writes \(v_i(t) = u_i e^{-\alpha t}\), and, using the fact that the matrix \((C_{ik})\) is \emph{symmetric}, he recognizes in the equation he obtains for \(\alpha\) the equation giving the eigenvalues of the symmetric matrix corresponding to the non degenerate positive \emph{quadratic form}
+\begin{equation}
+    \label{eq:4.11}
+    \Phi(u_1, u_2, \ldots, u_N) = \sum_{i \neq k} C_{ik} (u_i - u_k)^2 + \sum_i C_i u_i^2.
+\end{equation}
+Let \(\xi_1 \leq \xi_2 \leq \ldots \leq \xi_N\) be these eigenvalues; the classical theory of quadratic forms shows that one may write
+\begin{equation}
+    \label{eq:4.12}
+    \Phi = \xi_1 \varphi_1^2 + \ldots + \xi_N \varphi_N^2
+\end{equation}
+where the \(\varphi_i\) are linear forms in the variables \(u_1, \ldots, u_N\) such that \(\varphi_1^2 + \ldots + \varphi_N^2 = u_1^2 + \ldots + u_N^2\); if for two such forms \(f = \alpha_1 u_1 + \ldots + \alpha_N u_N, g = \beta_1 u_1 + \ldots + \beta_N u_N\) one writes \((f|g) = \sum\limits_k \alpha_k \beta_k\), the \(N\) forms \(\varphi_i\) are mutually orthogonal for that scalar prnduct. It is then clear that \(\xi_1\) is the smallest value of the function of \(u_1, \ldots, u_N\)
+\begin{equation}
+    \label{eq:4.13}
+    \frac{\Phi(u_1, \ldots, u_N)}{u_1^2 + u_2^2 + \ldots + u_N^2} = \frac{\Phi}{\varphi_1^2 + \ldots + \varphi_N^2}
+\end{equation}
+where the \(u_i\) are arbitrary; similarly \(\xi_2\) is the minimum of \eqref{eq:4.13} for \(\varphi_1 = 0, \xi_3\) the minimum for \(\varphi_1 = \varphi_2 = 0\) as relations between the \(u_i\); and so on. This is of course the analgous procedure in \(N\) dimensions to the classical determination of the ``axes'' of an ellipsoid in 3-dimensional space. Poincaré's idea is that the expression \eqref{eq:4.13} corresponds exactly to the quotient
+\[
+    \frac{\Iiint_V \left(\divergence{v}\right)d\omega + h\Iint_\Sigma v^2 d\sigma}{\Iiint_V v^2 d\omega}
+\]
+in his (or rather Weber's) procedure for the definition of the eigenvalues in the cooling off problem; these eigenvalues (the poles \(\lambda_m\) of his function \([f, \xi]\) (chap. \ref{ch:3}, \ref{sec:3.2})) correspond to the \(\xi_j\) in \eqref{eq:4.12} and the eigenfunctions \(U_m(M) = P(M,\lambda_m)\) to the \(\varphi_j\), the orthogonality of the \(\varphi_j\) corresponding to the relations
+\[
+    \Iiint_V U_p U_q d\omega = 0 \quad \text{for } p \neq q
+\]
+between the \(U_m\). Finally, he realizes that the same ideas apply as well to other problems and gives as an example the theory of elasticity, and he suggests that a rigorous proof of the existence of the \(\lambda_m\) and the \(U_m\), which he had not been able to give, might be obtained by simply letting \(N\) tend to \(+\infty\) in the formula \eqref{eq:4.12}. He never came back to the question; but we cannot fail to see that this is exactly the program which Hilbert in 1904 followed to its successful conclusion for integral equations with symmetric kernel (chap. \ref{ch:5}, \ref{sec:5.2}).
 
-% for i 2 1.
-% y
+A similar ``passage from finiteness to infinity'' emerged in the first \emph{general} theory of integral equations, beginning with the papers of Le Roux in 1894 and Volterra in 1896. In addition to the \emph{particular} integral equations which had been met by Liouville in the Sturm--Liouville problem (chap. \ref{ch:1}, \ref{sec:1.3}, equation \eqref{eq:1.34} and chap. \ref{ch:2}, \ref{sec:2.1}, equation \ref{eq:2.6}) and by Beer and Neumann in the Dirichlet problem (chap. \ref{ch:2}, \ref{sec:2.4}, equation \eqref{eq:2.23}) (not to speak of what we have called ``crypto-integral'' equations, where the equation is not written down explicitly but the method exactly amounts to solving it), other \emph{particular} equations involving integrals had come up in connection with problems not directly related to differential or partial differential equations. The first one (chronologically) was the ``inversion'' problem for the ``transform'' introduced by Fourier in 1822 (and to which we shall return in chap. \ref{ch:7}, \ref{sec:7.6}); it associates to a function \(f\) in \([0, +\infty[\) the function
+\begin{equation}
+    \label{eq:4.14}
+    \varphi(t) = \int_0^{+\infty} f(x)\cos{tx}dx
+\end{equation}
+and the problem consisted in finding \(f\) when the transform \(\varphi\) is a given function. It was solved by Fourier's inversion formula (\cite{067}, vol.~I, p.~392)
+\begin{equation}
+    \label{eq:4.15}
+    f(x) = \frac{2}{\pi} \int_0^{+\infty} \varphi(x)\cos{tx}dt
+\end{equation}
+where, as usual with Fourier, both formulas are obtained by a purely formal calculation. A little later, one of the first published papers of Abel (\cite{001}, vol.~I, p.~11--27 and 97--101) was devoted to a problem of mechanics, which amounted to finding a function \(\varphi\) such that
+\begin{equation}
+    \label{eq:4.16}
+    \int_0^x \frac{\varphi(y)dy}{\sqrt{x-y}} = \psi(x)
+\end{equation}
+is a given function; he obtains the solution by the formula
+\begin{equation}
+    \label{eq:4.17}
+    \varphi(x) = \frac{1}{\pi} \int_0^x \frac{\psi'(y)dy}{\sqrt{x - y}}
+\end{equation}
+and extends his result to the case in which \(\sqrt{x - y}\) is replaced by \((x-y)^\alpha\) for \(0 < \alpha < 1\). In a letter to Holmboe, he even hinted at more general results, but nothing was found on the subject in his papers. After Abel, a few papers, giving partial generalizations of his results, were published until 1890\footnote{See the long historical introduction given by Volterra in his 1897 paper on integral equations (\cite{219}, vol.~II, p.~279--287)}; but it was only in 1894 that Le Roux attacked the \emph{general} problem of ``inversion of a definite integral'' (as it was called), \emph{i.e.} finding a \(C^1\) function \(\varphi\) in an interval \([a,b]\) satisfying an equation
+\begin{equation}
+    \label{eq:4.18}
+    \int_a^b \varphi(x) H(x, y)dx = f(y)
+\end{equation}
+where \(f\) and \(H\) are \(C^1\) (in \([a,b]\) and \([a,b] \times [a,b]\) respectively) and \(f(a) = 0\) \footnote{As these conditions are \emph{not} satisfied for Abel's equation, Le Roux's results (which for him are auxiliary properties which he needs in a study of partial differential equations) do not directly generalize those of Abel.}. In contrast with his predecessors, Le Roux is not trying to find a ``closed formula'' similar to \eqref{eq:4.15} and \eqref{eq:4.17} for the unknown function. He assumes that \(h(y) = H(y,y)\) does not vanish in \([a,b]\), takes the derivative of both sides of \eqref{eq:4.18}, obtaining
+\begin{equation}
+    \label{eq:4.19}
+    h(y) \varphi(y) + \int_a^y \pder{H}{y}(x, y) \varphi(y) dx = f'(y)
+\end{equation}
+and then applies the method of successive approximations which Picard had popularized a few years earlier:
+\[
+    u_0(y) = \frac{f'(y)}{h(y)}, \qquad u_n(y) = \frac{f'(y)}{h(y)} - \frac{1}{h(y)} \int_a^y \pder{H}{y}(x, y) u_{n-1}(x)dx \quad \text{for } n \geq 1,
+\]
+proving easily the convergence of the sequence \((u_n)\) to a solution of \eqref{eq:4.18} (\cite{143}, p.~244--246).
 
-% In the later notes, he discussed the cases in which h(y) may
-% vanish at a finite number of points, and the case in which H(x,y) = G(x,y)/(x=y)® with O< @& < 1 and G is continuous (the generalization of Abel's equation). But the most in fluential part of his notes was the following remark he made immediately after obtaining formula (20): "If one considers
-% the system
-% ( by = a;1%
-% (22) fi ® [ ] ® [ J [ ] ® ®
-% b2 = alle + a22x2
-% \
-% the concept of integral easily leads to look at the question of functional Analysis represented by equation (18) as a 1li
-% miting case of the solution of a system similar to (22), in which the 2 and a., are the analogous of H(x,y) and H(y,y)s" Although he limited himself to that (somewhat vague)
-% statement, it seems obvious that what he had in mind was re placing in (18) the variable vy by its values
-% v, = a +-—(b-a) for 1< k< n
+In 1896, Volterra (who apparently was unaware of Le Roux's paper) tackles exactly the same problem by the same method, in a series of 4 notes (\cite{219}, vol.~II, p.~216--262). He goes a little beyond Le Roux, by giving an explicit expression of the solution
+\begin{equation}
+    \label{eq:4.20}
+    \varphi(y) = \frac{f'(y)}{h(y)} - \frac{1}{h(y)} \int_a^y \left( \sum_{i=0}^\infty S_i(x, y) \right) f'(x) dx
+\end{equation}
+where the \(S_i\) are defined by induction:
+\begin{equation}
+    \label{eq:4.21}
+    S_0(x, y) = \frac{1}{h(x)}\pder{H}{y}(x, y), \qquad S_i(x, y) = \int_x^y S_0(\xi, y)S_{i-1}(x, \xi)d\xi \quad \text{for } i \geq 1.
+\end{equation}
+In the later notes, he discussed the cases in which \(h(y)\) may vanish at a finite number of points, and the case in which \(H(x,y) = G(x,y)/(x-y)^\alpha\) with \(0 < \alpha < 1\) and \(G\) is continuous (the generalization of Abel's equation). But the most influential part of his notes was the following remark he made immediately after obtaining formula \eqref{eq:4.20}: ``If one considers the system
+\begin{equation}
+    \label{eq:4.22}
+    \begin{cases}
+        b_1 = a_{11} x_1 \\
+        b_2 = a_{12} x_1 + a_{22} x_2 \\
+        \dotfill \\
+        b_n = a_{1n} x_1 + \ldots + a_{nn} x_n
+    \end{cases}
+\end{equation}
+the concept of integral easily leads to look at the question of functional Analysis represented by equation \eqref{eq:4.18} as a limiting case of the solution of a system similar to \eqref{eq:4.22}, in which the \(a_{ij}\) and \(a_{ii}\) are the analogous of \(H(x,y)\) and \(H(y,y)\).'' Although he limited himself to that (somewhat vague) statement, it seems obvious that what he had in mind was replacing in \eqref{eq:4.18} the variable \(y\) by its values
+\[
+    y_k = a + \frac{k}{n}(b-a) \quad \text{for } 1 \leq k \leq n
+\]
+and replacing the integral by the corresponding ``Riemann sum'' for the subdivision of \([a,b]\) by the points \(y_k\) obtaining the system of type \eqref{eq:4.22}
+\begin{equation}
+    f(y_j) = \frac{b-a}{n} \sum_{k=1}^n \varphi(y_k) H(y_k, y_j) \quad \text{for } 1 \leq j \leq n.
+\end{equation}
 
-% THE TDEA OF INFINITE DIMENSION 95
-% and replacing the integral by the corresponding "Riemann sum" for the subdivision of [a,b] by the points Vi obtaining the system of type (22)
-% bea 2
-% f(y.) = — X @(y )H(y ,y.) for 1< Jj< n, J n k=1 k k?7 3
-% Finally, although he does not mention the product of matri
-% ces, Volterra develops in these notes the formalism which to two "kernelsTM Hl(x,y), Hz(x,y) associates the kernel y
-% H(X9y) = Hl(x9)H2(’Y)dg
-% X
-% (which much later he will write H = Hl*HZ). If, for sim
-% plicity, we adopt this notation, he shows that, for an arbi trary continuous function So(x,y) if we define for i = 1 the "kernel" S. by S, =S S one has also Si =
-% i i i=1%"0"
-% = Si—j*sj-l for 1< j< i, and a majoration
-% i+l M i
-% lSi(X9Y)l < il lX-Yl i
-% (23) F = % S
-% This implies uniform convergence for the series (00]
-% (24) FO-SO = SO*FO.
-% and the relation
-% i i o i=- l’
-% He observes that one may "invert" that relation: if the F. are defined for i = 1 by F. = F xF, one has
-% (25) Sy = (-1)7F, .
-% - i
-% i=0
-% And finally, at the end of his notes, he arrives at the ge-
-% 96 CHAPTER IV
-% neral concept of what Hilbert will call an "integral equation
-% of the second kind"
-% (26) o(y) - | 5 (x,y)0(x)dx = £(y)
-% for which the solution is given by
-% (27) o(y) = £(y) + F_(x,y)f(x)dx
-% y
-% a
-% as it follows immediately from (24), the "kernel" and the "resolvent kernel" playing completely symmetric parts in these formulas.,
+Finally, although he does not mention the product of matrices, Volterra develops in these notes the formalism which to two ``kernels'' \(H_1(x,y), H_2(x,y)\) associates the kernel
+\[
+    H(x, y) = \int_x^y H_1(x, \xi) H_2(\xi, y) d\xi
+\]
+(which much later he will write \(H = H_1 \ast H_2\)). If, for simplicity, we adopt this notation, he shows that, for an \emph{arbitrary} continuous function \(S_0(x,y)\) if we define for \(i \geq 1\) the ``kernel'' \(S_i\) by \(S_i = S_{i-1} \ast S_0\), one has also \(S_i = S_{i-j} \ast S_{j-1}\) for \(1 \leq j \leq i\), and a majoration
+\[
+    |S_i(x, y)| \leq \frac{M^{i+1}}{i!} |x-y|^i.
+\]
+This implies uniform convergence for the series
+\begin{equation}
+    \label{eq:4.23}
+    F_0 = \sum_{i=0}^\infty S_i
+\end{equation}
+and the relation
+\begin{equation}
+    \label{eq:4.24}
+    F_0 - S_0 = S_0 \ast F_0.
+\end{equation}
+
+He observes that one may ``invert'' that relation: if the \(F_i\) are defined for \(i \geq 1\) by \(F_i = F_0 \ast F_{i-1}\), one has
+\begin{equation}
+    \label{eq:4.25}
+    S_0 = \sum_{i=0}^\infty (-1)^i F_i.
+\end{equation}
+
+And finally, at the end of his notes, he arrives at the general concept of what Hilbert will call an ``integral equation of the second kind''
+\begin{equation}
+    \label{eq:4.26}
+    \varphi(y) - \int_a^y S_0(x, y) \varphi(x) dx = f(y)
+\end{equation}
+for which the solution is given by
+\begin{equation}
+    \label{eq:4.27}
+    \varphi(y) = f(y) + \int_a^y F_0(x, y) f(x) dx
+\end{equation}
+as it follows immediately from \eqref{eq:4.24}, the ``kernel'' and the ``resolvent kernel'' playing completely symmetric parts in these formulas.
 
 \chapter{The crucial years and the definition of Hilbert space}
 \label{ch:5}
