@@ -703,130 +703,163 @@ The same physical arguments which lead to the equation of vibrating strings (Cha
 \end{equation}
 for a constant \(\lambda\). If in addition the membrane at rest is a bounded portion \(\Omega\) of the plane and is \emph{fixed} at its boundary \(\Sigma\) (which means that \(u(x, y, t) = 0\) for all \(t\) if \((x,y) \in \Sigma\)), \(\lambda\) must be \(> 0, w(t) = \sin \sqrt{\lambda t}\), and one has to find a solution \(v\) of \eqref{eq:3.2} which vanishes on \(\Sigma\) and is not identically 0. Contrasting with the easy solution of the corresponding problem for the vibrating string, the elucidation of that problem was going to challenge the ingenuity of mathematicians during the whole second half of the XIX\supth{} century.
 
-% Experimental evidence, as well as the explicit solution of the problem for very special domains {2, such as a rectangle
-% or a disk, showed that, just as in the case of the vibrating string, solutions of (2) vanishing on ¥ and not identically O could only exist when )\ was equal to one of an infinite sequence (Xn) of real numbers > O (the "eigenvalues" of the problem), tending to +o.
-% The first attempt to prove such a result for general domains Q was made by H, Weber in 1869 [2247], by an adaptation of the variational method used by Riemann for the Dirichlet problem. Using Green's formula (Chapter II, formula (15)) he first shows that if My M, are two distinct eigenvalues, Vv l’ v, cor (3) (ul-uZ)JT’ Vl(x,y)vz(x,y)dxdy = 0
-% responding "eigenfunctions", then
-% 0
-% from which he deduces, as Poisson had done for ordinary dif ferential equations (Chap.I, 3), that the eigenvalues are necessarily real numbers, To determine the smallest eigen v, % dv,2 (4) F(v) = Y'((g; + (g;) )dxdy
-% value *1’ he considers the Dirichlet integral > -
-% 0
-% for C functions v din Q, equal to O on ¥ and sub (5) ! ‘IJ’ v? axdy = 1.
-% ject to the additional constraint
-% 0
-% THE EQUATION OF VIBRATING MEMBRANES 49
-% He assumes, as Riemann, that in this set & of functions, 1 there is one for which F(v) is equal to its greatest lower
-% bound Xl’ and by the usual methods of the Calculus of va riations, he shows that this function \& is a solution of (2) for A\ = xl'
-% He next considers the subset 32 of & defined by the ad- 1 (6) ‘ v(x,y)vl(x,y)dxdy = 0,
-% ditional condition
-% Q
-% takes the function v, € ¥, for which F(VZ) is equal to its greatest lower bound XZ’ and shows that V2 is a so=- lution of (2) for 1\ = A,. The induction process is then
-% obvious, and Weber concludes that he has proved the existence of an increasing infinite sequence (xn) of positive eigen
-% values to each of which there corresponds an eigenfunction Vo normalized by condition (5), and orthogonal to each other.
-% But he does not try to prove that 1lim xn = +o, nor that Il =pco
-% functions in 31 possess a "Fourier expansion" Y Cnvn de n
-% fined in the same manner as in the Sturm--Liouville problem (Chap.I, 3, formula (33)) (a result which he states however, without proof).
-% Webert's proofs were of course subject to the general criti cisms of Weierstrass against the Calculus of variations, but
-% no one seems to have tried to find more rigorous ones until 1885, In that year, H.A. Schwarz published a long paper on the theory of minimal surfaces, in which he had to consider a type of equation slightly more general than (2):
-% 50 CHAPTER III
-% oY, < oY < N
-% (7) a»N+oY <N+ > o)< i o
-% where p 1is a continuous function in a domain D, with va lues > O3 his arguments apply for any such function, but in fact he is only interested in the particular case p(x,y) = - 8/(1+x2+y2)2 [195, vol.I, p.223-269].
-% Schwarz's paper is extremely remarkable by the originality of its methods, which do not seem to have been inspired by any previous work; it may be that the study of the Sturm--Liouville problem led him to arguments which later could be transferred almost verbatim to general integral equations with symmetric kernels (see Chap.V, 2), but there is no hint in his paper of such an influence, and in fact he quotes nobody, not even Weber,
-% His starting point is not the problem of existence of eigen values XZ for equation (7), but a "Dirichlet problem" for
-% the equation
-% depending on a parameter £3; he limits himself to the case where w is subject to the condition of being equal to 1 on the boundary I’ of D, Using the time honored method of re presenting the solution as a power series in  (Chap.II,l)
-% (9) W = WO + gwl + o0 o+ gan +o 00
-% he takes for LIS the constant function equal to 1, and im poses on the W for n 2 1 to vanish on TI'y they are then determined inductively by the equations
+Experimental evidence, as well as the explicit solution of the problem for very special domains \(\Omega\), such as a rectangle or a disk, showed that, just as in the case of the vibrating string, solutions of \eqref{eq:3.2} vanishing on \(\Sigma\) and not identically 0 could only exist when \(\lambda\) was equal to one of an infinite sequence \((\lambda_n)\) of real numbers \(> 0\) (the ``eigenvalues'' of the problem), tending to \(+\infty\).
 
-% THE EQUATION OF VIBRATING MEMBRANES 51 (10) Aw, + pw _, =0 for =n =2 1.
-% He assumes that the Green function G(M,P) for the domain D exists (remember that he himself had proved that existence in extensive cases (Chap.II, 4)); the properties of that func
-% tion implied that for any function f continuous in D the (11) Aw + £ = 0O
-% equation
-% has a unique solution vanishing on I'y given by the formula (12) w(M) = -Z-J;T-j( f(P)G(M,P)dw (with dw = dxdy). D
-% Therefore his functions are given explicitly by (13) i(M) = ?lfi‘” p(P)w,_; (P)G (M, P)du. D
-% One must now investigate the convergence of (9) for small enough values of ||, and it is here that Schwarz's original contributions begin. His main tool is the inequality named after him(*)
-% (ff fg cwu)‘2 < (ff fzdw)(f( gzda))
-% D D D
-% for any two functions f, g continuous in 5; this gives
-% from (13)
-% (14) 4n®(w_(m))°< ({ p2<P>G2<M,P)dw><” we_ (P)dw) D D
-% < A(” we_ (P)dw)
+The first attempt to prove such a result for general domains \(\Omega\) was made by H. Weber in 1869 \cite{247}, by an adaptation of the variational method used by Riemann for the Dirichlet problem. Using Green's formula (Chapter \ref{ch:2}, formula \eqref{eq:2.15}) he first shows that if \(\mu_1, \mu_2\) are two distinct eigenvalues, \(v_1, v_2\) corresponding ``eigenfunctions'', then
+\begin{equation}
+    \label{eq:3.3}
+    \left(\mu_1 - \mu_2\right) \iint_\Omega v_1(x, y) v_2(x, y) dxdy = 0
+\end{equation}
+from which he deduces, as Poisson had done for ordinary differential equations (Chap. \ref{ch:1}, \ref{sec:1.3}), that the eigenvalues are necessarily real numbers. To determine the smallest eigenvalue \(\lambda_1\), he considers the Dirichlet integral
+\begin{equation}
+    \label{eq:3.4}
+    F(v) = \iint_\Omega \left( \left(\frac{\partial v}{\partial x}\right)^2 + \left(\frac{\partial v}{\partial y}\right)^2 \right) dxdy
+\end{equation}
+for \(C^2\) functions \(v\) in \(\overline\Omega\), equal to 0 on \(\Sigma\) and subject to the additional constraint
+\begin{equation}
+    \label{eq:3.5}
+    \iint_\Omega v^2 dxdy = 1.
+\end{equation}
 
-% S—————————
-% D
+He assumes, as Riemann, that in this set \(\mathcal{F}_1\) of functions, there is one for which \(F(v)\) is equal to its greatest lower bound \(\lambda_1\) and by the usual methods of the Calculus of variations, he shows that this function \(v_1\) is a solution of \eqref{eq:3.2} for \(\lambda = \lambda_1\).
 
-% (*)That inequality had been discovered by Buniakowsky in 1859, but does not seem to have been noticed nor used by many ma thematicians before 1885, If is of course a direct generali zation of the corresponding inequality for finite sums, which goes back at least to Cauchy.
+He next considers the subset \(\mathcal{F}_2\) of \(\mathcal{F}_1\) defined by the additional condition
+\begin{equation}
+    \label{eq:3.6}
+    \iint_\Omega v(x, y)v_1(x, y)dxdy = 0,
+\end{equation}
+takes the function \(v_2 \in \mathcal{F}_2\) for which \(F(v_2)\) is equal to its greatest lower bound \(\lambda_2\) and shows that \(v_2\) is a solution of \eqref{eq:3.2} for \(\lambda = \lambda_2\). The induction process is then obvious, and Weber concludes that he has proved the existence of an increasing infinite sequence \(\left(\lambda_n\right)\) of positive eigenvalues to each of which there corresponds an eigenfunction \(v_n\) normalized by condition \eqref{eq:3.5}, and orthogonal to each other. But he does not try to prove that \(\lim\limits_{n \to \infty} \lambda_n = +\infty\), nor that functions in \(\mathcal{F}_1\) possess a ``Fourier expansion'' \(\sum\limits_n c_n v_n\) defined in the same manner as in the Sturm--Liouville problem (Chap. \ref{ch:1}, \ref{sec:1.3}, formula \eqref{eq:1.33}) (a result which he states however, without proof).
 
-% 52 CHAPTER IIl
-% where A is a constant independent of n (due to the pro perties of the Green function of a bounded domain). Schwarz
-% (15) wn,k = Y{ pwkwn_kdw
-% is thus led to study the numbers
-% D
-% which, using the symmetry of the Green function, he shows are independent of k, so that Wn = W s, Which he writes Wn.
-% He also proves that
+Weber's proofs were of course subject to the general criticisms of Weierstrass against the Calculus of variations, but no one seems to have tried to find more rigorous ones until 1885, In that year, H.A. Schwarz published a long paper on the theory of minimal surfaces, in which he had to consider a type of equation slightly more general than \eqref{eq:3.2}:
+\begin{equation}
+    \label{eq:3.7}
+    \frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} + \lambda^2 pv = 0
+\end{equation}
+where \(p\) is a continuous function in a domain \(D\), with values \(> O\); his arguments apply for any such function, but in fact he is only interested in the particular case \(p(x, y) = - 8/(1 + x^2 + y^2)^2\) \cite[vol.~I, p.~223--269]{195}.
 
-% aw Aw awk k+1 n-=-k (16) Wn’k = ( 3% 3% +
-% +1 awn--k
+Schwarz's paper is extremely remarkable by the originality of its methods, which do not seem to have been inspired by any previous work; it may be that the study of the Sturm--Liouville problem led him to arguments which later could be transferred almost verbatim to general integral equations with symmetric kernels (see Chap. \ref{ch:5}, \ref{sec:5.2}), but there is no hint in his paper of such an influence, and in fact he quotes nobody, not even Weber.
 
-% D
-% . 2
-% Ay oy
-% )dxdy.
+His starting point is not the problem of existence of eigenvalues \(\lambda^2\) for equation \eqref{eq:3.7}, but a ``Dirichlet problem'' for the equation
+\begin{equation}
+    \label{eq:3.8}
+    \Delta w + \xi pw = 0
+\end{equation}
+depending on a parameter \(\xi\); he limits himself to the case where \(w\) is subject to the condition of being equal to 1 on the boundary \(\Gamma\) of \(D\). Using the time honored method of representing the solution as a power series in \(\xi\) (Chap. \ref{ch:2}, \ref{sec:2.1})
+\begin{equation}
+    \label{eq:3.9}
+    w = w_0 + \xi w_1 + \ldots + \xi^n w_n + \ldots
+\end{equation}
+he takes for \(w_0\) the constant function equal to 1, and imposes on the \(w_n\) for \(n \geq 1\) to vanish on \(\Gamma\); they are then determined inductively by the equations
+\begin{equation}
+    \label{eq:3.10}
+    \Delta w_n + pw_{n-1} = 0 \quad \text{for } n \geq 1.
+\end{equation}
+He assumes that the Green function \(G(M, P)\) for the domain \(D\) exists (remember that he himself had proved that existence in extensive cases (Chap. \ref{ch:2}, \ref{sec:2.4})); the properties of that function implied that for any function \(f\) continuous in \(\overline{D}\) the equation
+\begin{equation}
+    \label{eq:3.11}
+    \Delta w + f = 0
+\end{equation}
+has a unique solution vanishing on \(\Gamma\), given by the formula
+\begin{equation}
+    \label{eq:3.12}
+    w(M) = \frac{1}{2\pi} \iint_D f(P) G(M, P) d\omega \qquad (\text{with } d\omega = dxdy)
+\end{equation}
+Therefore his functions are given explicitly by
+\begin{equation}
+    \label{eq:3.13}
+    w_n(M) = \frac{1}{2\pi} \iint_D p(P) w_{n-1}(P) G(M, P) d\omega.
+\end{equation}
 
-% (17) wn < wn-lwn+l’
-% Finally, using the Schwarz inequality, he obtains the relation
-% hence the sequence of numbers Wn/Wn is increasing; on the -1 other hand, integrating (14) gives W < BW for a con- 2n 2n =2 stant B independent of n, and therefore the limit of the
-% sequence (wn/wn-l) is a finite number ¢ > O, It follows then from (14) that the series (9) is absolutely and uniform ly convergent in D for || < 1/ cy the properties of the Green function enable one to show that the derivatives of w
-% are also given by convergent series obtained by differentiat ing (9) termwise, and that w then satisfies (8) and is equal to 1 on the boundary T,
-% But Schwarz goes one step further, He proves that when € = lfi/g, the general term of the series (9) tends uniformly to a limit U which is not identically O in D but va- 1 (18) Aw + (1/c)pw = O,
-% nishes on the boundary and is solution of
+One must now investigate the convergence of \eqref{eq:3.9} for small enough values of \(|\xi|\), and it is here that Schwarz's original contributions begin. His main tool is the inequality named after him\footnote{That inequality had been discovered by Buniakowsky in 1859, but does not seem to have been noticed nor used by many mathematicians before 1885. If is of course a direct generalization of the corresponding inequality for finite sums, which goes back at least to Cauchy.}
+\[
+    \left( \iint_D fg d\omega \right)^2 \leq \left( \iint_D f^2 d\omega \right) \left( \iint_D g^2 d\omega \right)
+\]
+for any two functions \(f, g\) continuous in \(\Gamma\); this gives from \eqref{eq:3.13}
+\begin{equation}
+    \label{eq:3.14}
+    \begin{gathered}
+    4\pi^2\left(w_n(M)\right)^2 \leq \left(\iint_D p^2(P)G^2(M, P)d\omega\right) \left(\iint_D w^2_{n-1}(P)d\omega\right) \\
+    \leq A \left( \iint_D w^2_{n-1}(P)d\omega \right)
+    \end{gathered}
+\end{equation}
+where \(A\) is a constant independent of \(n\) (due to the properties of the Green function of a bounded domain). Schwarz is thus led to study the numbers
+\begin{equation}
+    \label{eq:3.15}
+    W_{n, k} = \iint_D p w_k w_{n-k} d\omega
+\end{equation}
+which, using the \emph{symmetry} of the Green function, he shows are independent of \(k\), so that \(W_{n, k} = W_{n, 0}\), which he writes \(W_n\). He also proves that
+\begin{equation}
+    \label{eq:3.16}
+    W_{n, k} = \iint_D \left(\frac{\partial w_{k+1}}{\partial x} \frac{\partial w_{n-k}}{\partial x} + \frac{\partial w_{k+1}}{\partial y} \frac{\partial w_{n-k}}{\partial y}\right) dxdy.
+\end{equation}
+Finally, using the Schwarz inequality, he obtains the relation
+\begin{equation}
+    \label{eq:3.17}
+    W_n^2 \leq W_{n-1} W_{n+1},
+\end{equation}
+hence the sequence of numbers \(W_n/W_{n-1}\) is increasing; on the other hand, integrating \eqref{eq:3.14} gives \(W_{2n} \leq BW_{2n-2}\) for a constant \(B\) independent of \(n\), and therefore the limit of the sequence \((W_n/W_{n-1})\) is a finite number \(c > 0\). It follows then from \eqref{eq:3.14} that the series \eqref{eq:3.9} is absolutely and uniformly convergent in \(\overline{D}\) for \(|\xi| < 1/ \sqrt{c}\); the properties of the Green function enable one to show that the derivatives of \(w\) are also given by convergent series obtained by differentiating \eqref{eq:3.9} termwise, and that \(w\) then satisfies \eqref{eq:3.8} and is equal to 1 on the boundary \(\Gamma\).
 
-% THE EQATUION OF VIBRATING MEMBRANES 53
-% He has thus proved the existence of the smallest eigenvalue Ai = 1/c of the equation (8) for functions vanishing on the
-% boundary, and of the corresponding eigenfunction. Tt should be observed here that these developments in fact
-% are Jjust another treatment of a "crypto-integral" equation (which Schwarz does not write, however), 1If one writes w=w_+E&v and "solves" equation (8) by formula (12) (using the same idea as Liouville in 1837 to obtain his "Volterrain tegral equation" (Chap.II, 1 and Chap.I, 3, equation (35))), one gets for v this time a "Fredholm integral equation" (19) v(M) = g(M) +2= || p(P)G(M,P)v(P)dw
-% with g(M) =-% (gr G(M,P)p(P)dw.
-% D
-% D
-% Schwarz's procedure is therefore essentially the same as C. Neumann's for the Dirichlet problem (Chap.II, 4), at least as a starting point; the main difference is in the emphasis put by Schwarz on the dependence on the parameter £,
-% To appreciate the originalityand power of Schwarz's method, it is perhaps not superfluous to show how it can be translat ed, almost without change, in the theory of self-adjoint com=- pact operators in a separable Hilbert space E. Suppose U
-% is such an operator in E, which in addition we suppose U then consists in a decreasing sequence (finite or infini t i i - e) ul 2 Mo 2 o002 Mo 2 eee > 0O, where each un is an eigen
-% positive, i.e. (Usf|f) = O for all f € E. The spectrum of
-% vValue counted a number of times equal to its multiplicity; O 4is always in the spectrum but Ker(U) may be reduced to O Or have infinite dimensionj; for each My there is an eigen-
-% 54 CHAPTER III
-% vector ©p of norm 1, such that F is the Hilbert sum of the one-dimensional spaces on and of Ker(y). Let
-% with w; € Ker(U), be the expression of a vector W € E for that decomposition, Then, for any m = 1, we have
-% m
-% vocwg = E Mn9n®n
-% 2 m_m - m m dn
-% and therefore the Schwarz series (9) is equal to m=0 © n m=0 noonon n 175H, "1
-% provided || < pil, and we have w = lUew + L w;. For A A E (M /Mq) Ao
-% m_m m m m
-% tends to dlwl if M4 is a simple eigenvalue, to the sum of the dnwn such that M, = Hl in general,., Finally, we have m m-k k md2 W = (07w lwg) = TR U ) = 2 updy
-% from which it follows that if the dn such that M, = M, are not all O, the ratio wm/wm_ tends to ul; furthermore, 1 one has2 m+1 m-] 1 m=-1 Wy o= [0 ew 17 = [T ew U T ew ) | s ([0 e [ [y T ew ]
-% %_
-% (W2m-2w2m+2) ’
-% L
-% To get the inequality W, < (Wm_lwm+l)2 for all integers m,
-% it is enough to consider the unique compact positive operator 2
-% V' such that 7V = U , and apply to V the preceding argument. Of course the concept of the "square root" of a positive self-
-% THE EQUATION OF VIBRATING MEMBRANES 55
-% ad joint operator was not available to Schwarz, and this is why he had to use the expression (16) for his numbers W
-% In 1893, E. Picard published a short Comptes-Rendus Note ([172], vol,II, p.545-550) in which he went one step further. For any point M € D, the function w(M,E) given by Schwarz's series (9) is holomorphic in the circle [E]| < £, = 1/J/c, and Picard investigates the analytic continuation of gk*-w(M,g) beyond that circle:s he shows that such a continuation exists in a circle || < £, of radius independent of M &€ D, and that it has a simple pole with residue —1U1(M) at the point €, He limits himself to the case in which p =1 and T is convex and smooth, and his idea is to adapt the method of
-% C. Neumann (Chap.II, 4) to evaluate the differences |nw - gn-lw |3 with apparently the same gap as in 1 n 1 n=-1"’ Neumann's argument (the details are not given in the Note) he "proves" that there are constants C and q < 1 independent
-% n n=1 n n
-% of M, such that |lwn - €7 Wo_1l S Cq 4, hence lglwn-Ul|s < ¢’ q" for another constant C’, hence his result. Writing w = Ul + Vv
-% (20) vV =V o+ Vl +ooot nv + oo
-% he looks for a power series development
-% O n
-% similar to (9) but which should converge in a circle [E]| < € 5 with 2 > l. He determines the vV by the successive appro
-% ximations
-% Avo - 1U1 = O, Av —+ v =0 for n=1
-% with the boundary conditions: v_ =1 on T and v, o= O on
-% 56 CHAPTER III
-% ' for n > 1, Introducing numbers similar to the Wh K of ’
-% Schwarz, he is able to prove that the radius of convergence £, of (20) is finite, but he cannot show that there is an eigenfunction corresponding to 2 and vanishing on I,
+But Schwarz goes one step further. He proves that when \(\xi = 1/\sqrt{c}\), the general term of the series \eqref{eq:3.9} tends uniformly to a limit \(U_1\) which is not identically 0 in \(\overline{D}\) but vanishes on the boundary and is solution of
+\begin{equation}
+    \label{eq:3.18}
+    \Delta w + (1/c) pw = 0.
+\end{equation}
+He has thus proved the existence of the \emph{smallest eigenvalue} \(\lambda_1^2 = 1/c\) of the equation \eqref{eq:3.8} for functions vanishing on the boundary, and of the corresponding eigenfunction.
+
+It should be observed here that these developments in fact are just another treatment of a ``crypto-integral'' equation (which Schwarz does not write, however). If one writes \(w = w_0 + \xi v\) and ``solves'' equation \eqref{eq:3.8} by formula \eqref{eq:3.12} (using the same idea as Liouville in 1837 to obtain his ``Volterra integral equation'' (Chap. \ref{ch:2}, \ref{sec:2.1} and Chap. \ref{ch:1}, \ref{sec:1.3}, equation \eqref{eq:1.35})), one gets for \(v\) this time a ``Fredholm integral equation''
+\begin{equation}
+    \label{eq:3.19}
+    v(M) = g(M) + \frac{\xi}{2\pi} \iint_D p(P) G(M, P) v(P) d\omega
+\end{equation}
+with
+\[
+    g(M) = \frac{1}{2\pi} \iint_D G(M, P) p(P) d\omega.
+\]
+Schwarz's procedure is therefore essentially the same as C. Neumann's for the Dirichlet problem (Chap. \ref{ch:2}, \ref{sec:2.4}), at least as a starting point; the main difference is in the emphasis put by Schwarz on the dependence on the parameter \(\xi\).
+
+To appreciate the originalityand power of Schwarz's method, it is perhaps not superfluous to show how it can be translated, almost without change, in the theory of self-adjoint compact operators in a separable Hilbert space \(E\). Suppose \(U\) is such an operator in \(E\), which in addition we suppose \emph{positive}, i.e. \((U\cdot f| f) \geq 0\) for all \(f \in E\). The spectrum of \(U\) then consists in a decreasing sequence (finite or infinite) \(\mu_1 \geq \mu_2 \geq \ldots \geq \mu_n \geq \ldots 0\), where each \(\mu_n\) is an eigenvalue counted a number of times equal to its multiplicity; 0 is always in the spectrum but \(\Ker(U)\) may be reduced to 0 or have infinite dimension; for each \(\mu_n\) there is an eigenvector \(\varphi_n\) of norm 1, such that \(E\) is the Hilbert sum of the one-dimensional spaces \(\C \varphi_n\) and of \(\Ker(U)\). Let
+\[
+    w_0 = \sum_n d_n \varphi_n + w'_0
+\]
+with \(w'_0 \in \Ker(U)\), be the expression of a vector \(w_0 \in E\) for that decomposition. Then, for any \(m \geq 1\), we have
+\[
+    U^m \cdot w_0 = \sum_n \mu^m_n d_n \varphi_n
+\]
+and therefore the Schwarz series \eqref{eq:3.9} is equal to
+\[
+    w = \sum_{m=0}^\infty \xi^m U^m \cdot w_0 = \sum_n \left( \sum_{m=0}^\infty \xi^m \mu^m_n \right) d_n \varphi_n = \sum_n \frac{d_n}{1 - \xi \mu_n} \varphi_n
+\]
+provided \(|\xi| < \mu_1^{-1}\), and we have \(w = \xi U \cdot w + w_0 - w'_0\). For \(\xi = 1/\mu_1\),
+\[
+    \xi^m U^m \cdot w_0 = \sum_n \xi^m \mu^m_n d_n \varphi_n = \sum_n \left( \mu_n / \mu_1 \right)^m d_m \varphi_n
+\]
+tends to \(d_1 \varphi_1\) if \(\mu_1\) is a simple eigenvalue, to the sum of the \(d_n \varphi_n\) such that \(\mu_n = \mu_1\) in general. Finally, we have
+\[
+    W_m = \left( U^m \cdot w_0 | w_0 \right) = \left( U^{m-k} \cdot w_0 | U^k \cdot w_0 \right) = \sum_n \mu^m_n d^2_n
+\]
+from which it follows that if the \(d_n\) such that \(\mu_n = \mu_1\) are not all 0, the ratio \(W_m / W_{m-1}\) tends to \(\mu_1\); furthermore, one has
+\begin{equation*}
+    \begin{gathered}
+        W_{2m} = \norm{U^m \cdot w_0}^2 = |\left( U^{m+1} \cdot w_0 | U^{m-1} \cdot w_0 \right)| \leq \norm{U^{m+1} \cdot w_0} \cdot \norm{U^{m-1} \cdot w_0} \\
+        = \left( W_{2m-2} W_{2m+2} \right)^\frac{1}{2}.
+    \end{gathered}
+\end{equation*}
+To get the inequality \(W_m \leq \left( W_{2m-2} W_{2m+2} \right)^\frac{1}{2}\) for all integers \(m\), it is enough to consider the unique compact positive operator \(V\) such that \(V^2 = U\), and apply to \(V\) the preceding argument. Of course the concept of the ``square root'' of a positive selfad joint operator was not available to Schwarz, and this is why he had to use the expression \eqref{eq:3.16} for his numbers \(W_n\).
+
+In 1893, E. Picard published a short Comptes-Rendus Note (\cite{172}, vol.~II, p.~545--550) in which he went one step further. For any point \(M \in D\), the function \(w(M, \xi)\) given by Schwarz's series \eqref{eq:3.9} is holomorphic in the circle \(|\xi| < \xi_1 = 1/\sqrt{c}\), and Picard investigates the \emph{analytic continuation} of \(\xi \mapsto w(M, \xi)\) beyond that circle: he shows that such a continuation exists in a circle \(|\xi| < \xi_2\), of radius independent of \(M \in D\), and that it has a \emph{simple pole} with residue \(-\xi_1 U_1(M)\) at the point \(\xi_1\). He limits himself to the case in which \(p = 1\) and \(\Gamma\) is convex and smooth, and his idea is to adapt the method of C. Neumann (Chap. \ref{ch:2}, \ref{sec:2.4}) to evaluate the differences \(\left| \xi^n_1 w_n - \xi^{n-1}_1 w_{n-1} \right|\); with apparently the same gap as in Neumann's argument (the details are not given in the Note) he ``proves'' that there are constants \(C\) and \(q < 1\) independent of \(M\), such that \(\left| \xi^n_1 w_n - \xi^{n-1}_1 w_{n-1} \right| \leq Cq^n\), hence \(\left| \xi^n_1 w_n - U_1 \right| \leq C'q^n\) for another constant \(C'\), hence his result. writing
+\[
+    w = \frac{U}{1 - (\xi / \xi_1)} + v
+\]
+he looks for a power series development
+\begin{equation}
+    \label{eq:3.20}
+    v = v_0 + \xi v_1 + \ldots \xi^n v_n + \ldots
+\end{equation}
+similar to \eqref{eq:3.9} but which should converge in a circle \(|\xi| < \xi_2\) with \(\xi_2 > \xi_1\). He determines the \(v_n\) by the successive approximations
+\[
+    \Delta v_0 - \xi_1 U_1 = 0, \qquad \Delta v_n + v_{n-1} = 0 \quad \text{for } n \geq 1
+\]
+with the boundary conditions: \(v_0 = 1\) on \(\Gamma\) and \(v_n = 0\) on \(\Gamma\) for \(n \geq 1\). Introducing numbers similar to the \(W_{n, k}\) of Schwarz, he is able to prove that the radius of convergence \(\xi_2\) of \eqref{eq:3.20} is finite, but he cannot show that there is an eigenfunction corresponding to \(\xi_2\) and vanishing on \(\Gamma\).
 
 \section{The contributions of Poincaré}
 \label{sec:3.2}
