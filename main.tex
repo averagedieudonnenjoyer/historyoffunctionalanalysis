@@ -124,15 +124,14 @@ With regard to Algebra, as the most frequently studied mappings between topologi
     \int_a^y \varphi(x) H(x,y) dx = f(y)
 \end{equation}
 for an unknown function \(\varphi\), the functions \(f\) and \(H\) being continuous in \([a,b]\) and \([a,b] \times [a,b]\) respectively, with \(f(a) = 0\). He divides \([a,b]\) into \(n\) subintervals by the points \(y_k = a + k \frac{b-a}{n} \; (1 \leq k \leq n)\), replaces \(y\) in \eqref{eq:1} by these \(n\) values, and the integral by the corresponding Riemann sums, which gives him a system of \(n\) linear equations
-\mytodo{fill line of dots up to the \(b_n\)}
 \begin{equation}
     \label{eq:2}
-    \begin{cases}
-        h_{11} z_1               \hfill &= b_1 \\
-        h_{21} z_1 + h_{22} z_2  \hfill &= b_2 \\
-        \dotfill                               \\
-        h_{n1} z_1 + h_{n2} z_2 + \ldots + h_{nn} z_n &= b_n
-    \end{cases}
+    \begin{dcases}
+        h_{11} z_1               \hfill = b_1 \\
+        h_{21} z_1 + h_{22} z_2  \hfill = b_2 \\
+        \dotfill \\
+        h_{n1} z_1 + h_{n2} z_2 + \ldots + h_{nn} z_n = b_n
+    \end{dcases}
 \end{equation}
 with \(j_{jk} = H(y_j, y_k), z_k = \varphi(y_k)\) and \(b_k = f(y_k)\); the integral equation \eqref{eq:1} was thus considered as obtained from systems \eqref{eq:2} by a limit process when the number of unknowns became infinite.
 
@@ -483,10 +482,10 @@ where the right hand sides do not contain any derivative with respect to \(x_{p+
 The tendency (inherited from the XVIII\supth{} century) to consider that the most interesting functions were analytic was still very strong during the whole XIX\supth{} century, and therefore at first the analyticity restrictions of the Cauchy--Kowalewska theorem did not worry mathematicians very much, However, as it was known that some special types of partial differential equations, such as the scalar equation of first order and some types of second order equations, had solutions under much less stringent restrictions, people began to wonder if some other method than Cauchy's ``method of majorants'' (which could only be applied to analytic functions) would not yield a generalization of the Cauchy--Kowalewska theorem, at least for \(C^\infty\) functions. The question remained unanswered until 1956, when H. Lewy gave the surprising example of a system of
 two linear equations in 3 variables, with \(C^\infty\) coefficients
 \begin{equation*}
-  \begin{cases}
+  \begin{dcases}
     \frac{\partial v_1}{\partial x_1} = \frac{\partial v_2}{\partial x_2} - 2 x_2 \frac{\partial v_1}{\partial x_3} - 2x_1 \frac{\partial v_2}{\partial x_3} - f(x_3) \\
     \frac{\partial v_2}{\partial x_1} = -\frac{\partial v_1}{\partial x_2} + 2 x_1 \frac{\partial v_1}{\partial x_3} - 2x_2 \frac{\partial v_2}{\partial x_3}
-  \end{cases}
+  \end{dcases}
 \end{equation*}
 which, for a suitable choice of the real \(C^\infty\) function \(f\), has \emph{no solution} whatsoever around any point (even if one al lows solutions which are distributions).
 
@@ -970,13 +969,13 @@ For any given integer \(p\), he introduces \(p\) arbitrary coefficients \(\alpha
 Next, applying his lemma for the evaluation of the Schwarz integrals \(W_n\) \emph{corresponding to} \(w\), he is able to show that, for a suitable \emph{choice} of the \(\alpha_j\) the series \eqref{eq:3.32} \emph{converges for} \(|\xi| \leq L_p\) (uniformly in \(\overline{V}\)). But if one writes \(u_j = \left[v_{j-2}, \xi\right]\), one has
 \begin{equation}
     \label{eq:3.33}
-    \begin{cases}
+    \begin{dcases}
         \alpha_1 v + \alpha_2 u_2 + \ldots \alpha_p u_p = w \\
         v - u_2 \xi = v_0 \\
         u_2 - u_3 \xi = v_1 \\
         \dotfill \\
         u_{p-1} - u_p \xi = v_{p-2}
-    \end{cases}
+    \end{dcases}
 \end{equation}
 a linear system from which Cramer's formulas give
 \begin{equation}
