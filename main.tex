@@ -29,8 +29,15 @@
 \usepackage[tiny,compact,explicit]{titlesec}
 \usepackage{todonotes}
 
-\usepackage[backend=biber,sorting=nty]{biblatex}
+\usepackage[backend=biber,maxnames=2,sorting=custom]{biblatex}
 \addbibresource{bibliography.bib}
+\DeclareFieldFormat{pages}{p.~#1} % Dieudonné used "p." instead of "pp." even for multiple pages
+\DeclareSortingScheme{custom}{\sort{\field{entrykey}}}
+\DefineBibliographyStrings{english}{
+    andothers = {\mkbibemph{et\addabbrvspace al\adddot}} % "et al." in italics
+}
+\renewcommand*{\mkbibnamefamily}[1]{\textsc{#1}} % surnames in small caps
+\renewcommand*{\newunitpunct}{\addcomma\space} % comma instead of dot between authors and title
 
 \usepackage{chngcntr}
 \counterwithout{equation}{chapter}
@@ -3867,6 +3874,8 @@ where \(K\) is supposed to be bounded and piecewise continuous in \((a, b] \time
 % and Tréves suc which were final local existence of operators [19]. to these papers.
 
 \nocite{*}
-\printbibliography
+\printbibliography[title=References]
+\markboth{References}{References}
+\fancyhead[C]{\textsc{\leftmark}}
 
 \end{document}
