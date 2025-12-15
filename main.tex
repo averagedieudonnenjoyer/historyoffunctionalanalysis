@@ -1087,96 +1087,83 @@ To sum up, at the end of the XIX\supth{} century, the main results of linear and
 \section{Infinite determinants}
 \label{sec:4.2}
 
-% The first appearance of infinite systems of linear equations in infinitely many unknowns seems to occur in Fourier's work on the theory of heat, He has to determine an infinite se quence (am) of coefficients such that the relation
-% (2) 1= I a_ cos(2m=-1)y m
-% m=1
-% m=1
-% holds for all y ([67], vol.I, p.149). Fourier's idea is to take derivatives of all orders of both sides of (2) and iden tify them for y = 0, which gives him the infinite system of linear equations for the a
-% r
+The first appearance of infinite systems of linear equations in infinitely many unknowns seems to occur in Fourier's work on the theory of heat. He has to determine an infinite sequence \((a_m)_{m \geq 1}\) of coefficients such that the relation
+\begin{equation}
+    \label{eq:4.2}
+    1 = \sum_{m=1}^\infty a_m \cos(2m - 1)y
+\end{equation}
+holds for all \(y\) (\cite{67}, vol.~I, p.~149). Fourier's idea is to take derivatives of all orders of both sides of \eqref{eq:4.2} and identify them for \(y = 0\), which gives him the infinite system of linear equations for the \(a_m\)
+\begin{equation}
+    \label{eq:4.3}
+    \begin{dcases}
+        1 = \sum_{m=1}^\infty a_m \\
+        0 = \sum_{m=1}^\infty (2m - 1)^2 a_m \\
+        0 = \sum_{m=1}^\infty (am-1)^4 a_m \\
+        \dotfill
+    \end{dcases}
+\end{equation}
+To solve it, he considers the first \(k\) equations where he replaces the \(a_m\) for \(m > k\) by 0; he then solves that system by Cramer's formulas, which give him a system of \(k\) numbers \(a_1^{(k)}, a_2^{(k)}, \ldots, a^{(k)}_k\), and lets \(k\) tend to infinity in each expression of \(a_m^{(k)}\) for fixed \(m\). Using the formulas giving Vandermonde determinants, he obtains
+\[
+    a_1^{(k)} = \frac{3^2 \cdot 5^2 \ldots (2k-1)^2}{8 \cdot 24 \ldots (4k^2 - 4k)}
+\]
+tending to \(a_1 = 4/\pi\), and
+\[
+    \frac{a_{m+1}^{(k)}}{a_m^{(k)}} = \frac{2m-1}{2m+1} \cdot \frac{m+k}{m-k}
+\]
+which gives him \(a_m = (-1)^{m-1} 4/\pi(2m-1)\); when later in his book he proves the general formula giving the Fourier coefficients, he can of course check that these values of the \(a_m\) are correct. But he never bothered to give any justification of his procedure, where all questions of convergence are completely disregarded; that procedure could of course be repeated for any infinite system
+\begin{equation}
+    \label{eq:4.4}
+    \sum_{k=1}^\infty a_{jk} x_k = b_j \qquad (j = 1, 2, \ldots)
+\end{equation}
+but nobody undertook to justify it before 1885\footnote{During that period, Fourier's method was used in two little-known papers, one by Fürstenau in 1860 on the computation of roots of an algebraic equation, and another by Kötteritzsch in 1870, for a system \eqref{eq:4.4} in which the \(a_{jk}\) are 0 for \(j > k\) (see \cite{184}, p.~8--12).}. In that year, P. Appell met such a system with \(a_{jk} = a_k^j\) for a given sequence \((a_k)\), in a question relative to elliptic functions, and used the same method as Fourier; his paper attracted Poincaré's attention, and he showed that for such a ``generalized Vandermonde system'', the procedure was justified provided the infinite product \(F(z) = \prod\limits_{k=1}^\infty \left( 1 - \frac{z}{a_k} \right)\) was convergent for all complex numbers \(z\).
 
-% = !
-% =o8No
+The next year, he returned to the subject, in relation with a paper published in 1877 by the American astronomer and mathematician G.W. Hill on the lunar theory \cite{114}. Hill proposed a new approach which rested on the integration of a second order differential equation
+\begin{equation}
+    \label{eq:4.5}
+    w'' + \left( \sum_{n=-\infty}^{+\infty} \theta_n e^{nit} \right) w = 0
+\end{equation}
+where the \(\theta_n\) are constants, and one looks for a solution of period \(2\pi\). Hill writes such a solution as a trigonometric series
+\begin{equation}
+    \label{eq:4.6}
+    w = \sum_{n=-\infty}^{+\infty} b_n e^{i(n+c)t}
+\end{equation}
+and substituting in \eqref{eq:4.5}, obtains for the coefficients \(b_n\) the infinite system of equations
+\begin{equation}
+    \label{eq:4.7}
+    \sum_{k=-\infty}^{+\infty} \theta_{n-k} b_k - (n+c)^2 b_n = 0, \qquad -\infty < n < +\infty.
+\end{equation}
+He probably was unaware of Fourier's procedure, but used a similar one, keeping this time the equations \eqref{eq:4.7} for \(-p \leq n \leq p\), replacing in these equations the \(b_m\) by 0 for \(m < -p\) or \(m > p\), and letting \(p\) tend to infinity in the solutions of the system thus obtained.
 
-% (3) ° =
-% I 8TMM Ve Ng|- N’ Np
+Poincaré considers a general system \eqref{eq:4.4}, where he supposes that \(a_{jj}=1\) for all \(j\) (one can always reduce \eqref{eq:4.4} to such a system by dividing the \(j\)-th equation by \(a_{jj}\), when \(a_{jj} \neq 0\)). His idea is to compare the determinant \(D_n = \det(a_{jk})_{1 \leq j, k \leq n}\) to the product \(P_n = \prod\limits_{j=1}^n \left( \sum_{k=1}^n |a_{jk}| \right)\). It is clear from the definition of a determinant that \(|D_n| \leq P_n\), and from the assumption on the diagonal terms, one has also \(|D_m - D_n| \leq P_m - P_n\); this inequality immediately gives Poincaré's \emph{sufficient} condition for the existence of \(D = \lim\limits_{n \to \infty} D_n\) , namely that the double sum \(\sum\limits_{j \neq k} |a_{jk}|\) be \emph{finite}. Furthermore, Poincaré shows that, when the \(k\)-th column of \(D\) is replaced by a sequence \((b_j)\) which is \emph{bounded}, there is still convergence for the new ``infinite determinant'', and that there is a unique bounded solution \(x_k\) of \eqref{eq:4.4} given by the usual Cramer formulas (with ``infinite determinants'' of course).\footnote{One must beware of the fact that the Fourier method (when no condition is imposed on the \(a_{jk}\)) may very well give convergent ``infinite determinants'', but the values given by the Cramer formulas may be such that the left hand sides of \eqref{eq:4.4} are \emph{divergent} series. An example is given by taking \(a_{jk} = 0\) if \(j > k, a_{jk} = 1\) if \(j \leq k, b_j = (-1)^j\); one finds as a ``solution'' \(x_k = 2(-1)^k\).} Finally he extends his results to doubly infinite systems
+\begin{equation}
+    \label{eq:4.8}
+    \sum_{k=-\infty}^{+\infty} a_{jk} x_k = b_j \qquad (-\infty < j < +\infty)
+\end{equation}
+with the same restriction \(a_{jj} = 1\) for all \(j\); in particular he shows that Hill's method is justified for the system \eqref{eq:4.7} (\cite{177}, vol.~V, p.~95--107).
 
-% ©) !
-% =N81 7~ o=i- N’ =A=
-
-% To solve it, he considers the first k equations where he replaces the a for m> k by O; he then solves that
-
-% 76 CHAPTER IV
-% system by Cramer's formulas, which give him a system of Kk numbers ak),a£k), \ldots,aik), and lets k tend to infinity in each expression of aék) for fixed m., Using the formulas
-% giving Vandermonde determinants, he obtains
-% L) _ 37,55, (2k-1)”
-% 1 8.24 \ldots(uk2-uk)
-% () :
-% tending to a, = 4/m, and
-% m+1 2m=-1 m+k
-% o (k) T 2m+1 ~ m-k
-% m
-% which gives him a_ = (-l)m-l 4/m(2m-1); when later in his book he proves the general formula giving the Fourier coef ficients, he can of course check that these values of the a are correct. But he never bothered to give any justification of his procedure, where all questions of convergence are com pletely disregarded; that procedure could of course be repeat ed for any infinite system
-% k=1
-% but nobody undertook to justify it before 1885(*). In that vear, P, Appell met such a system with ajk = ai for a given sequence (ak), in a question relative to elliptic functions,
-% and used the same method as Fourier; his paper attracted Poincaré's attention, and he showed that for such a "general ized Vandermonde system", the procedure was justified provided
-% *
-% ( )During that period, Fourier's method was used in two 1lit tle known papers, one by Flirstenau in 1860 on the computation
-% (see [184], p.8-12),. J
-% of roots of an algebraic equation, and another by Kotteritzch in 1870, for a system (4) in which the a_ are 0 for j > k
-% THE IDEA OF INFINITE DIMENSION 77
-% (00)
-% the infinite product F(z) = T—[ (l-g—) was convergent for
-
-% all complex numbers =z,
-% k=1 k
-
-% The next year, he returned to the subject, in relation with
-% a paper published in 1877 by the American astronomer and ma thematician G,W, Hill on the lunar theory [llh]. Hill propos ed a new approach which rested on the integration of a second order differential equation
-% (5) w o+ (X 9_e
-% where the en are constants, and one looks for a solution of peviod 2y Hill writes such a solution as a trigonometric (6) w o= bnei(n+c)t
-% series
-% and substituting in (5), obtains for the coefficients bn the
-% infinite system of equations
-% (7) % en_kbk - (n+c)2 bn = 0, -0 < N < 4o,
-% +
-% K=w=w
-% He probably was unaware of Fourier's procedure, but used a si milar one, keeping this time the equations (7) for -p < n < p, replacing in these equations the bm by O for m< -p or m > p, and letting p tend to infinity in the solutions of the system thus obtained,
-% Poincaré considers a general system (h), where he supposes that a,, = 1 for all j (one can always reduce (4) to such a system by dividing the j-th equation by ajj’ when n .
-% a5 ; # 0), His idea is to compare the determinant R n
-% D = det(a to the product P_ = || (T |ajk|). It j=1 k=1 jk)lsj,ksn
-
-% 78 CHAPTER IV
-% is clear from the definition of a determinant that [D_| < P_, n
-% and from the assumption on the diagonal terms, one has also D -D| < P -P; this inequality immediately gives Poincaré's Poincaré,
-% sufficient condition for the existence of D = 1lim D , name Nn=o
-% 1y that the double sum I |a be finite. Furthermore, shows that, wheni the k-th column of D is replaced
-% Jkl
-% by a sequence (bj) which is bounded, there is still conver
-% gence for the new "infinite determinant", and that there is a unique bounded solution (x;) of (4) given by the usual Cramer formulas (with "infinite determinants" of course).(*)
-% Finally he extends his results to doubly infinite systems
-% + oo
-% K= oo jk k J
-% with the same restriction ajj = 1 for all j; 1in particular he shows that Hill's method is justified for the system (7) (C177], vol. V, p. 95-107).
-% Ten years later, H. von Koch [220] refined and generalized Poincaré's results., Insteadof making assumptions on the diagonal terms, he writes the coefficients ij + Cjk instead of a determinant A, = det(éjk+ C .. ) as a sum of prine- K" 1< j,ken
-% of 2 oy (with the Kronecker delta), and uses the expression cipal minors
-% (*)One must beware of the fact that the Fourier method (when no condition is imposed on the ajk) may very well give con vergent "infinite determinants", but the values given by the Cramer formulas mayv be such that the left hand sides of (4) are divergent series, An example is given by taking ajk = 0 it  > k, 2 = i if j < k, bj = (-1)J; one finds as a "solu tion" x = 2(-1)".
-% THE IDEA OF INFINITE DIMENSION 79 n Cs S Cs S
-% 1 171 12 A, =1+ 1 Coo *+ 37 ZS + S= S1%2 o c
-% (9) Cs S Cs S Cs S
-% 2°1 S2%2
-% 11 12 173
-% 1 Cs S Cs S C
-% 81’82’83 oS..S C
-% 31 SBSZ Cs s
-% 33
-% (an expression which will be the starting point of Fredholm's theorems on integral equations 4 years later (Chap.V, 1)). He is thus able to replace Poincaré's criterion for coaver gence by a weaker one: it is enough that the sums J 172 72773 p 1
-
-% X chjl and ¥ loi 1 %5 4  \ldotsCoii |
-% (extended to all sequen=-
-
-% ces (il’iZ’ \ldots’ip) of distinct indices) be finite. Another convergence criterion is that the sum Y |c..| and ¥ |c. . JJ T Jjk
-% J Jo
-% |2
+Ten years later, H. von Koch \cite{220} refined and generalized Poincaré's results. Insteadof making assumptions on the diagonal terms, he writes the coefficients \(\delta_{jk} + c_{jk}\) instead of \(a_{jk}\) (with the Kronecker delta), and uses the expression of a determinant \(\Delta_n = \det(\delta_{jk} + c_{jk})_{1 \leq j, k \leq n}\) as a sum of principal minors
+\begin{equation}
+    \label{eq:4.9}
+    \begin{gathered}
+        \Delta_n = 1 + \sum_{s=1}^n c_{ss} + \frac{1}{2!} \sum_{s_1, s_2}
+        \left|
+        \begin{matrix}
+            c_{s_1 s_1} & c_{s_1 s_2} \\
+            c_{s_2 s_1} & c_{s_2 s_2}
+        \end{matrix}
+        \right| + \\
+        + \frac{1}{3!} \sum_{s_1, s_2, s_3}
+        \left|
+        \begin{matrix}
+            c_{s_1 s_1} & c_{s_1 s_2} & c_{s_1 s_3} \\
+            c_{s_2 s_1} & c_{s_2 s_2} & c_{s_2 s_3} \\
+            c_{s_3 s_1} & c_{s_3 s_2} & c_{s_3 s_3}
+        \end{matrix}
+        \right|
+        + \ldots
+    \end{gathered}
+\end{equation}
+(an expression which will be the starting point of Fredholm's theorems on integral equations 4 years later (Chap. \ref{ch:5}, \ref{sec:5.1})). He is thus able to replace Poincaré's criterion for convergence by a weaker one: it is enough that the sums \(\sum\limits_j |c_{jj}|\) and \(\sum |c_{i_1 i_2} c_{i_2 i_3} \ldots c_{i_p i_1}|\) (extended to all sequences \((i_1, i_2, \ldots, i_p)\) of distinct indices) be finite. Another convergence criterion is that the sum \(\sum\limits_j |c_{jj}|\) and \(\sum_{j,k} |c_{jk}|^2\) be finite.
 
 \section{Groping towards function spaces}
 \label{sec:4.3}
