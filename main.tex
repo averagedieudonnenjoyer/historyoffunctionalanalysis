@@ -1364,150 +1364,365 @@ Fredholm's 1900 note is entitled ``On a new method for the solution of Dirichlet
     \varphi(s) = f(s) + \lambda \int_a^b K(s, t) f(t) dt
 \end{equation}
 where \(K\) is supposed to be bounded and piecewise continuous in \((a, b] \times [a, b]\), and \(\varphi\) continuous in \([a, b]\), \(\lambda\) being a complex parameter. He briefly mentions the analogy with systems of linear equations and starts right away with the formulas describing his ``determinants'' (see below). But in a lecture given in 1909 \cite[p.~123--131]{074}, he acknowledges: 1° the inspiration derived from Volterra's idea of a ``passage to the limit'' from a system of linear equations to an integral equation; 2° the help he found in von Koch's work on infinite determinants (chap. \ref{ch:4}, \ref{sec:4.2}). From these indications, sparse as they are, it seems one can reconstruct his procedure, with great probability, as consisting in \emph{putting together three simple ideas}:
-% I) Replacing the integral in (1) by Riemann sums, one obtains, with the notations of chap. IV, 4, the system of n 1linear equations for the f(yj)
-% (2) £(yvy) + 512532 ; K(vy sy )f(vy) = ely;) (1= 3 = n).
-% II) Writing the determinant of that system according to von
-% Koch's formula (chap.IV, 2, formula (9))
-% % +ooe
-% KUKy Ky 7k,
 
-% X n
-% 1+l£:31 )X K(yk’yk) +
-% Xz(b-a)2 2
-% l’kZ
-% K(y, »v, ) K(v, ,v, ) K(ykz’ykl) K(yk29yk2)
+I) Replacing the integral in \eqref{eq:5.1} by Riemann sums, one obtains, with the notations of chap. \ref{ch:4}, \ref{sec:4.4}, the system of \(n\) linear equations for the \(f(y_j)\)
+\begin{equation}
+    \label{eq:5.2}
+    f(y_j) + \frac{\lambda (b-a)}{n} \sum_{k=1}^n K(y_k, y_j) f(y_k) = \varphi(y_j) \quad (1 \leq j \leq n).
+\end{equation}
 
-% and then letting n tend to +o, which gives the formula for what Fredholm calls the "determinant" of the integral equation (1)
+II) Writing the determinant of that system according to von Koch's formula (chap. \ref{ch:4}, \ref{sec:4.2}, formula \eqref{eq:4.9})
+\[
+    1 + \frac{\lambda (b-a)}{n} \sum_{k=1}^n K(y_k, y_j) + \frac{\lambda^2 (b-a)^2}{2!n^2} \sum_{k_1, k_2}
+    \left|
+    \begin{matrix}
+        K(y_{k_1}, y_{k_1}) & K(y_{k_1}, y_{k_2}) \\
+        K(y_{k_2}, y_{k_1}) & K(y_{k_2}, y_{k_2})
+    \end{matrix}
+    \right|
+    + \ldots
+\]
+and then letting \(n\) tend to \(+\infty\), which gives the formula for what Fredholm calls the ``determinant'' of the integral equation \eqref{eq:5.1}
+\begin{equation}
+    \label{eq:5.3}
+    \begin{gathered}
+        \Delta(\lambda) = 1 + \lambda \int_a^b K(s, s)ds + \frac{\lambda^2}{2!} \int_a^b \int_a^b K
+        \left(
+        \begin{matrix}
+            s_1 & s_2 \\
+            s_1 & s_2
+        \end{matrix}
+        \right) ds_1 ds_2
+        + \ldots \\
+        + \frac{\lambda^m}{m!} \int_a^b \ldots \int_a^b K
+        \left(
+        \begin{matrix}
+            s_1 & s_2 & \ldots & s_m \\
+            s_1 & s_2 & \ldots & s_m
+        \end{matrix}
+        \right) ds_1 ds_2 \ldots ds_m
+        + \ldots
+    \end{gathered}
+\end{equation}
+where he has written
+\begin{equation}
+    \label{eq:5.4}
+    K
+    \left(
+    \begin{matrix}
+        x_1 & x_2 & \ldots & x_m \\
+        y_1 & y_2 & \ldots & y_m
+    \end{matrix}
+    \right)
+    =
+    \left|
+    \begin{matrix}
+        K(x_1, y_1) & K(x_1, y_2) & \ldots & K(x_1, y_m) \\
+        K(x_2, y_1) & K(x_2, y_2) & \ldots & K(x_2, y_m) \\
+        \hdotsfor{4} \\
+        K(x_m, y_1) & K(x_m, y_2) & \ldots & K(x_m, y_m)
+    \end{matrix}
+    \right|
+    .
+\end{equation}
 
-% 100 CHAPTER V
-% () a (b .
-% 4 —
-% !
-% 5 Y - N 8
-% where he has written
-% K(Xl’yl) K(Xl’yz) ¢ o0 K(xl,ym)
-% xp Xy eee X |K(xpy;) K(x¥,) eee K(xy,v,) (&) K(yi Yi D m [ ] [ ]
+III) Proving the uniform convergence of the series \eqref{eq:5.3} in any compact set of the complex plane, for which it is enough to majorize the determinants \eqref{eq:5.4} in a suitable way; in his 1899 letter, Fredholm had given the majoration \(n^{n/2} M^n\), where \(M\) is the upper bound of \(|K|\); he had apparently arrived independently to this result, but was made aware that it was a special case of an inequality published by Hadamard in 1893 (\cite{094}, vol.~I, p.~239--243) for an arbitrary square matrix \(A = (a_{ij})\) of order \(n\):
+\begin{equation}
+    \label{eq:5.5}
+    |\det(A)|^2 \leq \prod_{i=1}^n \left( \sum_{j=1}^n |a_{ij}|^2 \right).
+\end{equation}
 
-% '® ®
-% >® [ ] ® ® [ ] [ ] ® :[ [ ] [ ] '
+The next ``natural'' steps are of course to apply Cramer's formulas to the system \eqref{eq:5.2} and let again \(n\) tend to infinity in the numerators; the result is described by Fredholm in the following elegant way: a development of the determinant \eqref{eq:5.4} according to the first row yields the formula
+\begin{equation}
+    \label{eq:5.6}
+    \begin{gathered}
+        K
+        \left(
+        \begin{matrix}
+            s & x_1 & \ldots & x_m \\
+            t & x_1 & \ldots & x_m
+        \end{matrix}
+        \right)
+        = K(s, t) K
+        \left(
+        \begin{matrix}
+            x_1 & \ldots & x_m \\
+            x_1 & \ldots & x_m
+        \end{matrix}
+        \right)
+        - \\
+        - K(s, x_1) K
+        \left(
+        \begin{matrix}
+            x_1 & x_2 & \ldots & x_m \\
+            t   & x_2 & \ldots & x_m
+        \end{matrix}
+        \right)
+        + K(s, x_2) K
+        \left(
+        \begin{matrix}
+            x_1 & x_2 & x_3 & \ldots & x_m \\
+            t   & x_1 & x_3 & \ldots & x_m
+        \end{matrix}
+        \right)
+        - \\
+        - \ldots + (-1)^m K(s, x_m) K
+        \left(
+        \begin{matrix}
+            x_1 & x_2 & \ldots & x_m \\
+            t   & x_1 & \ldots & x_{m-1}
+        \end{matrix}
+        \right)
+        .
+    \end{gathered}
+\end{equation}
+On the other hand, Fredholm defines the ``minor''
+\begin{equation}
+    \label{eq:5.7}
+    \begin{gathered}
+        \Delta(s, t; \lambda) = K(s, t) + \lambda \int_a^b K
+        \left(
+        \begin{matrix}
+            s & x_1 \\
+            t & x_1
+        \end{matrix}
+        \right)
+        dx_1 + \ldots + \\
+        + \frac{\lambda^m}{m!} \int_a^b \ldots \int_a^b K
+        \left(
+        \begin{matrix}
+            s & x_1 & \ldots & x_m \\
+            t & x_1 & \ldots & x_m
+        \end{matrix}
+        \right)
+        dx_1 dx_2 \ldots dx_n + \ldots
+    \end{gathered}
+\end{equation}
+and replaces each integrand by its expression \eqref{eq:5.6}, which gives him the simple relation
+\begin{equation}
+    \label{eq:5.8}
+    \Delta(s, t; \lambda) = K(s, t)\Delta(\lambda) - \lambda \int_a^b K(s, \xi) \Delta(\xi, t; \lambda) d\xi.
+\end{equation}
+He then introduces the function
+\begin{equation}
+    \label{eq:5.9}
+    \Phi(s) = \varphi(s)\Delta(\lambda) - \lambda \int_a^b \Delta(s, \xi; \lambda) \varphi(\xi) d\xi
+\end{equation}
+and derives from \eqref{eq:5.8} the equation
+\begin{equation}
+    \label{eq:5.10}
+    \Phi(s) + \lambda \int_a^b K(s, t)\Phi(t)dt = \varphi(s)\Delta(\lambda).
+\end{equation}
+The conclusion is then immediate: if \(\Delta(\lambda) \neq 0\), the function \(f(s) = \Phi(s)/\Delta(\lambda)\) is a solution of \eqref{eq:5.1}. Furthermore, he shows that one has
+\begin{equation}
+    \label{eq:5.11}
+    \frac{d\Delta(\lambda)}{d\lambda} = \int_a^b \Delta(s, s; \lambda)ds
+\end{equation}
+and from this he deduces that if \(\lambda_0\) is a zero of order \(\nu\)  of the entire function \(\Delta(\lambda), \Phi(s),\) for a suitable choice of \(\varphi\), cannot be divisible by a power of \(\lambda - \lambda_0\) greater than \((\lambda - \lambda_0)^{\nu-1}\); if \(\Phi(s) = (\lambda - \lambda_0)^k \Phi_1(s)\), one then deduces, from \eqref{eq:5.10}, that
+\begin{equation}
+    \label{eq:5.12}
+    \Phi_1(s) + \lambda_0 \int_a^b K(s, t) \Phi_1(t)dt = 0;
+\end{equation}
+in other words, if there is no nontrivial solution of the homogeneous equation \eqref{eq:5.12}, necessarily \(\Delta(\lambda_0) \neq 0\), hence the solution of \eqref{eq:5.1} for \(\lambda = \lambda_0\) exists and is unique. However, at that time, he does not yet prove that the existence of a non trivial solution of \eqref{eq:5.12} implies that \(\Delta(\lambda_0) = 0\). But the end of the Note is startling: he considers the Beer--Neumann equation for a bounded plane domain with a \(C^3\) boundary; the kernel of that integral equation is then bounded and continuous, and for \(\lambda_0 = 1\) it is very easy to deduce from the properties of double layer potentials that the homogeneous equation \eqref{eq:5.12} has no nontrivial solution. Therefore the existence and uniqueness of the soluation of Dirichlet's problem is proved, doing away, with a single strooke of the pen, so to speak, with all the complications of the Neumann--Poincaré solution!
 
-% [ ] [ ] [ ]
-% K(x,»¥7) K(x3¥,) eeee K(x_,v_)
-% III) Proving the uniform convergence of the series (3) in
-% any compact set of the complex plane, for which it is enough . : . n/2 n
-% to majorize the determinants (4) in asuitable wayj; in his 1899 letter, Fredholm had given the majoration n M, where M is the upper bound of |K|; he had apparently arrived inde pendently to this result, but was made aware that it was a special case of an inequality published by Hadamard in 1893 (C94], vol.I, p.239-243) for an arbitrary square matrix A= (a,.) of order n:
-% (5) |det(4)|" < TT (£ [a, 7). i
+In his 1903 paper, Fredholm completed his results on some important points. He first defines more general ``minors''
+\begin{equation}
+    \label{eq:5.13}
+    \begin{gathered}
+        \Delta
+        \left(
+        \begin{matrix}
+            s_1 & s_2 & \ldots s_m \\
+            t_1 & t_2 & \ldots t_m
+        \end{matrix}
+        ; \lambda
+        \right)
+        = K
+        \left(
+        \begin{matrix}
+            s_1 & s_2 & \ldots s_m \\
+            t_1 & t_2 & \ldots t_m
+        \end{matrix}
+        \right)
+        + \\
+        + \sum_{n=1}^\infty \frac{\lambda^n}{n!} \int_a^b \ldots \int_a^b K
+        \left(
+        \begin{matrix}
+            s_1 & s_2 & \ldots s_m & x_1 & \ldots & x_n \\
+            t_1 & t_2 & \ldots t_m & x_1 & \ldots & x_n
+        \end{matrix}
+        \right)
+        dx_1 \ldots dx_n.
+    \end{gathered}
+\end{equation}
+Developing this time the determinants \emph{both} according to the first row and the first column, he obtains the identities
+\begin{equation}
+    \label{eq:5.14}
+    \begin{gathered}
+        \Delta
+        \left(
+        \begin{matrix}
+            s_1 & s_2 & \ldots & s_m \\
+            t_1 & t_2 & \ldots & t_m
+        \end{matrix}
+        ; \lambda
+        \right)
+        + \lambda \int_a^b K(s_1, \xi) \Delta
+        \left(
+        \begin{matrix}
+            \xi & s_2 & \ldots & s_m \\
+            t_1 & t_2 & \ldots & t_m
+        \end{matrix}
+        ; \lambda
+        \right)
+        d\xi = \\
+        = K(s_1, t_1) \Delta
+        \left(
+        \begin{matrix}
+            s_2 & \ldots & s_m \\
+            t_2 & \ldots & t_m
+        \end{matrix}
+        ; \lambda
+        \right)
+        - K(s_1, t_2) \Delta
+        \left(
+        \begin{matrix}
+            s_2 & s_3 & \ldots & s_m \\
+            t_1 & t_3 & \ldots & t_m
+        \end{matrix}
+        ; \lambda
+        \right)
+        + \ldots
+    \end{gathered}
+\end{equation}
+and
+\begin{equation}
+    \label{eq:5.15}
+    \begin{gathered}
+        \Delta
+        \left(
+        \begin{matrix}
+            s_1 & s_2 & \ldots & s_m \\
+            t_1 & t_2 & \ldots & t_m
+        \end{matrix}
+        ; \lambda
+        \right)
+        + \lambda \int_a^b K(\xi, t_1) \Delta
+        \left(
+        \begin{matrix}
+            s_1 & s_2 & \ldots & s_m \\
+            \xi & t_2 & \ldots & t_m
+        \end{matrix}
+        ; \lambda
+        \right)
+        d\xi = \\
+        = K(s_1, t_1) \Delta
+        \left(
+        \begin{matrix}
+            s_2 & \ldots & s_m \\
+            t_2 & \ldots & t_m
+        \end{matrix}
+        ; \lambda
+        \right)
+        - K(s_2, t_1) \Delta
+        \left(
+        \begin{matrix}
+            s_1 & s_3 & \ldots & s_m \\
+            t_2 & t_3 & \ldots & t_m
+        \end{matrix}
+        ; \lambda
+        \right)
+        + \ldots
+    \end{gathered}
+\end{equation}
+which in particular, for \(m = 1\), reduce to \eqref{eq:5.8} and to
+\begin{equation}
+    \label{eq:5.16}
+    \Delta(s, t; \lambda) = K(s, t)\Delta(\lambda) - \lambda \int_a^b K(\xi, t) \Delta(s, \xi; \lambda) d\xi.
+\end{equation}
 
-% 1J
-% 2 — 2 n n
+The use he makes of these formulas is a little more sophisticated than in his first Note. He introduces the operator corresponding to the kernel \(K, f \mapsto S_K f\) such that \(S_K f(s) = f(s) + \int_a^b K(s, t)f(t)dt\), and, for two kernels \(K, K'\), writes the composite \(S_K S_{K'}\) as \(S_{K''}\) with
+\begin{equation}
+    \label{eq:5.17}
+    K''(x,t) = K(x, t) + K'(x, t) + \int_a^b K(s, \xi)K'(\xi, t)d\xi.
+\end{equation}
+Suppose now that \(\Delta(\lambda) \neq 0\), and write
+\begin{equation}
+    \label{eq:5.18}
+    R(s, t; \lambda) = -\Delta(s, t; \lambda)/\Delta(\lambda)
+\end{equation}
+(the \emph{resolvent kernel} in the later terminology of Hilbert). It then follows from \eqref{eq:5.17}, \eqref{eq:5.8} and \eqref{eq:5.16} that we have
+\begin{equation}
+    \label{eq:5.19}
+    S_{\lambda K} S_R = S_R S_{\lambda K} = \operatorname{Id}
+\end{equation}
+and Fredholm has thus shown that the mecessary and sufficient condition for the existence and uniqueness of a solution of \eqref{eq:5.1} is \(\Delta(\lambda) \neq 0\), the kernel \(\lambda K\) and the resolvent kernel \(R\) playing completely symmetric parts as in the formulas of Volterra (chap. \ref{ch:4}, \ref{sec:4.4}, formulas \eqref{eq:4.26} and \eqref{eq:4.27}).
 
-% The next "natural'" steps are of course to apply Cramer's formulas to the system (2) and let again n tend to infinity
-% in the numerators; the result is described by Fredholm in the following elegant way: a development of the determinant (4) according to the first row yields the formula
-% THE CRUCIAL YEARS AND THE DEFINITION OF HILBERT SPACE 101
-% K ( ) = K(s,t) K( ) -
-% (6) -K(s,x;)K( TM)+ K(s,x,)K( ) ") -
-% X X cee X X X X eee X
-% t Xo eee X t xl x3 cee X
-% 1 2 1 2
-% = see -+ (-l) K(S,Xm)K( m )o
-% m 1 2
-% X X eee X
-% t xl cee X -1
-% On the other hand, Fredholm defines the "minor"
+Next he examines what happens when \(\Delta(\lambda) = 0\). First he generalizes \eqref{eq:5.11} to
+\begin{equation}
+    \label{eq:5.20}
+    \frac{d^m \Delta(\lambda)}{d\lambda^m} = \int_a^b \ldots \int_a^b \Delta
+    \left(
+    \begin{matrix}
+        s_1 & \ldots & s_m \\
+        s_1 & \ldots & s_m
+    \end{matrix}
+    ; \lambda
+    \right)
+    ds_1 \ldots ds_m
+\end{equation}
+and from this he deduces that if \(\Delta(\lambda) = 0\), there is always an integer \(m\) such that \(\Delta
+\left(
+\begin{matrix}
+    s_1 & \ldots & s_m \\
+    s_1 & \ldots & s_m
+\end{matrix}
+; \lambda
+\right)\)
+is not identically 0. If \(m\) is the smallest integer having that property (which is exactly the order of \(\lambda\) as a zero of \(\Delta\)) he exhibits, using \eqref{eq:5.14}, \(m\) solutions of the homogeneous equation
+\begin{equation}
+    \label{eq:5.21}
+    \Phi_1(s) = \frac{\Delta
+    \left(
+    \begin{matrix}
+        s & s_1 & \ldots & s_m \\
+        t & t_1 & \ldots & t_m
+    \end{matrix}
+    \right)}{\Delta
+    \left(
+    \begin{matrix}
+        s_1 & \ldots & s_m \\
+        t_1 & \ldots & t_m
+    \end{matrix}
+    \right)}, \quad
+    \Phi_2(s) = \frac{\Delta
+    \left(
+    \begin{matrix}
+        s_1 & s   & s_3 & \ldots & s_m \\
+        t_1 & t_2 & t_3 & \ldots & t_m
+    \end{matrix}
+    \right)}{\Delta
+    \left(
+    \begin{matrix}
+        s_1 & \ldots & s_m \\
+        t_1 & \ldots & t_m
+    \end{matrix}
+    \right)}, \ldots
+\end{equation}
+for which he shows that they are linearly independent and that every other solution of the homogeneous equation is a linear combination of the \(\Phi_j (1 \leq j \leq m)\). He concludes the theory (which one often calls the ``Fredholm alternative'') by giving necessary and sufficient conditions on \(\varphi\) for the existence of a solution of \eqref{eq:5.1} when \(\lambda\) is a zero of order \(m\) of \(\Delta\). He observes that the ``transposed equation'' obtained from \eqref{eq:5.1} by replacing \(K(s,t)\) by \(K(t,s)\) has the same ``determinant'', and therefore the corresponding homogeneous equation has exactly \(m\) linearly independent solutions \(\psi_1, \ldots, \psi_m\); the condition \(\varphi\) must satisfy are then
+\begin{equation}
+    \label{eq:5.22}
+    \int_a^b \varphi(x)\psi_j(x)dx = 0 \quad \text{for } 1 \leq j \leq m.
+\end{equation}
 
-% (7) b b
-% bS Xl
+Finally, Fredholm shows that for any two kernels \(K, K'\), if \(\Delta_K\) and \(\Delta_{K'}\) are the corresponding ``determinants'', then for the ``composed'' kernel \(K''\) defined by \eqref{eq:5.17} one has
+\begin{equation}
+    \label{eq:5.23}
+    \Delta_{K''} = \Delta_K \Delta_{K'}
+\end{equation}
+which justifies the name ``determinant''. He also points out that his results can be generalized when the kernel \(K\) is not bounded any more, but such that \((x-y)^\alpha K(x, y)\) remains bounded, with \(0 < \alpha < 1\); and he mentions that the extension of his theorems to any number of variables is immediate.
 
-% A(s,t3)) = K(s,t) + A K(t )dxl teeet
-% + fil /ff°°°/ K( 1 m) dxldxzooodxn ‘oo
-% X1 a
-% m S X eeoe X
-% ° a a t Xl e e ©® Xm
-% and replaces each integrand by its expression (6), which gives (8) A(Syt;X) = K(S9t)A(>¥) - )&( K(S,g)lg,t;k)dg.
-% him the simple relation
-% b
-% (9) (s) =w(s)a(r) = A A(s,E32)0 (8 )a8
-% He then introduces the function
-% b
-% (10) 8(s) + kjr K(s,t)e(t)at = o(s)A(r).
-% o
-% and derives from (8) the equation
-% b
-% The conclusion is then immediate: if A()) # O, +the function that one has b
-% f(s) = 8(s)/A(A) 4dis a solution of (1). Furthermore, he shows (11) Eééfil = A(s,s3r)ds
-% a
-% and from this he deduces that if xn is a zero of order Vv
-
-% 102 CHAPTER V
-% of the entire function A (L), (s), for a suitable choice of o, cannot be divisible by a powerof x-ko greater than (X—xo)v-l if ¥(s) = (X—XO) @l(s), one then deduces, from (10), that
-% k
-% (12) @lun + A ( K(sflfl@l(tfiflzz 0; b
-% in other words, if there is no nontrivial solution of the ho mogeneous equation (12), necessarily A(ko) # 0, hence the solution of (1) for A = xo exists and is unique, However,
-% at that time, he does not yet prove that the existence of a non trivial solution of (12) implies that A(xo) = 0. But the end of the Note is startling: he considers the Beer 3
-% Neumann equation for a bounded plane domain with a C~- bound ary; the kernel of that integral equation is {hen bounded and continuous, and for xo = 1 it is very easy to deduce from
-% the properties of double layer potentials that the homogeneous equation (12) has no nontrivial solution. Therefore the exist ence and uniqueness of the soluation of Dirichlet's problem is proved, doing awav, with a single strooke of the pen, so to speak, with all the complications of the Neumann-Poincaré so lution!
-% In his 1903 paper, Fredholm completed his results on some
-% important points., He first defines more general "minors" A ( sh) = K( ) +
-% S S ® & ¢ S S S ® & o S
-% 1 °2 m 1 72 m
-% oo S e oo S X eee X
-
-% (13)
-% +3L( k(1 m 1 ?) dxy  \ldots dx . n=1 TM' |, t. eee bt X. eee X " 1 m 1 n
-
-% Developing this time the determinants both according to the
-
-% THE CRUCIAL YEARS AND THE DEFINITION OF HILBERT SPACE 103 S,]_ T ) Sm ( g 82 PRRPIEPY Sm
-% first row and the first column, he obtains the identities A( sA) + A ] K(sq,8)A( sA)dE =
-% b
-% 2 2
-% (14)S, eee S S, S. eee S 2 m 1 73 m
-% and b
-% t, eee t t, t, eee ©
-% 1 1 "2 A ( )+ h ) K(,tq)a( TN )dE =
-% S e o @ S S S o o O S
-% tl e oo tm a g t2 e oo tm
-% 2 1
-% (15)S eee S S S eee S 2 ° m 2 73 m
-% t ee T t, ¢t eee t
-% which in particular, for m = 1, reduce to (8) and to (16) A(S,t;)\) = K(S9t)A()¥) - A ]( K(g ,t)A (s,8 32 )dg.
-% b
-% la
-% The use he makes of these formulas is a little more sophis ticated than in his first Note, He introduces the operator
-% corresponding to the kernel K, f#*—SKf such that b
-% Sf(s) = £(s) + g/ K(s,t)f(t)dt, and, for two kernels K, K’, a
-% writes the composite SKSK, as SK& with
-% b
-% (17) K (x,t) = K(x,t) + K' (s,t) + K(s,5 )K' (E,t)dE.
-% a
-% Suppose now that A(A) # 0, and write
-% (18) R(s,t350) = =A(s,t350)/8(})
-% (the resolvent kernel in the later terminology of Hilbert). It then follows from (17), (8) and (16) that we have
-
-% 104 CHAPTER V
-% (19) S, kSg = SgSyx =
-% and Fredholm has thus shown that the mecessary and sufficient
-% condition for the existence and uniqueness of a solution of (1) is A()) # 0, the kernel XK and the resolvent kernel R playing completely symmetric parts as in the formulas of Vol terra (chap. IV, 4, formulas (26) and (27)).
-% Next he es<amines what happens when A(A) = O, First he ge m S eee S
-% de 1 m neralizes (11) to
-% and from this he deduces that if A(A) = O, there is always an integer m such that A(tl "
-
-% S
-% M.2) is not identically O, l o o O m
-% If m is the smallest integer having that property (which is exactly the order of A as a zero of A) he exhibits, using A(t tl tm) A(tl t tB tm)
-% (14),- m solutions of the homogeneous equation st TM At TM)
-% vy m Ty eee Th
-% for which he shows that they are linearly independent and that
-% every other solution of the homogeneous equation is a linear combination of the @j (1< j € m)e He concludes the theory (which one often calls the "Fredholm alternative") by giving necessary and sufficient conditions on ¢ for the existence of a solution of (1) when )\ is a zero of order m of A, He observes that the "transposed equation" obtained from (l) by replacing K(s,t) by K(t,s) has the same "determinant",
-% THE CRUCIAL YEARS AND THE DEFINITION OF HILBERT SPACE 105
-% and therefore the corresponding homogeneous equation has exactly m linearly independent solutions Yl, \ldots,Y m? the condition ¢ must satisfy are then
-% (22) @(X)Yj(x)dx = 0 for 1< j< m,
-% b
-% a
-% Finally, Fredholm shows that for any two kernels K, K', if and AK' are the corresponding "determinaunts", then for Ak the "composed" kernel K’ defined by (17 ? one has
-% which justifies the name "determinant", He also points out
-% that his results can be generalized when the kernel KX is not bounded any more, but such that (x-y)®*K(x,y) remains bounded, with O < @ < 13 and he mentions that the extension of his theorems to any number of variables is immediate,
-% This beautiful paper may be considered as the source from which all further developments of spectral theory are derived, It made a deep and lasting impression on the mathematical world, and almost overnight the theory of integral equations became a favorite topic among analysts ([23], [175], [107]).
+This beautiful paper may be considered as the source from which all further developments of spectral theory are derived. It made a deep and lasting impression on the mathematical world, and almost overnight the theory of integral equations became a favorite topic among analysts (\cite{023}, \cite{175}, \cite{107}).
 
 \section{The contributions of Hilbert}
 \label{sec:5.2}
