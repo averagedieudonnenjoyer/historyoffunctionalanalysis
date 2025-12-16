@@ -1924,49 +1924,39 @@ But the most important consequence of the Fischer--Riesz theorem is that it open
 \section{The search for continuous linear functionals}
 \label{sec:6.1}
 
-% In chap.IV, 3, we saw that in 1897 C. Bourlet solved for the first time the problem of the determination of a linear map U: E -+ F Dbetween "function spaces" by conditions of continuity. In a short Note published in 1903 ([94], vol.I,
-% p.405-408) Hadamard attacked the same problem with E = ¢([a,b]), space of real continuous functions in an in terval [a,b], F = R, and "continuity" means for him that U(f,) tends to U(f) when f_ tends to f wuniformly. He chooses a fixed function F such that for any continuous function f, one has
-% (1) f(x) = 1im n f(t)F(n(t-x))dt Il =pco = a
-% uniformly in x3; one has then
-% (2) U(f) = lim £(t)s (t)dt
-% b
+In chap. \ref{ch:4}, \ref{sec:4.3}, we saw that in 1897 C. Bourlet solved for the first time the problem of the determination of a linear map \(U: E \rightarrow F\) between ``function spaces'' by conditions of \emph{continuity}. In a short Note published in 1903 (\cite{094}, vol.~I, p.~405--408) Hadamard attacked the same problem with \(E = \Cont([a,b])\), space of real continuous functions in an in terval \([a,b], F = \R\), and ``continuity'' means for him that \(U(f_n)\) tends to \(U(f)\) when \(f_n\) tends to \(f\) \emph{uniformly}. He chooses a fixed function \(F\) such that for any continuous function \(f\), one has
+\begin{equation}
+    \label{eq:6.1}
+    f(x) = \lim_{n \to \infty} n \int_a^b f(t) F(n(t-x)) dt
+\end{equation}
+uniformly in \(x\); one has then
+\begin{equation}
+    \label{eq:6.2}
+    U(f) = \lim_{n \to \infty} \int_a^b f(t) \Phi_n(t) dt
+\end{equation}
+where \(\Phi_n(t)\) is the value of \(U\) at the function \(x \mapsto nF(n(t-x))\) one may take \(F(x) = e^{-x^2}\), so that \(\Phi_n\) is continuous, but the choice of \(F\) is largely arbitrary (the argument is a typical case of what later will be called a ``regularization'' process).
 
-% N=boo
-% 'a,
+In two papers published in 1904 and 1905, Fréchet gave another proof of Hadamard's theorem, and, what is more interesting, began to investigate the similar problems when \(\Cont([a,b])\) is replaced by another ``function space''; for instance \cite{070}, he remarked that if one takes for \(E\) the space \(\B([a,b])\) of all bounded integrable functions in \([a,b]\) (continuous or not) with the topology of uniform convergence, there were other continuous linear functionals than those given by Hadamard's formula, for instance the mappings \(f \mapsto c_1 f(x_1) + \ldots + c_m f(x_m)\), where the \(x_j\) are arbitrary points of \([a,b]\) and the \(c_j\) constants. Similarly, if one takes for \(E\) the space of all \(C^r\) functions in \([a,b]\), where convergence means uniform convergence for the function and its derivatives up to order \(r\), Fréchet showed that the continuous linear functionals could then be written
+\[
+    f \mapsto c_0 f(a) + c_1 f'(a) + \ldots + c_{r-1}f^{(r-1)}(a) + \lim_{n \to \infty} \int_a^b f^{(r)}(t) \Phi_n(t)dt.
+\]
 
-% where @n(t) is the value of U at the function x+nF(n(t-x)) 2
-% one may take F(x) = eTMTM , so that ¢ ~is continuous, but the choice of F is largely arbitrary (the argument is a typical case of what later will be called a "regularization" 121
+As soon as the study of Hilbert space began (chap. \ref{ch:5}, \ref{sec:5.3}), Fréchet \cite{072} and F. Riesz (\cite{183}, vol.~I, p.~386--388) independently showed that continuous ``linear functionals'' on Hilbert space \(l^2_{\R}\) (for the strong topology) could be written uniquely as \(x \mapsto (x|a)\) for a vector \(a \in l^2\).
 
-% 122 CHAPTER VI
-% |
-% |
-% process).
-% In two papers published in 1904 and 1905, Fréchet gave another proof of Hadamard's theorem, and, what is more inte
-% resting, began to investigate the similar problems when c¢(La,b]) is replaced by another "function space"; for ins tance E?O], he remarked that if one takes for E +the space fi([a,b]) of all bounded integrable functions in [a,b] (Con
-% tinuous or not) with the topology of uniform convergence, there were other continuous linear functionals than those
-% given by Hadamard's formula, for instance the mappings f e clf(xl) teee+ c f(x), where the x; are arbitrary points of [a,b] and the C ; constants. Similarly, if one takes for E the space of all €' functions in [a,b], where
-% convergence means uniform convergeince for the function and its derivatives up to order r, Fréchet showed that the con
-% tinuous linear functionals could then be written b
-% fh»Cof(a)+clf’(a)+ \ldots+cr_lf(r-l)(a)+lim f(r)(t) 2 (t)dat . n=oa
-% As soon as the study of Hilbert space began (chap.V, 3), Fréchet [72] and F. Riesz ([183], vol.I, p.386-388) indepen=-
-% dently showed that continuous "linear functionals" on Hilbert space Lé (for the strong topology) could be written unique ly as x +(x]|a) for a vector a € L=,
-% Finally, in 1909, F. Riesz ([183], vol.I,p.400-402) was able
-% to give a better form to Hadamard's theorem by removing the arbitrariness of the sequence (@n); his idea was to use the
-% Stielt jes integral, as Hilbert had done in his work on spectral theory (see chap.VII, 2): he showed that any continuous linear
+Finally, in 1909, F. Riesz (\cite{183}, vol.~I, p.~400--402) was able to give a better form to Hadamard's theorem by removing the arbitrariness of the sequence \((\Phi_n)\); his idea was to use the Stieltjes integral, as Hilbert had done in his work on spectral theory (see chap. \ref{ch:8}, \ref{sec:8.2}): he showed that any continuous linear functional \(U: \Cont([a,b]) \rightarrow \R\) could be written \emph{uniquely}
+\begin{equation}
+    \label{eq:6.3}
+    U: f \mapsto \int_a^b f(x) d\alpha(x)
+\end{equation}
+where \(\alpha\) is a function of bounded variation in \([a,b]\), provided one imposed on \(\alpha\) the additional conditions of being continuous on the left and such that \(\alpha(a) = 0\). His method consists in considering, for any \(t \in [a,b]\), the function \(f_t \in \Cont([a,b])\) equal to \(x-a\) for \(a \leq x \leq t\), and to \(t-a\) for \(t \leq x \leq b\), and the function \(A: t \mapsto U(f_t)\); he shows that this function is Lipschitzian, and takes for \(-\alpha(t)\) one of the ``derived numbers'' of \(A\) at the point \(t\); it is then easy to show that \(\alpha\) is a function of bounded variation, and it is a standard procedure to modify it in such a way that it satisfies the additional conditions meuntioned above without changing \(U\).
 
-% DUALITY AND THE DEFINITION OF NORMED SPACES 1273 functional : ¢([a,b]) » R could be written uniquely (3) Us £ +— f(x)da (x)
-% b
-% where a is a function of bounded variation in [a,b], pro vided one imposed on «a the additional conditions of being continuous on the left and such that a(a) = 0. His method
-% consists in considering, for any t € [a,b], the function f, € c(fa,b]) equal to x-a for ac< x< t, and to t-a for t < x < b, and the function A: trs U(ft); he shows that this function is Lipschitzian, and takes for =-g(t) one of the "derived numbers"of A at the point t; it is then easy to show that @ is a function of bounded variation, and it is a standard procedure to modify it in such a way that it sa tislfies the additional conditions meuntioned above without changing U.
-% Although the contemporaries did not realize the novelty of F, Riesz's approach, we are justified in seeing in his results (as he himself did) a radical departure from the conceptions
-% of linear algebra prevalent in his time:
-% 12 Whereas, even for the space LZ, it was possible, due to the Fischer-Riesz theorem, to identify the elements of the space with sequences of numbers, generalizing the dominant
-% Cayley concept of linear algebra as a theory of "n-tuples', no such identification was possible for ¢([a,b]), where one had to work directly on vectors, and not on their "coordinates"
-% 29 Functions of bounded variation may be discontinuous at a denumerable set of points, and therefore it was impossible to identify any more the continuous linear functionals on C([a,b])
+Although the contemporaries did not realize the novelty of F. Riesz's approach, we are justified in seeing in his results (as he himself did) a radical departure from the conceptions of linear algebra prevalent in his time:
 
-% 124 CHAPTER VI
-% to the elements of that space (again in contrast to what happened in LZ according to the Riesz-Fréchet theorem).
-% These features would be still more conspicuous in the theory of LP ana P spaces, which F., Riesz began to investigate in 1910 ([183], vol.I, p.4903).
+1° Whereas, even for the space \(L^2\), it was possible, due to the Fischer--Riesz theorem, to identify the elements of the space with sequences of numbers, generalizing the dominant Cayley concept of linear algebra as a theory of ``\(n\)-tuples'', no such identification was possible for \(\Cont([a,b])\), where one had to work directly on vectors, and not on their ``coordinates''
+
+2° Functions of bounded variation may be discontinuous at a denumerable set of points, and therefore it was impossible to \emph{identify} any more the continuous linear functionals on \(\Cont([a,b])\) to the elements of that space (again in contrast to what happened in \(l^2\) according to the Riesz--Fréchet theorem).
+
+These features would be still more conspicuous in the theory of \(L^p\) and \(l^p\) spaces, which F. Riesz began to investigate in 1910 (\cite{183}, vol.~I, p.~403).
 
 \section{The \protect{\(L^p\)} and \protect{\(l^p\)} spaces}
 \label{sec:6.2}
