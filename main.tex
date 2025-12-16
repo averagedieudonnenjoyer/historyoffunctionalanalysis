@@ -1727,180 +1727,141 @@ This beautiful paper may be considered as the source from which all further deve
 \section{The contributions of Hilbert}
 \label{sec:5.2}
 
-% One of the most active proponents of the new theory was David Hilbert, As soon as he heard of Fredholm's results, he started doing himself research work on these questions, made them one of the main subjects discussed in his Seminar at
+One of the most active proponents of the new theory was David Hilbert. As soon as he heard of Fredholm's results, he started doing himself research work on these questions, made them one of the main subjects discussed in his Seminar at Göttingen\footnote{It is reported (by Hellinger) that Hilbert inaugurated a session of his Seminar by announcing the development of a method which would lead to the proof of the Riemann hypothesis: the problem is to prove that a particular entire function has all its zeroes on the real line, and Hilbert hoped that this function would be expressed as the ``determinant'' of an integral equation wita symmetric kernel. However, nobody has yet been able to find such an equation.} and supervised many dissertations on the various aspects of the theory. Between 1904 and 1906, he published six papers on integral equations in the \emph{Göttingen Nachrichten}, later brought together in a single volume entitled ``Grundzüge einer allgemeinen Theorie der Integralgleichungen'' \cite{112}.
 
-% 106 CHAPTER V
-% *
-% thtingen( ) and supervised many dissertations on the wvarious aspects of the theory. Between 1904 and 1906, he published six papers on integral equations in the GO8ttingen Nachrichten, later brought together in a single volume entitled "Grundzlge einer allgemeinen Theorie der Integralgleichungen" [112].
-% In his first paper [112, p.1=-38], Hilbert starts by doing explicitly what had only been hinted at by Volterra and Fredholm, the "passage to the limit" in the system (2), res tricting himself (as he will do in almost all his results) to the case in which the kernel K is symmetric, i.e. a real continuous function such that K(t,s) = K(s,t). He soon re alized that in that particular case he might obtain much more precise results than Fredholm, In the first place, the symmet ric matrix (K(yk,yj)) is then the matrix of the quadratic form .Zk K(yk,yj)gkgj, and Hilbert undertook to apply also his "piésage to the 1limit" to that form, He thus obtained
-% the results which Poincaré had foreseen in the particular case he had considered (chap.IV, 4): the roots of the Fred
-% holm determinant are then real; if they are written as a se=- quence (xn), each being counted with its multiplicity, then,
-% for each n there is an eigenfunction ®,» such that b
-% f, @m(t)@n(t)dt = 0 for m #£ n, Finally, if one normalizes a
-% (*) It is reported (by Hellinger) that Hilbert inaugurated a session of his Seminar by announcing the development of a method which would lead to the proof of the Riemann hypothesis: the problem is to prove that a particular entire function has all its zeroes on the real line, and Hilbert hoped that this function would be expressed as the "determinant" of an inte gral equation wita symmetric kernel., However, nobody has yet been able to find such an equation,
+In his first paper \cite[p.~1--38]{112}, Hilbert starts by doing explicitly what had only been hinted at by Volterra and Fredholm, the ``passage to the limit'' in the system \eqref{eq:5.2}, restricting himself (as he will do in almost all his results) to the case in which the kernel \(K\) is \emph{symmetric}, i.e. a real continuous function such that \(K(t,s) = K(s,t)\). He soon realized that in that particular case he might obtain much more precise results than Fredholm. In the first place, the symmetric matrix \((K(y_k,y_j))\) is then the matrix of the quadratic form \(\sum\limits_{j,k} K(y_k, y_j) \xi_k \xi_j\), and Hilbert undertook to apply also his ``passage to the limit'' to that form. He thus obtained the results which Poincaré had foreseen in the particular case he had considered (chap.\ref{ch:4}, \ref{sec:4.4}): the roots of the Fredholm determinant are then real; if they are written as a sequence \((\lambda_n)\), each being counted with its multiplicity, then, for each \(n\) there is an eigenfunction \(\varphi_n\) such that \(\int_a^b \varphi_m(t) \varphi_n(t)dt = 0\) for \(m \neq n\). Finally, if one normalizes the \(\varphi_n\) by the condition \(\int_a^b \varphi_n(t)^2 dt = 1\), and if for each a continuous function \(x\) din \([a,b]\), one defines the ``Fourier coefficients'' \((x|\varphi_n) = \int_a^b x(t)\varphi_n(t)dt\), Hilbert proves that
+\begin{equation}
+    \label{eq:5.24}
+    \int_a^b \int_a^b K(s,t)x(s)y(t)dsdt = \sum_n \frac{1}{\lambda_n} (x|\varphi_n)(y|\varphi_n)
+\end{equation}
+for any two continuous functions \(x, y\), a relation which he rightly considers as the natural generalization of the classical reduction of a quadratic form to its ``axes''. What is particularly interesting in the way Hilbert considers this formula is that he shows that the righthand side of \eqref{eq:5.24} is \emph{uniformly convergent} when the functions \(x\) and \(y\) are allowed to vary arbitrarily, subject only to the conditions \(\int_a^b x(t)^2dt \leq 1\) and \(\int_a^b y(t)^2dt \leq 1\), the first prefiguration of what will become ``the unit ball in Hilbert space'' a few vears later. Of course Hilbert also justifies for his integral equation the variational deiinition of the eigenvalues \(\lambda_n\), first proposed by Weber (chap. \ref{ch:3}, \ref{sec:3.1}). He shows that the set of the \(\lambda_n\) is infinite, except when \(K(x,y)\) is a linear combination of a finite number of functions of type \(u(x)v(y)\). He also proves that the resolvent kernel \(R(s,t; \mu)\) (in the sense of Fredholm) has the eigenvalues \(\lambda_n - \mu\), the corresponding eigenfunctions being \(\varphi_n/(\lambda_n - \mu)\) (\(\mu\) distinct from the \(\lambda_n\)) and writes the identity
+\begin{equation}
+    \label{eq:5.25}
+    R(s, t; \mu) - R(s, t; \nu) = (\mu-\nu) \int_a^b R(s, \xi; \mu) R(\xi, t; \nu)d\xi
+\end{equation}
+for \(\mu\) and \(\nu\) distinct from the \(\lambda_n\). Finally, he shows that if a function \(f\) can be written in the form
+\begin{equation}
+    \label{eq:5.26}
+    f(s) = \int_a^b K(s, t)g(t)dt
+\end{equation}
+for a continuous function \(g\), then the corresponding ``Fourier expansion''
+\begin{equation}
+    \label{eq:5.27}
+    f(s) = \sum_n (f|\varphi_n)\varphi_n(s)
+\end{equation}
+is absolutely and uniformly convergent, and one has the ``Parseval identity''
+\begin{equation}
+    \label{eq:5.28}
+    \int_a^b f(s)^2ds = \sum_n (f|\varphi_n)^2.
+\end{equation}
+However, he could only give that proof undeir the restrictive assumption that any continuous function could be approximated (in the sense of mean square value, or, as we would now say, for the topology of Hilbert space!) by functions of the form \eqref{eq:5.26}.
 
-% THE CRUCIAL YEARS AND THE DEFINITION OF HILBERT SPACE 107 b
-% the © , Py the condition ( mn(t)zdt = 1, and if for each a
-% continuous function x din Ea,b], one defines the "Fourier coefficientsTM" (x|@n) = (/ x(t)wn(t)dt, Hilbert proves that (24) K(s,t)x(s)y(t)dsat = £ 5 (x]o.)(v]|p,)
+The proof that this last condition is superfluous was given in 1905 in the dissertation of Erhard Schmidt, one of the best students of Hilbert \cite{191}; it contained otherwise no startling new results, but it deserves some comments, since it is the first attempt to do away with the Fredholm ``determinants'', and substitute to them a more conceptual approach\footnote{Some of the results of E. Schmidt were also obtained independently by W. Stekloff \cite{204}.}.
 
-% -b Db
-% a
+E. Schmidt begins by proving the Bessel identity
+\begin{equation}
+    \label{eq:5.29}
+    \int_a^b \left( f(s) - \sum_{n=1}^N (f|\varphi_n)\varphi_n(s) \right)^2 ds = \int_a^b f(s)^2 ds - \sum_{n=1}^N (f|\varphi_n)^2
+\end{equation}
+for an \emph{arbitrary} orthonormal system \((\varphi_n)\), from which he deduces that for any continuous function \(f, g\), the series \(\sum\limits_n (f|\varphi_n)(g|\varphi_n)\) is absolutely convergent, and the convergence is uniform when \(f\) is allowed to vary subject to the condition \(\int_a^b f(s)^2 ds \leq A\) for a fixed constant \(A\).
 
-% for any two continuous functions x, y, a relation which he
-% rightly considers as the natural generalization of the clas sical reduction of a quadratic form to its "axes", What is particularly interesting in the way Hilbert considers this formula is that he shows that the righthand side of (24) is uniformly convergent when the functions x and y are al
-% lowed to vary arbitrarily, subject only to the conditions a a
-% (/ x(t)zdt < 1 and '( y(t)zdt < 1, the first prefiguration
-% of what will become "the unit ball in Ililbert space'" a few vears latevr, Of course Hilbert also justifies for his inte
-% gral equation the variational deiinition of the eigenvalues A, first proposed by Weber (chap.III, 1). He shows that the set of the \_ is infinite, except when K(x,y) dis a linear
-% combination of a finite number of functions of type u(x)v(y). He also proves that the resolvent kernel R(s,t;u) (in the sense of Fredholm) has the eigenvalues xn-u, the correspond ing eigenfunctions being wn/(xn-u) (u distinct from the xn)
-% and writes the ideuntity
-% (25) R(Syt;u) - R(Sat;\)) = (U-"V)( R(S9g ;U)R(g,t;\))dg b
-% for U and Vv distinct from the J . Finally, he shows that if a function f can be written in the form
+Next he assumes the existence of the eigenvalues \(\lambda_n\) and of the corresponding normalized eigenfunctions \(\varphi_n\), and using the Bessel inequality, he proves that
+\begin{equation}
+    \label{eq:5.30}
+    \sum_n \frac{1}{\lambda_n^2} \leq \int_a^b \int_a^b K(s,t)^2 dsdt
+\end{equation}
+from which it follows that each \(\lambda_n\) has finite multiplicity and that \(|\lambda_n|\) tends to \(+\infty\) with \(n\) if there is an infinity of eigenvalues.
 
-% 108 CHAPTER V
-% (26) £(s) f K(s,t)g(t)dt
-% b
-% for a continuous function g, then the corresponding "Fourier (27) f(s) = z (flee (s)
-% expansion"
-% is absolutely and uniformly convergent, and one has the (28) £(s)%ds = 3 (flo,)>.
-% "Parseval identity"
-% b
-% a
-% However, he could only give that proof undeir the restrictive assumption that any continuous function could be approximated (in the sense of mean square value, or, as we would now say, for the topology of Hilbert space!) by functions of the form (26).
-% The proof that this last condition is superfluous was given in 1905 in the dissertation of Erhard Schmidt, one of the best students of Hilbert [191]; it contained otherwise no startling new results, but it deserves some comments, since it is the
-% first attempt to do away with the Fredholm "determinants", and b b
-% substitute to them a more conceptual approach(*). N 2 2 N 2
-% a a n
-% E. Schmidt begins by proving the Bessel identity n
-% =1 = 1
-% (29) | (£(s) - = (floo, (s))%as = | £(s)%as - = (£]q,)
-% for an arbitrary orthonormal system (@n), from which he *
-% ( )Some of the results of E. Schmidt were also obtained in dependently by W, Stekloff [204],-
+To prepare for the proof of the existence of the eigenvalues, he introduces, as Fredholm and Volterra had done, the iterated kernels
+\begin{equation}
+    \label{eq:5.31}
+    K_m(s,t) = \int_a^b K_{m-1}(s, \xi)K(\xi, t)d\xi \quad \text{for } m > 1, \text{with } K_1 = K
+\end{equation}
+and shows that, if \(\varphi\) is an eigenfunction for \(K_m\), it is also an eigenfunction for \(K\) if \(m\) is odd, and is sum of two eigenfunctions for \(K\) if \(m\) is even. This allows him to apply Schwarz's method to prove the existence of at least an eigenvalue when \(K\) is not identically 0, as we have shown in chapter \ref{ch:3}, \ref{sec:3.1}, because what he gets in this way is an eigenvalue of \(K_2\).
 
-% THE CRUCIAL YEARS AND THE DEFINITION OF HILBERT SPACE 109
-% deduces that for any continuous functions f, g, the series z (f|mn)(g|@n) is absolutely convergent, and the convergence n
-% is uniform when f is allowed to vary subject to the condi tion r’ f(s)zds < A for a fixed constant A, a
-% Next he assumes the existence of the eigenvalues Xn and of the corresponding normalized eigenfunctions ¢_, and using n
-% (30) ) ~l-s (/ K(s,t)” dsdt
-% the Bessel inequality, he proves that
-% b b
-% 2
-% H ln a a
-% from which it follows that each xn has finite multiplicity and that |\ _| tends to +» with n if there is an infinity
-% of eigenvalues,
-% To prepare for the proof of the existence of the eigenvalues,
-% he introduces, as Fredholm and Volterra had done, the iterated (31) K (s,t) = K .(s,8)K(E,t)dE for m > 1, with K., =K m m=1 1
-% kernels
-% b
-% a
-% and shows that, if ¢ dis an eigenfunction for Km’ it is also an eigenfunction for K if m is odd, and is sum of two eigenfunctions for K 4if m is even, This allows him to apply Schwarz's method to prove the existence of at least an eigenvalue when K dis not identically O, as we have shown in chapter ITI, 1, because what he gets in this way is an eigenvalue of K2.
-% Finally, for functions f given by (26), he obtains the convergence of the Fourier expansion (27) by applying his initial lemma to the functions t+ K(s,t) and g; and from
+Finally, for functions \(f\) given by \eqref{eq:5.26}, he obtains the convergence of the Fourier expansion \eqref{eq:5.27} by applying his initial lemma to the functions \(t \mapsto K(s,t)\) and \(g\); and from that he derives Hilbert's formula \eqref{eq:5.24} by multiplying the formula \(x(s) = \sum_n (x|\varphi_n)\varphi_n(s)\) by \(K(s,t)y(t)\) and integrating.
 
-% 110 CHAPTER V
-% that he derives Hilbert's formula (24) by multiplying the formula x(s) = % (x|mn)mn(s) by K(s,t)y(t) and integrat n
-% ing.
-% Hilbert's interest in integral equations with symmetric kernels of course stemmed from the possibility of applying them to questions of Analysis such as the Dirichlet problem; it is to such applications that he devoted the second and third of his papers on integral equations, We shall bypass them for the time being, as well as most results in his two last papers on the subject (see chapters VII and IX), to con centrate on his fourth paper, published in 1906, a masterpiece and one of the best papers he ever wrote, By the depth and novelty of its ideas, it is a turning point in the history of Functional Analysis, and indeed deserves to be considered as the very first paper published in that discipline.
-% Hilbert's new departure in that paper is clear from the beginning: he deliberately abandons the point of view of in tegral equations, to return to the older conception of the in finite systems of linear equations (chap.,IV, 2), but with a new twist, This is because he realizes that the theory of
-% integral equations can be subsumed as a special case of that older theory: indeed, let (w) be a complete orthonormal system of continuous functions in [a,b], and suppose the continuous function f is a solution of (1) for A = 1;
-% then, if we consider the "Fourier coefficients" b ,b kg = ( ( K(s,t)wp(s)wq(t)dsdt,
-% (32) , a ’‘a
-% bp = ‘/ @(s)wp(s)ds, Xp = [/ f(s)wp(s)dsb
+Hilbert's interest in integral equations with symmetric kernels of course stemmed from the possibility of applying them to questions of Analysis such as the Dirichlet problem; it is to such applications that he devoted the second and third of his papers on integral equations, We shall bypass them for the time being, as well as most results in his two last papers on the subject (see chapters \ref{ch:7} and \ref{ch:9}), to concentrate on his fourth paper, published in 1906, a masterpiece and one of the best papers he ever wrote. By the depth and novelty of its ideas, it is a turning point in the history of Functional Analysis, and indeed deserves to be considered as the very \emph{first} paper published in that discipline.
 
-% THE CRUCIAL YEARS AND THE DEFINITION OF HILBERT SPACE 111
-% the xp (p=1,2, \ldots) satisfy the infinite system of linear equations
-% (33) p 7 qfl “pa*aq = Pp (p=1,2, \ldots) .
-% The new twist is that, due to the Bessel identity, one has 2 2
-% (34) > kgq < 4o, % bp < 4o, z Xp < 4o
-% P,q P P
-% Conversely, suppose we have a solution (xp) of (33) (with conditions (34)), and observe that if kq(s) = K(s,t)wqfiodt,
-% b
-% a
-% the functions kq are continuous, and b
-% 5 kp(s)2 < K(s,t)zdt;
-% P a
-% the series u(s) = T kap(s) B then absolutely and uniformly convergent; hence i is continuous and one has (u|wp)=:b -X_ 3 P P
-% therefore, if f = @p=-u, (flwp) = Xp and from the completeness of the system (wp) it follows that f is a solution of (1) for A = 1.
-% Hilbert then embarks into completely uncharted territory: 12 He exclusively considers sequences x = (xp) (for p=1,2,¢..,) of real numbers such that ¥ xi < 4o, 22 On the contrary, with regard to the double sequence (k_ ) Pqg
-% of real numbers, he abandons at first any restrictive = L qp Pq
-% condition such as the first condition (34), and only retains the symmetry conditions k = k .
-% 32 The center of interest is not any more the solution of (35) K(x,y) = %
-% the system (33), but the "symmetric bilinear form" k X
+Hilbert's new departure in that paper is clear from the beginning: he deliberately \emph{abandons} the point of view of integral equations, to return to the older conception of the infinite systems of linear equations (chap. \ref{ch:4}, \ref{sec:4.2}), but with a new twist, This is because he realizes that the theory of integral equations can be \emph{subsumed} as a special case of that older theory: indeed, let \((\omega_n)\) be a complete orthonormal system of continuous functions in \([a,b]\), and suppose the continuous function \(f\) is a solution of \eqref{eq:5.1} for \(\lambda = 1\); then, if we consider the ``Fourier coefficients''
+\begin{equation}
+    \label{eq:5.32}
+    \begin{gathered}
+        k_{pq} = \int_a^b \int_a^b K(s,t)\omega_p(s)\omega_q(t)dsdt, \\
+        b_p = \int_a^b \varphi(s)\omega_p(s)ds, \qquad x_p = \int_a^b f(s)\omega_p(s)ds
+    \end{gathered}
+\end{equation}
+the \(x_p (p=1,2, \ldots)\) satisfy the infinite system of linear equations
+\begin{equation}
+    \label{eq:5.33}
+    x_p + \sum_{q=1}^\infty k_{pq}x_q = b_p \qquad (p=1,2,\ldots).
+\end{equation}
+The new twist is that, due to the Bessel identity, one has
+\begin{equation}
+    \label{eq:5.34}
+    \sum_{p,q} k_{pq}^2 < +\infty, \quad
+    \sum_p b_p^2 < +\infty, \quad
+    \sum_p x_p^2 < +\infty.
+\end{equation}
+Conversely, suppose we have a solution \((x_p)\) of \eqref{eq:5.33} (with conditions \eqref{eq:5.34}), and observe that if \(k_q(s) = \int_a^b K(s,t)\omega_q(t)dt\), the functions \(k_q\) are continuous, and
+\[
+    \sum_p k_p(s)^2 \leq \int_a^b K(s,t)^2 dt;
+\]
+the series \(u(s) = \sum\limits_p x_p k_p(s)\) is then absolutely and uniformly convergent; hence \(u\) is continuous and one has \((u|\omega_p)=b_p - x_p\); therefore, if \(f = \varphi - u, (f|\omega_p) = x_p\) and from the completeness of the system \((\omega_p)\) it follows that \(f\) is a solution of \eqref{eq:5.1} for \(\lambda = 1\).
 
-% P,q
-% P9 qu
+Hilbert then embarks into completely uncharted territory:
 
-% 112 CHAPTER V
-% which he wants to "reduce" by a formula which would generalize
+1° He exclusively considers sequences \(x = (x_p)\) (for \(p=1,2,\ldots\)) of real numbers such that \(\sum\limits_p x_p^2 < +\infty\).
 
-% (24).
-% . 2 2
+2° On the contrary, with regard to the double sequence \((k_{pq})\) of real numbers, he \emph{abandons} at first \emph{any} restrictive condition such as the first condition \eqref{eq:5.34}, and only retains the \emph{symmetry} conditions \(k_{qp} = k_{pq}\).
 
-% Of course, even under the restrictions I Xy <+, X Yo < p
-% < +o, the right hand side of (35) is usually meaningless(*); proceeding as Fourier, Poincaré and von Koch (chap.IV, 2), Hilbert considers, for each integer n, the symmetric bilinear form in 2n variables ("sections" (Abschnitte) of K )
+3° The center of interest is not any more the solution of the system \eqref{eq:5.33}, but the ``symmetric bilinear form''
+\begin{equation}
+    \label{eq:5.35}
+    K(x,y) = \sum_{p,q} k_{pq} x_p y_q
+\end{equation}
+which he wants to ``reduce'' by a formula which would generalize \eqref{eq:5.24}.
 
-% (36) kK_(x,y) =
-% n
-% BTMM k X
+Of course, even under the restrictions \(\sum\limits_p x_p^2 < +\infty, \sum\limits_p y_p^2 < +\infty\), the right hand side of \eqref{eq:5.35} is usually meaningless\footnote{To this rather awkward formulation, Hellinger and Toeplitz \cite{106} substituted the consideration of ``infinite matrices'' \((k_{pq})_{1 \leq p, q < +\infty}\) and of their ``calculus'' inspired from Frobenius, but without associating an endomorphism to a matrix.}; proceeding as Fourier, Poincaré and von Koch (chap. \ref{ch:4}, \ref{sec:4.2}), Hilbert considers, for each integer \(n\), the symmetric bilinear form in \(2n\) variables (``sections'' (Abschnitte) of \(K\))
+\begin{equation}
+    \label{eq:5.36}
+    K_n(x,y) = \sum_{p=1}^n \sum_{q=1}^n k_{pq} x_p y_q,
+\end{equation}
+but instead of investigating the determinants of these forms, he ``reduces'' each one to its ``axes'' and is confronted with the problem of ``passing to the limit'' for these ``reduced'' forms when \(n\) tends to \(+\infty\). We postpone the detailed examination of the original method by which he was able to solve that problem, to chapter \ref{ch:7}, which is devoted to the history of modern spectral theory, of which this paper of Hilbert is the starting point; we shall only discuss here the various new notions he is led to introduce in that paper.
 
-% 2
-% p=1 qg=1
-% pq p q ’
+A) Hilbert is not yet using the geometrical language which will become prevalent among his immediate successors (cf. \ref{sec:5.3}), but it is obvious that everything he does in inspired by the analogy with \(n\)-dimensional FEuclidean space. In particular one of his main tools is the generalization of \emph{orthogonal transformations}: by that he means that, to every sequence \((x_p)\) with \(\sum\limits_p x_p^2 < +\infty\), he associates the sequence \((x'_p)\), where
+\begin{equation}
+    \label{eq:5.37}
+    x'_p = \sum_q a_{pq} x_q \qquad (p=1,2,\ldots)
+\end{equation}
+and where he imposes on the double sequence \((a_{pq})\) the conditions
+\begin{equation}
+    \label{eq:5.38}
+    \begin{gathered}
+        \sum_q a_{pq}^2 = 1, \qquad \sum_p a_{pq} a_{pr} = 0 \quad \text{for } q \neq r \\
+        \sum_p a_{pq}^2 = 1, \qquad \sum_q a_{pq} a_{np} = 0 \quad \text{for } n \neq p
+    \end{gathered}
+\end{equation}
+from which he immediately deduces that conversely \((x_p)\) is deduced from \((x'_p)\) by appling the ``inverse'' orthogonal transformation defined by \((a'_{pq})\) with \(a'_{pq} = a_{qp}\).
 
-% but instead of investigating the determinants of these forms, he "reduces" each one to its "axes" and is confronted with the problem of "passing to the limit" for these "reduced" forms when n tends to +o, We postpone the detailed examination of the original method by which he was able to solve that problem, to chapter VIIT, which is devoted to the history of modern spectral theory, of which this paper of Hilbert is the starting point; we shall only discuss here the various new notions he is led to introduce in that paper,
-% A) Hilbert is not yet using the geometrical language which will become prevalent among his immediate successors (cf. 3), but it is obvious that everything he does in inspired by the analogy with n-dimensional FEuclidean space, 1In particular one
-% of his main tools is the generalization of orthogonal trans formations: by that he means that, to every sequence (xp)
-% *
-% ( )To this rather awkward formulation, Hellinger and Toeplitz (ko) pq and of their "calculus" inspired from Fro- 1£p, q<+e’
-% [ 106] substituted the consideration of "infinite matrices" benius, but without associating an endomorphism to a matrix,
-% THE CRUCIAL YEARS AND THE DEFINITION OF HILBERT SPACE 113 with T x < +=, he associates the sequence (x;), whevre
-% 2
-% (37) x! = ¥ a X p—-—l 2 e e 0
-% P
-% P q
-% and where he imposes on the double seguence (apq) the con
+B) Hilbert restricts himself to forms \eqref{eq:5.35} which he calls \emph{bounded}: they are the (not necessarily symmetric) forms such that there exists an \(M > 0\) for which one has \(|K_n(x,y)| \leq M\) for \(\sum\limits_p x_p^2 \leq 1, \sum_p y_p^2 \leq 1\) and \emph{for all} \(n\); he also introduces \emph{bounded linear forms} \(L(x) = \sum\limits_p a_p x_p\) with \(\sum\limits_p a_p^2 < +\infty\), so that for any \(x\) (resp. \(y\)), and any bounded bilinear form \(K\), the linear forms \(K(x,\cdot): x \mapsto K(x,y)\) and \(K(\cdot,y): x \mapsto K(x,y)\) are bounded. One of the things he wants to do (inspired of course by the ``reduction'' of bilinear forms in a finite number of variables) is to operate an orthogonal transformation on \(x\) and \(y\), substituting the expressions \eqref{eq:5.37} for the \(x_p\) and doing the same for the \(y_p\). Unfortunately, he follows Frobenius in his conception of the ``''\emph{Faltung}'' of bilinear forms (instead of the natural idea of ``composing'' transformations). So, for two bounded bilinear forms \(A, B\), he has to show that the forms \(A_n(x,\cdot) B_n(\cdot,y)\) (\emph{Faltung} of \(A_n(x,y)\) and \(B_n(x,y)\), these forms being defined as in \eqref{eq:5.36}) are the forms \(C_n(x,y)\) corresponding to a bounded form \(C(x,y)\) which he calls again the ``\emph{Faltung}'' of \(A(x,y)\) and \(B(x,y)\) and writes \(A(x,\cdot) B(\cdot,y)\). He can then express the action of an orthogonal transformation on a bounded bilinear form \(K(x,y)\) as a ``\emph{Faltung}''
+\begin{equation}
+    \label{eq:5.39}
+    K'(x', y') = K(\cdot, \cdot) O(\cdot, x')O(\cdot, y')
+\end{equation}
+where \(O(x,y) = \sum\limits_{p,q} a_{pq} x_p y_q\) is the bounded bilinear form which he associates to the orthogonal transformation \eqref{eq:5.37}.
 
-% ditions
-% L 25q ’ % 2p5q%pr or q # q P
-% a = 1 a a = 0 for r
-% 2
-% > ®pq ’ > “pa"nq ° # P a = 1 a a = for n
-
-% (38)2
-% from which he immediately deduces that conversely (xp) is deduced from (x;) by appling the "inverse" orthogonal trans pa pPq ap
-% formation defined by (a’ ) with a’ = a _,
-% B) Hilbert restricts himself to forms (35) which he calls bounded: they are the (not necessarily symmetrio) forms such that there exists an M > O for which one has lKn(x,y)l < M
-% 2 2
-% p p2
-% for X xp <1, Z yp < 1 and for all n; he also introduces p p
-% bounded linear forms L(x) = T a x.,, with T a < 4=, so that for any x (resp. y), and any bounded bilinear form K, the linear forms K(x,¢): x+» K(x,y) and K(+,y): x> K(x,vy) are bounded, One of the things he wants to do (inspired of course by the "reduction" of bilinear forms in a finite num ber of variables) is to operate an orthogonal transformation on x and vy, substituting the expressions (37) for the X, and doing the same for the yp. Unfortunately, he follows Frobenius in his conception of the "Faltung" of bilinear forms (instead of the natural idea of "composing" transforma tions), So, for two bounded bilinear forms 4,B , he has to show that the forms An(X,°) Bn(°,Y) (Faltung of An(X,Y) and B_(x,y), these forms being defined as in (36)) are the
-
-% 114 CHAPTER V
-% forms Cn(x,y) corresponding to a bounded form ¢ (x,y) which he calls again the "Faltung" of A(x,y) and B(x,y) and writes A(x,s) B(+,vy). He ca& then express the action of an \
-% orthogonal transformation on d bounded bilinear form K (x,vy)
-% as a "Faltung"
-% (39) -K,(X!’Y') = K(°7')O(°’X’)O(°’Y’)
-% where O0(x,y) = % a_ x_¥y is the bounded bilinear form p,q PG P g
-% which he associates to the orthogonal transformation (37). C) For the development of Functional Analysis, the most im=- portant concepts introduced by Hilbert were what he calls "continuity" and "complete coutinuity", which correspond to
-% what will later be called the "strong" and "weak" topologies on Hilbert space. If F(x) is a complex=-valued function de fined for all sequences X = (xp) such that ¥ X < +o, P
-% Hilbert says that F is continuous if F(x(n)) tends to
-% p
-% F(x) when T (xp-xén)) tends to O, and that F is com
-% 2
-% P
-% pletely continuous if F(x(n)) tends to F(x) when ¥ xi < 1, 2 (x(n))2 < 1 and each coordinate xén) tends to x . He Ehows that a bounded bilinear form K(x,y) dis continuous, and that Kn(x,y) tends to K(x,y) when =n tends to +»., But he pays special attention to the completely continuous sym metric bilinear forms, and gives a separate proof that an or thogonal transformation can reduce any such form to the type 1 1 1
-% where the sequence (|Xn|) is either finite or tends to +w, He realizes that this is a genuine generalization of formula
-
-% THE CRUCIAL YEARS AND THE DEFINITION OF HILBERT SPACE 115
-% (24), which is the special case in which 2 k2 < +o (cor Py,q P4
-% responding to what will later be called the Hilbert-Schmidt
-% operators); he also mentions another special case, the one in which K(x,x) > 0 and Y kpp < 4o (Corresponding to the po p
-% sitive nuclear operators of a later date). This formula (40) enables him to go beyond Fredholm by solving a system (33) which is not derived any more {from an integral eguation, but in which the kpq are only supposed to be such that the sym metric bilinear form (35) is completely continuous. A final remark is that he repeatedly uses with great power what he calls a "principle of choice", which is equivalent to what will later be called the compactness of the unit ball for the
-% weak topology, and that he extends his results to hermitian (41) L1
-%  K(x,v) = z kpqxpyq
-% sesquilinear forms
-% P,g
-% where this time the sequences (xp), (yp) and (kpq) consist of complex numbers, with k = k_ .,
-% qp Pq
+C) For the development of Functional Analysis, the most important concepts introduced by Hilbert were what he calls ``continuity'' and ``complete coutinuity'', which correspond to what will later be called the ``strong'' and ``weak'' topologies on Hilbert space. If \(F(x)\) is a complex-valued function defined for all sequences \(x = (x_p)\) such that \(\sum\limits_p x_p^2 < +\infty\), Hilbert says that \(F\) is \emph{continuous} if \(F\left(x^{(n)}\right)\) tends to \(F(x)\) when \(\sum\limits_p \left(x_p - x_p^{(n)}\right)^2\) tends to 0, and that \(F\) is \emph{completely continuous} if \(F\left(x^{(n)}\right)\) tends to \(F(x)\) when \(\sum\limits_p x_p^2 \leq 1, \sum\limits_p \left(x_p^{(n)}\right)^2 \leq 1\) and each coordinate \(x_p^{(n)}\) tends to \(x_p\). He shows that a bounded bilinear form \(K(x,y)\) is continuous, and that \(K_n(x,y)\) tends to \(K(x,y)\) when \(n\) tends to \(\infty\). But he pays special attention to the completely continuous symmetric bilinear forms, and gives a separate proof that an orthogonal transformation can reduce any such form to the type
+\begin{equation}
+    \label{eq:5.40}
+    K(x,y) = \frac{1}{\lambda_1} x_1 y_1 +\frac{1}{\lambda_2} x_2 y_2 + \ldots + \frac{1}{\lambda_n} x_n y_n + \ldots
+\end{equation}
+where the sequence \((|\lambda_n|)\) is either finite or tends to \(+\infty\). He realizes that this is a genuine generalization of formula \eqref{eq:5.24}, which is the special case in which \(\sum\limits_{p,q} k_{pq}^2 < +\infty\) (corresponding to what will later be called the \emph{Hilbert--Schmidt operators}); he also mentions another special case, the one in which \(K(x,x) > 0\) and \(\sum\limits_p k_{pp} < +\infty\) (corresponding to the positive \emph{nuclear operators} of a later date). This formula \eqref{eq:5.40} enables him to go beyond Fredholm by solving a system \eqref{eq:5.33} which is not derived any more from an integral equation, but in which the \(k_{pq}\) are only supposed to be such that the symmetric bilinear form \eqref{eq:5.35} is completely continuous. A final remark is that he repeatedly uses with great power what he calls a ``principle of choice'', which is equivalent to what will later be called the compactness of the unit ball for the weak topology, and that he extends his results to \emph{hermitian} sesquilinear forms
+\begin{equation}
+    \label{eq:5.41}
+    K(x,y) = \sum_{p,q} k_{pq} x_p \overline{y}_q
+\end{equation}
+where this time the sequences \((x_p), (y_p)\) and \((k_{pq})\) consist of complex numbers, with \(k_{qp} = \overline{k}_{pq}\).
 
 \section{The confluence of Geometry, Topology and Analysis}
 \label{sec:5.3}
