@@ -1866,67 +1866,56 @@ where this time the sequences \((x_p), (y_p)\) and \((k_{pq})\) consist of compl
 \section{The confluence of Geometry, Topology and Analysis}
 \label{sec:5.3}
 
-% It may seem obvious to us that the results of Hilbert are but one step removed from what we now call the theory of Hilbert spacej; but if, in fact, the birth of that theory almost immediately followed the publication of Hilbert's papers, it seems to me that it is due to the fact that this publication precisely occurred during the emergence of a new concept in mathematics, the concept of structure,
+It may seem obvious to us that the results of Hilbert are but one step removed from what we now call the theory of Hilbert space; but if, in fact, the birth of that theory almost immediately followed the publication of Hilbert's papers, it seems to me that it is due to the fact that this publication precisely occurred during the emergence of a new concept in mathematics, the concept of \emph{structure}.
 
-% 116 CHAPTER V
-% Until the middle of the XIXth century, mathematicians had been dealing with well determined mathematical "objects'": numbers, points, curves, surfaces, volumes, functions, opera tors. But the fact that algebraic manipulations on different kinds of "objects" had a strikingly similar appearance soon attracted attention (cf., chap.IV, 3), and after 1840 it gradually became clear that the essence of these maunipulations did not lie in the nature of the objects, but in the rules to be followed in handling them, which might be the same for very different types of objects. However, a precise formulation of this idea had to wait for the adoption of the set-theoretic concepts and language; and it is only in 1895 that our defi
-% nition of a group, on an arbitrary underlying set, was formu lated by Weber [225]. The trend towards the definition of algebraic structures then gained momentum, and around 1920 all fundamental notions of present-day Algebra had been defined,
-% In Analysis, no similar development had yet ogcurred in 1900, The extensions of the ideas of 1limit and continuity which had been formulated always were relative to special objects such as curves, surfaces or functions, The possibi lity of defining such notions in an arbitrary set is an idea which undoubtedly was first put forward by Fréchet in 1904 [69], and developed by him in his famous thesis of 1906 [71]. The simplest and most fruitful method which he proposed for
-% such definitions was the introduction of the notion of dis tance (which he called "écart") on a set E, a function d(x,y) defined for any pair (x,y) of elements of E, with values =20 and such that: 1) the relation d(x,y) = O is
+Until the middle of the XIX\supth{} century, mathematicians had been dealing with \emph{well determined} mathematical ``objects'': numbers, points, curves, surfaces, volumes, functions, operators. But the fact that algebraic manipulations on different kinds of ``objects'' had a strikingly similar appearance soon attracted attention (cf. chap. \ref{ch:4}, \ref{sec:4.3}), and after 1840 it gradually became clear that the essence of these maunipulations did not lie in the \emph{nature} of the objects, but in the \emph{rules} to be followed in handling them, which might be the same for very different types of objects. However, a precise formulation of this idea had to wait for the adoption of the set-theoretic concepts and language; and it is only in 1895 that our definition of a \emph{group}, on an \emph{arbitrary} underlying set, was formulated by Weber \cite{225}. The trend towards the definition of algebraic structures then gained momentum, and around 1920 all fundamental notions of present-day Algebra had been defined.
 
-% THE CRUCIAL YEARS AND THE DEFINITION OF HILBERT SPACE 117
-% equivalent to x =vy; 2) d(y,x) = d(x,y); 3) d(x,z) < < d(x,y) + d(y,2z) for any three elements of E, It is ex tremely remarkable that with such simple axioms it is possible
-% to extend most notions and arguments relative to neighborhoods, limits and continuity in the space Rn, which usually are in troduced in relation to euclidean distance. But the greatest merit of Fréchet lies in the emphasis he put on three notions
-% which were to play a fundamental part in all later develop ments of Functional Analysis: compactness, completeness and separability., Moreover, he did not 1limit himself to deriving general theorems in an abstract setting, but more than half of his thesis is devoted to very "concrete" metric spaces (as they came to be called later) closely linked to Analysis: the
-% space of continuous real functions on a compact interval of R with the topology of uniform convergence, the space RN of all sequences nk> X, with the topology of simple convergen ce, the space of holomorphic functions in the disc |z| < 1,
-% with the topology of uniform convergence in compact subsets,
-% and finally the space of all continuous "curves", images of [0,1] in R by continuous maps, with a "distance" which is
-% a special case of what was later called the Hausdorff distan ce between two compact sets,
-% Clearly Hilbert's work immediately lent itself to applica tion of these ideas, and even invited a bodily transfer of euclidean geometry in "infinite dimension", This is exactly what was done by Fréchet himself [72] and by E, Schmidt [ 192] in 1908, In E, Schmidt's paper, we find the definition of 2 2
-% what we now call the (complex) space 4~ (or LC), with the
+In Analysis, no similar development had yet occurred in 1900. The extensions of the ideas of limit and continuity which had been formulated always were relative to \emph{special} objects such as curves, surfaces or functions. The possibility of defining such notions in an \emph{arbitrary} set is an idea which undoubtedly was first put forward by Fréchet in 1904 \cite{069}, and developed by him in his famous thesis of 1906 \cite{071}. The simplest and most fruitful method which he proposed for such definitions was the introduction of the notion of \emph{distance} (which he called ``écart'') on a set \(E\), a function \(d(x,y)\) defined for any pair \((x,y)\) of elements of \(E\), with values \(\geq 0\) and such that: 1) the relation \(d(x,y) = 0\) is equivalent to \(x = y\); 2) \(d(y,x) = d(x,y)\); 3) \(d(x,z) \leq d(x,y) + d(y,z)\) for any three elements of \(E\). It is extremely remarkable that with such simple axioms it is possible to extend most notions and arguments relative to neighborhoods, limits and continuity in the space \(\R^n\), which usually are introduced in relation to euclidean distance. But the greatest merit of Fréchet lies in the emphasis he put on three notions which were to play a fundamental part in all later develop ments of Functional Analysis: compactness, completeness and separability. Moreover, he did not limit himself to deriving general theorems in an abstract setting, but more than half of his thesis is devoted to very ``concrete'' metric spaces (as they came to be called later) closely linked to Analysis: the space of continuous real functions on a compact interval of \(\R\) with the topology of uniform convergence, the space \(\R^{\mathbb{N}}\) of all sequences \(n \mapsto x_n\), with the topology of simple convergence, the space of holomorphic functions in the disc \(|z| < 1\), with the topology of uniform convergence in compact subsets, and finally the space of all continuous ``curves'', images of \([0,1]\) in \(\R^3\) by continuous maps, with a ``distance'' which is a special case of what was later called the Hausdorff distance between two compact sets.
 
-% 118 CHAPTER V
-% notions of scalar product and of norm (already written | 4]),
-% the definition of orthogonality, of closed sets, and of vector subspaces (called "lineares Funktionengebilde"). The most interesting feature of that paper is the proof of the existen ce of the orthogonal projection of a point on a closed vector subspace, and the purely geometric way in which Schmidt uses this result to discuss the most general system of linear (42) (x|a)) = ¢ (n=1,2, \ldots)
-% equations in Hilbert space
-% where the a are arbitrary vectors of LZ and the c, ar
-% bitrary complex numbers,
-% For each n, Schmidt considers the closed linear affine varieties F_ of LZ defined by the equatioas (x|aj) = C for 1 £ j £ n, and the orthogonal projection x(n) of' the
-% origin on Fn; the necessary and sufficient condition of
-% existence of a solution of the system (42) is that the in=- creasing sequence (Hx(n)”) be bounded; the sequence (x(n)) then has a weak 1limit x in LZ, which is the solution of (42) of smallest norm, Of course, each F_~must be different k=1 k=1
-% from the empty set, which means that any linear relation
+Clearly Hilbert's work immediately lent itself to application of these ideas, and even invited a bodily transfer of euclidean geometry in ``infinite dimension''. This is exactly what was done by Fréchet himself \cite{072} and by E. Schmidt \cite{192} in 1908. In E. Schmidt's paper, we find the definition of what we now call the (complex) space \(l^2\) (or \(l^2_{\C}\)), with the notions of scalar product and of norm (already written \(\norm{A}\)), the definition of orthogonality, of closed sets, and of vector subspaces (called "\emph{lineares Funktionengebilde}"). The most interesting feature of that paper is the proof of the existence of the orthogonal projection of a point on a closed vector subspace, and the purely geometric way in which Schmidt uses this result to discuss the \emph{most general} system of linear equations in Hilbert space
+\begin{equation}
+    \label{eq:5.42}
+    (x|a_n) = c_n \qquad (n=1,2,\ldots)
+\end{equation}
+where the \(a_n\) are arbitrary vectors of \(l^2\) and the \(c_n\) arbitrary complex numbers,
 
-% g xkak = O between the vectors an must imply ;
-% )\ka = O3
+For each \(n\), Schmidt considers the closed linear affine varieties \(F_n\) of \(l^2\) defined by the equatioas \((x|a_j) = c_j\) for \(1 \leq j \leq n\), and the orthogonal projection \(x^{(n)}\) of the origin on \(F_n\); the necessary and sufficient condition of existence of a solution of the system \eqref{eq:5.42} is that the increasing sequence \(\left(\norm{x^{(n)}}\right)\) be bounded; the sequence \(\left(x^{(n)}\right)\) then has a weak limit \(x\) in \(l^2\), which is the solution of \eqref{eq:5.42} of smallest norm. Of course, each \(F_n\) must be different from the empty set, which means that any linear relation \(\sum\limits_{k=1}^n \lambda_k a_k = 0\) between the vectors \(a_n\) must imply \(\sum\limits_{k=1}^n \lambda_k c_k = 0\); one can then assume (by dropping some of the equations \eqref{eq:5.42}) that the \(a_n\) are linearly independent, and in that case, Schmidt easily obtains the explicit expression of \(\norm{x^{(n)}}\):
+\begin{equation}
+    \label{eq:5.43}
+    \norm{x^{(n)}}^2 = \Delta_n / D_n
+\end{equation}
+with
+\begin{equation}
+    \label{eq:5.44}
+    \begin{gathered}
+        D_n =
+        \left|
+        \begin{matrix}
+            (a_1 | a_1) & (a_1 | a_2) & \ldots & (a_1 | a_n) \\
+            (a_2 | a_1) & (a_2 | a_2) & \ldots & (a_2 | a_n) \\
+            \hdotsfor{4} \\
+            (a_n | a_1) & (a_n | a_2) & \ldots & (a_n | a_n) \\
+        \end{matrix}
+        \right|
+        , \\
+        \Delta_n =
+        \begin{array}{|c c c c c|}
+        0 & c_1 & c_2 & \cdots & c_n \\
+        \cline{2-5}
+        \multicolumn{1}{|c|}{\overline{c}_1} & & & & \\
+        \multicolumn{1}{|c|}{\overline{c}_2} &
+        \multicolumn{4}{|c|}{} \\
+        \multicolumn{1}{|c|}{\vdots} &
+        \multicolumn{4}{|c|}{D_n} \\
+        \multicolumn{1}{|c|}{\overline{c}_n} &
+        \multicolumn{4}{|c|}{} \\
+        \end{array}
+    \end{gathered}
+\end{equation}
 
-% one can then assume (by dropping some of the equations (42)) that the a ~are linearly independent, and in that case, (43) 1x()* A,/D
-% Schmidt easily obtains the explicit expression of ”x(n)l with
+This geometric outlook was already shared in 1906--1907 by two other young mathematicians, E. Fischer and F. Riesz, in the remarkable work which led them (independently) to what is now called the Fischer--Riesz theorem, introducing a hitherto unsuspected link between Hilbert space and the theory of in tegration (\cite{066}, \cite[vol.~I, p.~378--395]{183}). The latter, from Cauchy to Jordan and Peano, had evolved in a manner completely independent from spectral theory \cite{103}. When Fredholm and E. Schmidt had tried to enlarge the scope of their results on integral equations by weakening the assumptions on the kernel \(K(x,y)\), they had nothing else at their disposal beyond the horrible and useless so-called ``Riemann integral''\footnote{As a function \(K(x,y)\) of two variables may be ``Riemann integrable'' even if the partial functions \(x \mapsto K(x,y)\) are not, Fredholm is compelled to assume that integrability both for the kernel \(K\) and all its partial functions! Although E.Schmidt wrote his dissertation in 1905, he probably had no knowledge of Lebesgue's thesis at that time.}, and it is likely that progess in Functional Analysis might have been appreciably slowed down if the invention of the Lebesgue integral had not appeared, by a happy coincidence, exactly at the beginning of Hilbert's work on integral equations. With the help of this marvellous new tool, Fischer and F. Riesz could define the space \(L^2(I)\) over a compact interval \(I \subset \R\), consisting of square integrable functions, when two functions are identified if they only differ in a set of measure 0, Their fundameutal result is that, if to each function \(f \in L^2(I)\) one associates the sequence \((x_p)\) of its Fourier coefficients with respect to a complete orthonormal system (equations \eqref{eq:5.32}), this defines an \emph{isomorphism} of \(L^2(I)\) onto \(l^2\); from that it follows that \(L^2(I)\) is complete and separable. A byproduct was of course that the results of Fredholm and E. Schmidt could be applied without change to any integral equation where the kernel is only supposed to belong to \(L^2(I \times I)\), since it is then equivalent to a system of linear equations corresponding to a ``completely continuous'' bilinear form in the sense of Hilbert.
 
-% THE CRUCIAL YEARS AND THE DEFINITION OF HILBERT SPACE 119
-% (aglay) (a,]a,) «ee (ala)
-% (ay]ay) (aylay) «en (apla)
-% (a la;) (ala) «oo (a]a)
-% (44)1 Co eees . |0]
-% oQIeee
-% This geometric outlook was already shared in 1906-1907 by two other young mathematicians, E, Fischer and F, Riesz, in the remarkable work which led them (independently) to what is now called the Fischer-Riesz theorem, introducing a hitherto
-% unsuspected link between Hilbert space and the theory of in tegration ([66], [183, vol.I, p.378-395]). The latter, from
-% Cauchy to Jordan and Peano, had evolved in a manner complete ly independent from spectral theory [103], When Fredholm and EF., Schmidt had tried to enlarge the scope of their results on
-% integral equations by weakening the assumptions on the kernel K(x,v), they had nothing else at their disposal beyond the ¥
-% horrible and useless so~called "Riemann integral"( ), and it ( )As a function K(x,y) of two variables may be "Riemann in
-% %
-% tegrable" even if the partial functions x+—K(x,y) are not, Fredholm is compelled to assume that integrability both for the kernel K and all its partial functions! Although E,Schmidt wrote his dissertation in 1905, he probably had no knowledge of Lebesgue's thesis at that time,
-
-% 120 CHAPTER V
-% is likely that progess in Functional Analysis might have been appreciably slowed down if the invention of the Lebesgue in tegral had not appeared, by a happy coincidence, exactly at the beginning of Hilbert's work on integral equations., With
-% the help of this marvellous new tool, Fischer and F, Riesz could define the space LZ(I) over a compact interval I € R,
-% consisting of square integrable functions, when two functions are identified if they only differ in a set of measure O, Their fundameutal result is that, if to each function f € LZC% one associates the sequence (xp) of its Fourier coefficients
-% with respect to a complete orthonormal system (equations (32)), this defines an isomorphism of LZ(I) onto LZ; from that it follows that LZ(I) is complete and separable. A byproduct
-% was of course that the results of Fredholm and E, Schmidt
-% could be applied without change to any integral equation where the kernel is only supposed to belong to LZ(IxI), since it
-% is then equivalent to a system of linear equations correspond ing to a "completely continuous" bilinear form in the sense of Hilbert.,
-% But the most important consequence of the Fischer-Riesz
-% theorem is that it opened the way to the definition of the LP spaces and to the general theory of normed spaces, which
-% will be the subject of the next chapter,
+But the most important consequence of the Fischer--Riesz theorem is that it opened the way to the definition of the \(L^p\) spaces and to the general theory of normed spaces, which will be the subject of the next chapter.
 
 \chapter{Duality and the definition of normed spaces}
 \label{ch:6}
