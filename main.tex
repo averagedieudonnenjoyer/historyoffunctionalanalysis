@@ -2098,66 +2098,40 @@ Two years later, Banach, who apparently was not aware of Hahn's paper, published
 \section{The method of the gliding hump and Baire category}
 \label{sec:6.4}
 
-% In his 1922 paper [ 97], Hahn proved the following theorem: let E Dbe a complete normed space, (un) a sequence of con tinuous linear forms on E, and suppose that for each x¢€¢ E,
-% the sequence of numbers |un(x)| is bounded by a number de pending on x3; then the sequence of the norms ”un” is bounded.
-% The proof is by contradiction; assuming that the sequence (”un”) is unbounded, one determines by induction a sequence (Xk) in E and a sequence (nk) of integers such that: (00)
-% 12 the series £ X, converges to an element x € E; k=1
-% 20 Z lu. (x.)] = 1;
-% j=k+1 "k Y
-% k=1
-% 0 fuy ()l 2 2y ()1
-% k=1 o
-% Then one has for each k,
-% u (x)] =2 |u (x)] - = |u, (x.)]| - T lu. (x.)] =2 k-1 | Ny | I n ok =1 "k Y j=k+1 kY which contradicts the assumption. To do this, one assumes the u have been determined for Jj < k, and one considers a ball
+In his 1922 paper \cite{097}, Hahn proved the following theorem: let \(E\) be a complete normed space, \((u_n)\) a sequence of continuous linear forms on \(E\), and suppose that for each \(x \in E\), the sequence of numbers \(|u_n(x)|\) is bounded by a number \emph{depending on} ; then the sequence of the norms \(\norm{u_n}\) is \emph{bounded}. The proof is by contradiction; assuming that the sequence \((\norm{u_n})\) is unbounded, one determines by induction a sequence \((x_k)\) in \(E\) and a sequence \((n_k)\) of integers such that:
 
-% DUALITY AND THE DEFINITION OF NORMED SPACES 139
-% B, | x|l « 27 - inf (”unj||+l)-l
-% k
-% Jj<k
-% in E; the assumption that (HunH) is unbounded guarantees the existence of an index n, and a point Xk;E Bk for which condition 3¢ holds; conditions 19?2 and 292 are then deduced from the choice of the radius of the ball Bk'
-% This is often called the "method of the gliding hump": in the sequence of values |unk(xj)| when j varies from 1 to +o, the index j = k corresponds to a "hump" much bigger than the sum of the contributions of the other indices.
-% The result can be put in a different form: if the sequence (HunH) is unbounded, there exists at least one x € E such that the sequence (|un(x)|) is unbounded,
-% In this form, the first example of the method of the gliding hump is probably the way in which Lebesgue, in 1905 ([138], vol.,III, p.101] and [139, p.86-88]) constructed a continuous periodic function F(x) in [0,2n] whose Fourier series di verges at the point O, He had proved that, if one writes Sn(g) for the sum of the first n terms of the Fourier se ries of a continuous function g, it is possible to find a sequernce (gn) of continuous periodc functions of bounded variation such that |gn(t)| < 1 din [0,2r] and that the sequence of values Sn(gn)(O) tends to +», He then defines
-% €y ®x Kk
-% F(x) = elfl(nlx) + ezfz(nzx) +oeet ekfk(nkx) tees
-% o
-% are > 0 and such that Z
-% where the =1, the T k=1
-% are continuous periodic functions of bounded variation such that [f, (t)| < 1 in [0,2n] and that |spk(fk)(o)| 2 k/e, for an increasing sequence (pk) of integers. Finally the
+1° the series \(\sum\limits_{k=1}^\infty x_k\) converges to an element \(x \in E\);
 
-% 140 CHAPTER VI
-% increasing seguence (nk) of integers is chosen in such a way that n,_ K > and that, for the continuous function Ny -1Proa of bounded variation Fk(x) = elfl(nlx) +ooot ek-lfk-l(nk-lx)’ all the sums Sn(Fk)(O) are <2 in absolute value for n = n, (they converge to Fk(O)). This choice implies that, for j > %k, the sum of the first n terms of the Fourier kPk series of fj(njx) is reduced to the first term of the series,
-% hence is <1 in absolute value; using these definitions it is easy to check that |S (F)(0)| = k-3 for all k. “xPx One year later, Hellinger and Toeplitz, two students of
-% Hilbert, found a rather surprising complement to the defini
-% tion he had given of a bounded bilinear form (chap.V, 2); instead of assuming that [k (x,y)| £ M for all n and all
-% p p P
-% X = (xp) and y = (yp) such that I xi < 1 and I y2 < 1,
-% they showed that it was enough to assume that for each such pair (x,y), one had [Kn(x,y)| < Mx,y for all n, where
-% the number Mx y might depend on x, y in an arbitrary way, ’
-% Indepeundently of Lebesgue, they proved that result by a "gliding hump" method, constructing a pair (x,y) for which the sequence (|Kn(x,y)|) is unbounded if X is not a bound ed form in Hilbert's sense [106].
-% During the next 20 years, many more examples of the "gliding hump" method appeared in the literature: Lebesgue used it repeatedly in a 1909 paper on "singular integrals" ([138],
-% vol.ITT, p.259-351), where one looks for conditions on "kernels" K_ insuring that the integrals I, f(t)Kn(t,x)dt tend to f(x) when n tends to +», for various ;inds of function f,.
-% The method was also prominent in the study of "summation pro-
+2° \(\sum\limits_{j=k+1}^\infty \left| u_{n_k}(x_j) \right| \leq 1\);
 
-% DUALITY AND THE DEFINITION OF NORMED SPACES 141
-% cesses", where one "transforms" a sequence (xn) into a se=- (o0}
-% quence (yn) by the formulas y_ = X a_ X and has to n no1 Dm m’ look for conditions on the a__ insuring that when (xn) has a limit, (y,) tends to the same limit ([193], vol.II, p. 389-321). Hahn's paper of 1922 [97] was written to give a general background to all these results, showing that they all were consequences of his general theorem. Independently, Banach, in his thesis, proved a theorem more general than Hahn's, the u being now continuous linear operators from a complete normed space E dinto a complete normed space F3; he showed that the assumption that the norms Hun(x)H are bound ed for each x by a number depending on x, implies that the sequence of the norms Hun“ is bounded.
-% Finally, in 1927, Banach and Steinhaus (using an idea of Saks) discovered that this theorem could be proved without
-% using the "gliding hump" method, by an application of a theo rem Baire had proved in 1899 [11]: he had shownthat in R",
-% the intersection of a denumerable family of dense open subsets is itself dense( ); this implies that if u 1is a real func-
-% . . . . . n .
-% *
-% tion defined and lower semi-continuous in R , and if u(x) < < 4+ for each x € Rn, then any non empty open subset U of R contains a non empty open subset V such that sup u(x) < xXc€V
-% < 4o, These results and their proofs immediately generalize when Rn is replaced by an arbitrary complete metric space. If now H 1is a set of linear mappings from a complete normed space E into a complete normed space F, and if for each
-% ( )For n =1, the same result had been proved two years
-% *
-% earlier by W, Osgood [170].
+3° \(\left| u_{n_k}(x_k) \right| \geq k + \sum\limits_{j=1}^{k-1} \left| u_{n_k}(x_j) \right|\).
 
-% 142 CHAPTER VI
-% ucH ucH
-% x € E, sup ||lu(x)|| < +o, the function p(x) = sup ||u(x)| is
-% lower semi-continuous, and from the Baire theorem it follows that p 1is bounded in a neighborhood of O, which implies that sup [[u]] is finite [16].
-% u€H
+Then one has for each \(k\),
+\[
+    \left| u_{n_k}(x) \right| \geq \left| u_{n_k}(x_k) \right| - \sum\limits_{j=1}^{k-1} \left| u_{n_k}(x_j) \right| - \sum\limits_{j=k+1}^{\infty} \left| u_{n_k}(x_j) \right| \geq k-1
+\]
+which contradicts the assumption. To do this, one assumes the \(u_{n_j}\) have been determined for \(j < k\), and one considers a ball
+\[
+    B_k: \norm{x} \leq 2^{-k} \cdot \inf_{j < k}\left(\norm{u_{n_j} + 1}\right)^{-1}
+\]
+in \(E\); the assumption that \((\norm{u_n})\) is unbounded guarantees the existence of an index \(n_k\) and a point \(x_k \in B_k\) for which condition 3° holds; conditions 1° and 2° are then deduced from the choice of the radius of the ball \(B_k\).
+
+This is often called the ``method of the gliding hump'': in the sequence of values \(|u_{n_k}(x_j)|\) when \(j\) varies from 1 to \(+\infty\), the index \(j = k\) corresponds to a ``hump'' much bigger than the sum of the contributions of the other indices.
+
+The result can be put in a different form: if the sequence \(|u_{n_k}(x_j)|\) is unbounded, there exists at least one \(x \in E\) such that the sequence \(|u_{n_k}(x)|\) is unbounded.
+
+In this form, the first example of the method of the gliding hump is probably the way in which Lebesgue, in 1905 (\cite[vol.~III, p.~101]{138} and \cite[p.~86--88]{139}) constructed a continuous periodic function \(F(x)\) in \([0,2\pi]\) whose Fourier series diverges at the point 0. He had proved that, if one writes \(S_n(g)\) for the sum of the first \(n\) terms of the Fourier series of a continuous function \(g\), it is possible to find a sequence \((g_n)\) of continuous periodc functions of bounded variation such that \(|g_n(t)| \leq 1\) in \([0,2\pi]\) and that the sequence of values \(S_n(g_n)(0)\) tends to \(+\infty\). He then defines
+\[
+    F(x) = \varepsilon_1 f_1(n_1 x) + \varepsilon_2 f_2(n_2 x) + \ldots + \varepsilon_k f_k(n_k x) + \ldots
+\]
+where the \(\varepsilon_k\) are \(> 0\) and such that \(\sum\limits_{k=1}^\infty \varepsilon_k = 1\), the \(f_k\) are continuous periodic functions of bounded variation such that \(f_k(t)| \leq 1\) in \([0,2\pi]\) and that \(\left|S_{p_k}(f_k)(0)\right| \geq k/\varepsilon_k\), for an increasing sequence \((p_k)\) of integers. Finally the increasing seguence \((n_k)\) of integers is chosen in such a way that \(n_k > n_{k-1} p_{k-1}\) and that, for the continuous function of bounded variation \(F_k(x) = \varepsilon_1 f_1(n_1 x) + \ldots + \varepsilon_{k-1} f_{k-1}(n_{k-1} x)\), all the sums \(S_n(F_k)(0)\) are \(\leq 2\) in absolute value for \(n \geq n_k\), (they converge to \(F_k(0)\)). This choice implies that, for \(j > k\), the sum of the first \(n_k p_k\) terms of the Fourier series of \(f_j(n_j x)\) is reduced to the \emph{first} term of the series, hence is \(\leq 1\) in absolute value; using these definitions it is easy to check that \(\left|S_{n_k p_k}(F)(0)\right| \geq k-3\) for all \(k\).
+
+One year later, Hellinger and Toeplitz, two students of Hilbert, found a rather surprising complement to the definition he had given of a \emph{bounded} bilinear form (chap. \ref{ch:5}, \ref{sec:5.2}); instead of assuming that \(|K_n(x,y)| \leq M\) for all \(n\) and all \(x = (x_p)\) and \(y = (y_p)\) such that \(\sum\limits_p x_p^2 \leq 1\) and \(\sum\limits_p y_p^2 \leq 1\), they showed that it was enough to assume that for each such pair \((x,y)\), one had \(|K_n(x,y)| < M_{x,y}\) for all \(n\), where the number \(M_{x,y}\) \emph{might depend} on \(x, y\) \emph{in an arbitrary way}. Independently of Lebesgue, they proved that result by a ``gliding hump'' method, constructing a pair \((x,y)\) for which the sequence \((|K_n(x,y)|)\) is unbounded if \(K\) is not a \emph{bounded} form in Hilbert's sense \cite{106}.
+
+During the next 20 years, many more examples of the ``gliding hump'' method appeared in the literature: Lebesgue used it repeatedly in a 1909 paper on ``singular integrals'' (\cite{138}, vol.~III, p.~259--351), where one looks for conditions on ``kernels'' \(K_n\) insuring that the integrals \(\int_a^b f(t)K_n(t,x)dt\) tend to \(f(x)\) when \(n\) tends to \(+\infty\), for various kinds of function \(f\). The method was also prominent in the study of ``summation processes'', where one ``transforms'' a sequence \((x_n)\) into a sequence \((y_n)\) by the formulas \(y_n = \sum\limits_{m=1}^\infty a_{nm} x_m\), and has to look for conditions on the \(a_{nm}\) insuring that when \((x_n)\) has a limit, \((y_n)\) tends to the same limit (\cite{193}, vol.~II, p.~389--321). Hahn's paper of 1922 \cite{097} was written to give a general background to all these results, showing that they all were consequences of his general theorem. Independently, Banach, in his thesis, proved a theorem more general than Hahn's, the \(u_n\) being now continuous linear operators from a complete normed space \(E\) into a complete normed space \(F\); he showed that the assumption that the norms \(\norm{u_n(x)}\) are bounded for each \(x\) by a number depending on \(x\), implies that the sequence of the norms \(\norm{u_n}\) is bounded.
+
+Finally, in 1927, Banach and Steinhaus (using an idea of Saks) discovered that this theorem could be proved without using the ``gliding hump'' method, by an application of a theorem Baire had proved in 1899 \cite{011}: he had shown that in \(\R^n\), the intersection of a denumerable family of dense open subsets is itself dense\footnote{For \(n =1\), the same result had been proved two years earlier by W. Osgood \cite{170}.}; this implies that if \(u\) is a real function defined and \emph{lower semi-continuous} in \(\R^n\), and if \(u(x) < +\infty\) for each \(x \in \R^n\), then any non empty open subset \(U\) of \(\R^n\) contains a non empty open subset \(V\) such that \(\sup\limits_{x \in V} u(x) < +\infty\). These results and their proofs immediately generalize when \(\R^n\) is replaced by an arbitrary \emph{complete metric space}. If now \(H\) is a set of linear mappings from a complete normed space \(E\) into a complete normed space \(F\), and if for each \(x \in E, \sup\limits_{u \in H} \norm{u(x)} < +\infty\), the function \(p(x) = \sup\limits_{u \in H} \norm{u(x)}\) is lower semi-continuous, and from the Baire theorem it follows that \(p\) is bounded in a neighborhood of 0, which implies that \(\sup\limits_{u \in H} \norm{u}\) is finite \cite{16}.
+
 % 5 - Banach's book and beyond
 % In 1932 S. Banach published a book [15] containing a com prehensive account of all results known at that time in the theory of normed spaces, and in particular the theorems he had published in his papers of 1923 and 1929. A large part was devoted to the concept of weak convergence and its gene ralizations, which he had begun to study in 1929; we shall postpone to chap.VIII, 1 the discussion of these questions., The most remarkable result contained in that book is another consequence of Baire's theorem, discovered by Banach, and much deeper than the Banach-Steinhaus theorem: if u is a contin uous linear mapping from a complete normed space E dinto a complete normed space F, then either u(E) is meager in F (a2 set "of first category" in the terminology of Baire), or u(E) = F. An immediate consequence is the famous closed graph theorem: 4if u dis a linear mapping from E +to F having a closed graph in EXF, then u 1is continuous. These surpris ing results have become two of the most powerful tools in all applications of Functional Analysis.
 % These features, as well as many applicatiouns to classical Analysis, gave the book a great appeal, and it had on Func tional Analysis the same impact that van der Waerden's book
