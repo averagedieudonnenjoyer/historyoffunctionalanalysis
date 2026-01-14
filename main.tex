@@ -2161,7 +2161,9 @@ In my opinion, F. Riesz's 1918 paper is one of the most beautiful ever written; 
 F. Riesz then considers a completely continuous linear mapping \(u\) of \(E\) into itself (or, as we now say, a \emph{compact} linear mapping), and studies the endomorphism \(v = 1_E - u\) of \(E\). Using the two remarks above and very simple arguments, he proves in succession the following properties:
 \begin{enumerate}[a),noitemsep]
     \item the kernel \(V^{-1}(0)\) has finite dimension;
+    
     \item the image \(v(E)\) is closed in \(E\);
+    
     \item the codimension of \(v(E)\) in \(E\) is finite.
 \end{enumerate}
 The next step is to consider the \emph{iterates} \(v^k\) of \(v\), the kernel \(N_k\) and the image \(F_k\) of \(v^k\) \footnote{In finite dimensional spaces, this method to obtain the the Jordan normal form of an endomorphism had been developed by E. Weyr \cite{228}.}; the \(N_k\) form an increasing sequence of closed subspaces of finite dimension, the \(F_k\) a decreasing sequence of closed subspaces of finite codimension. F. Riesz shows, by contradiction and using remark 2) above, that there is a smallest integer \(n\) such that \(N_{k+1} = N_k\) for \(k \geq n\); it is then an easy matter to prove that \(F_{k+1} = F_k\) for \(k \geq n\), and that \(E\) is the \emph{topological direct sum} of \(F_n\) and \(N_n\); the restriction of \(v\) to \(F_n\) is a linear \emph{homeomorphism} of \(F_n\) onto itself. In particular, if \(N_1 = V^{-1}(0) = {0}, v\) is a linear homeomorphism of \(E\) onto itself, and its inverse \(w = v^{-1}\) is such that \((1_E - u) w = 1_E\), in other words \(w = 1_E + uw\) has the same form as \(v\), since \(uw\) is compact.
