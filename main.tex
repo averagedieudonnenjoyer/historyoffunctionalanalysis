@@ -2103,13 +2103,13 @@ Two years later, Banach, who apparently was not aware of Hahn's paper, published
 \label{sec:6.4}
 
 In his 1922 paper \cite{097}, Hahn proved the following theorem: let \(E\) be a complete normed space, \((u_n)\) a sequence of continuous linear forms on \(E\), and suppose that for each \(x \in E\), the sequence of numbers \(|u_n(x)|\) is bounded by a number \emph{depending on} ; then the sequence of the norms \(\norm{u_n}\) is \emph{bounded}. The proof is by contradiction; assuming that the sequence \((\norm{u_n})\) is unbounded, one determines by induction a sequence \((x_k)\) in \(E\) and a sequence \((n_k)\) of integers such that:
+\begin{enumerate}[1°,noitemsep]
+    \item the series \(\sum\limits_{k=1}^\infty x_k\) converges to an element \(x \in E\);
 
-1° the series \(\sum\limits_{k=1}^\infty x_k\) converges to an element \(x \in E\);
+    \item \(\sum\limits_{j=k+1}^\infty \left| u_{n_k}(x_j) \right| \leq 1\);
 
-2° \(\sum\limits_{j=k+1}^\infty \left| u_{n_k}(x_j) \right| \leq 1\);
-
-3° \(\left| u_{n_k}(x_k) \right| \geq k + \sum\limits_{j=1}^{k-1} \left| u_{n_k}(x_j) \right|\).
-
+    \item \(\left| u_{n_k}(x_k) \right| \geq k + \sum\limits_{j=1}^{k-1} \left| u_{n_k}(x_j) \right|\).
+\end{enumerate}
 Then one has for each \(k\),
 \[
     \left| u_{n_k}(x) \right| \geq \left| u_{n_k}(x_k) \right| - \sum\limits_{j=1}^{k-1} \left| u_{n_k}(x_j) \right| - \sum\limits_{j=k+1}^{\infty} \left| u_{n_k}(x_j) \right| \geq k-1
