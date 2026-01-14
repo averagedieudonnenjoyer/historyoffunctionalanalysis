@@ -7,6 +7,6 @@ Pages and rows are referred to the original book. Equations are not considered a
 - "strooke", p. 102, sixth-to-last line
 - "appling", p. 113, fifth line
 - "progess", p. 120, first line
-- "marvellous", p. 120, fifth line
+- "marvellous", p. 120, fifth line (correct in British English, but the author uses American English, so we consider it a typo)
 - "explicity", p. 126, seventh-to-last line
 - "periodc", p. 139, seventh-to-last line
