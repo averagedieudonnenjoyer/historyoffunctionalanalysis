@@ -490,10 +490,7 @@ The simplest application of this idea is to the proof of Cauchy's existence and 
 During the whole XIX\supth{} century, the theory of partial differential equations (in contrast with the theory of ordinary differential equations) has remained in an embryonic stage. The only general theorem, patterned after the Cauchy theorem on local existence and uniqueness of solutions of ordinary differential equations, is the Cauchy--Kowalewska theorem: suppose we have a system of \(r\) equations in \(r\) unknown real functions \(v_1, \ldots, v_r\) of \(p+1\) real variables \(x_1, \ldots, x_p\), of type
 \begin{equation}
     \label{eq:2.8}
-    \begin{gathered}
-    \frac{\partial v_j}{\partial x_{p+1}} = \\
-    = H_j\left(x_1, \ldots, x_{p+1}, v_1, \ldots, v_{r}, \frac{\partial v_1}{\partial x_1}, \frac{\partial v_1}{\partial x_2}, \ldots, \frac{\partial v_r}{\partial x_{p-1}}, \frac{\partial v_r}{\partial x_p}\right) \hfill (1 \leq j \leq r)
-    \end{gathered}
+    \frac{\partial v_j}{\partial x_{p+1}} = H_j\left(x_1, \ldots, x_{p+1}, v_1, \ldots, v_{r}, \frac{\partial v_1}{\partial x_1}, \frac{\partial v_1}{\partial x_2}, \ldots, \frac{\partial v_r}{\partial x_{p-1}}, \frac{\partial v_r}{\partial x_p}\right) \hfill (1 \leq j \leq r)
 \end{equation}
 where the right hand sides do not contain any derivative with respect to \(x_{p+1}\) and are supposed to be real and \emph{analytic} with respect to their \(p+1+r+rp\) variables, in a neighborhood \(V_0\) of 0 in \(\R^{p+1+r+rp}\); then there is a small neighborhood \(V\) of 0 in \(\R^{p+1}\) such that \eqref{eq:2.8} has in \(V\) a unique solution \((v_1,\ldots,v_r)\) consisting of \emph{analytic} functions in \(V\), such that \(v_j(x_1,\ldots,x_p,0) = 0\) in \(V \cap \R^p\) for \(1 \leq j \leq r\).
 
@@ -513,10 +510,7 @@ The remainder of the theory of partial differential equations until 1890 was lim
 A first attempt of classification of second order equations in 2 variables had been made by Laplace \cite[vol.~IX, p.~21--28]{137} He considered ``quasi-linear'' equations, i.e. those of the form
 \begin{equation}
   \label{eq:2.9}
-  \begin{gathered}
-    A(x,y) \frac{\partial^2 z}{\partial x^2} + B(x,y) \frac{\partial^2 z}{\partial x \partial y} + \\
-    + C(x,y) \frac{\partial^2 z}{\partial y^2} + F\left( x,y,z, \frac{\partial z}{\partial x}, \frac{\partial z}{\partial y} \right) = 0
-  \end{gathered}
+    A(x,y) \frac{\partial^2 z}{\partial x^2} + B(x,y) \frac{\partial^2 z}{\partial x \partial y} + C(x,y) \frac{\partial^2 z}{\partial y^2} + F\left( x,y,z, \frac{\partial z}{\partial x}, \frac{\partial z}{\partial y} \right) = 0
 \end{equation}
 linear in the second order derivatives. As he did not have a clear idea of the distinction between real and complex variables, and therefore did not hesitate to give complex values to \(x\) and \(y\), he asserted that a suitable change of variables could reduce the terms of \eqref{eq:2.9} containing second order derivatives either to \(\frac{\partial^2 z}{\partial x \partial y}\) or to \(\frac{\partial^2 z}{\partial x^2}\) when \(A, B, C\) are not all identically zero! With the development of the theory of functions of one complex variable, it was soon realized that, for real variables \(x, y\), equations \eqref{eq:2.9} where the second order derivatives enter by \(\frac{\partial^2 z}{\partial x^2} + \frac{\partial^2 z}{\partial y^2}\) (called \emph{elliptic} equations) had to be sharply distinguished from those (called \emph{hyperbolic} equations) where the second order derivatives enter by \(\frac{\partial^2 z}{\partial x \partial y}\) or \(\frac{\partial^2 z}{\partial x^2} - \frac{\partial^2 z}{\partial y^2}\). The study of general boundary conditions for hyperbolic equations only begins around 1860 and will have little contact with Functional Analysis until around 1925 (see chapter \ref{ch:9}, \ref{sec:9.5}). On the contrary, the various problems connected with the Laplace equation in 2 or 3 variables will be one of the main concerns of analysts from 1828 onwards, and will become the impetus leading to the theory of integral equations, and thence to our modern Functional Analysis.
 
