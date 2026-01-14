@@ -8,6 +8,7 @@
 % - the integrals in text mode are not exactly the same as those in math mode, while Diuedonné wrote them with the same symbol at the same height
 % - substitute all \frac{\partial #1}{\partial #2} with \pder
 % - substitute all divergences with \divergence
+% - add space between the end of a section and the beginning of another
 
 \documentclass[12pt,a4paper,leqno,twoside]{extbook}
 
@@ -427,12 +428,12 @@ where the parameter \(\varepsilon\) on the right-hand sides is ``small''. The ge
 to substitute these expressions in and identify the coefficients of the successive powers of \(\varepsilon\) on both sides. This led to a succession of equations
 \mytodo{the line of dots at the end is not visible}
 \[
-\begin{aligned}
-    y'_{1i} &= f_{1i}(x, a_1, \ldots, a_n) \\
-    y'_{2i} &= F_{2i}(x, y_{11}, \ldots, y_{1n}) \\
-    y'_{3i} &= F_{3i}(x, y_{11}, \ldots, y_{1n}, y_{21}, \ldots, y_{2n}) \\
-    \dotfill
-\end{aligned}
+    \begin{array}{l}
+        y'_{1i} = f_{1i}(x, a_1, \ldots, a_n) \\
+        y'_{2i} = F_{2i}(x, y_{11}, \ldots, y_{1n}) \\
+        y'_{3i} = F_{3i}(x, y_{11}, \ldots, y_{1n}, y_{21}, \ldots, y_{2n}) \\
+        \dotfill
+    \end{array}
 \]
 all of which had right-hand sides which were known functions, hence were reduced to mere ``quadratures''. No attempt was made to justify mathematically those procedures; the goal of these computations was merely to obtain a satisfactory agreement with observations.
 
