@@ -13,6 +13,14 @@ Pages and rows are referred to the original book. Equations are not considered a
 - "explicity", p. 126, seventh-to-last line
 - "periodc", p. 139, seventh-to-last line
 
+# Punctuation
+
+When Dieudonné references pages of entries in the bibliography, sometimes he writes "p.N", other times "p. N". Here they are always "p. N".
+
+Missing punctuation in the original book:
+
+- "p 876", p. 145, sixth line
+
 # Other changes
 
-* Equations 2.8 and 2.9 in the original book are split in two lines, as there is not enough space in one line due to the book's dimensions. Here they have been put in one line instead. 
+* Equations 2.8, 2.9, 6.18 in the original book are split in two lines, as there is not enough space in one line due to the book's dimensions. Here they have been put in one line instead. 
