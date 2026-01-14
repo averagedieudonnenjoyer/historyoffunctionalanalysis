@@ -30,7 +30,7 @@
 \usepackage[tiny,compact,explicit]{titlesec}
 \usepackage{todonotes}
 
-\usepackage[backend=biber,maxnames=2,sorting=custom]{biblatex}
+\usepackage[backend=biber,maxnames=2,mcite,sorting=custom]{biblatex}
 \addbibresource{bibliography.bib}
 \DeclareFieldFormat{pages}{p.~#1} % Dieudonné used "p." instead of "pp." even for multiple pages
 \DeclareSortingScheme{custom}{\sort{\field{entrykey}}}
@@ -3864,7 +3864,7 @@ There was thus an obvious need for a generalization of the concept of metric spa
 % and Tréves suc which were final local existence of operators [19]. to these papers.
 
 \nocite{*}
-\printbibliography[title=References,nokeyword={noprint}]
+\printbibliography[title=References,notkeyword={noprint}]
 \markboth{References}{References}
 \fancyhead[C]{\textsc{\leftmark}}
 
