@@ -1,3 +1,5 @@
+# Corrected typos
+
 This is a list of known typos in Dieudonné's book. They have been corrected in this re-typeset version.
 
 Pages and rows are referred to the original book. Equations are not considered as "lines".
@@ -10,3 +12,7 @@ Pages and rows are referred to the original book. Equations are not considered a
 - "marvellous", p. 120, fifth line (correct in British English, but the author uses American English, so we consider it a typo)
 - "explicity", p. 126, seventh-to-last line
 - "periodc", p. 139, seventh-to-last line
+
+# Other changes
+
+* Equations 2.8 and 2.9 in the original book are split in two lines, as there is not enough space in one line due to the book's dimensions. Here they have been put in one line instead. 
