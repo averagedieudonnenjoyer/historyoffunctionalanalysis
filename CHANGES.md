@@ -11,6 +11,7 @@ Pages and rows are referred to the original book. Equations are not considered a
 - "progess", p. 120, first line
 - "marvellous", p. 120, fifth line (correct in British English, but the author uses American English, so we consider it a typo)
 - "explicity", p. 126, seventh-to-last line
+- "funcionals", p. 135, third line in the footnote
 - "periodc", p. 139, seventh-to-last line
 
 # Punctuation
