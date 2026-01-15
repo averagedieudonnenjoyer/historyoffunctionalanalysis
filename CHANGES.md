@@ -13,6 +13,7 @@ Pages and rows are referred to the original book. Equations are not considered a
 - "explicity", p. 126, seventh-to-last line
 - "funcionals", p. 135, third line in the footnote
 - "periodc", p. 139, seventh-to-last line
+- "chap. V", p. 157, first line (it is actually chapter VI)
 
 # Punctuation
 
@@ -24,4 +25,9 @@ Missing punctuation in the original book:
 
 # Other changes
 
-* Equations 2.8, 2.9, 6.18 in the original book are split in two lines, as there is not enough space in one line due to the book's dimensions. Here they have been put in one line instead. 
+Certain equations in the original book are split in two lines, as there is not enough space in one line due to the book's dimensions. Here they have been put in one line instead:
+
+* 2.8
+* 2.9
+* 6.18
+* the unnumbered one immediately following 7.13
