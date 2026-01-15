@@ -98,6 +98,15 @@
 \newcommand{\Iint}{\displaystyle\iint}
 \newcommand{\Iiint}{\displaystyle\iiint}
 
+% for Pringsheim's notation in equation (F); "pfrac" stands for "Pringsheim's fraction"
+\newcommand{\pfrac}[2]{%
+    \begin{array}{@{} c @{}}%
+        \multicolumn{1}{c|}{#1} \\%
+        \hline%
+        \multicolumn{1}{|c}{#2}%
+    \end{array}%
+}
+
 \allowdisplaybreaks
 \frenchspacing
 \raggedbottom % prevent huge vertical gaps between paragraphs
@@ -2256,59 +2265,33 @@ where \(v\) is the common value of \(v^+\) and \(v^-\). With these notations, hi
 \end{equation}
 He says that the set of the \(\lambda_r\) is the \emph{point spectrum} of \(K\) and the complement of the set where all the \(\sigma(x; \lambda)\) are constant the \emph{continuous spectrum} of \(K\).
 
-% Of course, when K 1is a "completely continuous" form, the
-% continuous spectrum is absent, but Hilbert gives examples for which there is no point spectrum. For instance (see [183], vol.II, p.986-989), if (@p) is a complete orthonormal system in a compact interval [a,b] of R and f a bounded measu rable function in [a,b], one defines a bounded quadratic (9) 2 g = ( f (We, (W)e, d(u)du
-% form A(x,x) = ¥ a__x x_ by the formulas
-% Pad P g
-% a
-% and one has the "reduction" formulas
+Of course, when \(K\) is a ``completely continuous'' form, the continuous spectrum is absent, but Hilbert gives examples for which there is no point spectrum. For instance (see \cite{183}, vol.~II, p.~986--989), if \((\varphi_p)\) is a complete orthonormal system in a compact interval \([a,b]\) of \(\R\) and \(f\) a bounded measurable function in \([a,b]\), one defines a bounded quadratic form \(A(x,x) = \sum\limits_{p,q} a_{pq} x_p x_q\) by the formulas
+\begin{equation}
+    \label{eq:7.9}
+    a_{pq} = \int_a^b f(\mu) \varphi_p(\mu) \varphi_q(\mu) d\mu
+\end{equation}
+and one has the ``reduction'' formulas
+\begin{equation}
+    \label{eq:7.10}
+    \begin{gathered}
+        (x|x) = \int_a^b \left( \sum_p x_p \varphi_p(\mu) \right)^2 d\mu \\
+        A(x,x) = \int_a^b f(\mu) \left( \sum_p x_p \varphi_p(\mu) \right)^2 d\mu
+    \end{gathered}
+\end{equation}
+from which it is easy to see that there is no point spectrum (unless \(f\) is constant in an interval), and if f is continuous, the continuous spectrum consists of the whole interval \([m,M]\), where \(m\) and \(M\) are the minimum and maximum value taken by \(f\) in \([a,b]\). If one takes \(a = 0, b = \pi, \varphi_p(\mu) = \sqrt\frac{2}{\pi} \sin{p\mu}, f(\mu) = \cos{\mu}\), one obtains the first example given by Hilbert
+\begin{equation}
+    \label{eq:7.11}
+    A(x,x) = x_1 x_2 + x_2 x_3 + x_3 x_4 + \ldots .
+\end{equation}
+If one takes \(a = -\pi, b = \pi, \varphi_p(\mu) = \frac{1}{\sqrt{2\pi}} (\sin{p\mu} + \cos{p\mu})\) for \(-\infty < p < +\infty\), and \(f(\mu) = -\pi - \mu\) if \(\mu < 0, f(\mu) = \pi - \mu\) if \(\mu > 0\), one gets \(a_{pq} = \frac{1}{p+q}\) if \(p + q \neq 0, a_{pq} = 0\) if \(q = -p\). Making \(x_p = 0\) for \(p \leq 0\), one gets the second example of Hilbert \(A(x,x) = \sum_{p,q=1} \frac{x_p x_q}{p+q}\), and making \(x_p = 0\) for \(p \leq 0, y_p = 0\) for \(p \geq 0\), one gets still another example of Hilbert \(A(x,y) = \sum_{p,q} \frac{x_p y_q}{p-q}\) (where the summation extends to the pairs \((p,q)\) of integers \(>0\) and distinct); both have for continuous spectrum the interval \([-\pi, +\pi]\)\footnote{One also should mention how Stieltjes' results on continued fractions and on the moment problem were soon recognized as belonging to the Hilbert--von Neumann spectral theory. Jacobi, in 1848, had cunsidered the special quadratic forms \(J(x) = \sum\limits_{k=1}^n a_k x_k^2 - 2 \sum\limits_{k=1}^{n-1} b_{k+1} x_k x_{k+1}\), and he had shown that the eigenvalues of that form are the roots of the denominator of the limited continued fraction (\cite{120}, vol.~VI, p.~318--321)
+\begin{equation}
+    \tag{F}
+    \label{eq:7.F}
+    \frac{1}{a_0 - z} - \pfrac{b_1^2}{a_1 - z} -  \pfrac{b_2^2}{a_2 - z} - \cdots - \pfrac{b_n^2}{a_n - z}.
+\end{equation}
+Already in 1878, Heine \cite[vol.~1, p.~421]{104} had hinted at the possibility that an \emph{unlimited} continued fraction of type \eqref{eq:7.F} would be similarly related to a Jacobi quadratic form \(\sum\limits_{n=0}^\infty a_n x_n^2 - 2 \sum\limits_{n=0}^\infty b_{n+1} x_n x_{n+1}\) in an infinite system of variables. What Stieltjes had done was to study directly unlimited continued fractions of type \eqref{eq:7.F}, representing them as ``Stieltjes transforms'' and being led to his ``problem of moments'' by the problem of determining the Stieltjes measure corresponding to a given Stieltjes transform; but he had not considered the relation between the continued fraction and quadratic forms. This was done by Toeplitz in 1910 \cite{214} for the case of Jacobi bounded quadratic forms, and later extended to the general case; it turned out that these forms exactly corresponded to spectra of \emph{multiplicity} 1 \cite{207}.}.
 
-% (10) b® b
-% (x]x) = (z x 0 ()
-% 2
-% b
-% A(x,x) = £(u)(2 x 9, ()) du
-% 2
-% ab
-% from which it is easy to see that there is no point spectrum (unless f is constant in an interval), and if f is conti
-% nuous, the continuous spectrum consists of the whole interval [m,M], where m and M are the minimum and maximum value taken by f in [a,b]. If one takes a = 0O, b =1, @p(u) =/ — sin pu, f(u) = cos u, one obtains the first
-% 2
-% example given by Hilbert
-% If one takes a = =TT, b =1, mp(u) = (Sin pd4 + cos PM)
-% 1
-% Jom
-% for -0 < p< 4w, and f(u) = =-f -y if W < 0, f(u) =m-u
-
-% 154 CHAPTER VII
-% ifif > 0 , one g gets a bq ==
-%  Bra if p+q+ # O 0, aa . = 0 if
-% 1
-% . P g . -
-% q = =p. Making xp = 0 for p< O, one gets the second _1 Ptd p
-% example of Hilbert A(x,x) ) , and making x_ = O
-% X X
-% pP,q=1
-% for p < O, yp = 0 for p = O, one gets still another Xy example of Hilbert A(x,y) = ¥’ p?qq (where the summation P,g
-% extends to the pairs (p,q) of integers >0 and distinct); both have for continuous spectrum the interval f-fl,+fl]( ).
-% *
 % In his 1913 book ([183],v0ol.II,p.956-989 and [184]), F.Riesz gave an exposition of Hilbert's results based on an entirely
-% *
-% ( )One also should mention how Stieltjes' results on continued fractions and on the moment problem were soon recognized as
-% belonging to the Hilbert-von Neumann spectral theory. Jacobi, n n-1
-% in 1848, had cunsidered the special quadratic forms J(x)
-
-% = Z,'ax —ZZb k=1 k k k=1
-% k+lxkxk+l’ and he had shown that the eigen-
-
-% (F) aoiz la' cee -
-% values of that form are the roots of the denominator of the limited continued fraption ([120],vol.v1,p.318-321)
-% Already in 1878, Heine [104,vol.1. p.421] had hinted at the possibility that an unlimited continued fraction of type (F) 2 . . . .
-% (0] <
-% would be similarly related to a Jacobi quadratic form no a x. - 2 ngo bn+lxnxn+l in an infinite system of varia
-% bles. What Stieltjes had done was to study directly unlimited continued fractions of type (F), representing them as "Stieltjes transforms" and being led to his "problem of moments" by the problem of determining the Stielt jes measure
-% corresponding to a given Stielt jes transform; but he had not considered the relation between the continued fraction and quadratic forms. This was done by Toeplitz in 1910 [ 214] for the case of Jacobi bounded quadratic forms, and later extended to the general case; it turned out that these forms exactly corresponded to spectra of multiplicity 1 [207].
-
-% SPECTRAL THEORY AFTER 1900 155
 % different method, and which was to remain standard until around 1950, As we have already pointed out, he replaces the
 % bilinear forms of Hilbert by the much more natural continuous 2
 % endomorphisms of E = LR s to such an endomorphism A is as sociated the "bounded" bilinear form (x,y)r (A<x|y) and
