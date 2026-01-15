@@ -2176,72 +2176,86 @@ Although there has been much work done on compact operators of special types, th
 \section{The spectral theory of Hilbert}
 \label{sec:7.2}
 
-% We now return to the most original part of Hilbert's 1906 paper (chap.V, 2), in which he discovered the entirely new phenomenon of the "continuous spectrum", In his "Theory of heat", Fourier had considered trigonometric series represent-
-% SPECTRAL THEORY AFTER 1900 149
-% ing functions of period 2a (chap.I, 2, formula (13)) when a tends to +». The eigenvalues ) _ = (n+%) 'rrz/a2 of the
-% 2
-% corresponding Sturm--Liouville problem for the equation vy’ +\Ay = = 0 with boundary conditions vy(-a) = y(a) = O divide the interval [O0,+o[ in intervals of length tending to O with 1/a, and this had led Fourier to consider that the Mimiting case" of the trigonometric expansion of a function of period 2a would be, for any function f defined on R, the repre (1) f(x) =‘% dt ( f(t)cos u(x-t)du
-% sentation by an integral
-% —co 0
-% where the "eigenvalues" would now fill the interval [0, +o[ ([67], vol.I, p.392).
-% In 1897, Wirtinger [230] developed similar ideas for Hill's (2) y' + ra(x)y = O
-% equation
-% 4
-% where q 1is a continuous periodic function of pexriod 1. The general theory of these equations was well-known at the time: starting with a fundamental system of solutions u,, U, such
+We now return to the most original part of Hilbert's 1906 paper (chap. \ref{ch:5}, \ref{sec:5.2}), in which he discovered the entirely new phenomenon of the ``\emph{continuous spectrum}''. In his ``Theory of heat'', Fourier had considered trigonometric series representing functions of period \(2a\) (chap. \ref{ch:1}, \ref{sec:1.2}, formula \eqref{eq:1.13}) when a \emph{tends to} \(+\infty\). The eigenvalues \(\lambda_n = \left( 1 + \frac{1}{2}^2 \pi^2 / a^2 \right)\) corresponding Sturm--Liouville problem for the equation \(y'' + \lambda y = 0\) with boundary conditions \(y(-a) = y(a) = 0\) divide the interval \([0,+\infty[\) in intervals of length tending to \(0\) with \(1/a\), and this had led Fourier to consider that the ``limiting case'' of the trigonometric expansion of a function of period \(2a\) would be, for any function \(f\) defined on \(\R\), the representation by an \emph{integral}
+\begin{equation}
+    \label{eq:7.1}
+    f(x) = \frac{1}{\pi} \int_{-\infty}^{+\infty} dt \int_0^\infty f(t) \cos{u(x-t)}du
+\end{equation}
+where the ``eigenvalues'' would now \emph{fill the interval} \([0, +\infty[\) (\cite{067}, vol. \ref{ch:1}, p.~392).
 
-% that
-% ul(o,x) = 1, ui(o,x) =0 u,(0,\) = O, us (0,1) = -1
+In 1897, Wirtinger \cite{230} developed similar ideas for Hill's equation
+\begin{equation}
+    \label{eq:7.2}
+    y'' + \lambda q(x) y = 0
+\end{equation}
+where \(q\) is a continuous \emph{periodic} function of period 1. The general theory of these equations was well-known at the time: starting with a fundamental system of solutions \(u_1, u_2\) such that
+\[
+    \begin{aligned}
+        &u_1(0, \lambda) = 1, \qquad u'_1(0, \lambda) =  0 \\
+        &u_2(0, \lambda) = 0, \qquad u'_2(0, \lambda) = -1
+    \end{aligned}
+\]
+so that \(u_2 u'_1 - u_1 u'_2\) was the constant function 1, one considers complex solutions \(f\) such that \(f(x+1) = \rho f(x)\) for all \(x \in \R\); the constants \(\rho(\lambda)\) having that property are solutions of the equation
+\begin{equation}
+    \label{eq:7.3}
+    \rho^2 + \Phi(\lambda) \rho + 1 = 0
+\end{equation}
+with \(\Phi(\lambda) = u'_2(1, \lambda) - u_1(1, \lambda)\). The solutions of period 1 correspond to ``eigenvalues'' \(\lambda\) such that \(\Phi(\lambda) = 2\), the solutions \(f\) such that \(|f(x+1)| = |f(x)|\) to values of \(\lambda\) such that \(-2 \leq \Phi(\lambda) \leq 2\), which in general constitute disjoint intexrvals \(I_k\) of \(\R\). Wirtinger looks for solutions of period \(n\) (an arbitrary integer), which correspond to values of \(\lambda\) such that \((\rho(\lambda))^n = 1\), and he shows that when \(n\) tends to \(+\infty\), these values of \(\lambda\) tend to ``fill up'' the intervals \(I_k\). The similarity with the optical spectra of molecules leads him to speak of the ``Bandesspectrum'' of equation \eqref{eq:7.2} formed by the union of the intervals \(I_k\), and he thinks there should be an integral formula similar to \eqref{eq:7.1}, without being able to guess what that formula could be.
 
-% so that uzui - ulu% was the constant function 1, one con siders complex solutions f such that f(x+1) = pf(x) for all x € R; the constants p(A) having that property are so
-% (3) 0 + 3p + 1 = O
-% lutions of the equation
+Although Hilbert does not meantion Wirtinger's paper, it is probable that he had read it (it is quoted by several of his pupils), and it may be that the name ``\emph{Spectrum}'' which he used came from it; but it is a far cry from the vague ideas of Wirtinger to the extremely general and precise results of Hilbert. On the other hand, the influence of Stieltjes's big paper of 1894 on continued fractions is explicitly acknowledged by Hilbert: Stieltjes had had to take the limit of a sequence of rational functions of a complex variable
+\[
+    \frac{P_{2n+1}(z)}{Q_{2n+1}(z)} = \sum_{i=1}^n \frac{M_i}{z + x_i}
+\]
+where the \(M_i\) and the \(x_i\) are real numbers, and he had shown that the limit could be writteun as a ``Stieltjes transform''
+\[
+    F(z) = \int_0^\infty \frac{d\Phi(u)}{z+u}
+\]
+for a function \(\Phi\) of bounded variation (creating for that purpose the concept of ``Stieltjes integral'') \cite{205}. It is a similar problem which confronts Hilbert when he wants to pass from the classical ``reduction'' of the \(n\)-th ``Abschnitt''
+\begin{equation}
+    \label{eq:7.4}
+    K_n(x, x) = \sum_{p=1}^n \sum_{q=1}^n x_{pq} x_p x_q
+\end{equation}
+of his ``bounded'' quadratic form \(K(x,x)\), to a ``reduction'' of \(K(x,x)\) itself: the classical theory shows that one has
+\begin{equation}
+    \label{eq:7.5}
+    K_n(x, x) = \frac{\left( L_1^{(n)}(x) \right)^2}{\lambda_1^{(n)}} + \cdots + \frac{\left( L_n^{(n)}(x) \right)^2}{\lambda_n^{(n)}}
+\end{equation}
+where the \(\lambda_j^{(n)}\) are real numbers such that \(\lambda_1^{(n)} \leq \lambda_2^{(n)} \leq \ldots \leq \lambda_n^{(n)}\), and the \(L_j^{(n)}(x)\) are linear forms in \(x_1, x_2, \ldots, x_n\), such that
+\begin{equation}
+    \label{eq:7.6}
+    \left( L_1^{(n)}(x) \right)^2 + \ldots + \left( L_n^{(n)}(x) \right)^2 = x_1^2 + \ldots + x_n^2.
+\end{equation}
+To each \(x = (x_p)\) of \(l^2\) such that \(x_p=0\) for \(p > n\), Hilbert associates the piecewise linear convex function of the real variable
+\begin{equation}
+    \label{eq:7.7}
+    u^{(n)}(x; \lambda) = \sum_{p=1}^n \left( L_p^{(n)}(x) \right)^2 \left(\lambda - \lambda_p^{(n)}\right)^+.
+\end{equation}
+His idea is to take (if possible) the limit of each of these functions, for the points of \(l^2\) having only a finite number of coordinates \(\neq 0\). Using his ``principle of choice'' (chap. \ref{ch:5}, \ref{sec:5.2}) and Cantor's diagonal process, he shows that these limits exist at least for a suitable subsequence of the \(u^{(n)}\). In fact, he only uses these limits for the points \(x^{(pp)}\) having the coordinate of index \(p\) equal to 1, all others to 0, and the points \(x^{(pq)}\) for \(p \neq q\), having the coordinates of indices \(p\) and \(q\) equal to \(\frac{1}{\sqrt{2}}\) and all others to 0; he writes the corresponding limits \(u_{pq}(\lambda)\) for all pairs of integers \((p,q)\). They are convex functions of \(\lambda\), hence the right derivative \(v^+_{pq}(\lambda)\) and the left derivative \(v^-_{pq}(\lambda)\) exist for all \(\lambda\), and are equal except for an at most denumerable set of values of \(\lambda\). Hilbert writes \(\lambda_1, \lambda_2, \ldots, \lambda_r, \ldots\) the sequence of these exceptional values of \(\lambda\) for \emph{all} pairs \((p,q)\), and defines quadratic forms
+\[
+    v^+(x; \lambda) = \sum_{p,q} v^+_{pq}(\lambda)x_p x_q, \qquad v^-(x; \lambda) = \sum_{p,q} v^-_{pq}(\lambda)x_p x_q
+\]
+and for each index \(r\),
+\[
+    E_r(x) = v^+(x; \lambda_r) - v^-(x; \lambda_r).
+\]
+All these are bounded quadratic forms, and more precisely, their wvalues in \(l^2\) are \(\geq 0\) and \(\leq (x|x)\). For the values of \(\lambda\) distinct from the \(\lambda_r\), he writes
+\[
+    e(x; \lambda) = \sum_{\lambda_r < \lambda} E_r(x)
+\]
+and
+\[
+    \sigma(x; \lambda) = v(x; \lambda) - e(x; \lambda)
+\]
+where \(v\) is the common value of \(v^+\) and \(v^-\). With these notations, his final result is the ``reduction'' of the quadratic form \(K(x,x)\): for each \(x \in l^2\), the function \(\lambda \mapsto sigma(x; \lambda)\) is a continuous function of bounded variation, and one may write
+\begin{equation}
+    \label{eq:7.8}
+    \begin{dcases}
+        (x|x) = \sum_r E_r(x) + \int d\sigma(x; \lambda) \\
+        K(x,x) = \sum_r \frac{1}{\lambda_r} E_r(x) + \int \frac{1}{\lambda} d\sigma(x; \lambda).
+    \end{dcases}
+\end{equation}
+He says that the set of the \(\lambda_r\) is the \emph{point spectrum} of \(K\) and the complement of the set where all the \(\sigma(x; \lambda)\) are constant the \emph{continuous spectrum} of \(K\).
 
-% 150 CHAPTER VIT
-% with 3()\) = ué(l,k) - ul(l,x). The solutions of period 1 correspond to "eigenvalues" )\ such that @(k) = 2, the so lutions f{ such that |[f(x+1)]| = |£f(x)]| to values of A such that =2 < @(X) < 2, which in general constitute dis j oint intexrvals Ik of R, Wirtinger looks for solutions of period n (an arbitrary integer), which correspond to values of % such that (p(3))" = 1, and he shows that when n tends to +», these values of )} tend to "fill up" the in tervals I k. The similarity with the optical spectra of mo
-% lecules leads him to speak of the "Bandesspectrum" of equa tion (2) formed by the union of the intervals T k? and he thinks there should be an integral formula similar to (1), without being able to guess what that formula could be,
-% Although Hilbert does not meantion Wirtinger's paper, it is probable that he had read it (it is quoted by several of his pupils), and it may be that the name "Spectrum" which he used came from it; but it is a far cry from the vague ideas of Wirtinger to the extremely general and precise results of Hilbert, On the othexr hand, the influence of Stieltjes's big paper of 1894 on continued fractions is explicitly acknowled ged by Hilbert: Stieltjes had had to take the limit of a se quence of rational functions of a complex variable
-
-% ) n y = i2
-% M.i
-% Z+X. 1 i
-
-% where the Mi and the x, are real numbers, and he had shown that the 1limit could be writteun as a "Stieltjes transform" (o0)
-
-% SPECTRAL THEORY AFTER 1900 151
-% for a function & of bounded variation (creating for that purpose the concept of "Stielt jes integral") [205]. It is a similar problem which confronts Hilbert when he wants to pass from the classical "reduction" of the n-th "Abschnitt" (4) K (X,X) = X >y k x x
-% n n
-% n b1 qo1 P PG
-% of his "bounded" quadratic form X (x,x), to a "reduction" of K(x,x) iditself: the classical theory shows that one has
-
-% (5) Kn(X,X) =
-% @ () (x))? (L) (x))? Ay A
-
-% where the x(n) are real numbers such that xn) < Xgn) < See o5 xén), and the Lgn)(x) are linear forms in Xyj9Xogeeey X, such that
-% (6) (Ln)(x))2 +o oot (Lr(ln)(x))2 = xi tooot xi . To each x = (xp) of LZ such that xp = 0 for p > n,
-% Hilbert associates the piecewise linear convex function of (7) u(n)(x;x) = pil (Lén)(x))Z(X-Kén))+ ;
-% the real wvariable
-% His idea is to take (if possible) the limit of each of these functions, for the points of LZ having only a finite number of coordinates #0., Using his "principle of choice" (chap.V,
-% 2) and Cantor's diagonal process, he shows that these limits exist at least for a suitable subsequence of the u(n). In ffact, he only uses these limits for the points x(pp) having
-% the coordinate of index p egual to 1, all others to O, and the points x(pq) for p # g, having the coordinates of in-
-
-% 152 CHAPTER VII
-% dices p and q equal to and all others to O3 he writes the corresponding limits upq(X) for all pairs of in tegers (p,q). They are convex functions of ), hence the right derivative V;q(X) and the left derivative V;q(X) exist for all ), and are equal except for an at most denu meirable set of values of )A. Hilbert writes xl,kz, \ldots,lr, \ldots the sequence of these exceptional values of A for all pairs (p,q), and defines quadratic forms
-% + + - -
-% v (x;x) = Y v (X)x X v (x;x) = T v (x)x X D, q Pg P Qg D,q Pqg P g
-% and for each index r,
-% E_(x) = vi(x50.) = v (x350,).
-% All these are bounded quadratic forms, and more precisely, their wvalues in LZ are =20 and s(x|x). For the values of A distinct from the xr’ he writes
-% e(x;)) = ¥ E_(x)
-% A <A
-% and
-% o(x;3)) = v(x3\) = e(x;))
-% where Vv 1is the common value of v+ and v . With these
-% notations, his final result is the "reduction" ocf the qua dratic form K(x,x): for each x € LZ, the function A—0(x3)) dis a continuous function of bounded variation, and (5) (x|x) = z B_(x) + f,dc(x;x)
-% one may write
-% kK(x,x) = Z-%— Er(x) + (-%—dc(x;k).
-% r
-% SPECTRAL THEORY AFTER 1900 153
-% He says that the set of the xr is the point spectrum of K and the complement of the set where all the G(x;x) are comns tant the continuous spectrum of K .
 % Of course, when K 1is a "completely continuous" form, the
 % continuous spectrum is absent, but Hilbert gives examples for which there is no point spectrum. For instance (see [183], vol.II, p.986-989), if (@p) is a complete orthonormal system in a compact interval [a,b] of R and f a bounded measu rable function in [a,b], one defines a bounded quadratic (9) 2 g = ( f (We, (W)e, d(u)du
 % form A(x,x) = ¥ a__x x_ by the formulas
