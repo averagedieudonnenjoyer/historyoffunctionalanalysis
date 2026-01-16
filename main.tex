@@ -2332,66 +2332,61 @@ One of the byproducts of F. Riesz's method is that it enabled him to give a \emp
 \section{The work of Weyl and Carleman}
 \label{sec:7.3}
 
-% Hilbert's method associating to an integral equation with symmetric kernel KX(s,t) a "bounded" bilinear form K(x,vy) (chap.V, 2) worked even if K(s,t)2 was not integrable in [a,b]x[a,b], but the corresponding bilinear form might not
-% be "completely continuous"; already in his lectures in 1906 Hilbert had given the example K(s,t) = (s+t)'—l for the in terval [0,1] ([227], vol.I, p.83). He also had observed in
-% his Seminar that the Fredholm theorems might fail when the interval [a,b] was unbounded, and had given as example an
-% SPECTRAL THEORY AFTER 1900 161
-% interpretation of the Fourier inversion formula (1) (ibid., p.2): for K(s,t) = cos st in the interval [O0,+=[, 4/—E— and - J-é— are the only eigenvalues, but each of them has infinite multiplicity( ). He therefore encouraged his most
-% *
-% gifted student, Hermann Weyl, to elucidate such "singular"
-% integral equations, and in particular to determine conditions on the kernel K(s,t) implying that the bilinear form X(x,y) would be "bounded" and therefore amenable to his spectral theory. This was the theme of Weyl's dissertation; in it and in a subsequent paper (iglg., p.2-86 and 102-153) he gave ! o
-% the following sufficient conditions for [a,bl = [0,+[: 12 for each s = O, the integral f/ (K(s,t))zdt is finite; 0
-% 29 there is a constant M > O such that the inequality (0 0] [e0) | ( ( K(s,t)u(s)v(t)dsdt| < M Ffor all pairs of continuous
+Hilbert's method associating to an integral equation with symmetric kernel \(K(s,t)\) a ``bounded'' bilinear form \(K(x,y)\) (chap. \ref{ch:5}, \ref{sec:5.2}) worked even if \(K(s,t)^2\) was not integrable in \([a,b] \times [a,b]\), but the corresponding bilinear form might not be ``completely continuous''; already in his lectures in 1906 Hilbert had given the example \(K(s,t) = (s+t)^{-1}\) for the interval \([0,1]\) (\cite{227}, vol.~I, p.~83). He also had observed in his Seminar that the Fredholm theorems might fail when the interval \([a,b]\) was unbounded, and had given as example an interpretation of the Fourier inversion formula \eqref{eq:7.1} (\emph{ibid}., p.~2): for \(K(s,t) = \cos{st}\) in the interval \([0,+\infty[, \sqrt\frac{2}{\pi}\) and \(-\sqrt\frac{2}{\pi}\) are the only eigenvalues, but each of them has \emph{infinite multiplicity}\footnote{This is apparently the first appearance of a relation between Fourier transforms and Functional Analysis (see \ref{sec:7.6}).}. He therefore encouraged his most gifted student, Hermann Weyl, to elucidate such ``singular'' integral equations, and in particular to determine conditions on the kernel \(K(s,t)\) implying that the bilinear form \(K(x,y)\) would be ``bounded'' and therefore amenable to his spectral theory. This was the theme of Weyl's dissertation; in it and in a subsequent paper (\emph{ibid}., p.~2--86 and 102--153) he gave the following sufficient conditions for \([a,b[ = [0,+\infty[\): 1° for each \(s \geq 0\), the integral \(\int_0^\infty (K(s,t))^2 dt\) is finite; 2° there is a constant \(M > 0\) such that the inequality \(\left| \int_0^\infty \int_0^\infty K(s,t)u(s)v(t)dsdt \right| \leq M\) for all pairs of continuous functions \(u, v\) such that \(\int_0^\infty (u(s))^2 ds \leq 1\) and \(\int_0^\infty (v(s))^2 ds \leq 1\).
 
-% O 0 (00)
-% O 0(o0]2 functions u, v such that y/ (u(s))zds < 1 and ( (v(s)) " ds< < 1.
-% Another direction of research derived from an interpreta tion of the Sturm--Liouville theory (chap.I, 3) in terms of integral equations, Consider a second order differential (16) y' = a(x)y + iy = £(x)
-% equation
-% where q and f are continuous functions in a compact in terval [a,b], q having real values, f real or complex values and ) 1is a complex parameter; in addition we have
-% ( )This is apparently the first appearance of a relation
-% *
-% between Fourier transforms and Functional Analysis (see 6).
+Another direction of research derived from an interpretation of the Sturm--Liouville theory (chap. \ref{ch:1}, \ref{sec:1.3}) in terms of integral equations. Consider a second order differential equation
+\begin{equation}
+    \label{eq:7.16}
+    y'' - q(x)y + \lambda y = f(x)
+\end{equation}
+where \(q\) and \(f\) are continuous functions in a compact interval \([a,b], q\) having real values, \(f\) real or complex values and \(\lambda\) is a complex parameter; in addition we have two boundary conditions
+\begin{equation}
+    \label{eq:7.17}
+    y(a)\cos\alpha - y'(a)\sin\alpha = 0, \qquad y(b)\cos\beta - y'(b)\sin\beta = 0
+\end{equation}
+where \(\alpha\) and \(\beta\) are two positive constants. An elementary argument shows that for \(f = 0\), the homogeneous equation \eqref{eq:7.16} with boundary conditions \eqref{eq:7.17} has no solution if \(\lambda \leq -r\), where \(r\) is a number \(>0\) depending only on \(q\). Replacing \(q(x)\) by \(q(x) + r\) and \(\lambda\) by \(\lambda + r\), one may assume that for \(\lambda < 0\), the homogeneous equation \(y'' - q(x)y + \lambda y = 0\) has no solution satisfying the conditions (17).
 
-% 162 CHAPTER VII
-% two boundary conditions
-% (17) v(a)cos a-y’ (a)sin @ = O, y(b)cos B-v/' (b)sin B = 0
-% where @ and 8 are two positive conslants. An elementary argument shows that for f = 0, +the homogeneous eqgquation Cfifl with boundary conditions (17) has no solution if )\ < -r, where 1r 1is a number >0 depending only on g. Replacing q(x) by q(x) + r and A by A+r, one may assume that for A < O, the homogeneous equation y”’ - gq(x)y + Ay = O has no solution satisfying the conditions (17).
-% Now consider first equation (16) for )\ = 0; there are two solutions wu,, u, of the equation y"- q(x)y = O such that
-% y
-% ul(a)cos a - ui(a)sin e = O, uz(b)cos g - ué(b)sin B = O, u; and u, being linearly independent. For each ¢t € [a,b], (18)
-% define the function
-% K(t,x) -uz(t)ul(x)/d for a < x < t
-% K(t,x) = -u,(t)u,(x)/d for t < x< Db
-% where d is the constant ul(x)ué(x) - uz(x)ui(x). The function x#+> K(t,x) is then continuous in [a,b]; in each of the semi-open intervals a < x< t, t< x< b (for V4 a< t< b) it satisfies the equation ¥y’ - gq(x)y = 0, and in addition it satisfies conditions (17); finally, the function XF*-g; K(t,x) has at the point x =t a discontinuity such
-% 3
-% that %; K(t,t+) - %; K(t,t-) = =1. A routine calculation then shows that in order that a function y be a solution of v'- a(x)y = f(x) satisfying conditions (17), it is necessary and sufficient that
-% SPECTRAL THEORY AFTER 1900 163
-% (19) y(x) = - K(t,x)f(t)dt
-% and therefore the solutions of (16), satisfying (17), are exactly the solutions of the integral equation (20) y(x) - A K(t,x)y(t)dt = g(x)
-% b
-% (21) g(x) = - K(t,x)f(t)dt.
+Now consider first equation \eqref{eq:7.16} for \(\lambda = 0\); there are two solutions \(u_1, u_2\) of the equation \(y''- q(x)y = 0\) such that \(u_1(a)\cos\alpha - u'_1(a)\sin\alpha = 0, u_2(b)\cos\beta - u'_2(b)\sin\beta = 0, u_1\) and \(u_2\) being \emph{linearly independent}. For each \(t \in [a,b]\), define the function
+\begin{equation}
+    \label{eq:7.18}
+    \begin{dcases}
+        K(t,x) = -u_2(t)u_1(x)/d & \text{for } a \leq x \leq t \\
+        K(t,x) = -u_1(t)u_2(x)/d & \text{for } t \leq x \leq q
+    \end{dcases}
+\end{equation}
+where \(d\) is the constant \(u_1(x)u'_2(x) - u_2(x)u'_1(x)\). The function \(x \mapsto K(t,x)\) is then continuous in \([a,b]\); in each of the semi-open intervals \(a \leq x \leq t, t \leq x \leq b\) (for \(a < t < b\)) it satisfies the equation \(y'' - q(x)y = 0\), and in addition it satisfies conditions \eqref{eq:7.17}; finally, the function \(x \mapsto \pder{}{x} K(x,t)\) has at the point \(x = t\) a discontinuity such hat \(\pder{}{x} K(t,t+) - \pder{}{x} K(t,t-) = -1\). A routine calculation then shows that in order that a function \(y\) be a solution of \(y'- q(x)y = f(x)\) satisfying conditions \eqref{eq:7.17}, it is necessary and sufficient that
+\begin{equation}
+    \label{eq:7.19}
+    y(x) = -\int_a^b K(t,x)f(t)dt
+\end{equation}
+and therefore the solutions of \eqref{eq:7.16}, satisfying \eqref{eq:7.17}, are exactly the solutions of the integral equation
+\begin{equation}
+    \label{eq:7.20}
+    y(x) = -\lambda \int_a^b K(t,x)y(t)dt = g(x)
+\end{equation}
+where
+\begin{equation}
+    \label{eq:7.21}
+    g(x) = -\int_a^b K(t,x)f(t)dt.
+\end{equation}
+Clearly this method was patterned after Schwarz's method for solving the equation of vibrating membranes with the help of the Green function for the Laplacian (chap. \ref{ch:3}, \ref{sec:3.1}), and the function \(K\) was therefore called the \emph{Green function} for the operator \(L(y) = y'' - q(x)y\) and the boundary conditions \eqref{eq:7.17} \cite{035}. As obviously \(K(x,t) = K(t,x)\), the Sturm--Liouville problem was thus reduced to a special case of the Fredholm--Hilbert theory of integral equations with symmetric kernels.
 
-% where
-% b
+In his second paper (1904) on integral equations, Hilbert developed that method and expanded it to other boundary conditions than \eqref{eq:7.17}. He also was aware that many of the ``special functions'' which had been introduced in Analysis since the XVIII\supth{} century (hypergeometric functions, Bessel functions, Legendre polynomials, Hermite functions, etc.) satisfied equations of type \eqref{eq:7.16} but with \emph{less restrictive} conditions: the interval \([a,b]\) would be replaced by an unbounded interval and the function \(q\) might have \emph{singular points} at the extremities of the interval; in such a case, Hilbert proposed that the corresponding boundary condition should be replaced by the condition that \(y\) remain bounded at such an extremity, or tends to infinity not faster than some given singular function. He showed then, on various examples, that one could even in such ``singular'' cases, define a ``Green function'' \(K\), with the symmetric property \(K(t,x) = K(x,t)\), and the same discontinuity for the partial derivatives for \(x = t\); for instance, if \(L(y) = y'' + y\), one has, for the interval \(]-\infty, +\infty[, K(t,x) = -\frac{1}{2} \sin{|x-t|}\). At that time, he had not yet developed his theory of ``bounded'' bilinear forms, so he limited himself to cases in which the Green function K was a kernel to which the Fredholm theory was applicable (\cite{112}, p.~39--58). But of course he was aware that in examples such as the one above, one would fall on ``singular'' integral equatious, and one of his students, E. Hilb, wrote his ``Habilitationschrift'' in 1908 on the ap plication of Hilbert's theory of ``bounded'' forms to two special cases of ``singular'' Sturm--Liouville problems \cite{110}.
 
-% Clearly this method was patterned after Schwarz's method for solving the equation of vibrating membranes with the help of the Green function for the Laplacian (chap.III, 1), and the function K was therefore called the Green function for the /7 operator L(y) = y" - q(x)y and the boundary conditions (17) [ 35]« As obviously K(x,t) = K(t,x), the Sturm--Liouville
-% problem was thus reduced to a special case of the Fredholm=- Hilbert theory of integral equations with symmetric kernels. In his second paper (1904) on integral equations, Hilbert
-% developed that method and expanded it to other boundary con ditions than (17). He also was aware that many of the
-% "special functions" which had been introduced in Analysis since the XVIIIth century (hypergeometric functions, Bessel functions, Legendre polynomials, Hermite functions, etc.) sa tisfied equations of type (16) but with less restrictive con ditions: the interval [a,b] would be replaced by an unbounded interval and the function gq might have singular points at the extremities of the interval; in such a case, Hilbert proposed that the corresponding boundary condition
-
-% 164 CHAPTER VII
-% should be replaced by the condition that <y remain bounded at such an extremity, or tends to infinity not faster than some given singular function. He showed then, on various examples, that one could even in such "singular" cases, de fine a "Green function" K, with the symmetric property K(t,x) = K(x,t), and the same discontinuity for the partial derivatives for x = t; for instance, if L(y) = v’"+y, one has, for the interval J-ow,+o[, K(t,x) = = % sin|x-t]|. At
-% that time, he had not yet developed his theory of "bounded" bilinear forms, so he limited himself to cases in which the Green function K was a kernel to which the Fredholm theory was applicable ([112], p.39-58). But of course he was aware that in examples such as the one above, one would fall on "singular" integral equatious, and one of his students, E., Hilb, wrote his "Habilitationschrift" in 1908 on the ap plication of Hilbert's theory of "bounded" forms to two spe cial cases of "singular" Sturm--Liouville problems [110].
-% Then, in 1909-1910, H. Weyl discovered that he could apply
-% the results of his dissertation to handle the most general (22) I(y) = 5 (p(x) ) - alx)y
-% such problems for second order operators of the type o
-% where p and q are real continuous functions in an interval I R (bounded or not) subject to the only restriction that p(x) >0 in I. In his "Habilitationschrift" ([227], vol.I,
-% P.248-297) he considers the case I = [0,+x[3 his very ori (23) L(y) + Ay = O
-% ginal method consists in studying the equation
-% SPECTRAL THEORY AFTER 1900 165
-% for non real values of ), and in fact, he sees that it is enough to consider the case )\ = 1. Let u;, U, be the two solutions of L(y) + iy = 0 in [O0,+o[ satisfying the ini
-% tial conditions
-% ul(O) = 1, p(O)ui(O) = 0, u,(0) = 0, p(O)ué(O) =1
+Then, in 1909--1910, H. Weyl discovered that he could apply the results of his dissertation to handle the \emph{most general} such problems for second order operators of the type
+\begin{equation}
+    \label{eq:7.22}
+    L(y) = \frac{d}{dx} \left(p(x) \frac{dy}{dx}\right) - q(x)y
+\end{equation}
+where \(p\) and \(q\) are real continuous functions in an interval \(I \subset \R\) (bounded or not) subject to the only restriction that \(p(x) > 0\) in \(I\). In his ``Habilitationschrift'' (\cite{227}, vol.~I, p.~248--297) he considers the case \(I = [0,+\infty[\); his very original method consists in studying the equation
+\begin{equation}
+    \label{eq:7.23}
+    L(y) + \lambda y = 0
+\end{equation}
+for \emph{non real} values of \(\lambda\), and in fact, he sees that it is enough to consider the case \(\lambda = i\). Let \(u_1, u_2\) be the two solutions of \(L(y) + iy = 0\) in \([0,+\infty[\) satisfying the initial conditions
+\[
+    u_1(0) = 1, \quad p(0)u'_1(0) = 0, \qquad u_2(0) = 0, \quad p(0)u'_2(0) = 1
+\]
 % Let ¢ be auny number =20, and consider the two solutions of L(y) + iy = 0
 % V. = «sin @eu, + coOS a°u2, W = COS Qeu, + sinQ °u o 1 o 1 2
 % so that Vg is a solution satisfying the boundary condition (24) cos a*y(0) + sin a+p(0)y’(0) = O.
