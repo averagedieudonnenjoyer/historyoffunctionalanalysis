@@ -14,6 +14,7 @@ Pages and rows are referred to the original book. Equations are not considered a
 - "funcionals", p. 135, third line in the footnote
 - "periodc", p. 139, seventh-to-last line
 - "chap. V", p. 157, first line (it is actually chapter VI)
+- "objetive", p. 166, second-to-last line
 
 # Punctuation
 
