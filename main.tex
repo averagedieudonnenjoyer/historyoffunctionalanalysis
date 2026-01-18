@@ -3151,89 +3151,98 @@ In 1953, it was simultaneously observed by L. Gårding \cite{081} and F. Browder
 \section{Boundary problems for ordinary differential equations}
 \label{sec:9.3}
 
-% The results of H. Weyl on the spectral theory of second or der linear differential equations (chap.VII, 3) naturally raised the question of their generalization to linear differ
-% ential equations of arbitrary order, but that problem was only attacked by K., Kodaira in 1949 [126]. Surprizingly enough, although Stone had shown in his book [207] how von Neumann's spectral theory could be applied to yield H. Weyl's rcsults, Kodaira elected to follow Weyl's method, suitably extended. Simultaneous work by Glazman and Neumark, and later papers by many authors completed Kodaira's results and also inserted them within von Neumann's theory; we refer the reader to
-% 244 CHAPTER IX
-% [62, vol.ITI, p.1588-1592] for more historical details, and we will only describe the main features of the theory.
-% One considers a differential operator of even order 2r -1 -1 (15) L: u—D"(pD'u) + D" " (p,D "u) + \ldots+ D(p__,Du) + p_u 1 where po,pl, \ldots,pr are real COo functions in an open inter val J = Ja,8[ (bounded ornot) of R, and po(t) #Z 0 for all te€ J; it is formally self-adjoint, i.e. for any two functions u, v of 8(J) (space of ¢~ functions in J (16) (Leu|v) = (u|L+v)
-% with compact support)
-% the scalar product being taken in L7 (J). We write TL the
-% 2
-% operator L , considered as a hermitian (unbounded) operator in LZ(J) with dom(TL) = 9(J). Then the adjoint T;' is densely definedj; more precisely, dom(T;) = HL is the space of all functions u of class C~'~1 in J such that the distribution [ +u is a function of L-(J), with T°u = + -
-% = L eu., The von Neumann spectral theory (chap.VII, 4) shows + and E- . . * ¥
-% that HL is the direct sum of dom(TL ), E. X where EL is the subspace of functions u of class CZr 1 which are solutions of L eu = £ iu and in addition are square integrable in J; 1in fact, they are of class ¢”. Due to the fact that the pj are real functions, both spaces +
-% EL and EE have the same dimension p < 2r. The dual M +
-% of ELD EE can be identified with the space of linear forms on H._ which vanish on dom(Tz*); it is the direct sum mg<9<m8, where ‘W} (resp.?mB) is the subspace of M con sisting of all forms 6 such that 0(u) = O for all func-
+The results of H. Weyl on the spectral theory of second order linear differential equations (chap. \ref{ch:7}, \ref{sec:7.3}) naturally raised the question of their generalization to linear differential equations of arbitrary order, but that problem was only attacked by K. Kodaira in 1949 \cite{126}. Surprisingly enough, although Stone had shown in his book \cite{207} how von Neumann's spectral theory could be applied to yield H. Weyl's results, Kodaira elected to follow Weyl's method, suitably extended. Simultaneous work by Glazman and Neumark, and later papers by many authors completed Kodaira's results and also inserted them within von Neumann's theory; we refer the reader to \cite[vol.~II, p.~1588--1592]{062} for more historical details, and we will only describe the main features of the theory.
 
-% APPLICATIONS OF FUNCTIONAL ANALYSIS 245
-% tions u € HL which vanish in a neighborhood of a (resp. B). If one writes the Lagrange "adjunction" formula (chap.I, 1, formula (5))
-% v(zeu) - u(Lev) = 5 (C(u,v))
-% for functions u, v which are c® in J, then it can be shown that any linear form 8 € md (resp.me) can be written t-0 t
-% 6 (u) = 1im C(u,w)(t) (resp. 6(u) = 1im C(u,w)(t))
-% for a C° function w in J for which the limit exists for every u &€ HL, and conversely any such function defines a linear form in md (resp.‘mB). Due to this result, one says that for any 8 € M, the relation #(u) = 0 is a boundary condition for the differential operator L.
-% As the defects of ff;*' are both equal to p, there exist self-ad joint extensions AL of T (infinitely many if p > 0); L ( for each of them, dom(AL) is a subspace of HL of codimen
-% sion p, defined by p independent "limit conditions" Gj(u) = O with ej €M (the linear forms ej are not arbi trary, since one must have (T;ou|v) = (ulTZov) for u and v in dom(AL)). For a given self-adjoint extension AL, let S be its spectrum, which is a closed subset of R (it
-% may be the whole line R, and it is always infinite and un bounded). For any ( € S, (AL-QI)-l is a continuous normal operator in LZ(J); one shows that it is a Carleman operator, with kernel (s,t)~— G((,s,t), called the Green function of (16) G(¢,t,s) = G(Chs,t).
-% AL- Cr 3 one has
+One considers a differential operator of even order \(2r\)
+\begin{equation}
+    \label{eq:9.15}
+    L: u \mapsto D^r(p_0 D^r u) + D^{r-1}(p_1 D^{r-1}u) + \ldots + D(p_{r-1}Du) + p_r u
+\end{equation}
+where \(p_0, p_1, \ldots, p_r\) are \emph{real} \(\C^\infty\) functions in an open interval \(J = ]\alpha, \beta[\) (bounded or not) of \(\R\), and \(p_0(t) \neq 0\) for all \(t \in J\); it is \emph{formally self-adjoint}, i.e. for any two functions \(u, v\) of \(\mathcal{D}(J)\) (space of \(C^\infty\) functions in \(J\) with compact support)
+\begin{equation}
+    \label{eq:9.16}
+    (L \cdot u | v) = (u | L \cdot v)
+\end{equation}
+the scalar product being taken in \(L^2(J)\). We write \(T_L\) the operator \(L\), considered as a hermitian (unbounded) operator in \(L^2(J)\) with \(\dom(T_L) = \mathcal{D}(J)\). Then the adjoint \(T^*_L\) is densely defined; more precisely, \(\dom(T^*_L) = H_L\) is the space of all functions \(u\) of class \(C^{2r-1}\) in \(J\) such that the \emph{distribution} \(L \cdot u\) is a \emph{function} of \(L^2{J}\), with \(T^*_L \cdot u = L \cdot u\). The von Neumann spectral theory (chap. \ref{ch:7}, \ref{sec:7.4}) shows that \(H_L\) is the direct sum of \(\dom(T^{**}_L), E^+_L\) and \(E^-_L\), where \(E^\pm_L\) is the subspace of functions \(u\) of class \(C^{2r-1}\) which are solutions of \(L \cdot u = \pm iu\) and in addition are \emph{square integrable} in \(J\); in fact, they are of class \(C^\infty\). Due to the fact that the \(p_j\) are real functions, both spaces \(E^+_L\) and \(E^-_L\) have the \emph{same} dimension \(p \leq 2r\). The \emph{dual} \(\mathfrak{M}\) of \(E^+_L \oplus E^-_L\) can be identified with the space of linear forms on \(H_L\) which vanish on \(\dom(T^{**}_L)\); it is the direct sum \(\mathfrak{M}_\alpha \oplus \mathfrak{M}_\beta\), where \(\mathfrak{M}_\alpha\) (resp. \(\mathfrak{M}_\beta\)) is the subspace of \(\mathfrak{M}\) consisting of all forms \(\theta\) such that \(\theta(u) = 0\) for all functions \(u \in H_L\) which vanish in a neighborhood of \(\alpha\) (resp. \(\beta\)). If one writes the Lagrange ``adjunction'' formula (chap. \ref{ch:1}, \ref{sec:1.1}, formula \eqref{eq:1.5})
+\[
+    v(L \cdot u) - u(L \cdot v) = \frac{d}{dt}(C(u,v))
+\]
+for functions \(u, v\) which are \(C^\infty\) in \(J\), then it can be shown that any linear form \(\theta \in \mathfrak{M}_\alpha\) (resp. \(\mathfrak{M}_\beta\)) can be written
+\[
+    \theta(u) = \lim_{t \to \alpha} C(u,w)(t)
+    \qquad
+    (\text{resp. } \theta(u) = \lim_{t \to \beta} C(u,w)(t))
+\]
+for a \(C^\infty\) function \(w\) in \(J\) for which the limit exists for every \(u \in H_L\), and conversely any such function defines a linear form in \(\mathfrak{M}_\alpha\) (resp. \(\mathfrak{M}_\beta\)). Due to this result, one says that for any \(\theta \in \mathfrak{M}\), the relation \(\theta(u) = 0\) is a \emph{boundary condition} for the differential operator \(L\).
 
-% 246 CHAPTER IX
-% For each ( ¢ S and t € J, the function s> G({,t,s) is 2r-1 C function, and in each interval Ja,t[, Jt,8[, it is a € solution of the equation Leu - Cu = 0, satisfying the boundary conditions which define 4 , and in addition Ar=1 L
-% the function si— é_f?:f G(C,t,s) has limits on the left and S
-% on the right at the point s = t, such that
-% a2r-l a2r-l
-% 9SS oS
-% (17) —57o7 6(C,t,t-) - =555 G(C,t,t+4) = 1/p_(t).
-% These conditions obviously generalize those seen in chap.VII, 3 for second order equations; they completely determine G once a fundamental system of 2r solutions tr~>vj(g,t) of L*u = (u =0 is known, and it is easily seen that one can
-% write in matrix notation
-% [G(g,s,t) 3(5,8)* w-(g)g(g,t) for t < s
+As the defects of \(T^{**}_L\) are both equal to \(p\), there exist \emph{self-adjoint extensions} \(A_L\) of \(T_L\) (infinitely many if \(p > 0\)); for each of them, \(\dom(A_L)\) is a subspace of \(H_L\) of codimension \(p\), defined by \(p\) independent ``limit conditions'' \(\theta_j(u) = 0\) with \(\theta_j \in \mathfrak{M}\) (the linear forms \(\theta_j\) are not arbitrary, since one must have \((T^*_L \cdot u | v) = (u | T^*_L \cdot v)\) for \(u\) and \(v\) in \(\dom(A_L)\)). For a given self-adjoint extension \(A_L\), let \(S\) be its spectrum, which is a closed subset of \(\R\) (it may be the whole line \(\R\), and it is always infinite and unbounded). For any \(\zeta \not\in S, (A_L - \zeta I)^{-1}\) is a continuous normal operator in \(L^2(J)\); one shows that it is a \emph{Carleman operator}, with kernel \((s,t) \mapsto G(\zeta,s,t)\), called the \emph{Green function} of \(A_L - \zeta I\); one has
+\setcounter{equation}{15}
+\mytodo{either one of the two equations 9.16 is the impostor, or we need to change the numbers from here on.}
+\begin{equation}
+    \label{eq:9.16b}
+    G(\zeta, t, s) = \overline{G(\overline{\zeta}, s, t)}.
+\end{equation}
 
-% (18) <
-% G(C,s,t) 3(5,5)* W+(€)3(C,t) for t > s
+For each \(\zeta \not\in S\) and \(t \in J\), the function \(s \mapsto G(\zeta, t, s)\) is a \(C^{2r-1}\) function, and in each interval \(]\alpha,t[, ]t,\beta[\), it is a \(C^\infty\) solution of the equation \(L \cdot u - \zeta u = 0\), satisfying the boundary conditions which define \(A_L\), and in addition the function \(s \mapsto \pder{^{2r-1}}{s^{2r-1}} G(\zeta, t, s)\) has limits on the left and on the right at the point \(s = t\), such that
+\begin{equation}
+    \label{eq:9.17}
+    \pder{^{2r-1}}{s^{2r-1}} G(\zeta, t, t-) - \pder{^{2r-1}}{s^{2r-1}} G(\zeta, t, t+) = 1/p_0(t).
+\end{equation}
+These conditions obviously generalize those seen in chap. \ref{ch:7}, \ref{sec:7.3} for second order equations; they completely determine \(G\) once a fundamental system of \(2r\) solutions \(t \mapsto v_j(\zeta, t)\) of \(L \cdot u - \zeta u = 0\) is known, and it is easily seen that one can write in matrix notation
+\begin{equation}
+    \label{eq:9.18}
+    \begin{dcases}
+        G(\zeta, s, t) = \vec{v}(\overline{\zeta}, s)^* \, W^-(\zeta)\vec{v}(\zeta, t) \quad \text{for } t < s \\
+        G(\zeta, s, t) = \vec{v}(\overline{\zeta}, s)^* \, W^+(\zeta)\vec{v}(\zeta, t) \quad \text{for } t > s
+    \end{dcases}
+\end{equation}
+where \(\vec{\zeta, t}\) is the one column matrix \((v_j(\zeta, t))_{1 \leq j \leq 2r}\), \(W^-(\zeta)\) and \(W^+(\zeta)\) are two square matrices of order \(2r\) which only depend on \(\zeta\). Furthermore, if the \(v_j\) have been chosen so that for each \(t \in J\), the functions \(\zeta \mapsto v_j(\zeta, t)\) are \emph{holomorphic} in an open subset \(H \subset \C\), then \(W^-\) and \(W^+\) are \emph{holomorphic} in \(H \cap (\C - S)\).
 
-% where ,3(g,t) is the one column matrix (v .(C,t)) )
-% J 1< j<2r
-% W-(Q) and w*(g) are two square matrices of order 2r which only depend on (. Furthermore, if the Vj have been chosen so that for each t € J, the functions QF+-vj(g,t) are holomorphic in an open subset H C C (l < J s Zr), then W and Wt are holomorphic in H N (C—S).
-% As the operator[ is elliptic and formally self-adjoint, one can apply to it the Garding-Browder theorem (2). It can be shown that, with the notations introduced in 2, one has w < 2r+l, 1in other words, AI} has at most multiplicity 2r in its spectrum S; for convenience, if W < 2r+l, one de fines the function ej(t,g) to be identically O for
-% APPLICATIONS OF FUNCTIONAL ANALYSIS 247
-% m< j< 2r, t € J and & € S; for the other wvalues of j, (t,g)F-ej(t,) is a (A®v )-measurable function in JxS, such that for each & € S, tka—ej(t,g) is a solution of the equation Leu - Eu = 0 and for almost all t € J, the func tion Fa-ej(t,) is square integrable (for v) in each compact subset of S3; in addition, one has ej(t,g) = O for £ o S, For  € SC R, onemay write (with 2(t,g) = (19) 3(t,8) = @(8)V(g,t)
-% = (ej(tag)) 1< icop? OR€ column matrix)
-% < JSITr
-% and the elements of the matrix @ are -measurable and (20) P(8) = a(8)" a®)
-% square integrable in every compact subset of S, Let
-% which is a positive hermitian matrix for all & € S. The spectral decomposition of the operator (AL-QI)-l can then be written explicitlyin the following way: for any function fe 9(J), write
+As the operator \(L\) is elliptic and formally self-adjoint, one can apply to it the Gårding--Browder theorem (\ref{sec:9.2}). It can be shown that, with the notations introduced in \ref{sec:9.2}, one has \(\omega \leq 2r + 1\), in other words, \(A_L\) has \emph{at most multiplicity} \(2r\) in its spectrum \(S\); for convenience, if \(\omega < 2r + 1\), one defines the function \(e_j(t, \xi)\) to be identically 0 for \(\omega \leq j \leq 2r, t \in J\) and \(\xi in S\); for the other values of \(j, (t,\xi) \mapsto e_j(t,\xi)\) is a (\(\lambda \otimes \nu\))-measurable function in \(J \times S\), such that for each \(\xi \in S, t \mapsto e_j(t,\xi)\) is a solution of the equation \(L \cdot u - \xi u = 0\) and for almost all \(t \in J\), the function \(\xi \mapsto e_j(t, \xi)\) is square integrable (for \(\nu\)) in each compact subset of \(S\); in addition, one has \(e_j(t,g) = 0\) for \(\xi \not\in S\). For \(\xi \in S \subset \R\), one may write (with \(\vec{e}(t,\xi) = (e_j(t, \xi))_{1 \leq j \leq 2r}\), one column matrix)
+\begin{equation}
+    \label{eq:9.19}
+    \vec{e}(t, \xi) = \mathcal{Q}(\xi) \cdot \vec{v}(\xi, t)
+\end{equation}
+and the elements of the matrix \(\mathcal{Q}\) are \(\nu\)-measurable and square integrable in every compact subset of \(S\). Let
+\begin{equation}
+    \label{eq:9.20}
+    P(\xi) = \mathcal{Q}(\xi)^* \mathcal{Q}(\xi)
+\end{equation}
+which is a positive hermitian matrix for all \(\xi \in S\). The spectral decomposition of the operator \((A_L - \zeta I)^{-1}\) can then be written \emph{explicitly} in the following way: for any function \(f \in \mathcal{D}(J)\), write
+\begin{equation}
+    \label{eq:9.21}
+    (U \cdot f)(\zeta) = \left( \int_J \overline{f(t)} v_j(\zeta, t) dt \right)_{1 \leq j \leq 2r} \quad \text{(one column matrix);}
+\end{equation}
+then, for \(f, g\) in \(\mathcal{D}(J)\), one has
+\begin{equation}
+    \label{eq:9.22}
+    (f|g) = \int_S ((U \cdot f)(\xi))^* P(\xi)((U \cdot g)(\xi)) d\nu(\eta)
+\end{equation}
+and
+\begin{equation}
+    \label{eq:9.23}
+    ((A_L - \zeta I)^{-1} \cdot f| g) = \int_S (\xi - \zeta)^{-1} ((U \cdot f)(\xi))^* P(\xi)((U \cdot g)(\xi)) d\nu(\xi)
+\end{equation}
 
-% (21) (Ue£)(c) = (| £(t)v,(c,Dar)
-% (one column
+The set \(S_j - S_{j+1}\) is then the set of \(\xi \in S\) such that \emph{the matrix} \(P(\xi)\) \emph{has rank equal to} \(j\), and the (vector) measure \(P \cdot \nu\) can be recovered from the knowledge of the matrix \(W^+\) (formula \eqref{eq:9.18}) by the relation
+\begin{equation}
+    \label{eq:9.24}
+    \begin{gathered}
+        \int_{[a,b]} P(\xi)d\nu(\xi) - \frac{1}{2} (P(a)\nu(\{a\}) + P(b)\nu(\{b\})) = \\
+        = \frac{1}{2i\pi} \lim_{\varepsilon \to 0} \int_a^b (W^+(\sigma + i\varepsilon) - W^+(\sigma - i\varepsilon)) d\sigma.
+    \end{gathered}
+\end{equation}
 
-% J
-% then, for f, g in 8(J), one has
-% 1< j<2r
-% matrix);
+These results had previously been obtained for second order operators by Titchmarsh \cite{212}.
 
-% (22) (fle) = ff ((u-r)(E)N)TM PE)((U-e) (B))dv(E) S
-% and
-% (23) ((4, -¢cr) TM +fle)= | G-0) 7 ((U-£)())*PE) ((v-&)ENAV (3)
-% S
-% The set Sj-S.+ is then the set of & € S such that the J+1 matrix P(£) has rank equal to j, and the (vector) measure Pey can be recovered from the knowledge of the matrix W
-
-% 248 CHPATER IX
-% (formula (18)) by the relation
-% g P(8)av(g) - 3 (P(a)v({a}) + P(b)v({b})) =
-
-% [a,b]
-% (24)
-% b
-% - gi— 1im [r (W (c+ie) - W (o-ie))do.
-
-% TT
-% e=+0 Ja
-
-% These results had previously been obtained for second order operators by Titchmarsh [212],
-% Much work has been done to determine the spectrum S, the various subsets Sj’ and the measure Py under various hypotheses on the operator L ([62], [166]). It should how ever be stressed that the behavior of the measure Pv on R is essentially arbitrary: 1in a remarkable paper, Gelfand and Levitan have shown in 1951 [ 84] that, given on an arbitrary compact subset H of R an arbitrary measure o, it is always possible to find a second order operator [ with c”
-% coefficients such that P() has the form and
-% p,,(8) O
-% O )
-% the restriction of the measure pll y to H dis the given measure P
+Much work has been done to determine the spectrum \(S\), the various subsets \(S_j\) and the measure \(P \cdot \nu\) under various hypotheses on the operator \(L\) (\cite{062}, \cite{166}). It should how ever be stressed that the behavior of the measure \(P \cdot \nu\) on \(\R\) is essentially \emph{arbitrary}: in a remarkable paper, Gelfand and Levitan have shown in 1951 \cite{084} that, given on an arbitrary compact subset \(H\) of \(\R\) an arbitrary measure \(\rho\), it is always possible to find a second order operator \(L\) \emph{with} \(C^\infty\) \emph{coefficients} such that \(P(\xi)\) has the form
+\(
+    \begin{pmatrix}
+        p_{11}(\xi) & 0 \\
+        0           & 0
+    \end{pmatrix}
+\)
+and the restriction of the measure \(p_{11} \cdot \nu\) to \(H\) is the given measure \(\rho\).
 
 \section[Sobolev spaces and a priori inequalities]{Sobolev spaces and \emph{a priori} inequalities}
 \label{sec:9.4}
