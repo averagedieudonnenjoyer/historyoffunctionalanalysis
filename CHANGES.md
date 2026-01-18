@@ -17,6 +17,7 @@ Pages and rows are referred to the original book. Equations are not considered a
 - "objetive", p. 166, second-to-last line
 - "strognly", p. 176, second-to-last line
 - "indes", p. 184, fifteenth line
+- "if", p. 189, tenth-to-last line
 
 # Punctuation
 
