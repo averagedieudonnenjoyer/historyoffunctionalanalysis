@@ -3012,88 +3012,63 @@ for any function \(v \in \mathcal{D}(Y)\). The great interest of this result lie
 \label{ch:9}
 \setcounter{equation}{0}
 
-% I will not try to enumerate all the applications which have been made of Functional Analysis in the last 50 years, and which have amply Jjustified the creators of that discipline. But as we have seen in the first 4 chapters how most notions and problems of Functional Analysis had their origin in ques tions relative to ordinary or partial differential equations, I think it is worthwhile to give a sketchy description of a few of the most conspicuous progress in those questions which
-% have been made by an imaginative use of the new tools provided by Functional Analysis, mostly spectral theory and the theory of distributions.
+I will not try to enumerate all the applications which have been made of Functional Analysis in the last 50 years, and which have amply justified the creators of that discipline. But as we have seen in the first 4 chapters how most notions and problems of Functional Analysis had their origin in questions relative to ordinary or partial differential equations. I think it is worthwhile to give a sketchy description of \emph{a few} of the most conspicuous progress in those questions which have been made by an imaginative use of the new tools provided by Functional Analysis, mostly spectral theory and the theory of distributions.
 
 \section{Fixed point theorems}
 \label{sec:9.1}
 
-% In the first applications which we shall mention, however, little more is used of Banach spaces beyond their definition, and the results primarily concern non linear equations. The main idea is similar to the application of the contraction principle (chap.VI, 3) to the local existence theorems for differential equations, by writing them in the form 2z = F(z) for =z 4in some Banach space E of functionsy; if B is the closure of an open bounded convex set in E and F is a con
-% 233
+In the first applications which we shall mention, however, little more is used of Banach spaces beyond their definition, and the results primarily concern non linear equations. The main idea is similar to the application of the contraction principle (chap. \ref{ch:6}, \ref{sec:6.3}) to the local existence theorems for differential equations, by writing them in the form \(z = F(z)\) for \(z\) in some Banach space \(E\) of functions; if \(B\) is the closure of an open bounded convex set in \(E\) and \(F\) is a contraction mapping \(B\) into itself, then the contraction principle says there exists a \emph{unique} solution of \(z = F(z)\) in \(B\), what one calls a \emph{fixed point} for \(F\). But after the first years of the XX\supth{} century, new possibilities of obtaining ``fixed point theorems'' appeared with the first results of a new branch of mathematics, Algebraic Topology, created by H. Poincaré in 1895--1900: using the concepts of that theory, L.E.J.Brouwer could show in 1910 that if \(B\) is homeomorphic to a closed ball in some \emph{finite dimensional} vector space \(E\), and \(F\) is any continuous map of \(B\) into itself (which is not supposed any more to be a contraction), then \(F\) has \emph{at least} one fixed point in \(B\).
 
-% 234 CHAPTER IX
-% traction mapping B dinto itself, then the contraction prin ciple says there exists a unique solution of 2z = F(z) in B, what one calls a fixed point for F., But after the (irst years of the XXth century, new possibilities of obtaining "fixed point theorems" appeared with the first results of a new branch of mathematics, Algebraic Topology, created by H. Poincaré in 1895-1900: wusing the concepts of that theory, L.E.J.Brouwer could show in 1910 that if B is homeomorphic to a closed ball in some finite dimensional vector space E, and F is any continuous map of B into itself (which is not supposed any more to be a contraction), then F has at least one fixed point in B.
-% The problem was to find a similar theorem applicable to in finite dimensional Banach spaces K. The first result in that
-% direction was obtained in 1922 by G.D. Birkhoflf and O. Kellogg, who considered the case in which E = C(I) or E = LZ, and
-% showed that Brouwer's theorem could be extended, provided one took for B a compact convex set [22]; their fundamental de vice consists in using the compactness of B to "approximate"
-% it by a finite dimensional compact convex set Bn’ and to si milarly "approximate" F by a continuous mapping Fn of Bn into itself, to which Brouwer's theorem may be applied. This method was taken up and greatly expanded by J. Schauder, who showed that it could be applied to any Banach space E, and also, for separable Banach spaces, that one could replace com pactness of B and continuity of F by weak compactness and weak continuity ([186], [187]). This enabled him to prove, for instance, existence of a solution of the equation
+The problem was to find a similar theorem applicable to \emph{infinite dimensional} Banach spaces \(E\). The first result in that direction was obtained in 1922 by G.D. Birkhoff and O. Kellogg, who considered the case in which \(E = \Cont(I)\) or \(E = l^2\), and showed that Brouwer's theorem could be extended, provided one took for \(B\) a \emph{compact convex set} \cite{022}; their fundamental device consists in using the compactness of \(B\) to ``approximate'' it by a finite dimensional compact convex set \(B_n\), and to similarly ``approximate'' \(F\) by a continuous mapping \(F_n\) of \(B_n\) into itself, to which Brouwer's theorem may be applied. This method was taken up and greatly expanded by J. Schauder, who showed that it could be applied to any Banach space \(E\), and also, for separable Banach spaces, that one could replace compactness of \(B\) and continuity of \(F\) by weak compactness and weak continuity (\cite{186}, \cite{187}). This enabled him to prove, for instance, existence of a solution of the equation
+\begin{equation}
+    \label{eq:9.1}
+    \Delta z = f\left(x, y, z, \pder{z}{x}, \pder{z}{y}\right)
+\end{equation}
+in a domain \(\Omega \subset \R^2\) with smooth boundary (no connected component of which is reduced to a point), vanishing at the boundary, under the only assumption that \(f\) is bounded and continuous for bounded wvalues of the 5 variables on which it depends; the method consists in transforming \eqref{eq:9.1} into an integro-differential equation
+\begin{equation}
+    \label{eq:9.2}
+    z(x,y) = \iint_\Omega G(x, y, \xi, \eta) f(\xi, \eta, z(\xi, \eta), \pder{z}{\xi}, \pder{z}{\eta}) d\xi d\eta
+\end{equation}
+where \(G\) is the Green function for \(\Omega\).
 
-% APPLICATIONS OF FUNCTIONAL ANALYSIS 235 aZ aZ) (l) Az = f(x9y,zy 3%’ 3y
-% in a domain C R? with smooth boundary (no connected com ponent of which is reduced to a point), vanishing at the boundary, under the only assumption that f is bounded and continuous for bounded wvalues of the 5 variables on which it depends; the method consists in transforming (1) into an in
-% tegro-differential equation
-% oz (2) Z(X’Y) = G(X,Y,E,n)f(g,fl,Z(g,n), gg: ai)dg dn 0
-% where G dis the Green function for Q.
-% A little later, a much more sophisticated approach enabled
-% Schauder to solve Cauchy's problem locally for quasi-linear hyperbolic equations( )
-% *
-% 0z 9z d =z 2 A. (X 9 o 00 X Z '-—,ooo,---—) =
-% 2
-% i,k ik 71 *n? ’axl axn axiaxk
-% (3)4 4
+A little later, a much more sophisticated approach enabled Schauder to solve Cauchy's problem locally for quasi-linear hyperbolic equations\footnote{The equation is supposed to be ``normal'', which means that the left hand side is such that the quadratic form \(\sum_{i,k} A_{ik} \xi_i \xi_k\) has signature \((1,n-1)\).}
+\begin{equation}
+    \label{eq:9.3}
+    \sum_{i,k} A_{ik} \left( x_1, \ldots, x_n, z, \pder{z}{x_1}, \ldots, \pder{z}{x_n} \right) \frac{\partial^2 z}{\partial x_i \partial x_k} = A \left( x_1, \ldots, x_n, z, \pder{z}{x_1}, \ldots, \pder{z}{x_n} \right).
+\end{equation}
+His method consists, for a \emph{given} function \(z(x_1, \ldots, x_n)\), to solve the Cauchy problem for the linear hyperbolic equation in the unknown function \(Z\)
+\begin{equation}
+    \label{eq:9.4}
+    \sum_{i,k} A_{ik} \left( x_1, \ldots, x_n, z, \pder{z}{x_1}, \ldots, \pder{z}{x_n} \right) \frac{\partial^2 Z}{\partial x_i \partial x_k} = A \left( x_1, \ldots, x_n, z, \pder{z}{x_1}, \ldots, \pder{z}{x_n} \right).
+\end{equation}
+When \(z\) is in a suitable set \(K\), the problem has a unique solution \(Z(z)\), and existence of a solution \(z\) of \eqref{eq:9.3} in \(K\) will be obtained if one shows that the equation \(Z(z) = z\) has a solution in \(K\). The problem consists in choosing \(K\) such that the extension of Brouwer's fixed point theorem is applicable; the main point is to obtain \emph{a priori inequalities} for solutions of ``mormal'' linear hyperbolic equations
+\begin{equation}
+    \label{eq:9.5}
+    \begin{gathered}
+    L(u) \equiv \sum_{i,k} A_{ik}(x_1, \ldots, x_n) \frac{\partial^2 u}{\partial x_i \partial x_k} + \sum_j B_j(x_1, \ldots, x_n) \pder{u}{x_j} \\
+    + C(x_1, \ldots, x_n)u = F(x_1, \ldots, x_n)
+    \end{gathered}
+\end{equation}
+defined in a truncated pyramid \(P\) having its larger base \(B\) in \(\R^{n-1}\). Using a method first introduced in 1926 by Friedrichs and H. Lewy, which consists in transforming the integral \(\int_P \pder{u}{x_n} L(u)d\omega\) by integration by parts and Stokes' \(P\) formula, Schauder obtains (for suitable restrictions on \(P\) and the coefficients \(A_{ik}, B_j\) and \(C\) in \eqref{eq:9.5}) an inequality
+\begin{equation}
+    \label{eq:9.6}
+    \begin{gathered}
+    \int_P \left( \left(\pder{u}{x_1}\right)^2 + \ldots + \left(\pder{u}{x_n}\right)^2 \right) d\omega \leq \\
+    \leq M \left( \int_B \left( u^2 + \left(\pder{u}{x_1}\right)^2 + \ldots + \left(\pder{u}{x_n}\right)^2 \right) d\sigma + \int_P F^2 d\omega \right)
+    \end{gathered}
+\end{equation}
+with a constant \(M\) independent of \(u\); by differentiation he gets similar inequalities for all derivatives (of any order) of \(u\). The space \(E\) is then defined by the norm \(\sup\limits_{x \in P} \left( \sum\limits_{|\alpha| \leq r} |D^\alpha f(x)| \right)\) for a suitable value of \(r\), but the set \(K\) is a ball in \(E\) for \emph{another norm}, namely \(\left( \int_P \left( \sum_{|\alpha| \leq s} |D^\alpha f(x)|^2 \right) dx \right)^{1/2}\) for another value of \(s\); his \emph{a priori} inequalities enable then Schauder to show that \(K\) is compact in \(E\) \footnote{This is probably the first time the norm of the space \(H^s\) makes its appearance.} and \(z \mapsto Z(z)\) continuous in \(K\) \cite{190}.
 
-% —_ A(X l,
-% Z ’axl’  \ldots"—). axn X n’
+Another of the famous theorems proved by Brouwer was the \emph{invariance of domain}: if \(\Omega\) is an open subset of \(\R^n\), and \(F\) an \emph{injective} continuous map of \(\Omega\) into \(\R^n\), then the image \(F(\Omega)\) is again an open subset. In 1929, Schauder showed that the theorem was still true in some types of Banach spaces, for maps \(F\) of the type \(x \mapsto x + H(x)\), where \(H\) is \emph{completely continuous} in the sense of F. Riesz, but not necessarily linear. From this he deduced for instance that if one knows that the equation
+\begin{equation}
+    \label{eq:9.7}
+    \Delta z - f \left( x, y, z, \pder{z}{x}, \pder{z}{y} \right) = \psi(x, y)
+\end{equation}
+has \emph{at most} a solution taking given values \(\varphi(s)\) at the boundary of \(\Omega \subset \R^2\), then, if for given functions \(\varphi_0, \psi_0\) there \emph{exists} such a solution, the same is true for functions \(\varphi, \psi\) sufficiently close to \(\varphi_0, \psi_0\) \cite{189}.
 
-% o o o ’
-% His method consists, for a given function z(xl, \ldots,xn), to solve the Cauchy problem for the linear hyperbolic equation in the unknown function Z
-% () 3z 3z
-% 7z d2z 3 Z
-% 2
-% ik ik 7 1? *n ’axl X axiaxk
-% 2 A. (X e e e 49X s Z __,ooo,_—‘)—""‘“'—"‘" =
-% 1 n
-% = A(Xl, \ldots,xn,z,-a-;(—, \ldots,—a?).
-% (*)
-% The equation is supposed to be '"normal", which means that
-% the left hand side is such that the quadratic form i?k Aikgigk has signature (1,n-1).
+But the most sophisticated application of Algebraic Topology to functional equations was made in the famous 1934 paper by J. Leray and J. Schauder \cite{142}. If \(U\) is an open set in \(\R^n\), such that \(\overline{U}\) is compact, and \(f\) is a continuous mapping of \(\overline{U}\) in \(\R^n\), then, for each point \(z \in \R^n\) which does not be long to the image by \(f\) of the boundary of \(U\), Brouwer had shown that one may attach an integer \(d(f,U,z)\) which only depends on the connected component of \(\R^n - f(\text{Fr}(U))\) to which \(z\) belongs, and varies continuously with \(\lambda\) when \(f(x) = F(x, \lambda)\) where \(F\) is continuous and \(\lambda\) a real parameter; furthermore, when \(d(f,U,z) \neq 0\), the inverse image \(f^{-1}(z)\) is not empty. Leray and Schauder were able, by approximating compact subsets of a Banach space by finite dimensional subsets, to prove, by application of this theorem of Brouwer, the following existence theorem. Let \(E\) be a Banach space, \(I \subset \R\) a compact inverval, \(\Omega \subset E \times I\) a bounded open set in \(E \times I, F: \overline{\Omega} \to E\) a mapping which is completely continuous, and in addition uniformly continuous. One assumes that for every \(\lambda \in I\), there are no solution of the equation \(x - F(x, \lambda)) = 0\) in the boundary of \(\Omega\), and that, for \emph{one} value \(\lambda_0 \in I\), the equation \(x - F(x, \lambda_0) = 0\) has exactly one solution in \(\Omega\); then, for \emph{every} \(\lambda \in I\), there exists \emph{at least one} solution of \(x - F(x, \lambda) = 0\) in \(\Omega\).
 
-% 236 CHAPTER IX
-% When 2z 1is in a suitable set K, the problem has a unique solution Z(z), and existence of a solution 2z of (3) in K will be obtained if one shows that the equation Z(z) = z has a solution in XK. The problem consists in choosing K such that the extension of Brouwer's fixed point theorem is appli cable; the main point is to obtain a priori inequalities for solutions of "mormal" linear hyperbolic equations
-% L(u) = = Ak(xl’-°°’xn)mf‘+Bj(xl’“" )oX o i,k
-% (5)
-% + C(Xl,ooo,xn)u = F(Xl, \ldots,Xn)
-% defined in a truncated pyramid P having its larger base B in Rn-l. Using a method first introduced in 1926 by
-% Friedrichs and H. Lewy, which consists in transforming the integral S‘ g; L(u)dy by integration by parts and Stokes' P n
-% formula, Schauder obtains (for suitable restrictions on P
-
-% and the coefficients Aik’
-% Bj and C in (5)) an inequality
-
-% ((%EI)Z toeot (%%—)Z)dm <
-% < M( (u2 + (gzz) tee ot (ax ) )do + {/ P dw)
-% (6)2
-% ws) ‘P
-% with a constant M dindependent of u; by differentiation he gets similar inequalities for all derivatives (of any order)
-% of wu., The space E is then defined by the norm sup ( % |Daf(x)|) for a suitable value of r, but the b (S |a|sr
-% set K 4is a ball in E for another norm, namely (( ( z |Do‘f(x)|2)dx)l/2 for another value of s3; his
-% APPLICATIONS OF FUNCTIONAL ANALYSIS 237 . (*) : : is compact in E and z+=2Z(z) continuous in K [190].
-% a priori inequalities enable then Schauder to show that K . o o - L4 n
-% Another of the famous theorems proved by Brouwer was the invariance of domain: if () is an open subset of R , and F an injective continuous map of () dinto Rn, then the image F(Q) is again an open subset. In 1929, Schauder
-% showed that the theorem was still true in some types of Banach spaces, for maps F of the type Xha-X+H(X), where H is
-% completely continuous in the sense of F. Riesz, but not neces
-% sarily linear. From this he deduced for instance that if one (7) AZ-f(X,y,Z,g—E-, %“}E,) = W(X,Y)
-% knows that the equation
-% has at most a solution taking given values @(s) at the boundary of () C Rz, then, if for given functions P wo
-% there exists such a solution, the same is true for functions ®,  sufficiently close to o_, ¥ [189].
-% O
-% But the most sophisticated application of Algebraic Topology to functional equations was made in the famous 1934 paper by Je Leray and J. Schauder [142]. If U is an open set in Rn, such that U is compact, and f is a continuous mapping of U in Rn, then, for each point 2z € R" which does not be long to the image by f of the boundary of U, Brouwer had shown that one may attach an integer d(f,U,z) which only depends on the connected component of R" - f(Fr(U)) to which z belongs, and varies continuously with XA when f(x) = F(x,}\)
-% (*) This is probably the first time the norm of the space " makes its appearance.
-
-% 238 CHAPTER IX
-% where F 1s continuous and ) a real parameter; furthermore, when d(f,U,z) #£ O, the inverse image f-l(z) is not empty.
-% Leray and Schauder were able, by approximating compact sub sets of a Banach space by finite dimensional subsets, to prove, by application of this theorem of Brouwer, the following exis tence theorem, Let E Dbe a Banach space, IC R a compact inverval, () € EXI a bounded open set in ExI, F: Q-+ E a
-% mapping which is completely continuous, and in addition uni formly continuous. One assumes that for every )\ € I, there are no solution of the equation x-F(x,)) = O in the boundary of 2, and that, for one value xo € I, the eqgquation x-F(x,ko) = 0 has exactly one solution in Q3 then, for every A € I, there exists at least one solution of x-F(x,))=
-% The application of that theorem to partial differential equations usually necessitates subtle a priori inequalities which guarantee that all the assumptions of the theorem are satisfied.
+The application of that theorem to partial differential equations usually necessitates subtle \emph{a priori} inequalities which guarantee that all the assumptions of the theorem are satisfied.
 
 \section{Carleman operators and generalized eigenvectors}
 \label{sec:9.2}
