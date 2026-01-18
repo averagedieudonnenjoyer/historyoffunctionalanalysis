@@ -39,3 +39,4 @@ Certain equations in the original book are split in two lines, as there is not e
 * 5.44
 * 6.18
 * the unnumbered one immediately following 7.13
+* 9.4
