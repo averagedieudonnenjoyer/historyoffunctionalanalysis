@@ -18,6 +18,7 @@ Pages and rows are referred to the original book. Equations are not considered a
 - "strognly", p. 176, second-to-last line
 - "indes", p. 184, fifteenth line
 - "if", p. 189, tenth-to-last line
+- "it", p. 191, second-to-last line (without considering the footnote)
 
 # Punctuation
 
