@@ -2844,56 +2844,35 @@ In his thesis, Fréchet had already noticed that convergence in a metric space c
 
 There was thus an obvious need for a generalization of the concept of metric space, but none proved adequate for Functional Analysis until Hausdorff, in 1914, created ``General topology'' as we understand it now, based on the concept of neighborhood \cite{100}; but surprizingly enough, it took some time to become aware of that adequacy. Ever since Hilbert, ``weak convergence'' of \emph{sequences} had become a ceniral theme, first in Hilbert spaces, then with F. Riesz and Helly in some types of normed spaces (chap. \ref{ch:6}), and one would have thought that Hausdorff's concept of topology would have been tested on that notion; but ultil 1934 the only mathematician who seems to have had that idea was von Neumann: he defined weak neighborhoods of a point \(x_0\) in a Hilbert space \(E\) by a finite number of conditions \(|\left(x-x_0|a_j\right)| \leq \varepsilon\) for points \(a_j \in E\), and then went on to define similarly, in the algebra \(\L(E)\) of endomorphisms of \(E\), ``strong neighborhoods'' of an operator \(U_0\) by a finite number of conditions \(\norm{(U-U_0) \cdot x_j} \leq \varepsilon\) for \(x_j \in E\), and ``weak neighborhoods'' by a finite number of con ditions \(\norm{\left( (U-U_0) \cdot x_j | y_j \right)} \leq \varepsilon\) \cite[vol.~II, p.~94--104]{221}. But he did not try to extend these ideas to other Banach spaces.
 
-% On the contrary, "weak convergence" was at the center of Banach's book, and the results he obtained concerning that notion can be considered as some of his deepest work. But to understand what he did, it is probably better first to state
-% the final form which was taken by his 3 main theorems: I) If E 4is a Banach space, and its dual E’ is given the weak topology o(E’,E), the unit ball |[[x’]] < 1 in E’ is
-% compact for that topology.
-% IT) In order that a vector subspace V < E’ Dbe closed for the topology ¢(E’,E), it is necessary and sufficient that for any closed ball B’ in E’, Vv N B’ be compact for that
-% topology.
+On the contrary, ``weak convergence'' was at the center of Banach's book, and the results he obtained concerning that notion can be considered as some of his deepest work. But to understand what he did, it is probably better first to state the final form which was taken by his 3 main theorems:
 
-% 212 CHAPTER VIII
-% III) In order that E be reflexive, it is necessary and sufficient that the unit ball |[|x|| < 1 in E be compact for the weak topology G(E,E').
-% In this form, the theorems were proved by N. Bourbaki in 1938 [ 25], and independently a little later by L. Alaoglu [ 5].
-% Their proofs use the following ingredients:
-% a) The weak topology o(E’,E) is defined by taking as neigh borhoods of xg € E’ the sets defined by a finite number of relations |(x’-xg,xj)| < ¢ for arbitrary X € E; o(E,E") is defined similarly by exchanging the roles of E and E’.
-% b) The word "compact" is used in the sense of N, Bourbaki, and means what was defined as "bicompact sets" (in Hausdorff spaces) by P, Alexandroff and P. Urysohn in 1924 [6]: for them a space is "bicompact" if every open covering of the space contains a finite covering (the "Borel-Lebesgue axiom").
-% c) Compact sets can be characterized equivalently by means of the notion of limit of a "net'", a notion which generalizes
-% the 1limit of a sequence and was introduced in 1922 by E,.H, Moore and H.L. Smith [164] (N. Bourbaki uses the equivalent
-% concept of limit of a "filter").,
-% d) Any product of compact spaces is compact, a theorem proved by A, Tychonoff in 1930.
-% However, none of these notions or theorems was ever men
-% tioned by Banach or mathematicians of his school until 1940, although they repeatedly quote Hausdorff's book of 1927 ( );
-% *
-% ( )The bulk of that book [101] is devoted to metric spaces,
-% *
-% and general topological spaces are given a very scanty treat ment in 5 pages; it seems that Hausdorff had lost faith in his ideas of 1914!
+I) If \(E\) is a Banach space, and its dual \(E'\) is given the weak topology \(\sigma(E',E)\), the unit ball \(\norm{x} \leq 1\) in \(E'\) is compact for that topology.
 
-% LOCALLY CONVEX SPACES AND THE THEORY OF DISTRIBUTIONS 213
-% for them, the word "compact" is always taken in the initial sense of Fréchet, meaning a space in which there is no infi nite closed discrete set, That notion is equivalent to the notion of "bicompact" space when restricted to metrizable spaces; the version of theorem I proved by Banach [15,p.123] is therefore limited to separable Banach spaces E (because in that case the ball ||x’]] £ 1 4is metrizable for the weak topology o(E’,E). It generalizes of course the "principles of choice" used by Hilbert, F. Riesz and Helly (ohap.V and VI)
-% On the other hand, Banach was able to prove a theorem equi valent to Theorem II for all Banach spaces. He starts from the study of vector subspaces of E’ which are closed for
-% the topology of the norm, and observes that for such a sub space V, a sequence (x;) of points of V may have a weak limit which does not belong to V; furthermore, if Vl is
-% the vector space consisting of all these weak limits, it may happen that sequences of points of V have weak limits 1
-% which do not belong to V and so on [15,p.209]. Without 1? speaking of weak topology, he then introduces the weakly closed vector subspaces, under the name of "regularly closed" subspaces: he defines such a space V by the property that for any xé £ V, there is an x € E such that (x',x) = 0 for all x'€¢ Vv, but (xg,x) ; O, Conscious of the fact that
-% weakly convergent sequences are inadequate tools, Banach then introduces an ad hoc notion, the "limits of bounded transfi nite sequences" in the dual E’: for any family (ué)<Y of elements of E’, contained in a ball and indexed by a segment of the ordinals, he shows (by using the Hahn--Banach theorem)
+II) In order that a vector subspace \(V \subset E'\) be closed for the topology \(\sigma(E',E)\), it is necessary and sufficient that for any closed ball \(B'\) in \(E'\), \(V \cap B'\) be compact for that topology.
 
-% 214 CHAPTER VIII
-% that there always exist elements u’€ E’ such that, for
+III) In order that \(E\) be reflexive, it is necessary and sufficient that the unit ball \(\norm{x} \leq 1\) in \(E\) be compact for the weak topology \(\sigma(E,E')\).
 
-% every x € E,
-% gy gy
-% lim.inf (ué,x) < (u’,x) < lim.sup (ué,x)
+In this form, the theorems were proved by N. Bourbaki in 1938 \cite{025}, and independently a little later by L. Alaoglu \cite{005}. Their proofs use the following ingredients:
 
-% and calls any such u’ '"a limit" of the transfinite sequence (ué) (there may be infinitely many such "limits"!). He then says V is "transfinitely closed" if every bounded transfini
-% te sequence of elements of V has at least a "transfinite limit" in V, and what he shows, by a very clever argument,
-% is that "regularly closed" and "transfinitely closed" are equivalent notions [ 15, p.121]. It was an easy matter to replace "transfinite sequences" by "nets" or "filters" in Banach's proof to obtain the equivalent statement of Theorem
-% IT.
-% Finally, by considering E as naturally imbcecdded in its second dual E’ and using again "transfinite limits", Banach (%) could prove Theorem III, but only when E is separable
-% It should be mentioned here that these theorems enabled
-% Banach to obtain a series of interesting theorems relating the properties of a continuous linear mapping u: E = F (where E
-% and F are Banach spaces), those of its transposed mapping Pu: P E’, and properties of the images u(E) and tu(F') (see [517) (**),
-% (*)In 1938, Goldstine proved a result which is equivalent to the property that for any Banach space E, the intersection ENB”, where B” is the unit ball |[x”||<1 in the second dual E”, is dense in B” for the weak topology o(E’ ,E’); from this Theorem III easily follows [ 88].
-% ( )Some of Banach's results had been obtained by Hausdorff in
-% * %
-% 1931 [102]; it is quite remarkable that he makes no mention of weak topology!
+a) The weak topology \(\sigma(E',E)\) is defined by taking as neighborhoods of \(x'_0 \in E'\) the sets defined by a finite number of relations \(|\langle x'-'_0, x_j\rangle| \leq \varepsilon\) for arbitrary \(x \in E\); \(\sigma(E,E')\) is defined similarly by exchanging the roles of \(E\) and \(E'\).
+
+b) The word ``compact'' is used in the sense of N. Bourbaki, and means what was defined as ``bicompact sets'' (in Hausdorff spaces) by P. Alexandroff and P. Urysohn in 1924 \cite{006}: for them a space is ``bicompact'' if every open covering of the space contains a finite covering (the ``Borel--Lebesgue axiom'').
+
+c) Compact sets can be characterized equivalently by means of the notion of limit of a ``net''', a notion which generalizes the limit of a sequence and was introduced in 1922 by E.H. Moore and H.L. Smith \cite{164} (N. Bourbaki uses the equivalent concept of limit of a ``filter'').
+
+d) Any product of compact spaces is compact, a theorem proved by A. Tychonoff in 1930.
+
+However, none of these notions or theorems was ever mentioned by Banach or mathematicians of his school until 1940, although they repeatedly quote Hausdorff's book of 1927 \footnote{The bulk of that book \cite{101} is devoted to metric spaces, and general topological spaces are given a very scanty treatment in 5 pages; it seems that Hausdorff had lost faith in his ideas of 1914!}; for them, the word ``compact'' is always taken in the initial sense of Fréchet, meaning a space in which there is no infinite closed discrete set. That notion is equivalent to the notion of ``bicompact'' space when restricted to metrizable spaces; the version of theorem I proved by Banach \cite[p.~123]{015} is therefore limited to \emph{separable} Banach spaces \(E\) (because in that case the ball \(\norm{x'} \leq 1\) is metrizable for the weak topology \(\sigma(E',E)\). It generalizes of course the ``principles of choice'' used by Hilbert, F. Riesz and Helly (chap. \ref{ch:5} and \ref{ch:6})
+
+On the other hand, Banach was able to prove a theorem equivalent to Theorem II for \emph{all} Banach spaces. He starts from the study of vector subspaces of \(E'\) which are \emph{closed} for the topology of the norm, and observes that for such a subspace \(V\), a sequence \((x'_n)\) of points of \(V\) may have a weak limit which does not belong to \(V\); furthermore, if \(V_1\) is the vector space consisting of all these weak limits, it may happen that sequences of points of \(V_1\) have weak limits which do not belong to \(V_1\) and so on \cite[p.~209]{015}. Without speaking of weak topology, he then introduces the weakly closed vector subspaces, under the name of ``regularly closed'' subspaces: he defines such a space \(V\) by the property that for any \(x'_0 \not\in V\), there is an \(x \in E\) such that \(\ip{x',x} \neq 0\) for all \(x' \in V\), but \(\ip{x'_0, x} \neq 0\). Conscious of the fact that weakly convergent sequences are inadequate tools, Banach then introduces an \emph{ad hoc} notion, the ``limits of bounded transfinite sequences'' in the dual \(E'\): for any family \((u'_\xi)_{\xi < \gamma}\) of elements of \(E'\), contained in a ball and indexed by a segment of the ordinals, he shows (by using the Hahn--Banach theorem) that there always exist elements \(u' \in E'\) such that, for every \(x \in E\),
+\[
+    \Liminf_{\xi \to \gamma} \ip{u'_\xi, x} \leq \ip{u', x} \leq \Limsup_{\xi \to \gamma} \ip{u'_\xi, x}
+\]
+and calls any such \(u'\) ``a limit'' of the transfinite sequence \((u'_\xi)\) (there may be infinitely many such ``limits''!). He then says \(V\) is ``\emph{transfinitely closed}'' if every bounded transfinite sequence of elements of \(V\) has at least a ``\emph{transfinite limit}'' in \(V\), and what he shows, by a very clever argument, is that ``regularly closed'' and ``transfinitely closed'' are \emph{equivalent} notions \cite[p.~121]{015}. It was an easy matter to replace ``transfinite sequences'' by ``nets'' or ``filters'' in Banach's proof to obtain the equivalent statement of Theorem II.
+
+Finally, by considering \(E\) as naturally imbedded in its second dual \(E''\) and using again ``transfinite limits'', Banach could prove Theorem III, but only when \(E\) is \emph{separable} \footnote{In 1938, Goldstine proved a result which is equivalent to the property that for any Banach space \(E\), the intersection \(E \cap B''\), where \(B''\) is the unit ball \(\norm{x''} \leq 1\) in the second dual \(E''\), is dense in \(B''\) for the weak topology \(\sigma(E'',E')\); from this Theorem III easily follows \cite{088}.}.
+
+It should be mentioned here that these theorems enabled Banach to obtain a series of interesting theorems relating the properties of a continuous linear mapping \(u: E \to F\) (where \(E\) and \(F\) are Banach spaces), those of its transposed mapping \(\prescript{t}{}u: F' \to E'\), and properties of the images \(u(E)\) and \(\prescript{t}{}u(F')\) (see \cite{51}) \footnote{Some of Banach's results had been obtained by Hausdorff in 1931 \cite{102}; it is quite remarkable that he makes no mention of weak topology!}.
 
 \section{Locally convex vector spaces}
 \label{sec:8.2}
