@@ -2,7 +2,7 @@ Jean Dieudonné's "History of Functional Analysis" typeset in LaTeX.
 
 I'm trying to stay as close as possible to the original book's style. The changes are documented in the file CHANGES.md.
 
-Current status: introduction + 7 chapters out of 9 are basically done (a diagram is missing in the introduction).
+Current status: introduction + 8 chapters out of 9 are basically done (a diagram is missing in the introduction).
 
 Bibliography is usually done by hand. Few references have been added.
 
