@@ -2607,215 +2607,231 @@ For self-adjoint operators \(A\) in \(E\), the connection with the ``eigendiffer
 \section{Later developments}
 \label{sec:7.6}
 
-% Since 1940, an enormous number of papers have been publish ed on Banach algebras, spectral theory and their applications. I think a fair and well organized account of all these deve lopments will have to wait till more time has elapsed and has
-% SPECTRAL THEORY AFTER 1900 191
-% put them in their proper perspective(*). With the exception of the theory of differential (ordinary or partial) and inte gral equations, which has a complex background in which more
-% than spectral theory is involved, and which will be considered in chap. IX, we shall limit our survey to bare indications of the general trends, and to references to a few papers and books.
-% A) Structure of Banach algebras,
-% After Gelfand and his school had investigated the general properties of all Banach algebras, mathematicians concentrat ed their efforts on two particular classes of such algebras,
-% the commutative and the involutive ones.
-% For a commutative Banach algebra A, a central problem was to define "functions" of elements x € A more general than polynomials, after the pattern set by F. Riesz and von Neumann. The latter had even shown that it was possible to define functions f(Nl, \ldots,Nk) of commuting normal operators
-% Nj in a Hilbert space, for all continuous functions f de fined in Ck. For a general commutative Banach algebra A,
-% such a definition was only possible under some restrictions on f; it Xy3eeeyXy are any elements of A, their Jjoint spectrum is the image in Ck of the mapping
-% *
-% ( )Glaring examples of lack of perspective are given by the Hellinger-Toeplitz article of 1923 in the Enzyklopddie der math., Wiss. [107], which gives undue emphasis to integral equations, and by Hadamard's article on Functional Analysis of 1928 ([94], vol.I, p.435-453), which barely mentions F. Riesz and does not speak of spectral theory at all!
-% 192 CHAPTER VIT
-% XF+-(X(xl),x(xz), \ldots,x(xk)) where X runs through X(A) (for k = 1, it is of course the spectrum of xl); one then could prove that if B is the algebra of (germs of) functions f holomorphic in a neighbourhood (depending on f) of the joint spectrum of XpsesesXy there is a homomorphism B = A written fW—>f(xl, \ldots,xk), which uniquely extends the natural homomorphism of the algebra of polynomials on Ck into A written similarly ([222], [27]).
-% On the spectrum X(A) of a commutative Banach algebra A,
-% one soon was led to consider a topology different from the one induced by the weak topology of the dual A’ of the Banach space A. For Boolean rings, Stone had introduced the idea of defining on the space of maximal ideals of such a ring B a topology, in which the closed sets were defined as the sets of maximal ideals containing a giveun (arbitrary) ideal of B. As the set X(A) of characters of a commutative Banach algebra A corresponds in a one-to-one way to the set of maxifial ideals, Stone's topology can be defined in the same way on X(A); dit is in general coarser than the weak topology, and one says A 1is a regular commutative Banach algebra if these two topologies on X(A) coincide; for instance, the algebra @(K) of continuous functions on a compact space K
-% is a regular algebra,
-% To any closed ideal J in A, one attaches the set h(J) off all characters ¥ € X(A) which vanish on J; a natural question is to ask if the intersection of all kernels X-l(O) (maximal ideals of A) such that ¥ € h(J), which always contains J, dis actually equal to J; one then says that
-% SPECTRAL THEORY AFTER 1900 193
-% the ideal J admits spectral synthesis., Giving conditions for a closed ideal to admit spectral synthesis in a regular commutative Banach algebra is a problem which has been exten sively studied ([21], [58]).
-% Involutive Banach algebras A (not necessarily commutative) are those equipped with an involution x+» x* such that | x*|| = [|x|]] for al11 x € A; c¥*¥-algebras (5) are involutive
-% algebras, but there exist involutive Banach algebras which are not C¥-algebras (see C) below). The central concept is that of representation of an involutive Banach algebra A in a Hilbert space Ej; this means a homomorphism f: A = £(E) of algebras such that in addition f(x*) = f(x)¥. They have been the subject of a large number of investigations, lecading 1o the elucidation of the structure of several classes ol C*¥-algebras; the theory of von Neumann algebras (which are special types of C*-algebras) plays a great part in these in vestigations ([58], [36]).
-% B) Algebras of continuous functions.
-% Since 1960, many mathematicians have been interested in the study of subalgebras of Banach algebras C(K) of con tinuous functions on a compact space K. 1In classical Analysis, one had much studied the case in which K is the unit disk |[z| £ 1 in €; there is then in C(K) a parti cularly interesting Banach subalgebra, namely the algebra B of functions which are holomorphic in the interior |z| < 1 of the disc. It can be identified with the algebra BO of the restrictions of the functions of B to the unit circle WU: |z| = 1, and B, 1is also the closure in c(U) of the alge-
-% 194 CHAPTER VII
-% bra of trigonometric polynomials. It turns out that the study of BO is closely linked to the completions of the space of trigonometric polynomials in the various spaces Lp(u% where |4 1is Haar measure on U, and many beautiful proper ties of these spaces (known as the Hardy spaces Hp(u)) had been discovered., But in the light of the theory of commuta tive Banach algebras, it was found that these results could
-% be much better understood if they were generalized to subal gebras of an algebra C(K) where K is any compact space, and put in relation with some kinds of measures on K (see f18], [(33], [79], [116], [140]).
-% C) Harmonic Analysis.
-% We have already stressed the fact (chap.I, 2) that
-% Fourier series provided the starting point of spectral theory when it was realizedlthat they could be generalized to "ex pansions" in series of "orthogonal'" functions arising from boundary wvalue problems,
-% It was, however, very soon observed that the "trigonometric system" (elnx) possessed very peculiar properties not ncz shared by general "orthogonal systems", and linked to the . / . . /
-% functional equation el(X+x ) = e ¥et¥ . For instance, if + o0 . Ffoo :
-% N==co N==cw
-% f(x)  a(n)enlx, g(x) = £ b(n)eTMTM were two Fourier
-% series, one had Cor the Fourier series f(x)g(x) = +
-% = X C(n)enlx of their product, the very simple formula (40) c(n) = Z a(p)b(n-p).
-% N=-=0o
-% + o
+Since 1940, an enormous number of papers have been published on Banach algebras, spectral theory and their applications. I think a fair and well organized account of all these developments will have to wait till more time has elapsed and has put them in their proper perspective\footnote{Glaring examples of lack of perspective are given by the Hellinger--Toeplitz article of 1923 in the \emph{Enzyklopädie der math. Wiss.} \cite{107}, which gives undue emphasis to integral equations, and by Hadamard's article on Functional Analysis of 1928 (\cite{094}, vol.~I, p.~435--453), which barely mentions F. Riesz and does not speak of spectral theory at all!}. With the exception of the theory of differential (ordinary or partial) and integral equations, which has a complex background in which more than spectral theory is involved, and which will be considered in chap. \ref{ch:9}, we shall limit our survey to bare indications of the general trends, and to references to a few papers and books.
 
-% P==co
-% + oo .
+A) \emph{Structure of Banach algebras}.
 
-% Similarly, from the formula f(x) = £ a(n)e"'TM, one obtain N==o©
-% ed
+After Gelfand and his school had investigated the general properties of all Banach algebras, mathematicians concentrated their efforts on two particular classes of such algebras, the \emph{commutative} and the \emph{involutive} ones.
 
-% SPECTRAL THEORY AFTER 1900 195
-% (41) 2 a(n+l)e¥ = e ¥ (x)
-% 400 . .
-% n:—oo
-% and this property was used by de Moivre and even more by P
-% Laplace to solve linear difference equations X @ka(n+k)==0 k=1
-% by associating to the sequence (a(n)) the Fourier series f(x) = I a(n)e"TMTM, reducing the difference equation to an n
-% algebraic equation for f(x).
-% Similar peculiarities were observed for the "Fourier trans form" associating to an integrable function f din R the (42) Ff(x) = eT2MIXT riyat,
-% function
-% 400
-% Its main virtue, in the eyes of Fourier, Cauchy and Poisson, was that it reduced linear partial differential equations with
-% constant coefficients to algebraic problems, due to the fact that the Fourier transform of the derivative f’ is the function x« 27ix Ff(x). Furthermore, in his researches on Probability theory, Tchebycheff had shown that if F1 F2 are
-% two independent "random variables" with "probability lawsTM" @,y &, Mmeasures on R with densities 810 8o the proba bility law of F, 1 + F5 had a density given by the convolution g = 81x85 def'ined as
-% 40
-% (43) g(x) = g, (t)e,(x-t)dt ([211] ,vol.ITI,p.481-491);
-% and Tchebycheff's student Liapounov, who started to use Fourier (44) S(gl*gz) = gl'3g2 [148].
-% transforms in Probability theory, observed that
-% 196 CHAPTER VII
-% One should also mention the Poisson formula (also discover (45) T f(n) = T 3f(n)
-% ed independently by Cauchy)
-% necZz ncz
-% for sufficiently regular functions f on R,
-% It took over 100 years to understand these peculiarities and to connect them with the notion of group, via the concepts of character and of group algebra. Characters were first de fined for arbitrary finite commutative groups by H, Weber in 1882, as complex valued functions <Y on such a group G with values #0, such that ¥X(xy) = X(x)x(y) for all x, y in Gj
-% but special cases had long before been considered by Legendre, Gauss and Dirichlet. A meaningful generalization to non com mutative finite groups was discovered in 1896 by Frobenius: instead of considering homomorphisms of G dinto the multi plicative group ¥, one should consider homomorphisms s —= U(s) of G into the general linear group GL(n,C) of invertible matrices of order n, for any integer n, This is also called a linear representation of degree n of G in the vector space E = Cn: giving such a representation is equivalent to defining an action (s,x)+» sex of G on E such that se(tex) = (st)ex, e+x = x for the neutral element e € G, and such that each mapping X1 se*x is linear (with matrix U(s)).
-% Now Cayley had defined, for a finite group G, the group algebra ¢€[G] as the vector space of all formal linear com binations z %Ss with S € ¢, multiplication being de SEG
-% fined by
-% SPECTRAL THEORY AFTER 1900 197
-% 46) (2 £ s)(z s) = z E n,st. ( scc S seg | ® (s,t)€Gxa ° ° When there is given an action (s,x)~>s*x of G on E as above, it defines naturally on E a structure of left (47) (Z SS)°X  gs(sox)
-% ¢[G] -module by
-% s€ G s€EG
-% and the study of linear representations of G is thus equi valent to the study of left ¢€[G]-modules.
-% The fundamental results of Frobenius for finite groups may then be expressed in the following way. An element ) gss s€G
-% of @[G] may be identified with a mapping f: s—>&_ of G into €, so that ¢€[G] may be identified with the vector space GG of all mapping of G into €, with the multipli cation written fxg and defined by
-% (48) (fxg) (s) = (Card(G))-l X f(t)g(t'ls). t€G
-% Then €6[G] can be written as a direct sum Al &) A.2 D oo Ah of mutually annihilating subalgebras, where h is the number of classes of conjugate elements in Gj; each A (1sk<h) is it has a basis (mk ) of n 10 elements belonging to GG, with ij
-% 2
-% a matrix algebra of dimension n, over C, which means that 2
-% the following properties:
-% k k k
-% (L49) mpq*mrs = 6qrmps for 1 < pyq,r,s < n, (50) mgq*mis =0 if k £ k’.
-% /
-% In addition, one has
-% 198 CHAPTER VII
-% (51) m?i(s) = mgj(s-l) for 1<i,j <n, s € G (52) Z miq(s)mis(s) = 0 unless p=r, q=s, k=k’
-% /
-% s€G
-% (53) z mpq(s)mpq(s) = n, card(G) for 1< p,q < n,
-% k k
-% s€G
-% (orthogonality relations). One has n; + ng oot nfi card(G)
-% 2
-% and the expression of any f € CG with respect to the basis (mij) of' that space,
-% k
-% (54) f(s) = i,i,k cf my i (s)
-% k k
-% k -1 k
-% is given explicitly, due to the orthogonality relations, by (55) cij = (nk Card(G)) SEG f(s)mij(s). If once writes Mk(s) the n, xn,_ matrix (n;lmij(s)), one
-% has
-% -1 (56) Mk(st) = Mk(s)Mk(t) and Mk(s ) = (Mk(s))*
-% In other words, s+ Mk(s) is a linear representation of G of degree n, for 1 £ k € hy it is irreducible, which means that the corresponding C€[G]-module is simple (i.e. has no non trivial submodule). Furthermore, every €[G]-module of finite dimension over (€ is a direct sum of modules each of
-% which corresponds to one of the linear representations S > Mk(s); one says that every linear representation of G
-% is completely reducible, and that it contains the irreducible representation s~— M (s) with multiplicity d, if in the
-% direct decomposition of the corresponding module, there are d, submodules corresponding to s+— Mk(s).
-% SPECTRAL THEORY AFTER 1900 199
-% Now linear representations of degree n can be defined in the same way for any group G, finite or not. Already in 1901, I. Schur, in his dissertation ([193],vol.I, p.1-70),
-% could determine all linear representations of the general 1i near group GL(N,C) which are such that the elements of U(s) are polynomials in the elements of the matrix s € GL(N,C); he showed that these representations are again completely re ducible and he could determine explicitly the irreducible ones (see [53]); but it is clear that for such infinite groups, all the Frobenius relations described above were meaningless., However, in 1924, I, Schur observed that the restrictions of these representations to the group of rotations G = SO(N,R) gave him irreducible representations of that compact group,
-% and that these representations were continuous, and could be written s~ M (s) where Mk(s), as in (56), was a unitary
-% matrixs; furthermore, he proved the relations which he rightly considered as the analogues of (52)
-% (57) mgq(s)mis(s)ds = O unless p=r, q=s, k=k’
-% —_—
-% G
-% where ds is a left and right invariant measure on G, the existence of which was substantially known since S. Lie, and which had already been used to construct invariants of SO(N,R) by Hurwitz in 1898 ([193], vol.II, p.4Lo-L9L),
-% This result attracted the attention of H., Weyl; in a beau tiful series of 3 papers published the next year, by a skill ful combination of Schur's ideas with the "infinitesimal" methods by which E, Cartan in 1913 had obtained all finite dimensional representations of the complex semi-simple Lie
-% 200 CHAPTER VIXI
-% groups, he was able to determine explicitly all continuous
-% irreducible linear representations of compact semi-simple Lie groups (including, in the case of SO(N,R), the "spinor" re presentations which had escaped I. Schur). 1In all cases, the orthogonality relations (57) still held, and every continuous linear representation of a semi-simple compact Lie group was
-% shown to be completely reducible ([227],vol. II, p. 633).
-% Of course, for compact Lie groups, there is an infinite system of irreducible representations M k’ and relations such as (5&) were out of the question., But for the group SO(l,R): = U (the circle group), the irreducible representations were the characters (+— gn for n€ Z, and H. Weyl realized ‘that the formula which corresponded to (54) was just the Fourier series expansion of f (when f is sufficiently re gular) [ 227, vol.III, p.34-37]. He then undertook to general
-% ize this expansion to all semi-simple compact Lie groups G for such a group, the functions m?j which he had determined formeé an orthogonal system in the Hilbert space LZ(G) (for
-% a left and right invariant measure); the problem was to prove that this system was complete,
-% This is what H. Weyl proved in 1927, in a remarkable paper written in collaboration with his student F. Peter [227, vol. IIT, p.58-75], which can be considered as the first application of spectral theory to harmonic analysis. He saw that the no
-% tion which could serve as a substitute to the group algebra ¢[G] was the space (C(G) of continuous complex-valued func tions on the compact group G, on which an algebra structure is defined by convolution, generalizing (40), (43), and (48):
-% SPECTRAL THEORY AFTER 1900 201
-% -1 (58) (fxg)(s) = {, f(t)g(t "s)dt
-% ‘G
-% where the integration is for a left and right invariant posi tive measure on G with total mass 1, H. Weyl next observed that, given a linear representation st— U(s) of G by uni (59) U(f) = f(s)afgads
-% tary matrices of order n, if one wrote
-% G
-% one obtained a homomorphism of the algebra C(G) into (60) U(fxg) = U(f) u(e)
-% End(@n), in other words
-% Vv -
-% (61) u(f) = (u(£))”.
-% and furthermore, if one wrote f(s) = f(s-l), one had v
-% The crux of his proof is to show that for an f £ O in c(G), there is at least a continuous representation s U(s) for which U(f) # O; due to the complete reducibility of se—= U(s), there is then at least one irreducible represen tation s~e~Mk(s) such that Mk(f) # 0, and this hows that f cannot be orthogonal to all functions mk.. However, if 1
-% the system (m. ) was not complete, there would exist a non i
-% k
-% negligible function g € LZ(G) orthogonal to all the m?j, and as the subspace L of C(G) generated by the mij is a two-sided ideal (one has (fxU)(s) = v*(f)U(s)), hxg would also be orthogonal to L for any function h € ¢(G), and one has hxg€ ¢(G) and hxg £ O for suitable functions h.fij (*)This is a slight simplification of Weyl's argument, which consists in obtaining for each function of C(G) the analogueof the Fischer-Riesz exgansion by an inductive application of the Schwarz-E.Schmidt method.
-% 202 CHAPTER VII
-% The proof of the existence of a representation [y such that U(f) £ O is deduced by Weyl from the theory of Hilbert-Schmidt inlegral equations. He considers the function g = f*g, for which U(g) = U(f)U*(f), and it is enough to show that U(g) # 0O for some U. One has g(e) = (’ |f(t)|2 dt > O3 Weyl forms the sequence of functions g1 S 8y 8, = E%8ysece g 8% g by an adaptation of the method of H.A.Schwarz, n
-% as generalized by E. Schmidt to integral equations with sym metric kernels (chap.III, 1 and chap.V, 2), he proves that the sequence of numbers Y = gn(e)/gn_l(e) is increasing and tends to a 1imit Y > O, and gn/Yn tends uniformly to a continuous function u, such that gxu = u¥g = Yu and u*u = uy Y 1is an eigenvalue of the hermitian kernel k(s,t) = g(st-l), and if P ; (1<j<sr) form an orthonormal
-% basis of the corresponding eigenspace, one easily proves that = ml(s)ng¥3 Toeot mr(s)5;T€3. Furthermore, for any t € G, the function Sra-@j(st-l) again is an eigenvector of the same space, hence mj(st-l) = kgl G;;?Ejmk(s), and one shows that if U(t) = (ujk(t))’ tl* U(t) dis a linear representation of G for which U(g) # O.
-% H. Weyl himself remarked that this method also proved the existence of the irreducible representations M and was k? applicable to any compact Lie group (not necessarily semi simple); a little later, when A, Haar had proved in 1933 the existence of a measure invariant by left and right translation on any compact subgroup, Weyl's arguments could at once be extended to that general case.
-% The next year, Pontrjagin, in view of applications to alge-
-% SPECTRAL THEORY AFTER 1900 2073
-% braic topology, showed that the Peter-Weyl theory, applied to commutative metrizable compact groups, led to a remarkable generalization of the duality between finite commutative groups, which had been well-known since Weber. It was of course classical that an irreducible linear representation of a commutative group G must be of degree 1, in other words it is a character X of G. The Peter-Weyl theory therefore associated to a metrizable compact commutative group G the set é of all continuous characters of G, which of course
-% is itself a denumerable group for ordinary multiplication. Now, for any x € G, the map Y+ ¥(x) is clearly a cha racter of é, and Pontrjagin showed that all characters of é are of that type. Conversely, iff D 1is any denumerable grou and D the group of all its characters, one can put on 5
-% the topology of simple convergence, for which it becomes a
-% metrizable compact group, and then all continuous characters N
-% of D are exactly the maps Y+ X(x) for all x € D, But Pontrjagin went further and could extend this duality to some locally compact commutative groups [179], and in 1936 van Kampen showed, by different methods, that Pontrjagin's results could be generalized to all such groups G. The dual é, consisting of all continuous characters on G, is given the topology of uniform convergence on compact subsets of G,
-% and it is again locally compact f{or that topologys; to each
-% X€ G there corresponds the continuous character n(x): X—X (x) on é, and the duality theorem of Pontrjagin-van Kampen says that 1 is an isomorphism of topological groups X
-% of G onto G [216].
-% 204 CHAPTER VII
-% This discovery made possible a unified treatment of the Fourier series and of the Fourier integral. In general, for (62) 3f(X) = S’ F(x)X(x)dx
-% any function f € Ll(G), one could define the function on G N
-% G
-% as the Fourier transform of f, For G = IR, continuous cha racters could be uniquely written x +— exp(Zflixy) for a real number vy, so that G could be identified with R it self, and (62) was just the definition of the Fourier integral. For G = Z, all characters are continuous and can be written n t» gn for a uniquely determined complex number ( € Uj; for a function n+ c(n) on Z such that E lc(n)| < +», the
-% .right hand side of (62) becomes the absolutely convergent Fourier series £ c(n)cTM = % C(n)enie il ¢ = eie, a
-% nez ne7z
-% function defined on the dual ©U of Z. Finally, for G = U, continuous characters are the functions gke-gn for a unique ly determined n € Z, and the Fourier transform of a function f € Ll(U) is the sequence n+= c(n) of its "Fourier coef ficients". In 1940, A, Weil [226] showed how most results concerning Fourier series and integrals could be generalized to all locally compact commutative groupsy; the central theorem
-% was the generalization of the Parseval relation: if a func tion £ on G ©belongs to Ll(G) N LZ(G), its Fourier trans
-% (63) [ £(x)]* ax = ( 3r(x)|* ax
-% form belongs to Lz(a), and one has the relation G G
-% for a suitable Haar measure on Gj; this relation, for the case G = R, had been proved in 1910 by M. Plancherel [ 1747,
+For a commutative Banach algebra \(A\), a central problem was to define ``functions'' of elements \(x \in A\) more general than polynomials, after the pattern set by F. Riesz and von Neumann. The latter had even shown that it was possible to define functions \(f(N_1, \ldots, N_k)\) of commuting normal operators \(N_j\) in a Hilbert space, for all continuous functions \(f\) defined in \(C^k\). For a general commutative Banach algebra \(A\), such a definition was only possible under some restrictions on \(f\); if \(x_1, \ldots, x_k\) are any elements of \(A\), their \emph{joint spectrum} is the image in \(\C^k\) of the mapping \(\chi \mapsto (\chi(x_1), \chi(x_2), \ldots, \chi(x_k))\) where \(\chi\) runs through \(\Chi(A)\) (for \(k = 1\), it is of course the spectrum of \(x_1\)); one then could prove that if B is the algebra of (germs of) functions \(f\) \emph{holomorphic in a neighbourhood} (\emph{depending on} f) \emph{of the joint spectrum} of \(x_1, \ldots, x_k\), there is a homomorphism \(B \to A\) written \(f \mapsto f(x_1, \ldots, x_k)\), which uniquely extends the natural homomorphism of the algebra of polynomials on \(\C^k\) into \(A\) written similarly (\cite{222}, \cite{027}).
 
-% SPECTRAL THEORY AFTER 1900 205
-% and is known as the Plancherel theorem for locally compact commutative groups.
-% We have already mentioned (5) that Gelfand, when he defined characters on a commutative Banach algebra, had followed the pattern set by H. Weyl and Pontrjagin., In fact, in a Jjoint paper with D. Raikov [ 86], he immediately showed how the Pontr jagin-van Kampen-A., Weil theory could be deduced from his general results on Banach algebras in a much simpler way (the
-% earlier proofs relied heavily on detailed information on the structure of locally compact commutative groups). The basic
-% idea is to consider, for a locally compact commutative group G, the space Ll(G) (for a Haar measure on G), on which a
-% structure of Banach algebra is defined by the convolution
-% product (58); it is an involutive algebra for the involution V
-% £+ f, but in general it is not a C¥*-algebra. A character of that algebra (in the sense of Gelfand) can then be unique 1y written as f+ 3f(x) for a well-determined character ¥ (in the sense of Pontrjagin), so that the spectrum X(Ll(G))
-% is identified (with its topology induced by the weak topology of L”(G)) with the dual group G, and then the Fourier
-% transform merely becomes a special case of the Gelfand trans form, equation (44) being the expression in that special case of the fact that the Gelfand transform is a homomorphism of algebras!
-% But this absorption of harmonic Analysis by spectral theory did not stop with commutative groups. One can still define the Banach algebra Ll(G) for locally compact separable uni-
-% 206 CHAPTER VII
-% modular groups (i.e. those for which left invariant Haar mea sure is also right invariant, for instance compact groups or semi-simple Lie groups), and it is still an involutive algebra.
-% On the other hand, one can define linear representations S — U(s) of such a group G not only when U(s) is a uni tary matrix, but more generally when U(s) is an automorphism of a complex Hilbert space E; one then speaks of unitary re presentations of G in E, and one adds to the definition the additional condition that for any x ¢ E, the mapping sr»-U(s)-x of G into the Hilbert space KE should be con tinuous. For any function f € Ll(G), it is then possible to define U(f) as in (59), more precisely, one has, for any x € E and y € E
-% (64) (U(£)-x]y) = £(s)(v(s)-x|y)ds G
-% where ds is (left and right) invariant Haar measure on G.
-% It is then remarkable that starting from the unitary repre sentations of G din E, one obtains in this way a bijection
-% of the set of these representations onto the set of all homo morphisms V of Ll(G) into the C*-algebra £(E) which sa tisfy (61) and are non-degenerate (i.e. such that the V(f)ex for x €& E and f € Ll(G) generate a dense subspace of E).
-% With convenient modifications, there is still a similar re sult for all locally compact groups, and the general theory of unitary representations of locally compact groups in Hilbert space is thus in a certain sense subordinate to the theory of homomorphisms of involutive Banach algebras in al gebras of operators in Hilbert space [ 58].
-% SPECTRAL THEORY AFTER 19060 207
-% However, most results concerning unitary representations of locally compact groups have up to now been restricted to Lie groups, where a large number of more refined and powerful tools (Lie algebras, differential geometry, partial differ ential equations, etc.) are available. We can only mention here this beautiful and difficult theory (known as non commu tative harmonic Analysis), which has known an enormous expan sion since 1950, and in which many problems are still openj the interested reader is referred to [32], [43], [152], [ 217] and [ 223]; for a detailed history of harmonic Analysis (both commutative and non commutative) and its relations with pro bability theory, quantum mechanics and number theory, see [155].
-% D) Other developments.
-% One of the first results on infinite dimensional repre sentations was obtained by M.H, Stone in 1930 [206]: he show ed that any unitary representation of the additive group R
-% into a separable Hilbert space E was given by the formula t - eitA, where 4 is an arbitrary (in general unbounded) self-adjoint operator in E, so that one may say that the theory of unitary representations of R is equivalent to the spectral theory of unbounded self-adjoint operators.
-% If now E idis an arbitrary Banach space, and A a bounded operator in E it is clear that th»-etA is a homomorphism of R into the group of invertible elements in £(E). Un
-% bounded operators A4 may be defined in E just as in Hilbert space, but for such an operator, etA usually has no mea ning for every real number t. Various questions of Analysis led E. Hille, in a series of papers beginning in 1936, to in-
-% 208 CHAPTER VII
-% vestigate mappings t— P into £(E), only defined for t > 0 and such that, for s > 0 and <t > O
-% Such mappings are called semi-groups of operators. If one assumes that ”PtH < C for all t > O and that for every x € E, t~— Pt'x is continuous for + > O, then one may
-% associate to such a semi-group an unbounded operator A4 in E, (66) Aex = 1lim t-l(Pt-lE)°x .
-% defined by
-% t-+0
-% This has been the starting point of an extensive theory with many applications in Analysis [115].
-% A large literature has been devoted to various types of ope rators in Banach spaces. A very general method consists in starting with an operator AO whose properties are well-known (for instance a normal operator in a Hilbert space) and to consider operators A = AO + P which differ from AO by a "perturbation" P which is "small" in some sense; for instan ce, the norm ”P” is supposed to be small enough, or P dis a
-% compact operator; such assumptions allow in many cases to extend some properties of A, to 4 (see [124]). The nice properties of the operators lE + K, where K is a compact operator (1) have inspired the study of generali
-% zations of such operators, for instance the Fredholm operators U, which are defined by the properties that U-l(O) has fi nite dimension, U(E) is closed and has finite codimension, but the dimension of U~1(0) and the codimension of U(E) are not necessarily equal [133]. Finally, there is an exten-
-% SPECTRAL THEORY AFTER 1900 209
-% sive theory of operators for which there is a family of pro jectors having properties similar to the projectors E(k) associated to a self-adjoint operator in von Neumann's theory (4); the difficulty is of course to find criteria implying the existence of such a family ([62], vol.III).
+On the spectrum \(\Chi(A)\) of a commutative Banach algebra \(A\), one soon was led to consider a topology different from the one induced by the weak topology of the dual \(A'\) of the Banach space \(A\). For Boolean rings, Stone had introduced the idea of defining on the space of \emph{maximal ideals} of such a ring \(B\) a topology, in which the closed sets were defined as the sets of maximal ideals containing a given (arbitrary) ideal of \(B\). As the set \(\Chi(A)\) of characters of a commutative Banach algebra \(A\) corresponds in a one-to-one way to the set of maximal ideals, Stone's topology can be defined in the same way on \(\Chi(A)\); it is in general coarser than the weak topology, and one says \(A\) is a \emph{regular} commutative Banach algebra if these two topologies on \(\Chi(A)\) coincide; for instance, the algebra \(\Cont(K)\) of continuous functions on a compact space \(K\) is a regular algebra.
+
+To any closed ideal \(J\) in \(A\), one attaches the set \(h(J)\) of all characters \(\chi \in \Chi(A)\) which vanish on \(J\); a natural question is to ask if the intersection of all kernels \(\chi^{-1}(0)\) (maximal ideals of \(A\)) such that \(\chi \in h(J)\), which always contains \(J\), is actually equal to \(J\); one then says that the ideal \(J\) admits \emph{spectral synthesis}. Giving conditions for a closed ideal to admit spectral synthesis in a regular commutative Banach algebra is a problem which has been extensively studied (\cite{021}, \cite{058}).
+
+\emph{Involutive} Banach algebras \(A\) (not necessarily commutative) are those equipped with an involution \(x \mapsto x^*\) such that \(\norm{x^*} = \norm{x}\) for all \(x \in A\); \(C^*\)-algebras (\ref{sec:7.5}) are involutive algebras, but there exist involutive Banach algebras which are not \(C^*\)-algebras (see C) below). The central concept is that of \emph{representation} of an involutive Banach algebra \(A\) in a Hilbert space \(E_j\); this means a homomorphism \(f: A \to \mathcal{L}(E)\) of algebras such that in addition \(f(x^*) = f(x)^*\). They have been the subject of a large number of investigations, leading to the elucidation of the structure of several classes ol \(C^*\)-algebras; the theory of von Neumann algebras (which are special types of \(C^*\)-algebras) plays a great part in these investigations (\cite{058}, \cite{036}).
+
+B) \emph{Algebras of continuous functions}.
+
+Since 1960, many mathematicians have been interested in the study of \emph{subalgebras} of Banach algebras \(\Cont(K)\) of continuous functions on a compact space \(K\). In classical Analysis, one had much studied the case in which \(K\) is the unit disk \(|z| \leq 1\) in \(\C\); there is then in \(\Cont(K)\) a particularly interesting Banach subalgebra, namely the algebra \(B\) of functions which are \emph{holomorphic} in the interior \(|z| < 1\) of the disc. It can be identified with the algebra \(B_0\) of the \emph{restrictions} of the functions of \(B\) to the unit circle \(\mathbb{U}: |z| = 1\), and \(B_0\) is also the closure in \(\Cont(\mathbb{U})\) of the algebra of \emph{trigonometric polynomials}. It turns out that the study of \(B_0\) is closely linked to the \emph{completions} of the space of trigonometric polynomials in the various spaces \(L^p(\mu)\), where \(\mu\) is Haar measure on \(\mathbb{U}\), and many beautiful properties of these spaces (known as the \emph{Hardy spaces} \(H^p(\mu))\) had been discovered. But in the light of the theory of commutative Banach algebras, it was found that these results could be much better understood if they were generalized to subalgebras of an algebra \(\Cont(K)\) where \(K\) is any compact space, and put in relation with some kinds of measures on \(K\) (see \cite{018}, \cite{033}, \cite{079}, \cite{116}, \cite{140}).
+
+C) \emph{Harmonic Analysis}.
+
+We have already stressed the fact (chap. \ref{ch:1}, \ref{sec:1.2}) that Fourier series provided the starting point of spectral theory when it was realizedlthat they could be generalized to ``expansions'' in series of ``orthogonal''' functions arising from boundary value problems.
+
+It was, however, very soon observed that the ``trigonometric system'' \((e^{inx})_{n \in \mathbb{Z}}\) possessed very peculiar properties not shared by general ``orthogonal systems'', and linked to the functional equation \(e^{i(x + x')} = e^{ix} e^{ix'}\). For instance, if \(f(x) = \sum\limits_{n=-\infty}^{+\infty} a(n) e^{nix}, g(x) = \sum\limits_{n=-\infty}^{+\infty} b(n) e^{nix}\) were two Fourier series, one had for the Fourier series \(f(x)g(x) = \sum\limits_{n=-\infty}^{+\infty} c(n)e^{nix}\) of their product, the very simple formula
+\begin{equation}
+    \label{eq:7.40}
+    c(n) = \sum_{p=-\infty}^{+\infty} a(p)b(n-p).
+\end{equation}
+Similarly, from the formula \(f(x) = \sum\limits_{n=-\infty}^{+\infty} a(n) e^{nix}\), one obtained
+\begin{equation}
+    \label{eq:7.41}
+    \sum_{n=-\infty}^{+\infty} a(n+1) e^{nix} = e^{-ix}f(x)
+\end{equation}
+and this property was used by de Moivre and even more by Laplace to solve linear difference equations \(\sum\limits_{k=1}^p \alpha_k a(n+k) = 0\) by associating to the sequence \((a(n))\) the Fourier series \(f(x) = \sum\limits_{n} a(n) e^{nix}\), reducing the difference equation to an algebraic equation for \(f(x)\).
+
+Similar peculiarities were observed for the ``Fourier transform'' associating to an integrable function \(f\) in \(\R\) the function
+\begin{equation}
+    \label{eq:7.42}
+    \mathcal{F}f(x) = \int_{-\infty}^{\infty} e^{-2\pi ixt} f(t)dt.
+\end{equation}
+Its main virtue, in the eyes of Fourier, Cauchy and Poisson, was that it reduced linear partial differential equations with constant coefficients to algebraic problems, due to the fact that the Fourier transform of the derivative \(f'\) is the function \( x\mapsto 2\pi ix \mathcal{F}f(x)\). Furthermore, in his researches on Probability theory, Tchebycheff had shown that if \(F_1, F_2\) are two independent ``random variables'' with ``probability laws'' \(\alpha_1, \alpha_2\), measures on \(\R\) with densities \(g_1, g_2\), the probability law of \(F_1 + F_2\) had a density given by the convolution \(g = g_1 * g_2\), defined as
+\begin{equation}
+    \label{eq:7.43}
+    g(x) = \int_{-\infty}^{+\infty} g_1(t) g_2(x - t)dt
+    \qquad
+    (\text{\cite{211}, vol.~II, p.~481--491});
+\end{equation}
+and Tchebycheff's student Liapounov, who started to use Fourier transforms in Probability theory, observed that
+\begin{equation}
+    \label{eq:7.44}
+    \mathcal{F}(g_1 * g_2) = \mathcal{F}g_1 \cdot \mathcal{F}g_2
+    \qquad
+    (\text{\cite{148}}).
+\end{equation}
+
+One should also mention the Poisson formula (also discovered independently by Cauchy)
+\begin{equation}
+    \label{eq:7.45}
+    \sum_{n \in \mathbb{Z}} f(n) = \sum_{n \in \mathbb{Z}} \mathcal{F}f(n)
+\end{equation}
+for sufficiently regular functions \(f\) on \(\R\).
+
+It took over 100 years to understand these peculiarities and to connect them with the notion of group, \emph{via} the concepts of \emph{character} and of \emph{group algebra}. Characters were first defined for arbitrary finite commutative groups by H. Weber in 1882, as complex valued functions \(\chi\) on such a group \(G\) with values \(\neq 0\), such that \(\chi(xy) = \chi(x)\chi(y)\) for all \(x, y\) in \(G\); but special cases had long before been considered by Legendre, Gauss and Dirichlet. A meaningful generalization to non commutative finite groups was discovered in 1896 by Frobenius: instead of considering homomorphisms of \(G\) into the multiplicative group \(C^*\), one should consider homomorphisms \(s \mapsto U(s)\) of \(G\) into the general linear group \(\text{GL}(n,\C\) of invertible matrices of order \(n\), for any integer \(n\). This is also called a \emph{linear representation} of degree \(n\) of \(G\) in the vector space \(E = \C^n\): giving such a representation is equivalent to defining an action \((s,x) \mapsto s \cdot x\) of \(G\) on \(E\) such that \(s \cdot (t \cdot x) = (st) \cdot x, e \cdot x = x\) for the neutral element \(e \in G\), and such that each mapping \(x \mapsto s \cdot x\) is linear (with matrix \(U(s)\)).
+
+Now Cayley had defined, for a finite group \(G\), the \emph{group algebra} \(\C[G]\) as the vector space of all formal linear combinations \(\sum\limits_{s \in G} \xi_s s\) with \(\xi_s \in \C\), multiplication being defined by
+\begin{equation}
+    \label{eq:7.46}
+    \left( \sum_{s \in G} \xi_s s \right) \left( \sum_{s \in G} \eta_s s \right)
+    =
+    \sum_{(s,t) \in G \times G} \xi_s \eta_t st.
+\end{equation}
+
+When there is given an action \((s,x) \mapsto s \cdot x\) of \(G\) on \(E\) as above, it defines naturally on \(E\) a structure of \emph{left} \(\C[G]\)-\emph{module} by
+\begin{equation}
+    \label{eq:7.47}
+    \left( \sum_{s \in G} \xi_s s \right) \cdot x
+    =
+    \sum_{(s,t) \in G \times G} \xi_s (s \cdot x)
+\end{equation}
+and the study of linear representations of \(G\) is thus equivalent to the study of left \(\C[G]\)-modules.
+
+The fundamental results of Frobenius for finite groups may then be expressed in the following way. An element \(\sum\limits_{s \in G} \xi_s s\) of \(\C[G]\) may be identified with a mapping \(f: s \mapsto x_s\) of \(G\) into \(\C\), so that \(\C[G]\) may be identified with the vector space \(\C^G\) of \emph{all} mappings of \(G\) into \(\C\), with the multiplication written \(f * g\) and defined by
+\begin{equation}
+    \label{eq:7.48}
+    (f * g)(s) = (\Card(G))^{-1} \sum_{t \in G} f(t)g(t^{-1} s).
+\end{equation}
+
+Then \(\C[G]\) can be written as a direct sum \(A_1 \oplus A_2 \oplus \ldots \oplus A_h\) of mutually annihilating subalgebras, where \(h\) is the number of classes of conjugate elements in \(G\); each \(A_k (1 \leq k \leq h)\) a \emph{matrix algebra} of dimension \(n^2_k\) over \(\C\), which means that it has a basis \((m^k_{ij})\) of \(n^2_k\) elements belonging to \(\C^G\), with the following properties:
+\begin{equation}
+    \label{eq:7.49}
+    m^k_{pq} * m^k_{rs} = \delta_{qr} m^k_{ps}
+    \text{ for }
+    1 \leq p, q, r, s \leq n_k
+\end{equation}
+\begin{equation}
+    \label{eq:7.50}
+    m^k_{pq} * m^{k'}_{rs} = 0
+    \text{ if }
+    k \neq k'.
+\end{equation}
+In addition, one has
+\begin{equation}
+    \label{eq:7.51}
+    m^k_{ji}(s) = \overline{m^k_{ij}(s^-1)}
+    \text{ for }
+    1 \leq i, j \leq n_k, s \in G
+\end{equation}
+\begin{equation}
+    \label{eq:7.52}
+    \sum_{s \in G} m^k_{pq}(s) m^{k'}_{rs}(s) = 0
+    \text{ unless }
+    p=r, q=s, k=k'
+\end{equation}
+\begin{equation}
+    \label{eq:7.53}
+    \sum_{s \in G} m^k_{pq}(s) \overline{m^k_pq(s)} = n_k \Card(G)
+    \text{ for }
+    1 \leq p, q \leq n_k
+\end{equation}
+(\emph{orthogonality relations}). One has \(n^2_1 + n^2_2 + \ldots + n^2_h = \Card(G)\) and the expression of any \(f \in \C^G\) with respect to the basis \((m^k_{ij})\) of that space,
+\begin{equation}
+    \label{eq:7.54}
+    f(s) = \sum_{i, j, k} c^k_{ij} m^k_{ij}(s)
+\end{equation}
+is given explicitly, due to the orthogonality relations, by
+\begin{equation}
+    \label{eq:7.55}
+    c^k_{ij} = (n_k \Card(G))^{-1} \sum_{s \in G} f(s)\overline{m^k_{ij}(s)}.
+\end{equation}
+If one writes \(M_k(s)\) the \(n_k \times n_k\) matrix \((n^{-1}_k m^k_{ij}(s))\), one has
+\begin{equation}
+    \label{eq:7.56}
+    M_k(st) = M_k(s) M_k(t)
+    \text{ and }
+    M_k(s^{-1}) = (M_k(s))^*
+\end{equation}
+In other words, \(s \mapsto M_k(s)\) is a \emph{linear representation} of \(G\) of degree \(n_k\), for \(1 \leq k \leq h\); it is \emph{irreducible}, which means that the corresponding \(\C[G]\)-module is \emph{simple} (i.e. has no non trivial submodule). Furthermore, \emph{every} \(\C[G]\)-module of finite dimension over \(\C\) is a \emph{direct sum} of modules each of which corresponds to one of the linear representations \(s \mapsto M_k(s)\); one says that every linear representation of \(G\) is \emph{completely reducible}, and that it contains the irreducible representation \(s \mapsto M_k(s)\) with \emph{multiplicity} \(d\), if in the direct decomposition of the corresponding module, there are \(d_k\) submodules corresponding to \(s \mapsto M_k(s)\).
+
+Now linear representations of degree \(n\) can be defined in the same way for \emph{any} group \(G\), \emph{finite or not}. Already in 1901, I. Schur, in his dissertation (\cite{193}, vol.~I, p.~1--70), could determine all linear representations of the general linear group \(\text{GL}(N,\C)\) which are such that the elements of \(U(s\)) are \emph{polynomials} in the elements of the matrix \(s \in \text{GL}(N,\C)\); he showed that these representations are again completely reducible and he could determine explicitly the irreducible ones (see \cite{053}); but it is clear that for such infinite groups, all the Frobenius relations described above were meaningless. However, in 1924, I. Schur observed that the restrictions of these representations to the group of \emph{rotations} \(G = \text{SO}(N,\R)\) gave him irreducible representations of that \emph{compact} group, and that these representations were continuous, and could be written \(s \mapsto M_k(s)\) where \(M_k(s)\), as in \eqref{eq:7.56}, was a \emph{unitary} matrix; furthermore, he proved the relations which he rightly considered as the analogues of \eqref{eq:7.52}
+\begin{equation}
+    \label{eq:7.57}
+    \int_G m^k_{pq} \overline{m^{k'}_{rs}(s)}d = 0
+    \text{ unless }
+    p=r, q=s, k=k'
+\end{equation}
+where \(ds\) is a left and right invariant measure on \(G\), the existence of which was substantially known since S. Lie, and which had already been used to construct invariants of \(\text{SO}(N,\R)\) by Hurwitz in 1898 (\cite{193}, vol.~II, p.~440--494),
+
+This result attracted the attention of H. Weyl; in a beautiful series of 3 papers published the next year, by a skillful combination of Schur's ideas with the ``infinitesimal'' methods by which E. Cartan in 1913 had obtained all finite dimensional representations of the complex semi-simple Lie groups, he was able to determine explicitly \emph{all} continuous irreducible linear representations of \emph{compact semi-simple Lie groups} (including, in the case of \(\text{SO}(N,\R)\), the ``spinor'' representations which had escaped I. Schur). In all cases, the orthogonality relations \eqref{eq:7.57} still held, and every continuous linear representation of a semi-simple compact Lie group was shown to be completely reducible (\cite{227}, vol.~II, p.~633).
+
+Of course, for compact Lie groups, there is an \emph{infinite} system of irreducible representations \(M_k\), and relations such as \eqref{eq:7.54} were out of the question. But for the group \(\text{SO}(1,\R) = \mathbb{U}\) (the circle group), the irreducible representations were the characters \(\zeta \mapsto \zeta^n\) for \(n \in \mathbb{Z}\), and H. Weyl realized that the formula which corresponded to \eqref{eq:7.54} was just the \emph{Fourier series expansion} of \(f\) (when f is sufficiently regular) \cite[vol.~III, p.~34--37]{227}. He then undertook to generalize this expansion to all semi-simple compact Lie groups \(G\); for such a group, the functions \(m^k_{ij}\) which he had determined formed an orthogonal system in the Hilbert space \(L^2(G)\) (for a left and right invariant measure); the problem was to prove that this system was \emph{complete}.
+
+This is what H. Weyl proved in 1927, in a remarkable paper written in collaboration with his student F. Peter \cite[vol.~III, p.~58--75]{227}, which can be considered as the first application of spectral theory to harmonic analysis. He saw that the notion which could serve as a substitute to the group algebra \(\C[G]\) was the space \(\Cont(G)\) of continuous complex-valued functions on the compact group \(G\), on which an algebra structure is defined by \emph{convolution}, generalizing \eqref{eq:7.40}, \eqref{eq:7.43}, and \eqref{eq:7.48}:
+\begin{equation}
+    \label{eq:7.58}
+    (f * g)(s) = \int_G f(t) g(t^-1 s)dt
+\end{equation}
+where the integration is for a left and right invariant positive measure on \(G\) with total mass 1. H. Weyl next observed that, given a linear representation \(s \mapsto U(s)\) of \(G\) by unitary matrices of order \(n\), if one wrote
+\begin{equation}
+    \label{eq:7.59}
+    U(f) = \int_G f(s)\overline{U(s)}ds
+\end{equation}
+one obtained a \emph{homomorphism} of the algebra \(\Cont(G)\) into \(\text{End}(\C^n)\), in other words
+\begin{equation}
+    \label{eq:7.60}
+    U(f * g) = U(f) U(g)
+\end{equation}
+and furthermore, if one wrote \(\check{\overline{f}}(s) = \overline{f(s^{-1})}\), one had
+\begin{equation}
+    \label{eq:7.61}
+    U(\check{\overline{f}}) = (U(f))^*.
+\end{equation}
+
+The crux of his proof is to show that for an \(f \neq 0\) in \(\Cont(G)\), there is at least a continuous representation \(s \mapsto U(s)\) for which \(U(f) \neq 0\); due to the complete reducibility of \(s \mapsto U(s)\), there is then at least one irreducible representation \(s \mapsto M_k(s)\) such that \(M_k(f) \neq 0\), and this hows that \(f\) cannot be orthogonal to all functions \(m^k_{ij}\). However, if the system \((m^k_{ij})\) was not complete, there would exist a non negligible function \(g \in L^2(G)\) orthogonal to all the \(m^k_{ij}\), and as the subspace \(L\) of \(\Cont(G)\) generated by the \(m^k_{ij}\) is a two-sided ideal (one has \((f*U)(s) = U^*(f)U(s)\)), \(h*g\) would also be orthogonal to \(L\) for any function \(h \in \Cont(G)\), and one has \(h*g \in \Cont(G)\) and \(h*g \neq 0\) for suitable functions \(h\).\footnote{This is a slight simplification of Weyl's argument, which consists in obtaining for each function of \(\Cont(G)\) the analogue of the Fischer--Riesz exgansion by an inductive application of the Schwarz--E. Schmidt method.}
+
+The proof of the existence of a representation \(H\) such that \(U(f) \neq 0\) is deduced by Weyl from the theory of Hilbert--Schmidt inlegral equations. He considers the function \(g = f * \check{\overline{f}}\), for which \(U(g) = U(f)U^*(f)\), and it is enough to show that \(U(g) \neq 0\) for some \(U\). One has \(g(e) = \int_G |f(t)|^2 dt > 0\); Weyl forms the sequence of functions \(g_1 = g, g_2 = g*g, \ldots, g_n = g*g_{n-1}, \ldots\) by an adaptation of the method of H.A. Schwarz, as generalized by E. Schmidt to integral equations with sym metric kernels (chap. \ref{ch:3}, \ref{sec:3.1} and chap. \ref{ch:5}, \ref{sec:5.2}), he proves that the sequence of numbers \(\gamma_n = g_n(e)/g_{n-1}(e)\) is increasing and tends to a limit \(\gamma > 0\), and \(g_n/\gamma_n\) tends uniformly to a continuous function \(u\), such that \(g*u = u*g = \gamma u\) and \(u*u = u\); \(\gamma\) is an eigenvalue of the hermitian kernel \(k(s,t) = g(st^{-1})\), and if \(\varphi_j (1 \leq j \leq r)\) form an orthonormal basis of the corresponding eigenspace, one easily proves that \(u(st^{-1}) = \varphi_1(s) \overline{\varphi_1(t)} + \ldots + \varphi_r(s)\overline{\varphi_r(t)}\). Furthermore, for any \(t \in G\), the function \(s \mapsto \varphi_j(st^{-1})\) again is an eigenvector of the same space, hence \(\varphi_j(st^{-1}) = \sum\limits_{k=1}^r \overline{u_{ik}(t)}\varphi_k(s)\), and one shows that if \(U(t) = (u_{jk}(t)), t \mapsto U(t)\) is a linear representation of \(G\) for which \(U(g) \neq 0\).
+
+H. Weyl himself remarked that this method also proved the existence of the irreducible representations \(M_k\) and was applicable to any compact Lie group (not necessarily semi-simple); a little later, when A. Haar had proved in 1933 the existence of a measure invariant by left and right translation on \emph{any} compact subgroup, Weyl's arguments could at once be extended to that general case.
+
+The next year, Pontrjagin, in view of applications to algebraic topology, showed that the Peter--Weyl theory, applied to \emph{commutative metrizable compact groups}, led to a remarkable generalization of the duality between \emph{finite} commutative groups, which had been well-known since Weber. It was of course classical that an irreducible linear representation of a commutative group \(G\) must be of degree 1, in other words it is a character \(\chi\) of \(G\). The Peter--Weyl theory therefore associated to a metrizable compact commutative group \(G\) the set \(\hat{G}\) of all \emph{continuous} characters of \(G\), which of course is itself a denumerable group for ordinary multiplication. Now, for any \(x \in G\), the map \(\chi \mapsto \chi(x)\) is clearly a character of \(\hat{G}\), and Pontrjagin showed that \emph{all} characters of \(\hat{G}\) are of that type. Conversely, ff \(D\) is any denumerable group and \(\hat{D}\) the group of all its characters, one can put on \(\hat{D}\) the topology of simple convergence, for which it becomes a metrizable compact group, and then all \emph{continuous} characters of \(\stackrel{\vee}{G}\) are exactly the maps \(\chi \mapsto \chi(x)\) for all \(x \in D\).
+
+But Pontrjagin went further and could extend this duality to some \emph{locally compact} commutative groups \cite{179}, and in 1936 van Kampen showed, by different methods, that Pontrjagin's results could be generalized to \emph{all} such groups \(G\). The dual \(\hat{G}\), consisting of all continuous characters on \(G\), is given the topology of uniform convergence on compact subsets of \(G\), and it is again locally compact for that topology; to each \(x \in G\) there corresponds the continuous character \(\eta(x): \chi \mapsto \chi(x)\) on \(\hat{G}\), and the duality theorem of Pontrjagin--van Kampen says that \(\eta\) is an \emph{isomorphism of topological groups} of \(G\) onto \(\Hat{\Hat{G}}\) \cite{216}.
+
+This discovery made possible a unified treatment of the Fourier series and of the Fourier integral. In general, for any function \(f \in L^1(G)\), one could define the function \emph{on} \(\hat{G}\)
+\begin{equation}
+    \label{eq:7.62}
+    \mathcal{F}f(\chi) = \int_G f(x)\overline{\chi(x)}dx
+\end{equation}
+as the \emph{Fourier transform} of \(f\). For \(G = \R\), continuous characters could be uniquely written \(x \mapsto \exp(2\pi ixy)\) for a real number \(y\), so that \(\hat{G}\) could be identified with \(\R\) itself, and \eqref{eq:7.62} was just the definition of the Fourier integral. For \(G = \mathbb{Z}\), all characters are continuous and can be written \(n \mapsto \zeta^n\) for a uniquely determined complex number \(\zeta \in U\); for a function \(n \mapsto c(n)\) on \(\mathbb{Z}\) such that \(\sum\limits_n |c(n)| < +\infty\), the right hand side of \eqref{eq:7.62} becomes the absolutely convergent Fourier series \(\sum\limits_{n \in \mathbb{Z}} c(n)\zeta^n = \sum\limits_{n \in \mathbb{Z}} c(n)e^{ni\theta}\) if \(\zeta = e^{i\theta}\), a function defined on the dual \(\mathbb{U}\) of \(\mathbb{Z}\). Finally, for \(G = \mathbb{U}\), continuous characters are the functions \(\zeta \mapsto \zeta^n\) for a uniquely determined \(n \in \mathbb{Z}\), and the Fourier transform of a function \(f \in L^1(\mathbb{U})\) is the sequence \(n \mapsto c(n)\) of its ``Fourier coef ficients''. In 1940, A. Weil \cite{226} showed how most results concerning Fourier series and integrals could be generalized to all locally compact commutative groups; the central theorem was the generalization of the Parseval relation: if a function \(f\) on \(G\) belongs to \(L^1(G) \cap L^2(G)\), its Fourier transform belongs to \(L^2(\hat{G})\), and one has the relation
+\begin{equation}
+    \label{eq:7.63}
+    \int_G |f(x)|^2 dx = \int_{\hat{G}} |\mathcal{F}f(\chi)|^2 d\chi
+\end{equation}
+for a suitable Haar measure on \(\hat{G}\); this relation, for the case \(G = \R\), had been proved in 1910 by M. Plancherel \cite{174}, and is known as the \emph{Plancherel theorem} for locally compact commutative groups.
+
+We have already mentioned (\ref{sec:7.5}) that Gelfand, when he defined characters on a commutative Banach algebra, had followed the pattern set by H. Weyl and Pontrjagin. In fact, in a joint paper with D. Raikov \cite{086}, he immediately showed how the Pontrjagin--van Kampen--A. Weil theory could be deduced from his general results on Banach algebras in a much simpler way (the earlier proofs relied heavily on detailed information on the structure of locally compact commutative groups). The basic idea is to consider, for a locally compact commutative group \(G\), the space \(L^1(G)\) (for a Haar measure on \(G\)), on which a structure of Banach algebra is defined by the \emph{convolution} product \eqref{eq:7.58}; it is an \emph{involutive} algebra for the involution \(f \mapsto \check{\overline{f}}\), but in general it is not a \(C^*\)-algebra. A character of that algebra (in the sense of Gelfand) can then be uniquely written as \(f \mapsto \mathcal{F}f(\chi)\) for a well-determined character \(\chi\) (in the sense of Pontrjagin), so that the spectrum \(\Chi(L^1(G))\) is identified (with its topology induced by the weak topology of \(L^\infty(G)\)) with the dual group \(\hat{G}\), and then the Fourier transform merely becomes a special case of the Gelfand transform, equation \eqref{eq:7.44} being the expression in that special case of the fact that the Gelfand transform is a homomorphism of algebras!
+
+But this absorption of harmonic Analysis by spectral theory did not stop with commutative groups. One can still define the Banach algebra \(L^1(G)\) for locally compact separable \emph{unimodular} groups (i.e. those for which left invariant Haar measure is also right invariant, for instance compact groups or semi-simple Lie groups), and it is still an involutive algebra. On the other hand, one can define linear representations \(s \mapsto U(s)\) of such a group \(G\) not only when \(U(s)\) is a unitary matrix, but more generally when \(U(s)\) is an \emph{automorphism of a complex Hilbert space} \(E\); one then speaks of \emph{unitary representations} of \(G\) in \(E\), and one adds to the definition the additional condition that for any \(x \in E\), the mapping \(s \mapsto U(s) \cdot x\) of \(G\) into the Hilbert space \(E\) should be \emph{continuous}. For any function \(f \in L^1(G)\), it is then possible to define \(U(f)\) as in \eqref{eq:7.59}, more precisely, one has, for any \(x \in E\) and \(y \in E\)
+\begin{equation}
+    \label{eq:7.64}
+    (U(f) \cdot x | y) = \int_G f(s) (U(s) \cdot x | y) ds
+\end{equation}
+where \(ds\) is (left and right) invariant Haar measure on \(G\). It is then remarkable that starting from the unitary representations of \(G\) in \(E\), one obtains in this way a bijection of the set of these representations onto the set of all homomorphisms \(V\) of \(L^1(G)\) into the \(C^*\)-algebra \(\mathcal{L}(E)\) which satisfy \eqref{eq:7.61} and are non-degenerate (i.e. such that the \(V(f) \cdot x\) for \(x \in E\) and \(f \in L^1(G)\) generate a dense subspace of E). With convenient modifications, there is still a similar result for \emph{all} locally compact groups, and the general theory of unitary representations of locally compact groups in Hilbert space is thus in a certain sense subordinate to the theory of homomorphisms of involutive Banach algebras in algebras of operators in Hilbert space \cite{058}.
+
+However, most results concerning unitary representations of locally compact groups have up to now been restricted to \emph{Lie groups}, where a large number of more refined and powerful tools (Lie algebras, differential geometry, partial differ ential equations, etc.) are available. We can only mention here this beautiful and difficult theory (known as \emph{non commutative harmonic Analysis}), which has known an enormous expansion since 1950, and in which many problems are still open; the interested reader is referred to \cite{032}, \cite{043}, \cite{152}, \cite{217} and \cite{223}; for a detailed history of harmonic Analysis (both commutative and non commutative) and its relations with probability theory, quantum mechanics and number theory, see \cite{155}.
+
+D) \emph{Other developments}.
+
+One of the first results on infinite dimensional representations was obtained by M.H. Stone in 1930 \cite{206}: he showed that any unitary representation of the additive group \(\R\) into a separable Hilbert space \(E\) was given by the formula \(t \mapsto e^{itA}\), where \(A\) is an arbitrary (in general unbounded) self-adjoint operator in \(E\), so that one may say that the theory of unitary representations of \(\R\) is \emph{equivalent} to the spectral theory of unbounded self-adjoint operators.
+
+If now \(E\) is an arbitrary \emph{Banach space}, and \(A\) a \emph{bounded} operator in \(E\) it is clear that \(t \mapsto e^{itA}\) is a homomorphism of \(\R\) into the group of invertible elements in \(\mathcal{L}(E)\). Unbounded operators \(A\) may be defined in \(E\) just as in Hilbert space, but for such an operator, \(e^{tA}\) usually has no meaning for \emph{every} real number \(t\). Various questions of Analysis led E. Hille, in a series of papers beginning in 1936, to investigate mappings \(t \mapsto P_t\) into \(\mathcal{L}(E)\), \emph{only defined for} \(t > 0\) and such that, for \(s > 0\) and \(t > 0\)
+\begin{equation}
+    \label{eq:7.65}
+    P_{s+t} = P_s P_t.
+\end{equation}
+
+Such mappings are called \emph{semi-groups of operators}. If one assumes that \(\norm{P_t} \leq C\) for all \(t > 0\) and that for every \(x \in E, t \mapsto P_t \cdot x\) is continuous for \(t > 0\), then one may associate to such a semi-group an \emph{unbounded operator} \(A\) in \(E\), defined by
+\begin{equation}
+    \label{eq:7.66}
+    A \cdot x = \lim_{t \to 0} t^{-1} (P_t - 1_E) \cdot x.
+\end{equation}
+
+This has been the starting point of an extensive theory with many applications in Analysis \cite{115}.
+
+A large literature has been devoted to various types of operators in Banach spaces. A very general method consists in starting with an operator \(A_0\) whose properties are well-known (for instance a normal operator in a Hilbert space) and to consider operators \(A = A_0 + P\) which differ from \(A_0\) by a ``perturbation'' \(P\) which is ``small'' in some sense; for instance, the norm \(\norm{P}\) is supposed to be small enough, or \(P\) is a compact operator; such assumptions allow in many cases to extend some properties of \(A_0\) to \(A\) (see \cite{124}).
+
+The nice properties of the operators \(1_E + K\), where \(K\) is a compact operator (\ref{sec:7.1}) have inspired the study of generalizations of such operators, for instance the \emph{Fredholm operators} \(U\), which are defined by the properties that \(U^{-1}(0)\) has finite dimension, \(U(E)\) is closed and has finite codimension, but the dimension of \(U^{-1}(0)\) and the codimension of \(U(E)\) are not necessarily equal \cite{133}. Finally, there is an extensive theory of operators for which there is a family of \emph{projectors} having properties similar to the projectors \(E(\lambda)\) associated to a self-adjoint operator in von Neumann's theory (\ref{sec:7.4}); the difficulty is of course to find criteria implying the existence of such a family (\cite{062}, vol.~III).
 
 \chapter{Locally convex spaces and the theory of distributions}
 \label{ch:8}
