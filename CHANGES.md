@@ -16,6 +16,7 @@ Pages and rows are referred to the original book. Equations are not considered a
 - "chap. V", p. 157, first line (it is actually chapter VI)
 - "objetive", p. 166, second-to-last line
 - "strognly", p. 176, second-to-last line
+- "indes", p. 184, fifteenth line
 
 # Punctuation
 
