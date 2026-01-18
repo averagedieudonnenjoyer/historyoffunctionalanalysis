@@ -19,6 +19,7 @@ Pages and rows are referred to the original book. Equations are not considered a
 - "indes", p. 184, fifteenth line
 - "if", p. 189, tenth-to-last line
 - "it", p. 191, second-to-last line (without considering the footnote)
+- "mapping", p. 197, fifth line of the second paragraph
 
 # Punctuation
 
