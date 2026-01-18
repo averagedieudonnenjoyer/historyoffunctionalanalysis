@@ -3073,93 +3073,80 @@ The application of that theorem to partial differential equations usually necess
 \section{Carleman operators and generalized eigenvectors}
 \label{sec:9.2}
 
-% For applications to partial differential equations, it is
-% necessary to generalize the notion of Carleman operators de fined in chap.V, 3. Let X ©be a locally compact metrizable and separable space, | a positive measure on X and H a separable Hilbert space (finite dimensional or not); let (an) be a Hilbert basis of H, where J is a finite or ncJ
-% denumerable set., One defines a new Hilbert space L;(X,u) as the space of vector valued functions f: x+— I f_(x)a_, ncJg M n
+For applications to partial differential equations, it is necessary to generalize the notion of Carleman operators defined in chap. \ref{ch:5}, \ref{sec:5.3}. Let \(X\) be a locally compact metrizable and separable space, \(\mu\) a positive measure on \(X\) and \(H\) a separable Hilbert space (finite dimensional or not); let \((a_n)_{n \in J}\) be a Hilbert basis of \(H\), where \(J\) is a finite or denumerable set. One defines a new Hilbert space \(L^2_H(X,\mu)\) as the space of \emph{vector valued} functions \(f: x \mapsto \sum\limits_{n \in J} f_n(x)a_n\), mappings of \(X\) into \(H\) such that each \(f_n\) is a function of \(L^2(X,\mu)\) with complex values, and that \(|f|^2 = \sum\limits_{n \in J} |f_n|^2\) is \(\mu\)-integrable; the scalar product in that Hilbert space is then defined by
+\begin{equation}
+    \label{eq:9.8}
+    (f|g) = \sum_{n \in J} \int_X f_n \overline{g}_n d\mu.
+\end{equation}
+Let now \(Y\) be another locally compact metrizable and separable space, \(\nu\) a positive measure on \(Y\). A \emph{Carleman kernel} on \(X \times Y\) (for the measure \(\mu \otimes \nu\) and the Hilbert space \(H\)) is then a mapping \(K: (x,y) \mapsto (K_n(x,y))_{n \in J}\) of \(X \times Y\) into \(\C^J\) such that:
 
-% APPLICATIONS OF FUNCTIONAIL ANALYSIS 239 *( = £ |, L.“(X,u) with complex values, and that |[f is 2 2
-% mappingsof X idinto H such that each fn is a function of
+1° each complex function \(K_n\) is \((\mu \otimes \nu)\)-measurable;
 
-% (8) (flg) = I ( £ 8 du .
-% ncJ
-% n
+2° there is a null set \(N \subset Y\) such that, for each \(y \not\in N\), the function \(x \mapsto K_n(x,y)\) is \(\mu\)-measurable and the function \(x \mapsto \sum\limits_{n \in J} |K_n(x, y)|^2\) is \(\mu\)-integrable.
 
-% u-integrable; the scalar product in that Hilbert space is then defined by
-% ncd /x
-% Let now Y be another locally compact metrizable and sepa . . . J
-% rable space, V a positive measure on Y, A Carleman kernel on XXY (for the measure |y @ vV and the Hilbert space H) is then a mapping K: (x,y)fifi>(Kn(x,y)) : of XxY into € ncJ
-% such that:
-% 12 each complex function Kn is (u®v)-measurable; 2¢ +there is a null set N c Y such that, for each y & N, the function XF*-Kn(X,Y) is yy=-measurable and the function x— £ |K (x,y)|2 is y-integrable.
+If \(f = \sum\limits_{n \in J} f_n a_n\) is a function of \(L^2(X,\mu)\), the function \(x \mapsto \sum\limits_{n \in J} K_n(x,y) f_n(x)\) is \(\mu\)-integrable for all \(y \in N\), and the function
+\begin{equation}
+    \label{eq:9.9}
+    g(y) = \int_X \sum_{n \in J} K_n(x, y) f_n(x) d\mu(x)
+\end{equation}
+defined in \(Y-N\), is \(\nu\)-measurable. One writes \(K \cdot f = g\), and \(K\), defined in \(L^2_H(X,\mu)\) is called the \emph{Carleman operator} defined by the Carleman kernel \(K\).
 
-% ncJ
-% n
+In 1952, F. Mautner discovered that Carleman operators can be characterized by properties which are independent of the definition by a kernel \cite{157}: suppose that there is a null set \(N \subset Y\) and, for each \(y \in Y - N\), a \emph{continuous linear map} \(F_Y: L_H^2(X, \mu) \to \C\) such that for any function \(f \in L^2_H(X,\mu)\), the map \(y \mapsto F_y(f)\) is \(\mu\)-measurable. Then there is a Carleman kernel \(K = (K_n)\) and a null set \(N' \supset N\) such that, for any \(y \not\in N', F_y(f) = (K \cdot f)(y)\) for all functions \(f \in L^2_H(X,\mu)\).
 
-% If f£f = ¥ f_a is a function of LZ(X,u), the function ne J n n H x+— ¥ K (x,y)f (x) 4is y=-integrable for all y £ N, and
-% ne J n n
-% the function
-% (9) e(y) = | T K (x,7)f_ (x)du(x) neJ
-% defined in Y-N, is v-measurable., One writes K-+f = g, and K, defined in LH(X,u) is called the Carleman operator de
-% 2
-% fined by the Carleman kernel K.
-% In 1952, F. Mautner discovered that Carleman operators can be characterized by properties which are independent of the definition by a kernel [157]: suppose that there is a null Set Nc Y and, for each 7y € Y-=N, a continuous linear map
+We have seen (chap. \ref{ch:7}, \ref{sec:7.5}) that a continuous normal operator has a ``diagonalizationìì which transforms it into multiplication by the function ``identity'' \(\zeta \mapsto \zeta\). More generally, one defines a \emph{diagonalization} of a continuous normal operator \(B\) in a Hilbert space \(E\) for a function \(\zeta mapsto \Phi(\zeta)\) as in chap. \ref{ch:7}, \ref{sec:7.5}, by replacing \(\spec(B)\) by a separable locally compact space \(Y\), the function \(\zeta \mapsto \zeta\) being replaced by a mapping \(\zeta mapsto \Phi(\zeta)\) of Y into \(\C\).
 
-% 240 CHAPTER IX
-% P Lfi(x,u) 4 ¢ such that for any function f € Lfi(X,u), the map yke»Fy(f) is v-measurable, Then there is a Carleman kernel K = (K) and a null set N'D N such that, for any y ¢ N/, Fy(f) = (K+f)(y) for all functions f € Lfi(X,u).
-% We have seen (chap.VII, 5) that a continuous normal opera
-% tor has a "diagonalization" which transforms it into multi plication by the function "identity" (+= (. More gene rally, one defines a diagonalization of a continuous normal operatorB ina Hilbert space E for a function (¢ +— 3(() as in chap.VII, 5, by replacing Sp(B) by a separable lo cally compact space Y, the function (+~=( Dbeing replaced by a mapping (+= 8(¢) of Y into (.
-% With the help of his characterization of Carleman operators, Mautner was able to get a much more precise description of such a diagonalization when the operator B is defined in a Hilbert space E = L7(X,u), and is a Carleman operator cor responding to a Carleman kernel (x,y) K(x,y) defined in XXX, wrelative to the measure Q®y; 1in addition one assumes that for the isometry T = (T.) defining the diagonali- J7 1< j<uw zation for the function &, one has &(() £ O almost every where in Y (for the measure V), which is equivalent to assuming that B and B* are injective, It is then possible
-% to describe the isometries
-% T: E, + F, = LZ(Y,mS V)
-% J
-% performing that diagonalization, in the following way: 12 For each index j such that 1 < j< w, there is a (U®V) -measurable function (x,() ej(x,g) such that
+With the help of his characterization of Carleman operators, Mautner was able to get a much more precise description of such a diagonalization when the operator \(B\) is defined in a Hilbert space \(E = L^2(X,\mu)\), and is a \emph{Carleman operator} corresponding to a Carleman kernel \((x,y) \mapsto K(x,y)\) defined in \(X \times X\), relative to the measure \(\mu \otimes \mu\); in addition one assumes that for the isometry \(T = (T_j)_{1 \leq j < \omega}\) defining the diagonalization for the function \(\Phi\), one has \(\Phi(\zeta) \neq 0\) almost every where in \(Y\) (for the measure \(\nu\)), which is equivalent to assuming that \(B\) and \(B^*\) are \emph{injective}. It is then possible to describe the isometries
+\[
+    T_j: E_j \to F_j = L^2(Y, \varphi_{S_j} \cdot \nu)
+\]
+performing that diagonalization, in the following way:
 
-% APPLTICATIONS OF FUNCTIONAL ANALYSIS 241
-% ej(x,g) =0 for (¢ £ S5 and that for almost all x € X,
-% the function
-% c—13(0)1° = e (x0)|
-% 1< j<w
-% is v=integrable,
-% 2¢ Let r(x) = ( { |K(x,y)|2 du(y))l/z, which is gy-measu rable and almost ever?where finite; then, for every function (10) (T,-£)(C) = ( f£(x)e (x,0)du(x)
-% f € E; such that I/ r(x)|£f(x)]| du(x) < +o one has
-% *
-% X
-% X
-% for almost every ( € Y.
-% 32 There is a null set N C X having the following pro perty: for every jJ such that 1 s j< W, let uj be a function belonging to Fj’ and suppose that the function -2 2
-% ¢ = |2 (¢)] z Jus(e)]
-% 1< 3<w
-% is v-integrable., Then, for every x & N, the function (— Z ej(x,g)uj(g) is veintegrable, and
-% 1< j<w
-% (11) (7))(%) = f (T e (x0)uy(0))av(c).
-% J 1< j<w
-% Y
-% The nature of this result is better understood when one
-% sSpecializes it to a situation stemming from harmonic Analysis. Take X = G, a separable commutative locally compact group;
-% let |4 be a Haar measure on G, and consider a complex func tion b € Ll(G) N LZ(G); then B: fi+» bxf 1is a continuous normal operator in LZ(G), such that B¥.f = B*f; further
-% <
-% more, from the definition
+1° For each index \(j\) such that \(1 \leq j < \omega\), there is a \((\mu otimes \nu)\)-measurable function \((x, \zeta) \mapsto e_j(x, \zeta)\) such that \(e_j(x, \zeta) = 0\) for \(\zeta \not\in S_j\), and that for almost all \(x \in X\), the function
+\[
+    \zeta \mapsto |\Phi(\zeta)|^2 \sum_{1 \leq j < \omega} |e_j(x, \zeta)|^2
+\]
+is \(\nu\)-integrable,
 
-% 242 CHAPTER IX
-% ,
-% (bxf)(x) = b(x-y)f(y)du(y)
-% G
-% it follows that B 4is a Carleman operator corresponding to the Carleman kernel K(x,y) = b(x-y). The Plancherel theorem
-% and the multiplicative property of the Fourier transform (chap.VII, formula (44)) show that the isometry T: f+— JFf defines a diagonalization of the operator B, with Y = é, w =2, &(C) = 3b(g), and Vv a Haar measure on G. Formulas G G
-% (10) and (11) then boil down to
-% (12) (T-£)(¢)= | £(x)e(x,0)au(x), (T eu)(x) =fe@@fifl3®© with e(x,¢) = (x,() for x€ G and ¢ € G, i.e. the defi
-% nitions of the: Fourier transform and of its inversej; these formulas are only valid for f € Ll(G) N L°(G) and
-% 2
-% u € Ll(a) N Lz(a), which shows that the restrictions imposed on the functions f and wu, in (10) and (11) cannot be com pletely suppressed. Finally, for every ( € é, one has
-% (13) bxe(+,0) = 8(C)e(*,C)
-% and although the functions e(*,() do not belong to LZ(G) in general, they are in some sense "generalized eigenvectors" for the operator B, exhibiting the same phenomenon already observed by F., Riesz (chap.VII, 2).
-% In 1953, it was simultaneously observed by L. Garding [ 81] and F, Browder [34] that this phenomenon of "generalized ei genvectors" occurs for all self-adjoint operators stemming
-% from formally self-adjoint elliptic differential operators (see 5). It is assumed that such an operator P or order m . 2
-% in L%(X) (where X is an open bounded subset of R") pos-
-% APPLICATIONS OF FUNCTIONAL ANALYSIS 243
-% sesses a self-adjoint extension AP; then [ = AP+ il 2 -
-% (I didentity) is a normal unbounded operator, which is a bi jection of dom(AP) onto L7(X); the inverse [ 1 s 2
-% therefore a continuous normal operator in L (X), and the same is true of course of its iterates B = L-q. It follows from the existence of a parametrix of P (see 5) that for gm > n, B 1is a Carleman operator; it then also follows from the hypoellipticity of P (see 5) and from Mautner's theorem that there is a diagonalization of A, with Y = Sp(AZ)) and (¢) = ¢, for which (with the preceding notations) each function ej(°,g), for ¢ ¢ Sp( P)’ is a €~ function (ge nerally not in LZ(X)) solution of the partial differential (14) (P'ej(O,g))(x) = er(x9€)°
-% equation
+2° Let \(r(x) = \left( \int_X |K(x,y)|^2 d\mu(y) \right)^{1/2}\), which is \(\mu\)-measurable and almost everywhere finite; then, for every function \(f \in E_j\) such that \(\int_X^* r(x)|f(x)|d\mu(x) < +\infty\) one has
+\begin{equation}
+    \label{eq:9.10}
+    (T_j \cdot f)(\zeta) = \int_X f(x)\overline{e_j(x, \zeta)} d\mu(x)
+\end{equation}
+for almost every \(\zeta \in Y\).
+
+3° There is a null set \(N \subset X\) having the following property: for every \(j\) such that \(1 \leq j < \omega\), let \(u_j\) be a function belonging to \(F_j\), and suppose that the function
+\[
+    \zeta \mapsto |\Phi(\zeta)|^{-2} \sum_{1 \leq j < \omega} |u_j(\zeta)|^2
+\]
+is \(\nu\)-integrable. Then, for every \(x \not\in N\), the function \(\zeta \mapsto \sum_{1 \leq j < \omega} e_j(x, \zeta) u_j(\zeta)\) is \(\nu\)-integrable, and
+\begin{equation}
+    \label{eq:9.11}
+    (T^{-1} \cdot (u_j))(x) = \int_Y \left( \sum_{1 \leq j < \omega} e_j(x, \zeta) u_j(\zeta) \right) d\nu(\zeta).
+\end{equation}
+
+The nature of this result is better understood when one specializes it to a situation stemming from harmonic Analysis. Take \(X = G\), a separable commutative locally compact group; let \(\mu\) be a Haar measure on \(G\), and consider a complex function \(b \in L^1(G) \cap L^2(G)\); then \(B: f \mapsto b * f\) is a continuous normal operator in \(L^2(G)\), such that \(B^* \cdot f = \check{\overline{b}} * f\); furthermore, from the definition
+\[
+    (b * f)(x) = \int_G b(x-y) f(y) d\mu(y)
+\]
+it follows that \(B\) is a \emph{Carleman operator} corresponding to the Carleman kernel \(K(x,y) = b(x-y)\). The Plancherel theorem and the multiplicative property of the Fourier transform (chap. \ref{ch:7}, formula \eqref{eq:7.44}) show that the isometry \(T: f \mapsto \mathcal{F}f\) defines a \emph{diagonalization} of the operator \(B\), with \(Y = \hat{G}, \omega = 2, \Phi(\zeta) = \mathcal{F}b(\zeta)\), and \(\nu\) a Haar measure on \(\hat{G}\). Formulas \eqref{eq:9.10} and \eqref{eq:9.11} then boil down to
+\begin{equation}
+    \label{eq:9.12}
+    (T \cdot f)(\zeta) = \int_G f(x) \overline{e(x, \zeta)} d\mu(x),
+    \qquad
+    (T^{-1} \cdot u)(x) = \int_{\hat{G}} e(x, \zeta) u(\zeta) d\nu(\zeta)
+\end{equation}
+with \(e(x,\zeta) = \ip{x, \zeta}\) for \(x \in G\) and \(\zeta \in \hat{G}\), i.e. the definitions of the \emph{Fourier transform} and of its inverse; these formulas are only valid for \(f \in L^1(G) \cap L^2(G)\) and \(u \in L^1(\hat{G}) \cap L^2(\hat{G})\), which shows that the restrictions imposed on the functions \(f\) and \(u_j\), in \eqref{eq:9.10} and \eqref{eq:9.11} cannot be com pletely suppressed. Finally, for every \(\zeta \in \hat{G}\), one has
+\begin{equation}
+    \label{eq:9.13}
+    b * e (\cdot, \zeta) = \Phi(\zeta) e(\cdot, \zeta)
+\end{equation}
+and although the functions \(e(\cdot, \zeta)\) \emph{do not} belong to \(L^2(G)\) in general, they are in some sense ``generalized eigenvectors'' for the operator \(B\), exhibiting the same phenomenon already observed by F. Riesz (chap. \ref{ch:7}, \ref{sec:7.2}).
+
+In 1953, it was simultaneously observed by L. Gårding \cite{081} and F. Browder \cite{34} that this phenomenon of ``generalized eigenvectors'' occurs for all self-adjoint operators stemming from \emph{formally self-adjoint elliptic differential operators} (see \ref{sec:9.5}). It is assumed that such an operator \(P\) or order \(m\) in \(L^2(X)\) (where \(X\) is an open bounded subset of \(\R^n\)) possesses a \emph{self-adjoint} extension \(A_P\); then \(L = A_P + iI\) (\(I\) identity) is a \emph{normal} unbounded operator, which is a bijection of \(\dom(A_P)\) onto \(L^2(X)\); the inverse \(L^{-1}\) is therefore a \emph{continuous} normal operator in \(L^2(X)\), and the same is true of course of its iterates \(B = L^{-q}\). It follows from the existence of a parametrix of \(P\) (see \ref{sec:9.5}) that for \(qm > n, B\) is a \emph{Carleman operator}; it then also follows from the hypoellipticity of \(P\) (see \ref{sec:9.5}) and from Mautner's theorem that there is a diagonalization of \(A_P\) with \(Y = \spec(A_P)\) and \(\Phi(\zeta) = \zeta\), for which (with the preceding notations) each function \(e_j(\cdot, \zeta)\), for \(\zeta \not\in \spec(A_P)\) is a \(C^\infty\) function (generally \emph{not} in \(L^2(X)\)) solution of the partial differential equation
+\begin{equation}
+    \label{eq:9.14}
+    (P \cdot e_j(\cdot, \zeta))(x) = \zeta e_j(x, \zeta).
+\end{equation}
 
 \section{Boundary problems for ordinary differential equations}
 \label{sec:9.3}
