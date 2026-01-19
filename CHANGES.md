@@ -4,6 +4,7 @@ This is a list of known typos in Dieudonné's book. They have been corrected in 
 
 Pages and rows are referred to the original book. Equations are not considered as "lines".
 
+- "or", p. 28, eleventh line
 - "explicity", p. 46, second line
 - "analgous", p. 90, fourth-to-last line
 - "strooke", p. 102, sixth-to-last line
@@ -20,6 +21,7 @@ Pages and rows are referred to the original book. Equations are not considered a
 - "if", p. 189, tenth-to-last line
 - "it", p. 191, second-to-last line (without considering the footnote)
 - "mapping", p. 197, fifth line of the second paragraph
+- "or", p. 242, second-to-last line
 - $_P$, p. 243, third line before equation 9.14
 - "surprizingly", p. 243, seventh-to-last line
 - "or", p. 255, fifth line
