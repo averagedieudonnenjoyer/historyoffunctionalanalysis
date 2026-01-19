@@ -3202,12 +3202,12 @@ where \(\vec{\zeta, t}\) is the one column matrix \((v_j(\zeta, t))_{1 \leq j \l
 As the operator \(L\) is elliptic and formally self-adjoint, one can apply to it the Gårding--Browder theorem (\ref{sec:9.2}). It can be shown that, with the notations introduced in \ref{sec:9.2}, one has \(\omega \leq 2r + 1\), in other words, \(A_L\) has \emph{at most multiplicity} \(2r\) in its spectrum \(S\); for convenience, if \(\omega < 2r + 1\), one defines the function \(e_j(t, \xi)\) to be identically 0 for \(\omega \leq j \leq 2r, t \in J\) and \(\xi in S\); for the other values of \(j, (t,\xi) \mapsto e_j(t,\xi)\) is a (\(\lambda \otimes \nu\))-measurable function in \(J \times S\), such that for each \(\xi \in S, t \mapsto e_j(t,\xi)\) is a solution of the equation \(L \cdot u - \xi u = 0\) and for almost all \(t \in J\), the function \(\xi \mapsto e_j(t, \xi)\) is square integrable (for \(\nu\)) in each compact subset of \(S\); in addition, one has \(e_j(t,g) = 0\) for \(\xi \not\in S\). For \(\xi \in S \subset \R\), one may write (with \(\vec{e}(t,\xi) = (e_j(t, \xi))_{1 \leq j \leq 2r}\), one column matrix)
 \begin{equation}
     \label{eq:9.19}
-    \vec{e}(t, \xi) = \mathcal{Q}(\xi) \cdot \vec{v}(\xi, t)
+    \vec{e}(t, \xi) = Q(\xi) \cdot \vec{v}(\xi, t)
 \end{equation}
-and the elements of the matrix \(\mathcal{Q}\) are \(\nu\)-measurable and square integrable in every compact subset of \(S\). Let
+and the elements of the matrix \(Q\) are \(\nu\)-measurable and square integrable in every compact subset of \(S\). Let
 \begin{equation}
     \label{eq:9.20}
-    P(\xi) = \mathcal{Q}(\xi)^* \mathcal{Q}(\xi)
+    P(\xi) = Q(\xi)^* Q(\xi)
 \end{equation}
 which is a positive hermitian matrix for all \(\xi \in S\). The spectral decomposition of the operator \((A_L - \zeta I)^{-1}\) can then be written \emph{explicitly} in the following way: for any function \(f \in \mathcal{D}(J)\), write
 \begin{equation}
