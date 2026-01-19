@@ -28,7 +28,7 @@ Pages and rows are referred to the original book. Equations are not considered a
 
 # Punctuation
 
-When Dieudonné references pages of entries in the bibliography, sometimes he writes "p.N", other times "p. N". Here they are always "p. N".
+When Dieudonné references pages of entries in the bibliography, sometimes he writes "p.N", other times "p. N". Here they are always "p. N". The same applies for chapters ("chap. N") and volumes ("vol. N"). For this reason, missing spaces in the original books ("p.N") are not considered typos: they are legion, and listing them all would not make sense, given the convention we use here.
 
 Missing punctuation in the original book:
 
