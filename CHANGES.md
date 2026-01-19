@@ -22,6 +22,7 @@ Pages and rows are referred to the original book. Equations are not considered a
 - "mapping", p. 197, fifth line of the second paragraph
 - $_P$, p. 243, third line before equation 9.14
 - "surprizingly", p. 243, seventh-to-last line
+- "or", p. 255, fifth line
 
 # Punctuation
 
