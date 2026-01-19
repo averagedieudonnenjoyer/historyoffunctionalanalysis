@@ -49,3 +49,4 @@ Certain equations in the original book are split in two lines, as there is not e
 * 9.3
 * 9.4
 * 9.62 (by a hair's breadth)
+* the unnumbered one immediately following 9.64 (by a hair's breadth)
