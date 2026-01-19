@@ -3276,343 +3276,362 @@ The ``bootstrap'' method shows that if \(P \cdot u = f\) where \(f\) is a \(C^\i
 \section{Elementary solutions, parametrices and pseudo-differential operators}
 \label{sec:9.5}
 
-% We have seen (chap.II, 3) that from the beginning the idea
-% of "mewtonian" potential was closely related to the laplacian operator; if one considers in R the integral operator U
-% 3
+We have seen (chap. \ref{ch:2}, \ref{sec:2.3}) that from the beginning the idea of ``newtonian'' potential was closely related to the laplacian operator; if one considers in \(\R^3\) the integral operator \(U\) defined by the kernel \(-\frac{1}{4\pi|x-y|}\) (where \(|x|\) is the euclidean norm), then Poisson's equation (chap. \ref{ch:2}, formula \eqref{eq:2.12}) can be written \(\Delta \cdot (U \cdot \rho) = \rho\) for \(\rho \in \mathcal{D}(\R^3)\), and one also may write \(U \cdot (\Delta \cdot f)\) if \(f\) is the potential having density \(\rho\), so that this equation is also valid for all \(f \in \mathcal{D}(\R^3)\). Later, when the existence of the Green function \(G\) was proved for a domain \(\Omega\) in \(\R^3\), one had similarly the relations \(\Delta \cdot (U \cdot f) = f\) and \(U \cdot (\Delta cdot f) = f\) for all \(f \in \mathcal{D}(\Omega)\), where now \(U\) is the integral operator defined by the kernel \(\frac{1}{4\pi}G(x,y)\). In both cases, \(y \mapsto \frac{1}{|x-y|}\) and \(y \mapsto G(x,y)\) are solutions of the Laplace equation \(\Delta u = 0\), but with a \emph{singular point} for \(y=x\).
 
-% APPLTCATIONS OF FUNCTIONAL ANALYSIS 253 defined by the kernel (where |x| is the eucli
-% 1
-% L | x=vy|
-% dean norm), then Poisson's equation (chap.II, formula (12)) can be written A+(U+p) =p for p € @(RB), and one also may write U+(A+f) = f if £ is the potential having density p, so that this equation is also valid for all f € @(RB). Later,
-% when the existence of the Green function G was proved for a domain in RB, one had similarly the relations As(U«f) = = f and Us(A*f) = £ for all f € 8(Q?), where now U is the integral operator defined by the kernel fi%—G(x,y). In both cases, YP*’T;%;T and y+— G(x,y) are solutions of the Laplace equation Au = 0, but with a singular point for y=x.
-% In 1860 Riemann proposed to solve Cauchy's problem for 1i
-% near hyperbolic equations of second order in 2 wvariables Peu = 0O by using a particular solution y+— R(x,y) of the adjoint equation tPov = O depending on the point x, in
-% such a way that the integral operator U defined by the kernel R satisfies again the relation Pe(Usf) = £ for fE€ @(RZ), the function R playing for P a role similar to the Green
-% funcfiion for the laplacian. In that case R is continuous; but when Volterra and Hadamard undertook to extend the method to second order hyperbolic equations in n = 3 +variables, they were beset by difficulties stemming from the fact that the function corresponding to R would now have, not only (as the Green function) a singularity at one point x, but singularities along lines or surfaces,
-% We cannot here describe the details of these researches, for which we refer to [93]. What we want to emphasize is that, by the end of the x1x? century, one had the (rather Vague) idea that, for a second order linear differential ope-
+In 1860 Riemann proposed to solve Cauchy's problem for linear hyperbolic equations of second order in 2 variables \(P \cdot u = 0\) by using a particular solution \(y \mapsto R(x, y)\) of the adjoint equation \(\prescript{t}{}P \cdot v = 0\) depending on the point \(x\), in such a way that the integral operator \(U\) defined by the kernel \(R\) satisfies again the relation \(P \cdot (U \cdot f) = f\) for \(f \in \mathcal{D}(\R^2)\), the function \(R\) playing for \(P\) a role similar to the Green funcfiion for the laplacian. In that case \(R\) is continuous; but when Volterra and Hadamard undertook to extend the method to second order hyperbolic equations in \(n \geq 3\) variables, they were beset by difficulties stemming from the fact that the function corresponding to \(R\) would now have, not only (as the Green function) a singularity at one point \(x\), but singularities along lines or surfaces.
 
-% 25l CHAPTER IX
-% rator P, one should look for a solution y +~—s R(x,y) of the ad joint equation tP'V = O having a suitable singularity at the point x, and that the integral operator U defined by the kernel R would be such that P*(Uf) = £ for fec 8(Q); such a function R was called an elementary (or fundamental) solution for tP. This worked, not only for A,
+We cannot here describe the details of these researches, for which we refer to \cite{093}. What we want to emphasize is that, by the end of the XIX\supth{} century, one had the (rather vague) idea that, for a second order linear differential operator \(P\), one should look for a solution \(y \mapsto R(x,y)\) of the adjoint equation \(\prescript{t}{}P \cdot v = 0\) having a suitable singularity at the point \(x\), and that the integral operator \(U\) defined by the kernel \(R\) would be such that \(P \cdot (U \cdot f) = f\) for \(f \in \mathcal{D}(\Omega)\); such a function \(R\) was called an \emph{elementary} (or \emph{fundamental}) solution for \(\prescript{t}{}P\). This worked, not only for \(\Delta\), but also for instance for the heat operator \(\pder{}{t} - \pder{^2}{x^2}\), one has \(R(t,x) = \frac{1}{2\sqrt{\pi t}} e^{-x^2/4t}\) for \(t > 0, R(t,x) = 0\) for \(t < 0\) (\(R(0,x)\) is undefined); for hyperbolic equations, things were not so simple, for one had to apply the integral operator defined by the kernel \(R\), not to \(f\) but to some derivatives of \(f\) \cite{122}.
 
-% 3
-% 2
+After 1900, mathematicians began to investigate the possibility of extending the notion of elementary solution and its applications to equations of higher order. To an operator \eqref{eq:9.25}, one associates the polynomial in \(\xi = (\xi_1, \xi_2, \ldots, \xi_n)\)
+\begin{equation}
+    \label{eq:9.28}
+    \sigma_P(x,\xi) = \sum_{|\alpha| \leq m} a_\alpha(x)(2\pi i\xi)^\alpha
+\end{equation}
+(later called the ``symbol'' of \(P\)) and the homogeneous polynomial in  consisting in the terms of highest degree \(m\) (the ``principal symbol'' of \(P\))
+\begin{equation}
+    \label{eq:9.29}
+    \sigma^0_P(x,\xi) = \sum_{|\alpha| = m} a_\alpha(2\pi i\xi)^\alpha.
+\end{equation}
+The operator \(P\) is called \emph{elliptic} if \(\sigma^0_P(x,\xi) \neq 0\) for all \(x \in \Omega\) and all \(\xi \neq 0\). In his thesis, Fredholm considered, for \(n = 3\), elliptic operators with constant coefficients, and proved the existence of an elementary solution by writing it explicitly as an abelian integral (\cite{074}, p.~17--57); this was later generalized to elliptic operators with constant coefficients in any number of variables (Holmgren, Herglotz \cite{109}). In 1907, E.E. Levi considered elliptic operators with variable coefficients, and either \(n = 2\) variables, or operators of order 2 in any number of variables; in both cases, using the fact that for constant coefficients elementary solutions were explicitly known, he showed how one could prove the existence of elementary solutions by showing that their determination could be reduced to the solution of a Fredholm integral equation (\cite{145}, vol.~II, p.~28--84).
 
-% but also for instance for the heat operator 3% —-;—E—, one 1 -x* /it 0x has R(t,x) = ———e for t > 0, R(t,x) = 0 for 2 it
-% t < 0 (R(O,x) 4dis undefined); for hyperbolic equations, things were not so simple, for one had to apply the integral operator defined by the kernel R, mnot to f but to some derivatives of f [122],
-% After 1900, mathematicians began to investigate the possi bility of extending the notion of elementary solution and its applications to equations of higher order. To an operator (25), one associates the polynomial in £ = (gl,gz, \ldots,gn)
-% (28) op(x,8) = T a (x)(2nig)" | [sm
-% (later called the "symbol" of P) and the homogeneous poly nomial in  consisting in the terms of highest degree m (29) oo(x,8) = T a (x)(2mig)%. P o |=m &
-% (the "principal symbol" of P)
-% The operator P is called elliptic if G;(x,g) £ 0 for all Xx€ 2 and all £ £ O, In his thesis, Fredholm considered, for n = 3, elliptic operators with constant coefficients, and proved the existence of an elementary solution by writing it explicitly as an abelian integral ([74], p.17-57); this was
+For operators with constant coefficients, the theory of distributions completely clarified the concept of ``elementary solution'' \cite{194}; such an operator may be written \(u \mapsto A * u\), where \(A = \sum\limits_\alpha a_\alpha D^\alpha \varepsilon_0\), linear combination of derivatives of the Dirac measure \(\varepsilon_0\) at the origin of \(\R^n\). An elementary solution is then, by definition, a \emph{distribution} \(E\) on \(\R^n\) such that
+\begin{equation}
+    \label{eq:9.30}
+    A * E = \varepsilon_0;
+\end{equation}
+it follows at once from that definition that, for any \emph{distribution} \(T\) with compact support (and not only for a function), one has
+\begin{equation}
+    \label{eq:9.31}
+    A*(E*T) = E*(A*T) = T.
+\end{equation}
 
-% APPLTICATIONS OF FUNCTIONAL ANALYSIS 255
-% later generalized to elliptic operators with constant coeffi cients in any number of wvariables (Holmgren, Herglotz E109]). In 1907, E,E. Levi considered elliptic operators with varia ble coefficients, and either n = 2 variables, or operators or order 2 in any number of variables; in both cases, using the fact that for constant coefficients elementary solutions were explicitly known, he showed how one could prove the exis tence of elementary solutions by showing that their determi nation could be reduced to the solution of a Fredholm integral equation ([145], vol.II, p.28-84).
-% For operators with constant coefficients, the theory of dis
-% tributions completely clarified the concept of "elementary solution" [194]; such an operator may be written u +— Axu, where A = g aaDgeo, linear combination of derivatives of the Dirac measure ¢ at the origin of Rn. An elementary solu o tion is then, by definition, a distribution E on R such (30) AxE = eO s
-% that
-% it follows at once from that definition that, for any distri bution T with compact support (and not only for a function), (31) Ax (E*T) = Ex(A*T) = T,
-% one has
-% In 1954, Ehrenpreis [63] and Malgrange [ 156] independently proved that any operator P of form (25) with constant coef ficients has an elementary solution E, Of course, such a
-% solution is only determined up to addition of any distribu tion S solution of the homogeneous equation PSS = 0, It
+In 1954, Ehrenpreis \cite{063} and Malgrange \cite{156} independently proved that \emph{any} operator \(P\) of form \eqref{eq:9.25} with constant coefficients has an elementary solution \(E\). Of course, such a solution is only determined up to addition of any distribution \(S\) solution of the homogeneous equation \(P \cdot S =0\). It is not obvious that among these distributions there would exist \emph{tempered} ones; as \(\mathcal{F}A\) is the polynomial \(\sigma_P(\xi)\) such an elementary solution should be such that
+\begin{equation}
+    \label{eq:9.32}
+    \sigma_P(\xi) \cdot \mathcal{F}E = 1;
+\end{equation}
+it is only in 1958 that independently Hörmander \cite{118} and Łojasiewicz \cite{153} showed that it is always possible, for any polynomial \(Q\), to find a tempered distribution \(T\) such that \(Q \cdot T = 1\).
 
-% 256 CHAPTER IX
-% is not obvious that among these distributions there would exist tempered ones; as &A is the polynomial GP(g) such (32) 0p(8)3E = 1;
-% an elementary solution should be such that
-% it is only in 1958 that independently H8rmander [118] and Yojasiewicz [153] showed that it is always possible, for any polynomial Q, to find a tempered distribution T such that QT = 1.
-% FElementary solutions proved to be useful to show that an operator P is hypoelliptic [117, p.100], or to prove uni queness of the Cauchy problem for some operators [117,p.1l41]. But gradually it was realized that instead of looking for a "right inverse" to a differential operator, it could be much simpler to obtain an "approximate right inverse" which would be put to the same uses.,
-% Such an idea was first introduced by Hilbert in 1907 under the name of parametrix, in a particularly simple context, the study of an elliptic operator P or order 2 on the sphere SZ; he proves that there is an integral operator ¢, defined by a kernel having a singularity similar to the logarithmic sin gularity of the Green function, and such that QP= I + R, where PR is an integral operator; a solution of P ¢u = f is therefore a solution of the integral equation u + Reu = = Q+f [112, p.233-242]; @ could therefore be considered as an "approximate left inverse" of P,
-% Two years later, E.,E, Levi independently introduced a simi lar method in a much more general and difficult question, the generalization of the Dirichlet problem for elliptic operators
+Elementary solutions proved to be useful to show that an operator \(P\) is hypoelliptic \cite[p.~100]{117}, or to prove uniqueness of the Cauchy problem for some operators \cite[p.~141]{117}. But gradually it was realized that instead of looking for a ``right inverse'' to a differential operator, it could be much simpler to obtain an ``approximate right inverse'' which would be put to the same uses.
 
-% APPLICATIONS OF FUNCTIONAL ANALYSTS 257
-% of arbitrary even order, completely unexplored until then except for a few special operators such as the iterated la placian., On these special examples it transpired that what should correspond to the Dirichlet problem for an operator of even order 2m was the boundary condition consisting in fix ing the values of the solution and its first m-1 normal de rivatives on the boundary I of a bounded open set (O C Rn. Levi is only concerned with the case of n = 2 +variables and first shows that the problem (for smooth boundary I') may be reduced to the case in which one has to find a solution of Peu = f such that u and its m=1 first normal derivatives take the value O on I's. His idea is then to determine two functions, ¢(x,y) and K(x,y,xl,yl) defined respectively in 0 and Qx0, and such that: 1¢ for each point (x,,7,) € € 0, the function (x,y)F¢~K(X,y,xl,yl) and its m=1 first normal derivatives vanish on T3 292 +the function
-% 70
-% satisfies the equation Peu= f, 1In order to obtain that
-% result, he chooses K 1in such a way that
-% (34) (P°u) (X9y) = CD(X9Y) + (Kl(X9Y9X19yl)CP(xlyyl)dxldyl Q
-% where Kl is a kernel to which Fredholm's theory is appli
-% cable, and he has thus reduced the problem to a Fredholm in tegral equation., If one writes ¢ o the right hand side of (33), one may say that the operator  is such that PQ= I+R where £ is an integral operator; this time ¢ is an "appro ximate right inverse" of P, The determination of the func-
+Such an idea was first introduced by Hilbert in 1907 under the name of \emph{parametrix}, in a particularly simple context, the study of an elliptic operator \(P\) of order 2 on the sphere \(\Sph_2\); he proves that there is an integral operator \(Q\), defined by a kernel having a singularity similar to the logarithmic singularity of the Green function, and such that \(QP = I + R\), where \(R\) is an integral operator; a solution of \(P \cdot u = f\) is therefore a solution of the \emph{integral equation} \(u + R \cdot u = Q \cdot f\) \cite[p.~233--242]{112}; \(Q\) could therefore be considered as an ``approximate left inverse'' of \(P\).
 
-% 258 CHAPTER IX
-% tion K satisfying these conditions is a difficult problem, and it is not surprising that after Levi not much work was done in that direction until around 1960 ([ 145], vol.II, p. 207-343).
-% At that time progress came from a completely different di rection, In his work on integrals of complex functions along paths in €, Cauchy, in 1814, had observed that if f is a ¢l function in an interval [-a,a] of R, the function f(x)/x is not integrable if f(0) £ O, but the sum
-% - a
-% ( 3 z dx + (, £LE%QE , when ¢ tends to O, has a limit
-% -3 €
-% which he called the "principal value" of the integral. Simi (35) (Hef)(x) = lim flg_)_i_z
-% larly, if L is a Cl curve in C, the limit
-% € -0 1
-% where x € L and Lb is the part of L for which the arc of L Jjoining x and 2z has length >¢, exists for each Cl function f defined on L, and is written Vp{' ELElflE_; if L dis a simple closed curve, the boundary 7 =X L
-% o i is defined for x¢ L, and is in ) a holo
-% of a bounded open set (, the usual line integral 1 f(z)dz
-% 7 ==X
-% L
-% morphic function F (x), and in the exterior € - () another holomorphic function F (x); when x +tends to a point t€L,
-% these functions have limits respectively equal to 1 1 £ d
-% F+(t) =5 f(t) + E-TT—i-VP (zztz ’
-% L
-% - 1 1 f d
-% L
+Two years later, E.E. Levi independently introduced a similar method in a much more general and difficult question, the generalization of the Dirichlet problem for elliptic operators of \emph{arbitrary even order}, completely unexplored until then except for a few special operators such as the iterated laplacian. On these special examples it transpired that what should correspond to the Dirichlet problem for an operator of even order \(2m\) was the boundary condition consisting in fixing the values of the solution and \emph{its first} \(m-1\) \emph{normal derivatives} on the boundary \(I\) of a bounded open set \(\Omega \subset \R^n\). Levi is only concerned with the case of \(n = 2\) variables and first shows that the problem (for smooth boundary \(\Gamma\)) may be reduced to the case in which one has to find a solution of \(P \cdot u = f\) such that \(u\) and its \(m-1\) first normal derivatives take the value 0 on \(\Gamma\). His idea is then to determine two functions, \(\varphi(x,t)\) and \(K(x,y,x_1,y_1)\) defined respectively in \(\overline{\Omega}\) and \(\overline{\Omega} \times \overline{\Omega}\), and such that: 1° for each point \((x_1, y_1) \in \Omega\), the function \((x,y) \mapsto (x,y,x_1,y_1)\) and its \(m-1\) first normal derivatives vanish on \(\Gamma\); 2° the function
+\begin{equation}
+    \label{eq:9.33}
+    u(x,y) = \iint_\Omega K(x,y,x_1,y_1)\varphi(x_1,y_1) dx_1 dy_1
+\end{equation}
+satisfies the equation \(P \cdot u = f\). In order to obtain that result, he chooses \(K\) in such a way that
+\begin{equation}
+    \label{eq:9.34}
+    (P \cdot u)(x,y) = \varphi(x,y) + \iint_\Omega K_1(x,y,x_1,y_1)\varphi(x_1,y_1) dx_1 dy_1
+\end{equation}
+where \(K_1\) is a kernel to which Fredholm's theory is applicable, and he has thus reduced the problem to a Fredholm integral equation. If one writes \(Q \cdot \varphi\) the right hand side of \eqref{eq:9.33}, one may say that the operator \(Q\) is such that \(PQ = I + R\) where \(R\) is an integral operator; this time \(Q\) is an ``approximate right inverse'' of \(P\). The determination of the function \(K\) satisfying these conditions is a difficult problem, and it is not surprising that after Levi not much work was done in that direction until around 1960 (\cite{145}, vol.~II, p.~207--343).
 
-% APPLICATIONS OF FUNCTIONAL ANALYSIS 259
-% In his third paper on integral equations, Hilbert, using
-% these formulas, showed that one could find two holomorphic functions F ' (x) 4in Q, F (x) in € -Q, such that for t € L, the limits F'(t) and F (t) of these functions - . 1 .
-% exist when x tends to t, and satisfy a relation F'(t) = = g(t)F (t), where g dis a C~ function on L [112, p. 81-108]3 this led to calling the function H+f defined by (35) the Hilbert transform of £,
-% Between 1910 and 1955, many mathematicians studied wvarious generalizations of this operator to functions of any number of variables, and applied them to various problems of Analysis; we cannot describe this evolution in any detail, and refer the reader to [197]. The most general of these "singular in tegral operators" (or "Calderon=-Zygmund operators" as they were also called) are defined in the following way: Q is an open subset of R, (x,6)—K(x,6) a locally integrable map ping of (Q X (mn-{o}) into €, which is positively homogen eous of degree -n in  for every x € ()3 4in addition it is assumed that for any x € Q, g’ K(x,£)do() = 0 (o be
+At that time progress came from a completely different direction. In his work on integrals of complex functions along paths in \(\C\), Cauchy, in 1814, had observed that if \(f\) is a \(C^1\) function in an interval \([-a,a]\) of \(\R\), the function \(f(x)/x\) is not integrable if \(f(0) \neq 0\), but the sum \(\int_{-a}^{-\varepsilon} \frac{f(x)dx}{x} + \int_\varepsilon^a \frac{f(x)dx}{x}\), when \(\varepsilon\) tends to 0, has a limit which he called the ``principal value'' of the integral. Similarly, if \(L\) is a \(C^1\) curve in \(\C\), the limit
+\begin{equation}
+    \label{eq:9.35}
+    (H \cdot f)(x) = \lim_{\varepsilon \to 0} \int_{L_\varepsilon} \frac{f(z)dz}{z-x}
+\end{equation}
+where \(x \in L\) and \(L_\varepsilon\) is the part of \(L\) for which the arc of \(L\) joining \(x\) and \(z\) has length \(> \varepsilon\), exists for each \(C^1\) function \(f\) defined on \(L\), and is written \(\text{vp} \int_L \frac{f(z)dz}{z-x}\); if \(L\) is a simple closed curve, the boundary of a bounded open set \(\Omega\), the usual line integral \(\frac{1}{2\pi i} \int_L \frac{f(z)dz}{z-x}\) is defined for \(x \not\in L\), and is in \(\Omega\) a holomorphic function \(F^+(x)\), and in the exterior \(\C - \overline{\Omega}\) another holomorphic function \(F^-(x)\); when \(x\) tends to a point \(t \in L\), these functions have limits respectively equal to
+\[
+    \begin{aligned}
+        F^+(t) &= \frac{1}{2} f(t) + \frac{1}{2\pi i} \text{vp} \int_L \frac{f(z)dz}{z - t}, \\
+        F^-(t) &= -\frac{1}{2} f(t) + \frac{1}{2\pi i} \text{vp} \int_L \frac{f(z)dz}{z - t}.
+    \end{aligned}
+\]
+In his third paper on integral equations, Hilbert, using these formulas, showed that one could find two holomorphic functions \(F^+(x)\) in \(\Omega, F^-(x)\) in \(\C - \overline{\Omega}\), such that for \(t \in L\), the limits \(F^+(t)\) and \(F^-(t)\) of these functions exist when \(x\) tends to \(t\), and satisfy a relation \(F^+(t) = g(t)F^-(t)\), where \(g\) is a \(C^1\) function on \(L\) \cite[p.~81--108]{112} this led to calling the function \(H \cdot f\) defined by \eqref{eq:9.35} the \emph{Hilbert transform} of \(f\).
 
-% N
-% n-1
+Between 1910 and 1955, many mathematicians studied various generalizations of this operator to functions of any number of variables, and applied them to various problems of Analysis; we cannot describe this evolution in any detail, and refer the reader to \cite{197}. The most general of these ``singular integral operators'' (or ``Calderon--Zygmund operators'' as they were also called) are defined in the following way: \(\Omega\) is an open subset of \(\R^n, (x, \xi) \mapsto K(x, \xi)\), a locally integrable mapping of \(\Omega \times (\R^n - \{0\})\) into \(\C\), which is \emph{positively homogeneous} of degree \(-n\) in \(\xi\) for every \(x \in \Omega\); in addition it is assumed that for any \(x \in \Omega, \int_{\Sph_{n-1}} K(x, \xi) d\sigma(\xi) = 0\) (\(\sigma\) being the invariant measure on \(\Sph_{n-1}\)). Then, for any function \(u \in \mathcal{D}(\Omega)\), the limit
+\begin{equation}
+    \label{eq:9.36}
+    (P \cdot u)(x) = \lim_{\varepsilon \to 0} \int_{|y-x| \geq \varepsilon} K(x,y-x)u(y)dy
+\end{equation}
+exists for every \(x\) and defines a \emph{singular integral operator} \(P\).
 
-% ing the invariant measure on (n-1)' Then, for any function u€ 9(Q), the limit
-% (36) (Peu)(x) = 1im K(x,v-x)u(y)dy e -0 |y -x|=¢
-% exists for every x and defines a singular integral operator P.
-% Around 1960, it was realized that the use of Fourier trans form (generalized to distributions) enabled one to define a class of linear operators which contained at the same time
+Around 1960, it was realized that the use of Fourier transform (generalized to distributions) enabled one to define a class of linear operators which contained at the same time differential operators of type \eqref{eq:9.25}, singular integral operators and some ordinary integral operators (with locally in tegrable kernels); several mathematicians independently contributed to this new theory, but again we cannot go into any historical detail, and we shall merely give a short description of its present status (for more references, see
+\mytodo{add reference: [D]}
+, \cite{119} and \cite{068}). The inversion formula for Fourier transforms shows that the operator \eqref{eq:9.25} can be written
+\begin{equation}
+    \label{eq:9.37}
+    (P \cdot u)(x) = \int_{\R^n} \exp(2\pi i(x|\xi))a(x,\xi)\mathcal{F}u(\xi)d\xi
+    \quad
+    \text{for } u \in \mathcal{D}(\Omega)
+\end{equation}
+where \(a(x,\xi) = \sigma_P(x,\xi)\) (formula \eqref{eq:9.28}). The generalization consists in replacing in \eqref{eq:9.37} the polynomial (in \(\xi\)) \(\sigma_P(x,\xi)\) by a more general \(C^\infty\) function defined in \(\Omega \times \R^n\) and which is only submitted to conditions concerning its \emph{growth} as \(|\xi|\) tends to \(+\infty\): for a polynomial \(\sigma_P, D^\alpha_x \sigma_P\) has the same behavior for \(|\xi| \to \infty\) as \(\sigma_P\) itself, whereas \(D^\beta_\xi \sigma_P\) is a polynomial in \(\xi\) of degree \(m - |\beta|\). One defines then a \emph{symbol} as a \(C^\infty\) mapping \((x,\xi) \mapsto a(x, \xi)\) of \(\Omega \times \R^n\) into \(\C\), such that one has
+\begin{equation}
+    \label{eq:9.38}
+    |D^\alpha_x D^\beta_\xi a(x, \xi)| \leq C_{\alpha \beta L} (1 + |\xi|)^{m-|\beta|}
+\end{equation}
+for all multiindices \(\alpha, \beta\) and all compact subsets \(L \subset \Omega\), where \(x \in L\) and \(\xi \in \R^n\) are arbitrary, and \(C_{\alpha \beta L}\) is independent of \(x \in L\) and \(\xi \in \R^n\); the main difference is that here \(m\) (the \emph{order} of \(a\), or of \(P\)) is an \emph{arbitrary real} number. The corresponding operator \(P\) defined by \eqref{eq:9.37} for \(u \in \mathcal{D}(\Omega)\) is called a \emph{pseudo-differential operator} defined by the symbol \(a\); differential operators therefore correspond to symbols of order \(m\) equal to an integer \(m \geq 1\), the newtonian potential to \(m = -2\), and the singular integral operators \eqref{eq:9.36} (for \(K\) of class \(C^\infty\)) to \(m = 0\). The most interesting case is the one in which \(a = a_0 + a_1\), where \(a_0\) is \emph{positively homogeneous of degree} \(m\) in \(\xi\), and \(a_1\) is a symbol of order \(< m\); one then says that \(a\) is the \emph{principal symbol} of the pseudo-differential operator \eqref{eq:9.37}, and one writes \(a_0 = \sigma^0_P\).
 
-% 260 CHAPTER IX
-% differential operators of type (25), singular integral opera tors and some ordinary integral operators (with locally in tegrable kernels); several mathematicians independently con tributed to this new theory, but again we cannot go into any historical detail, and we shall merely give a short descrip tion of its present status (for more references, see (D], [119] and [68]). The inversion formula for Fourier trans forms shows that the operator (25) can be written
-% (37) (Peu)(x) =| exp(2mi(x|g))a(x,58)Fu(E)dg for ue 8(Q) [Rn
-% where a(x,8) = 0p(x,8) (formula (28)). The generalization consists in replacing in (37) the polynomial (in ) op(x,8) by a more general ¢® function defined in men and which is only submitted to conditions concerning its growth as || tends to +o: for a polynomial GP, DiGP has the same be havior for || + o as Op itself, whereas ngp is a poly o . n .
-% nomial in & of degree m-IB + One defines then a symbol as a C mapping (x,8)+= a(x,£) of QxR into €, such that (38) p%0f a(x,8)| s o, (1+z])"18
-% one has
-% for all multiindices @, B and all compact subsets LC (2, where x € L and  € R" are arbitrary, and C is inde- aBL pendent of x € L and & ¢ Rn; the main difference is that here m (the order of a, or of P) is an arbitrary real number. The corresponding operator P defined by (37) for u ¢ Q(Q) is called a pseudo=-differential operator defined by the symbol a; differential operators therefore correspond to symbols of order m equal to an integer m 2 1, the new-
-% APPLICATIONS OF FUNCTIONAL ANALYSIS 261
-% tonian potential to m = =2, and the singular integral ope rators (36) (for K of class Cw) to m = O, The most in teresting case is the one in which a = ao+al, where a is po sitively homogeneous of degree m in , and al is a symbol of order < mj; one then says that a is the princi pal symbol of the pseudo-differential operator (37), and one writes a = GP.
-% The main properties of pseudo-differential operators are
-% the following ones:
-% I) P maps the space 9(Q) into the space &(Q) of all c” (39) (Peulv) = (u|p®.v)
-% complex functions in (3 it has an adjoint P*, satisfying
-% for all u, v in 9(Q) (scalar product of LZ(Q)), which
-% is a pseudo-differential operator of same order my; if P has a principal symbol, P* has a principal symbol such that O 0
-% ITI) One says P is of proper type if bothP and P* apply 9(Q) idinto itself; for any pseudo-differential operator @ of order r, the compositions &P and Pg are then defined and are pseudo=-differential operators of order m+r; 4if P and €@ have principal symbols, so have P and QP and
-% o 0 0_oO (41) Oy, = Opp = OpOy
-% IITI) If m< -1, P is an integral operator, having a kernel which is locally interable in Qx?, but has singular ities for x = yjy 4if m< -n-k, the kernel is of class Ck in the whole of (QXxQ). One says that the symbol a (and the
-% 262 CHAPTER IX
-% corresponding pseudo-differential operator Z’) are of order -0 1if a satisfies inequalities (38) for every real number m; P 4is then an integral operator with a kernel which is of class Cw, and conversely any such operator is a pseudo-dif ferential operator of order -o, and its principal symbol is O,
-% IV) Any pseudo-differential operator P may be extended by continuity (for the weak topology) from 98(Q) to the space e’ (1) of all distributions on with compact support. The operators P of order -o are characterized by the property that for any distribution T € &’(Q), P+*T idis a C~ function on (}; one says that these operators are smoothing operators. Any pseudo-differential operator is the sum of a pseudo-dif ferential operator of proper type and of a smoothing operator. WhenK is a smoothing operator, so are the products KP and PK for any pseudo-differential operator P, if one of the two operators K , P is of proper type.
-% One writes P~ @ 4if P - @ dis a smoothing operator, V) The most remarkable feature of pseudo-differential opera tors is the possibility of defining a symbol by an asymptotic
-% expansion, Suppose given an infinite sequence ao,al, \ldots,ak,. eey Of symbols, having orders mO > M, Seee> M >ee6 with 1 k lim m, = -3 then there exists a symbol a of order m k=
-% such that, for any k, a - (ao+al+ \ldots+ak) has order < m,; this is expressed by writing
-% a ~ aO + al + o0 0o+ ak + o00
-% and saying that the right hand side is an asymptotic expansion of a, If PO, \ldots,P k,ooo are the pseudo-differential opera-
-% APPLICATIONS OF FUNCTIONAL ANALYSIS 263
-% tors defined by the symbols A seeesByyee, and P the pseudo-differential operator defined by a, one also writes Ol k+ ® o O
-% P ~ P +P +ooo+P
-% VI) One says a pseudo-differential operator P having a principal symbol of order m is elliptic if G;(x,g) £ 0 for x€ Q and £ #£ 03 for differential operators, this coincides with the previous definition., It is equivalent to
-% say that there exists a pseudo-differential operator  of order -m and of proper type such that QP =I+R andpg=I+R’where R and R’ are smoothing operators; in other words, P has a (left and right) parametrix in a very strong sense, The proof
-% is very simple; the necessity follows from the fact that if QP~ I , one must have G; = (02)-1 by (41). Conversely,
-% if P dis elliptic, there is a pseudo-differential operator Ql of proper type defined by the symbol (G;)-l; one has then QlP =71 =P l’ where Pl has order < -1, and one is reduced to finding a pseudo=-differential operator Q2 such that QZ(I-Pl) = I+R , where R 1is a smoothing operator; but it is enough to take @, ~ I+ P. 4+ P_ 4,404 P? +eee t+tOo oObtain 2 1 1
-% 2
-% that result!
-% VII) An immediate consequence of the existence of a para metrix €@ for an elliptic differential operator P is that P is hypoelliptic, for if T is a distribution such that PeTr = f € (), one has &@°f =T + R*T, and as R is a smoothing operator, Re*T and @ *f are both ¢~ functions, hence also T. Another easy consequence of the use of pseudo differential operators is that for each point X € 1, there is a small neighborhood U c (? of X such that the equatim
-% 264 CHAPTER IX
-% Peu = f has solutions in U (in other words, the H. Lewy phenomenon (chap.II, 2) cannot occur for an elliptic differ ential operator P); one should note, however, that there are examples of elliptic operators P defined in Rn, and such that there are equations Peu = f which have no solution in a large ball containing the support of f € Q(Rn) [176].
-% VIII) When QQ C RTM is bounded, pseudo-differential opera tors of proper type in ()} have simple continuity properties with respect to the Sobolev spaces: 4if P 1is such an opera tor of order 1r, defined in a neighborhood of 5, and s is any real number, there is a constant C depending only on P (42) [2eu]l, < cllull. _
-% and s, such that
-% for any u € 9(Q), the norms being those of HS(Rn) and g **(®")., If r >0 and P is elliptic, applying this result to a parametrix of P immediately yields an a priori (43) lull . < c(leeal, + [l ).
-% inequality of Friedrichs type
-% Suppose in addition that P = P* is a differential opera tor such that op(x,g) > O for large lgl; then an easy in ductive argument determines (by an asymptotic expansion of its symbol) a pseudo-differential operator S of proper type and of order r/2 such that P = S5 + R, where R is a smoothing operator. Applying (42) and (43) to S, one obtains the existence of constants a > 0, b > 0, ¢ > O such that, for u and v in 8(Q), one has
-% (4) |(P’u|V)O| < C”u”r/z HVHr/Z
+The main properties of pseudo-differential operators are the following ones:
 
-% APPLICATIONS OF FUNCTIONAL ANALYSIS 265 (45) (Prufu)g = allull?, - olull]
-% The second one (for an even integer r) was first proved by Garding in 1953 [80]. It enabled him to apply the von Neumann
-% spectral theory to the hermitian operator TP in the Hilbert space LZ(Q), with dom(T;) = 8(Q). In general, the defects of @;* are both infinite, and one can define a particular
-% self-adjoint extension AP of Ib by the following process: dom(AP) is the dense subspace of LZ(Q) consisting of func tions u such that the distribution Peu is ggain in LTM (Q)
-% 2
-% and then Ap*u = Peu; furthermore, dom(AP) is contained in the space Hz/Z(Q), the closure in Hr/Z(Rn) of ®(Q). The
-% spectrum of A.P is reduced to the point spectrum, consisting of an increasing sequence (xn) off real eigenvalues of fini te multiplicity, tending to +o3; the corresponding eigen functions (suitably normalized) form a Hilbert basis of LZ(Q) and are of class Cw; for any ( € € distinct from the Kn’ GQ = @%,-QI)-l is a compact operator, which one may call the
-% Green operator of P- (T. It is easy to see that the res triction of GQ to 9(Q) is a pseudo-differential operator of order -r, which in general is not of proper type; how ever, for every distribution T with compact support in 2, one has (P-QI)'(GQ°T) = Gg°((P-gI)'T) = T and in particular, for any point x € (2,
-% (46) (P-QI)°(G€-eX) = GQ'((P-QI)'GX) =€ so that one may say that the distribution @ 'ex is an ele-
-% g
-% mentary solution of P -(I at the point x.
+I) \(P\) maps the space \(\mathcal{D}(\Omega)\) into the space \(\mathcal{E}(\Omega)\) of all \(C^\infty\) complex functions in \(\Omega\); it has an adjoint \(P^*\), satisfying
+\begin{equation}
+    \label{eq:9.39}
+    (P \cdot u | v) = (u |  P^* \cdot v)
+\end{equation}
+for all \(u, v\) in \(\mathcal{D}(\Omega)\) (scalar product of \(L^2(\Omega)\)), which is a pseudo-differential operator of same order \(m\); if \(P\) has a principal symbol, \(P^*\) has a principal symbol such that
+\begin{equation}
+    \label{eq:9.40}
+    \sigma^0_{P^*} = \overline{\sigma^0_P}.
+\end{equation}
 
-% 266 CHAPTER IX
-% IX) The results of VIII) apply in particular to a differen tial operator of even order 2p = 2
-% (47) (Peu)(x) == D* (a (x)DBu(x)) lo[<p, |8 <P o where the anB are bounded €~ functions in a neighborhood of the bounded set 5, such that:
-% 19 (-l)lBla = (-1)|@|5f“ , which guarantee that P* = P; B&. aB 22 there is a constant C > O such that, for every x € ( and every family (g@) of complex numbers, one has o |=p —_— 2
-% (48) z (—l)p a (x)z.z_ = c¢( I Iz I ).
-% la |=|g |=p aB @ B lo|=p
-% The Green operator GQ is then (for ( € Sp(AP)) an inte gral operator, with kernel (x,y)r> G((,x,y) which is local 1y integrable in 0Qx0), C_ outside of the diagonal and such that &(¢,x,v) = G(¢,y,x) (the Green function of P); from (46) it follows that y~— G(C,x,y) is a solution of P°u = = Cu in the cofiplement Q-{x} of the point x.
-% One may always take ( = =b for a sufficiently large num ber b > 0, and for every function f € €(Q) N 1?(0), there is therefore a unique solution of the equation Peu + bu = f belonging to the space Hg(Q) and of class C° in Q.
-% These results were obtained (of course without the theory of pseudo-differential operators) by Garding and Vi¥ik (inde pendently) in 1953 ([80], [218]); they may be considered as
-% a "weak" solution of the generalization of Dirichlett's problem considered by E,E, Levi: no assumption is made on the boundary I’ of Q, but all which is required of the solution is that it should be arbitrarily close, for the topology of
+II) One says \(P\) is of \emph{proper type} if both \(P\) and \(P^*\) apply \(\mathcal{D}(\Omega)\) into \emph{itself}; for any pseudo-differential operator \(Q\) of order \(r\), the compositions \(QP\) and \(PQ\) are then defined and are pseudo-differential operators of order \(m+r\); if \(P\) and \(Q\) have principal symbols, so have \(PQ\) and \(QP\) and
+\begin{equation}
+    \label{eq:9.41}
+    \sigma^0_{PQ} = \sigma^0_{QP} = \sigma^0_P \sigma^0_Q.
+\end{equation}
 
-% APPLICATIONS OF FUNCTIONAL ANALYSIS 267
-% Hp(Rn), of € functions vanishing in a neighborhood of I"s but it (or its derivatives) may have a very pathological behaviour at points of T 4if I is not smooth, (Peu)(x) = z p*(a_(x)DPu(x)) + £ DY(a (x)DVu(x)) la|=p, |8 |=p ap |v]<p v )
-% If one makes the additional assumption that
-% where (--l)l\)l av(x) > 0 for all |v]| < p, then one may even take b = O in the Garding—Vigik theorem (this is the case in particular for (-A)P).
-% X) If E and F are two complex vector bundles over a compact differentiable manifold X, and T(E), I'(F) are the vector spaces of ¢” sections of these bundles over X, one can define pseudo-differential operators P: T'(E) » I'(F), which become matrices of ordinary pseudo-differential opera tors when expressed in local coordinates., It is then possible to define intrinsically a principal symbol oO: for each P x € X and every tangent covector  to X at the point x, g;(x,g) is a homomorphism E_ 4 F_ of the vector spaces, fibres of E and F at xj; idin local coordinates, g;(x,g)
-% is the matrix of the principal symbols of the elements of the matrix equal to P. It is possible to define on T (E) and I'(F) structures of prehilbert spaces, and to attach to any pseudo-differential operator P i1its adjoint p”s T'(F) » T(E) such that (Peu|v) = (u|p¥*+v); properties (40) and (41) stinl
-% hold.
-% A pseudo-differential operator P: T(E) = F(E) is then called elliptic if for every x € X and every & # O, g;(x,g) is a bijection of E_ onto itself, and the existence
+III) If \(m < -1, P\) is \emph{an integral operator}, having a kernel which is locally interable in \(\Omega \times \Omega\), but has \emph{singularities for} \(x = y\); if \(m < -n-k\), the kernel is of class \(C^k\) in the whole of \(\Omega \times \Omega\). One says that the symbol \(a\) (and the corresponding pseudo-differential operator \(P\)) are of \emph{order} \(-\infty\) if a satisfies inequalities \eqref{eq:9.38} for \emph{every} real number \(m\); \(P\) is then an integral operator with a kernel which is of class \(C^\infty\), and conversely any such operator is a pseudo-differential operator of order \(-\infty\), and its principal symbol is 0.
 
-% 268 CHAPTER IX
-% of a parametrix for such an operator can then be proved as in VI). For elliptic operators such that P* = p, the applica tion of spectral theory to the hermitian operator TP (in the Hilbert space, completion of T(E)) is here much simpler than in VIII) due to the absen;e of "boundary conditions": i
-% there is a Hilbert basis (u,) of T(E) such that Pe.u_= = My Uy where |, 1s real and I“kl tends to +o with Kkj for every f € I'(E), one has f = i (fluk)uk, the series being convergent for the topology of the Fréchet space P(E), and P ef = E uk(fluk)uk with the same convergence, 1In par ticular, Ker(pP) is the finite dimensional subspace having as a basis the u, for which My = 0, and Im(P) dis closed
-% and is a topological supplement of Ker( P).
-% If now P is any elliptic operator T(E) » I'(E), P*P and PP* are both elliptic and equal to their adjoints; the study
-% of these operators enable one to evaluate the difference dim(Ker(E’)) - dim(Ker( P*)), the index of P , and to express it by a formula in terms of the principal symbol of P and of the cohomology of X3 +this is the famous Atiyah-Singer for mula, a fundamental result which has many applications and has spurred research in many directions (ElO], [31], [198], [199]). It was in fact due to the development of the neces
-% sary tools for the proof of that formula that the theory of pseudo-differential operators got started.
-% XI) The Garding-Vigik theorem of IX) leaves unanswered two questions: 1¢ Why dis it that, in the Dirichlet problem and its generalizations, half of the Cauchy data on the boundary are enough to determine the solution? 2¢ What can be said of
-% APPLICATIONS OF FUNCTIONAL ANALYSIS 269
-% the behavior of the unique solution belonging to Hg(Q) in the vicinity of a point of the boundary I' where T' is smooth?
-% To answer these questions, one starts by investigating the Cauchy problem for an elliptic operator and seeing why in
-% general it has no solution, Suppose that the bounded open set € R has a smooth boundary I, and (for simplicity's sake) that P is a differential operator defined in a neigh borhood Qo of 5, has even order 2p = 2, and possesses in QO a parametrix ¢ of order =2p such that Q -@“T) = = P+(@+T) for any distribution T € 8'(00) (this is the case for the operator P - (I in VIII), but here we do not suppose that P " = P). For any function u € 8(00), we note Dch(u) the function (go’gl""’gZp—l) defined on the boun dary T’ and with values in (€ p’ where gj is the normal
-% 2
-% derivative at a point of T« The starting point is an
-% Ju
-% an?o) idea due to Sobolev ([200], p.63): 1let u be the discontin unous function equal to u in 5 but to O in the complement QO - Q. Then Peu® is well defined as a distribution on Qo’ (49) Peu® = (Peu)® + NeDch(u)
-% and it is easy to check that one can write
-% where N is a linear operator (independent of the function u) which to every € function in (G(P))Zp associates a distribution with support in [ (what one now calls a multi layer on I'). As both sides of (49) are distributions on Qo with compact support, the operator ¢ may be applied to them, and yvields the relation
-% 270 CHAPTER IX
-% (50) u® = @ «((P-u)®) + Q- (N:Deh(u)).
-% This is the general form of Green's formula (17) of chap.II, 3;’ for any function f ¢ G(QO), the distribution Q+f° has a restriction to O which is a €© function such that all its derivatives have limits at every point of I3 one says that it is the Q@ =potential of the mass distribution of den sity £ on . Similarly, for any vector function gE(&(T»Zp, the distribution Q°(N°g) has the same properties, and one says that its restriction to ()} is the -potential of the multilayer N +*g; these properties obviously generalize the classical properties of the newtonian potentials of a mass
-% distribution, of a single layer and of a double layer (chap. IX, 3) (of course the restriction of Q «(N.g) to Q, - Q also has similar properties, but the limits at a point of T
-% differ in general from the limits at the same point of the restriction of Qo(Nog) to Q). Therefore, equation (50) shows that if there is an u € €(Q) such that Peu = f and Dch(u) = g are given functions, this function u (restric tion of u°) is unique, which corresponds to what one may expect of the Cauchy problem, But in addition one must have Dch(u®) = g, which gives the necessary condition
-% (51) g = DCh(Q'fO) + Dch(@+«(N-g))
-% between f and g. One proves that C: g+ Dch(Q+*(N*g)) is a pseudo-differential operator of (G(P))Zp into itself,
-% which is called the Calderon operator corresponding to the parametrix g .
-% A more detailed study shows that (51) is equivalent to p
+IV) Any pseudo-differential operator \(P\) may be extended by continuity (for the weak topology) from \(\mathcal{D}(\Omega)\) to the space \(\mathcal{E}'(\Omega)\) of all distributions on with compact support. The operators \(P\) of order \(-\infty\) are \emph{characterized} by the property that for any distribution \(T \in \mathcal{E}'(\Omega), P \cdot T\) is a \(C^\infty\) function on \(\Omega\); one says that these operators are \emph{smoothing} operators. Any pseudo-differential operator is the sum of a pseudo-differential operator of proper type and of a smoothing operator. When \(K\) is a smoothing operator, so are the products \(KP\) and \(PK\) for any pseudo-differential operator \(P\), if one of the two operators \(K, P\) is of proper type.
 
-% APPLICATIONS OF FUNCTIONAL ANALYSIS 271
-% linear relations between the 2p functions go""’gZp 1 and du 82p-l 2p functions u, In ' 5p-1 on T, but only p of
-% their derivatives; this explains why one cannot prescribe the
-% them. More generally, one may consider a differential opera torB of (8(?))2p into (S(F))p, and instead of the Cauchy problem, consider the boundary conditions B +(Dch(u)) = g for a given vector function g ¢ (S(P))p. It is then possible to describe explicitly a set of sufficient conditions (called the Lopatinski conditions) linking B and ( and implying that the problem can be reduced to Fredholm integral equations on T3 more precisely, these conditions imply that the map (52) u**—(P-u,B°(DCh(u)))
-% ping
-% of €(0) (space of the restrictions to 0 of functions of S(QO)) into 8(5) X (8(?))p has a finite dimensional kernel
-% and a closed image of finite codimension.
-% In particular, one checks that the Lopatinski conditions are
-% always satisfied if one takes for B.g a consecutive sequence (gq,g R =3 ) of p of the functions gj, and the q+p-1
-% q+1l
-% corresponding problem for q = O dis Jjust the Dirichlet prob lem as posed by E.E. Levi,
-% At this point, one might think, from the example (47), that except for a denumerable set of values of ( € C, the mapping ui—~ ((P-¢I)*u, B+(Dch(u))) would in fact be bijective. How ever, this is not always the case, and there are examples for which that mapping is injective for no ( € C.
-% Vv For operators (47) to which the Garding-Visik theorem applies, to prove that the preceding mapping is bijective for QGSp(AP)
+One writes \(P \sim{} Q\) if \(P - Q\) is a smoothing operator.
 
-% 272 CHAPTER IX
-% (with Beg = (go, \ldots,gp_l)), it is enough to show that, when " 1is smooth, the unique solution u € HE(Q), and all its de rivatives, can be extended by continuity to O =0UT (the second problem mentioned above). Actually, even if T is not smooth everywhere, the existence of limits for these functions is guaranteed at each point where [T is smoothj; this was first proved by L, Nirenberg in 1955 [167], and has been
-% proved by Peetre in 1961 using a different method, which how ever still relies on a priori inequalities [171]. These re
-% sults may be extended to other types of boundary conditions B+(Dch(u)) = g satisfying the Lopatinski conditions, the so called coercitive problems for elliptic operators P for which
-% p¥ =p.
-% Further generaliizations. Formula (37) defining a pseudo-dif ferential operator can also be written, replacing ¥u by its
-% definition
-% (P°u)(X) = l exp(2fl1(x-y|))a(x,b)u(y)dydg
-% JOxRTM
-% where the integral is not any more a Lebesgue integral, but an "improper" (or "oscillating") one, obtained by passage to
-% the 1limit from the integral of the same function multiplied by a function h(g/q), where h e 8(R") is equal to 1 in a neighborhood of 0O, and q tends to +o. It turns out that
-% one can define similar integrals when one replaces exp(2mi(x-y|)) by "phase functions" ¢(x,v,f) positively homogeneous in £, and a(x,f) by more general "symbols"
-% a(x,y,8).
-% I) Such operators naturally occur in the theory of strictly
+V) The most remarkable feature of pseudo-differential operators is the possibility of defining a symbol by an \emph{asymptotic expansion}. Suppose given an infinite sequence \(a_0, a_1, \ldots, a_k, \ldots\), of symbols, having orders \(m_0 > m_1 > \ldots > m_k > \ldots\) with \(\lim\limits_{k \to \infty} m_k = -\infty\); then there exists a symbol \(a\) of order \(m_0\) such that, for any \(k, a - (a_0 + a_1 + \ldots + a_k)\) has order \(< m_k\); this is expressed by writing
+\[
+    a \sim{} a_0 + a_1 + \ldots + a_k + \ldots
+\]
+and saying that the right hand side is an asymptotic expansion of \(a\). If \(P_0, \ldots, P_k, \ldots\) are the pseudo-differential operators defined by the symbols \(a_0, \ldots, a_k, \ldots\), and \(P\) the pseudo-differential operator defined by \(a\), one also writes
+\[
+    P \sim{} P_0 + P_1 + \ldots + P_K + \ldots
+\]
 
-% APPLICATIONS OF FUNCTIONAL ANALYSIS 2773
-% hyperbolic operators, of which the simplest is the wave opera=- (53) Ou = i—% - (a ; Foaud 2 ;) .
-% tor (or dalembertian)2 2
-% ot axl aXn
-% The Cauchy problem for that operator, consisting in finding a solution of [Ju = O such that u(0,x) = go(x) and g%(o,x) = gl(x) are given functions, had already been solved
-% by Cauchy; the explicit formula he gave for the solution can be written u(t,x) = u+(t,x) + u_(t,x), where
-% (5%) u, (tx) = %flexp(Zfli((x-fl% )+[5 160 (g, (v) + 55 —I—]—)dydé
-% the integrals being "improper" in a sense easy to describe. In general, one considers an operator of order m in n+l variables t, xl, \ldots,kn
-% m m -J
-% 3t =1 |a|<3 2TMd
-% and one assumes that its principal symbol OP(T,g,t,x) can (56) 0;(799t9x) = ]—L (T‘qj(t’xsg))
-% be written
-% J=
-% where the qj are real functions of class Cm in IxQx(Rn-{O}) (I open subset of R, (2 open subset of Rn), positively homogeneous or degree 1 in £, and such that for j # k, qj(t,x,g) # qk(t,x,g) everywhere, The Cauchy problem to be solved is to find a function v(t,x) such that Pev= £ and J
-% o . v(t_,x) = g.(x) (0< j <m-1) fora t_ € I, in a con venient neighborhood of (to,xo) € Ix2, f and 8 being C° functions. Taking (54) as a model, one introduces m2 opera=-
+VI) One says a pseudo-differential operator \(P\) having a principal symbol of order \(m\) is \emph{elliptic} if \(\sigma^0_P(x, \xi) \neq 0\) for \(x \in \Omega\) and \(\xi \neq 0\); for differential operators, this coincides with the previous definition. It is \emph{equivalent} to say that there exists a pseudo-differential operator  of order \(-m\) and of proper type such that \(QP = I+ R\) and \(PQ = I + R'\) where \(R\) and \(R'\) are smoothing operators; in other words, \(P\) has a (left and right) \emph{parametrix} in a very strong sense. The proof is very simple; the necessity follows from the fact that if \(QP \sim{} I\), one must have \(\sigma^0_P = (\sigma^0_Q)^{-1}\) by \eqref{eq:9.41}. Conversely, if \(P\) is elliptic, there is a pseudo-differential operator \(Q_1\) of proper type defined by the symbol \((\sigma^0_P)^{-1}\); one has then \(Q_1 P = I - P_1\), where \(P_1\) has \emph{order} \(\leq -1\), and one is reduced to finding a pseudo-differential operator \(Q_2\) such that \(Q_2(I - P_1) = I + R\), where \(R\) is a smoothing operator; but it is enough to take \(Q_2 \sim{} I + P_1 + P^2_1 + \ldots + P^k_1 + \ldots\) to obtain that result!
 
-% 274 CHAPTER IX
-% t in I, such that, if E_(s) = I E J.h(s) for O €< h < m-1, o h 0
-% tors E&h(s) (O < j,h £ m-1) for s in a neighborhood of
-% one has (locally)
-% 3 (K (57) PEh(s) = Rh(s), (ét) Eh(s) = Ath for t=s and Ogk<m-1,
-% where the Rh(s) are smoothing operators. If one writes t
-% (L-u)(t,x) = ( (Em_l(s)'u(s,‘))(t,x)ds
-% 't)
-% one has (%¥) (L-u)(to,x) =0 for O< k £ m-1, and
-% k
-% Pe(L*u) = u- Veu, where V is a Volterra integral operator (58) (V.u)(tQX) = ds K(t9S9X9Y)u(89Y)dY
-% t
-% t U
-% U Dbeing a neighborhood of X in Q and K a C function. It is easy to see that I +V 4is inverted by I +W, where W is a similar Volterra operator. The Cauchy problem is then
-% solved by taking in a sufficiently small neighborhood of (to’xo)m=1 m-1
-% J-—O J:O
-% (59) = 2 E. ‘g . * * - . g . . v= T Bt )e; +L(Iew)e(f - Z Ri(t)):g;))
-% The construction of the Eh follows an idea introduced by P. Lax in 1957, and patterned after the known behavior of the solutions of the wave equation, which "propagate'" along "rays". For operators (25) with analytic coefficients, it follows from the Cauchy=-Kowalewska theorem that the Cauchy problem for data
-% given on a hypersurface will fail to have a unique solution if the hypersurface is given locally by an equation z(xl,“”xn)z = const., where =z 1is a solution of the partial differential equation of order 1
+VII) An immediate consequence of the existence of a parametrix \(Q\) for an elliptic differential operator \(P\) is that \(P\) is \emph{hypoelliptic}, for if \(T\) is a distribution such that \(P \cdot T = f \in \mathcal{E}(\Omega)\), one has \(Q \cdot f = T + R \cdot T\), and as \(R\) is a smoothing operator, \(R \cdot T\) and \(Q \cdot f\) are both \(C^\infty\) functions, hence also \(T\). Another easy consequence of the use of pseudo-differential operators is that for each point \(x_0 \in \Omega\), there is a small neighborhood \(U \subset \Omega\) of \(x_0\) such that the equation \(P \cdot u = f\) has solutions in \(U\) (in other words, the H. Lewy phenomenon (chap. \ref{ch:2}, \ref{sec:2.2}) cannot occur for an elliptic differential operator \(P\)); one should note, however, that there are examples of elliptic operators \(P\) defined in \(\R^n\), and such that there are equations \(P \cdot u = f\) which have \emph{no solution} in a large ball containing the support of \(f \in \mathcal{D}(\R^n)\) \cite{176}.
 
-% APPLTICATIONS OF FUNCTIONAL ANALYSIS 275 ’_—, \ldots, n axl axn (60) @(xl, \ldots,x
-% 3z 3z )
-% in which & is obtained from the principal symbol Og(x,g) by replacing the vector & Dby s such hyper
-% (az oz )
-% 39X, X
-% -~ 9 ® 0 e g —
-% surfaces are called characteristic for the operator P. For strictly hyperbolic operators (55), it follows from (56 that the equation of characteristic hypersurfaces (60) splits into m equations
-% (61) %%~- qj(t,x,gradxz) = 0, 0 < j< m=1 . 3z 3z (with gradxz = (SEE, \ldots,ggg)). For the wave operator (53) the equations (61) are
-% (674 é—g- = fl:|gradxz|
-% with solutions
-% z = 2m((x|g) £ [E]¢t)
-% which reduce to 2m(x|) for t = O; they are precisely the "phase functions" which enter in Cauchy's formula (54). For
-% general strictly hyperbolic operators (54), one therefore in troduces the m- operators th(s) defined by
-% (th(s)°u)(t,x) =
+VIII) When \(\Omega \subset \R^n\) is bounded, pseudo-differential operators of proper type in \(\Omega\) have simple continuity properties with respect to the Sobolev spaces: if \(P\) is such an operator of order \(r\), defined in a neighborhood of \(\overline{\Omega}\), and \(s\) is any real number, there is a constant \(C\) depending only on \(P\) and \(s\), such that
+\begin{equation}
+    \label{eq:9.42}
+    \norm{P \cdot u}_s \leq C \norm{u}_{r+s}
+\end{equation}
+for any \(u \in \mathcal{D}(\Omega)\), the norms being those of \(H^s(\R^n)\) and \(H^{r+s}(\R^n)\). If \(r > 0\) and \(P\) is \emph{elliptic}, applying this result to a parametrix of \(P\) immediately yields an \emph{a priori} inequality of Friedrichs type
+\begin{equation}
+    \label{eq:9.43}
+    \norm{u}_r \leq  C(\norm{P \cdot u}_0 + \norm{u}_0).
+\end{equation}
 
-% (62) y
-% l( exp(i(wj(t,s,x,g)-2fl(y|)))ajh(t,s,x,y,g)u(y)dydg UxR
+Suppose in addition that \(P = P^*\) is a differential operator such that \(\sigma_P(x,\xi) > 0\) for large \(|\xi|\); then an easy inductive argument determines (by an asymptotic expansion of its symbol) a pseudo-differential operator \(S\) of proper type and of order \(r/2\) such that \(P = S^* S + R\), where \(R\) is a smoothing operator. Applying \eqref{eq:9.42} and \eqref{eq:9.43} to \(S\), one obtains the existence of constants \(a > 0, b > 0, c > 0\) such that, for \(u\) and \(v\) in \(\mathcal{D}(\Omega)\), one has
+\begin{equation}
+    \label{eq:9.44}
+    |(P \cdot u | v)_0| \leq c \norm{u}_{r/2} \norm{v}_{r/2}
+\end{equation}
+\begin{equation}
+    \label{eq:9.45}
+    (P \cdot u | u)_0 \geq a \norm{u}^2_{r/2} - b \norm{u}^2_0.
+\end{equation}
+The second one (for an even integer \(r\)) was first proved by Gårding in 1953 \cite{080}. It enabled him to apply the von Neumann spectral theory to the hermitian operator \(T_P\) in the Hilbert space \(L^2(\Omega)\), with \(\dom(T_P) = \mathcal{D}(\Omega)\). In general, the defects of \(T^{**}_P\) are both infinite, and one can define a particular \emph{self-adjoint} extension \(A_P\) of \(T_P\) by the following process: \(\dom(A_P)\) is the dense subspace of \(L^2(\Omega)\) consisting of functions \(u\) such that the \emph{distribution} \(P \cdot u\) is again in \(L^2(\Omega)\) and then \(A_P \cdot u = P \cdot u\); furthermore, \(\dom(A_P)\) is contained in the space \(H^{r/2}_0(\Omega)\), the closure in \(H^{r/2}(\R^n)\) of \(\mathcal{D}(\Omega)\). The spectrum of \(A_P\) is reduced to the point spectrum, consisting of an increasing sequence \((\lambda_n)\) of real eigenvalues of finite multiplicity, tending to \(+\infty\); the corresponding eigenfunctions (suitably normalized) form a \emph{Hilbert basis} of \(L^2(\Omega)\) and are of class \(C^\infty\); for any \(\zeta \in \C\) distinct from the \(\lambda_n, G_\zeta = (A_P - \zeta I)^{-1}\) is a \emph{compact} operator, which one may call the \emph{Green operator} of \(P - \zeta I\). It is easy to see that the restriction of \(Q_\zeta\) to \(\mathcal{D}(\Omega)\) is a pseudo-differential operator of order \(-r\), which in general is not of proper type; however, for every distribution \(T\) with compact support in \(\Omega\), one has \((P-\zeta I) \cdot (G_\zeta \cdot T) = G_\zeta \cdot ((P - \zeta I) \cdot T) = T\) and in particular, for any point \(x \in \Omega\),
+\begin{equation}
+    \label{eq:9.46}
+    (P - \zeta I) \cdot (G_\zeta \cdot \varepsilon_x) = G_\zeta \cdot ((P - \zeta I) \cdot \varepsilon_x) = \varepsilon_x
+\end{equation}
+so that one may say that the distribution \(G_\zeta \cdot \varepsilon_x\) is an \emph{elementary solution} of \(P - \zeta I\) at the point \(x\).
 
-% where wj(t,s,x,g) is the unique solution of (61) satisfying the initial condition
-% and ajh is a symbol of order =~h (in the sense defined for
+IX) The results of VIII) apply in particular to a differential operator of even order \(2p \geq 2\)
+\begin{equation}
+    \label{eq:9.47}
+    (P \cdot u)(x) = \sum_{|\alpha| \leq p, |\beta| \leq p} D^\alpha \left( a_{\alpha \beta}(x) D^\beta u(x) \right)
+\end{equation}
+where the \(a_{\alpha \beta}\) are \emph{bounded} \(C^\infty\) functions in a neighborhood of the \emph{bounded} set \(\overline{\Omega}\), such that:
 
-% 276 CHAPTER IX
-% pseudo-differential operators). The goal is to determine the m-1
-% 2 i in such a way that, if one writes Fh(s) = jO E}h(s),
-% the following conditions are satisfied:
-% 19 Qh(s) = Pth(s) is a smoothing operator;
-% 20 for each g € 9(U), +the restriction to the hyperplane t = s of the function -%;E (Fh(s)°g) has the form (s,x)+ > 6hkg(x) + (<Qhk(s)-g)(x) where Qhk(s) is a smoothing operator, for O < h,k € m-1,
-% The conditions (57) are then met by taking
-% and Eh(s) = F (s) - R, (s).
-% k=0
-% To achieve that goal, one defines the a. by asymptotic jh (00) () (64) 2y ~ LEO a sy
-% expansions
-% where ajh() is a symbol or order -h = 4 ; the agfi) are determined by induction on 1, in such a way that if one writes| (thN(S)'U)(t,X) =
-% X . (1) = X Jf{ exp(l(wj(t,s,x,)-2fl(y|)»ajh (t,s,x,y,g)u(y)dydg =07 Juxr"TM
-% then:
-% 12 Each operator Pon (s) is defined by a symbol of 0 F _ . . —
-% order m-h-N-=2.
-% m-1
-% 20 TIf hN(s) = jo E}hN(s), the restriction to t = s K 9=
-% of the function'gzi(FhN(s)'g) has the form (s,x)r*-bhkg(x) +
+1° \((-1)^{|\beta|} a_{\beta \alpha} = (-1)^{|\alpha|} \overline{a_{\alpha \beta}}\), which guarantee that \(P^* = P\);
 
-% APPLICATIONS OF FUNCTIONAL ANALYSTS 277
-% + (QhkN(s)-g)(x), where QhkN(S) is a pseudo-differential operator of order k-h-N-1l, for O < h,k £ m=1.
-% It is in this inductive process that the analogs of the "rays" enter. The classical Cauchy method for integration of partial differential equations of order 1 consists, f(or each equation (61), in considering, in the space IXQan+ )
-% 1
-% the "characteristic" curves
-% t (t9xl(t)’°°°9xn(t)9po(t)9pl(t)9°°°apn(t))
-% solutions of the system of ordinary differential equations rdxk qu
-% & = 7 aE, (Brareees Ty Preeeopy)
-% (65)  l < k £ n dpk oq .
+2° there is a constant \(C > 0\) such that, for every \(x \in \Omega\) and every family \((z_\alpha)_{|\alpha|=p}\) of complex numbers, one has
+\begin{equation}
+    \label{eq:9.48}
+    \sum_{|\alpha|=|\beta|=p} (-1)^p a_{\alpha \beta}(x) z_\alpha \overline{z_\beta}
+    \geq
+    C \left( \sum_{|\alpha|=p} |z_\alpha|^2 \right)
+\end{equation}
 
-% \
-% k
+The Green operator \(G_\zeta\) is then (for \(\zeta \in \spec(A_P)\)) an \emph{integral operator}, with kernel \((x,y) \mapsto \overline{G(\zeta,x,y)}\) which is locally integrable in \(\Omega \times \Omega, C^\infty\) outside of the diagonal and such that \(G(\overline{\zeta}, x, y) = G(\zeta, x, y)\) (the \emph{Green function} of \(P\)); from \eqref{eq:9.46} it follows that \(y \mapsto G(\zeta, x, y)\) is a \emph{solution} of \(P \cdot u = \zeta u\) in the complement \(\Omega - \{x\}\) of the point \(x\).
 
-% and verifying the condition P, = qj(t’xl’""Xn’pl""’pn); one says that their projections th*(t,xl(t), \ldots,xn(t)) on I x Q constitute the j-th family of bicharacteristic curves
-% for the operator P. For the wave operator, the bicharacter istic curves which are such that xk(s) = ¥y for 1 <k < n
-% are in fact the classical "rays"
-% t t— yk:l:—l-gfr(t-s) (1 <k < n).
-% g
-% In the general theory, each agg)(t,s,x,g) is taken inde pendent of vy, and is obtained by integrating, along each
-% bicharacteristic curve, an ordinary linear differential equa tion of the first order (in the variable t), whose coeffi cients are determined when the agfi) are known for {f < N-1;
-% finally the induction starts with the values of the
+One may always take \(\zeta = -b\) for a sufficiently large number \(b > 0\), and for every function \(f \in \mathcal{E}(\Omega) \cap L^2(\Omega)\), there is therefore \emph{a unique solution of the equation} \(P \cdot u + bu = f\) \emph{belonging to the space} \(H^p_0(\Omega)\) \emph{and of class} \(C^\infty\) \emph{in} \(\Omega\).
 
-% 278 CHAPTER IX
-% agg)(s,s,x,g), which are given by the linear system
-% where qg(s,x,g) = qj(s,x,gradij(s,s,x,g)); the determinant of that system is #£0 ©because the a; have been supposed to be distinct.,
-% One of the consequences of this remarkable construction is that, in the explicit formula (59) for f = O, one may re place the "initial conditions" gj by arbitrary distributions Sj on )3 Vv 1is then replaced by a distribution T solution of P.T = O, For these equations, the "trace" Tt of such a distribution on the hyperplane {t} x Q2 may be defined (although T is not a function) as a distribution on Q, varying with t, and which may be said to "propagate" with
-% the "time" t, starting from the "initial" distribution Tt = O
-% = SO. It is then possible to show that the singular support of Tt is contained in a set Mt obtained in the following way: one considers the union MO of the singular supports of the distributions Sj’ and all the bicharacteristics issued from points of MO; Mt is the set of all points on these bicharacteristics at time t. This gives a precise meaning to a phenomenon which had been well known for second order strictly hyperbolic equations, and particular types of "initial values": the singularities propagate along the bi
-% characteristics,
-% Under additional assumptions, it is possible to extend these results when in the decomposition (56), some of the qj are equal [L41].
-% II) Another important application of operators generalizing the pseudo-differential operators is the problem of local e
-% xistence of solutions for a partial differential equation Peu = {, which has stimulated much research after H. Lewy's discovery (chap.II, 2). Over a period of more than 15 years,
+These results were obtained (of course without the theory of pseudo-differential operators) by Gårding and Višik (independently) in 1953 (\cite{080}, \cite{218}); they may be considered as a ``weak'' solution of the generalization of Dirichlet's problem considered by E.E. Levi: \emph{no} assumption is made on the boundary \(\Gamma\) of \(\Omega\), but all which is required of the solution is that it should be arbitrarily close, \emph{for the topology of} \(H^p(\R^n)\), of \(C^\infty\) functions vanishing in a neighborhood of \(\Gamma\); but it (or its derivatives) may have a very pathological behaviour at points of \(\Gamma\) if \(\Gamma\) is not smooth.
 
-% the combined efforts of HOrmander, Nirenberg ceeded in formulating a system of conditions ly proved to be necessary and sufficient for by Beals and Fefferman [ 20], using new types We cannot here do more than refer the reader
-% and Tréves suc which were final local existence of operators [19]. to these papers.
+If one makes the additional assumption that
+\[
+    (P \cdot u)(x) = \sum_{|\alpha|=p, |\beta|=p} D^\alpha \left( a_{\alpha\beta}(x) D^\beta u(x) \right) + \sum_{|\nu| < p} D^\nu \left( a_\nu(x) D^\nu u(x) \right)
+\]
+where \((-1)^{|\nu|} a_\nu(x) \geq 0\) for all \(|\nu| < p\), then one may even take \(b = 0\) in the Gårding--Višik theorem (this is the case in particular for \((-Delta)^p\).
+
+X) If \(E\) and \(F\) are two complex vector bundles over a compact differentiable manifold \(X\), and \(\Gamma(E), \Gamma(F)\) are the vector spaces of \(C^\infty\) sections of these bundles over \(X\), one can define pseudo-differential operators \(P: \Gamma(E) \to \Gamma(F)\), which become matrices of ordinary pseudo-differential operators when expressed in local coordinates. It is then possible to define intrinsically a \emph{principal symbol} \(\sigma^0_P\): for each \(x \in X\) and every tangent covector \(\xi\) to \(X\) at the point \(x, \sigma^0_P(x, \xi)\) is a homomorphism \(E_x \to F_x\) of the vector spaces, fibres of \(E\) and \(F\) at \(x\); in local coordinates, \(\sigma^0_P(x, \xi)\) is the matrix of the principal symbols of the elements of the matrix equal to \(P\). It is possible to define on \(\Gamma(E)\) and \(\Gamma(F)\) structures of prehilbert spaces, and to attach to any pseudo-differential operator \(P\) its adjoint \(P^*: \Gamma(F) \to \Gamma(E)\) such that \((P \cdot u|v) = (u | P^* \cdot v)\); properties \eqref{eq:9.40} and \eqref{eq:9.41} still hold.
+
+A pseudo-differential operator \(P: \Gamma(E) \to \Gamma(E)\) is then called \emph{elliptic} if for every \(x \in X\) and every \(\xi \neq 0, \sigma^0_P(x, \xi)\) is a \emph{bijection} of \(E_x\) onto itself, and the existence of a \emph{parametrix} for such an operator can then be proved as in VI). For elliptic operators such that \(P^* = P\), the application of spectral theory to the hermitian operator \(T_P\) (in the Hilbert space, completion of \(\Gamma(E)\)) is here much simpler than in VIII) due to the absence of ``boundary conditions'': there is a Hilbert basis \((u_k)\) of \(\Gamma(E)\) such that \(P \cdot u_k = \mu_k u_k\) where \(\mu_k\) real and \(|\mu_k|\) tends to \(+\infty\) with \(k\); for every \(f \in \Gamma(E)\), one has \(f = \sum\limits_k (f | u_k) u_k\), the series being convergent for the topology of the Fréchet space \(\Gamma(E)\), and \(P \cdot f = \sum\limits_k \mu_k (f | u_k) u_k\) with the same convergence, in particular, \(\Ker(P)\) is the finite dimensional subspace having as a basis the \(u_k\), for which \(\mu_k\), and \(\operatorname{Im}(P)\) is closed and is a topological supplement of \(\Ker(P)\).
+
+If now \(P\) is \emph{any} elliptic operator \(\Gamma(E) \to \Gamma(E), P^* P\) and \(PP^*\) are both elliptic and equal to their adjoints; the study of these operators enable one to evaluate the difference \(\dim(\Ker(P)) - \dim(\Ker(P^*))\), the \emph{index} of \(P\), and to express it by a formula in terms of the principal symbol of \(P\) and of the cohomology of \(X\); this is the famous \emph{Atiyah--Singer formula}, a fundamental result which has many applications and has spurred research in many directions (\cite{010}, \cite{031}, \cite{198}, \cite{199}). It was in fact due to the development of the necessary tools for the proof of that formula that the theory of pseudo-differential operators got started.
+
+XI) The Gårding--Višik theorem of IX) leaves unanswered two questions: 1° Why is it that, in the Dirichlet problem and its generalizations, \emph{half} of the Cauchy data on the boundary are enough to determine the solution? 2° What can be said of the behavior of the unique solution belonging to \(H^p_0(\Omega)\) in the vicinity of a point of the boundary \(\Gamma\) where \(\Gamma\) is \emph{smooth}?
+
+To answer these questions, one starts by investigating the Cauchy problem for an elliptic operator and seeing why in general it has no solution. Suppose that the bounded open set \(\Omega \subset \R^n\) has a smooth boundary \(\Gamma\), and (for simplicity's sake) that \(P\) is a differential operator defined in a neighborhood \(\Omega_0\) of \(\overline{\Omega}\), has even order \(2p \geq 2\), and possesses in \(\Omega_0\) a parametrix \(Q\) of order \(-2p\) such that \(Q \cdot (P \cdot T) = P \cdot (Q \cdot T)\) for any distribution \(T \in \mathcal{E}'(\Omega_0)\) (this is the case for the operator \(P - \zeta I\) in VIII), but here we \emph{do not} suppose that \(P^* = P\)). For any function \(u \in \mathcal{E}(\Omega)\), we note \(\Dch(u)\) the function \((g_0, g_1, \ldots, g_{2p-1})\) defined on the boundary \(\Gamma\) and with values in \(\C^{2p}\), where \(g_j\) is the normal derivative \(\pder{^j u}{n^j}\) at a point of \(\Gamma\). The starting point is an idea due to Sobolev (\cite{200}, p.~63): let \(u\) be the \emph{discontinunous} function equal to \(u\) in \(\overline{\Omega}\) but to 0 in the complement \(\Omega_0 - \overline{\Omega}\). Then \(P \cdot u^0\) is well defined as a \emph{distribution} on \(\Omega_0\), and it is easy to check that one can write
+\begin{equation}
+    \label{eq:9.49}
+    P \cdot u^0 = (P \cdot u)^0 + N
+\end{equation}
+where \(N\) is a linear operator (independent of the function \(u\)) which to every \(C^\infty\) function in \((\mathcal{E}(\Gamma))^{2p}\) associates a distribution with \emph{support in} \(\Gamma\) (what one now calls a \emph{multilayer} on \(\Gamma\). As both sides of \eqref{eq:9.49} are distributions on \(\Omega_0\) with compact support, the operator \(Q\) may be applied to them, and yields the relation
+\begin{equation}
+    \label{eq:9.50}
+    u^0 = Q \cdot ((P \cdot u)^0) + Q \cdot (N \cdot \Dch(u)).
+\end{equation}
+This is the general form of Green's formula \eqref{eq:2.17} of chap. \ref{ch:2}, \ref{sec:2.3}; for any function \(f \in \mathcal{E}(\Omega_0)\), the distribution \(Q \cdot f^0\) has a restriction to \(\Omega\) which is a \(C^\infty\) \emph{function} such that all its derivatives have \emph{limits} at every point of \(\Gamma\); one says that it is the \(Q\)-\emph{potential of the mass distribution} of density \(f\) on \(\Omega\). Similarly, for any vector function \(g \in (\mathcal{E}(\Gamma))^{2p}\), the distribution \(Q \cdot (N \cdot g)\) has the same properties, and one says that its restriction to \(\Omega\) is the \(Q\)-\emph{potential of the multilayer} \(N \cdot g\); these properties obviously generalize the classical properties of the newtonian potentials of a mass distribution, of a single layer and of a double layer (chap. \ref{ch:9}, \ref{sec:9.3}) (of course the restriction of \(Q \cdot (N \cdot q)\) to \(\Omega_0 - \overline{\Omega}\) also has similar properties, but the limits at a point of \(\Gamma\) differ in general from the limits at the same point of the restriction of \(Q \cdot (N \cdot g)\) to \(\Omega\)). Therefore, equation \eqref{eq:9.50} shows that if there is an \(u \in \mathcal{E}(\Omega)\) such that \(P \cdot u = f\) and \(\Dch(u) = g\) are given functions, this function \(u\) (restriction of \(u^0\)) is \emph{unique}, which corresponds to what one may expect of the Cauchy problem. But in addition one must have \(\Dch(u^0) = g\), which gives the \emph{necessary condition}
+\begin{equation}
+    \label{eq:9.51}
+    g = \Dch(Q \cdot f^0) + \Dch(Q \cdot (N \cdot g))
+\end{equation}
+between \(f\) and \(g\). One proves that \(C: g \mapsto \Dch(Q \cdot (N \cdot g))\) is a pseudo-differential operator of \((\mathcal{E}(\Gamma))^{2p}\) into itself, which is called the \emph{Calderon operator} corresponding to the parametrix \(Q\).
+
+A more detailed study shows that \eqref{eq:9.51} is equivalent to \(p\) linear relations between the \(2p\) functions \(g_0, \ldots, g_{2p-1}\) and their derivatives; this explains why one cannot prescribe the \(2p\) functions \(u, \pder{u}{n}, \ldots, \pder{^{2p-1}}{n^{2p-1}}\) on \(\Gamma\), but only \(p\) of them. More generally, one may consider a differential operator \(B\) of \((\mathcal{E}(\Gamma))^{2p}\) into \((\mathcal{E}(\Gamma))^p\), and instead of the Cauchy problem, consider the boundary conditions \(B \cdot (\Dch(u)) = g\) for a given vector function \(g \in (\mathcal{E}(\Gamma))^p\). It is then possible to describe explicitly a set of sufficient conditions (called the \emph{Lopatinski conditions}) linking \(B\) and \(C\) and implying that the problem can be reduced to Fredholm integral equations on \(\Gamma\); more precisely, these conditions imply that the mapping
+\begin{equation}
+    \label{eq:9.52}
+    u \mapsto (P \cdot u, B \cdot (\Dch(h)))
+\end{equation}
+of \(\mathcal{E}(\overline{\Omega})\) (space of the restrictions to \(\overline{\Omega}\) of functions of \(\mathcal{E}(\Omega_0)\)) into \(\mathcal{E}(\overline{\Omega}) \times (\mathcal{E}(\Gamma))^p\) has \emph{a finite dimensional kernel and a closed image of finite codimension}.
+
+In particular, one checks that the Lopatinski conditions are always satisfied if one takes for \(B \cdot g\) a consecutive sequence \((g_q, g_{q+1}, \ldots, g_{q+p-1})\) of \(p\) of the functions \(g_j\), and the corresponding problem for \(q = 0\) is just the Dirichlet problem as posed by E.E. Levi.
+
+At this point, one might think, from the example \eqref{eq:9.47}, that except for a \emph{denumerable} set of values of \(\zeta \in \C\), the mapping \(u \mapsto ((P - \zeta I) \cdot u, B\cdot (\Dch(u)))\) would in fact be \emph{bijective}. However, this is \emph{not} always the case, and there are examples for which that mapping is injective for \emph{no} \(\zeta \in \C\).
+
+For operators \eqref{eq:9.47} to which the Gårding--Višik theorem applies, to prove that the preceding mapping is bijective for \(\zeta \in \spec(A_P)\) (with \(B \cdot g = (g_0, \ldots, g_{p-1})\)), it is enough to show that, when \(\Gamma\) is smooth, the unique solution \(u \in H^p_0(\Omega)\), and all its derivatives, can be extended by continuity to \(\overline{\Omega} = \Omega \cup \Gamma\) (the second problem mentioned above). Actually, even if \(\Gamma\) is not smooth everywhere, the existence of limits for these functions is guaranteed at \emph{each point} where \(\Gamma\) is smooth; this was first proved by L. Nirenberg in 1955 \cite{167}, and has been proved by Peetre in 1961 using a different method, which however still relies on \emph{a priori} inequalities \cite{171}. These results may be extended to other types of boundary conditions \(B \cdot (\Dch(u)) = g\) satisfying the Lopatinski conditions, the so-called \emph{coercitive} problems for elliptic operators \(P\) for which \(P^* = P\).
+
+\noindent \emph{Further generalizations}. Formula \eqref{eq:9.37} defining a pseudo-differential operator can also be written, replacing \(\mathcal{F}u\) by its definition
+\[
+    (P \cdot u)(x) = \widetilde{\iint}_{\Omega \times \R^n} \exp(2\pi i(x - y | \xi)) a(x, \xi) u(y) dy d\xi
+\]
+where the integral is not any more a Lebesgue integral, but an ``improper'' (or ``oscillating'') one, obtained by passage to the limit from the integral of the same function multiplied by a function \(h(\xi/q)\), where \(h \in \mathcal{D}(\R^n)\) is equal to 1 in a neighborhood of 0, and \(q\) tends to \(+\infty\). It turns out that one can define similar integrals when one replaces \(\exp(2\pi i(x-y|\xi))\) by ``phase functions'' \(\varphi(x, y, \xi)\) positively homogeneous in \(\xi\), and \(a(x, \xi)\) by more general ``symbols'' \(a(x,y,\xi)\).
+
+I) Such operators naturally occur in the theory of \emph{strictly hyperbolic operators}, of which the simplest is the wave operator (or \emph{dalembertian})
+\begin{equation}
+    \label{eq:9.53}
+    \square u = \pder{^2 u}{t^2} - \left( \pder{^2 u}{x^2_1} + \ldots + \pder{^2 u}{x^2_n} \right).
+\end{equation}
+The Cauchy problem for that operator, consisting in finding a solution of \(\square u = 0\) such that \(u(0,x) = g_0(x)\) and \(\pder{u}{t}(0, x) = g_1(x)\) are given functions, had already been solved by Cauchy; the explicit formula he gave for the solution can be written \(u(t,x) = u_+(t,x) + u_-(t,x)\), where
+\begin{equation}
+    \label{eq:9.54}
+    u_\pm(t,x) = \frac{1}{2} \iint \exp(2\pi i((x-y|\xi) \pm (|\xi|t))) \left( g_0(y) \pm \frac{1}{2\pi i} \frac{g_1(y)}{|\xi|} \right) dy d\xi
+\end{equation}
+the integrals being ``improper'' in a sense easy to describe. In general, one considers an operator of order \(m\) in \(n+1\) variables \(t, x_1, \ldots, x_n\)
+\begin{equation}
+    \label{eq:9.55}
+    P \cdot u = \pder{^m u}{t^m} + \sum_{j=1}^m \sum_{|\alpha| \leq j} c_{j \alpha}(t,x) D^\alpha_x \left( \pder{^{m-j} u}{t^{m-j}} \right)
+\end{equation}
+and one assumes that its principal symbol \(\sigma_P(\tau, \xi, t, x)\) be written
+\begin{equation}
+    \label{eq:9.56}
+    \sigma^0_P(\tau, \xi, t, x) = \prod_{j=0}^{m-1} \left( \tau - q_j(t, x, \xi) \right)
+\end{equation}
+where the \(q_j\) are real functions of class \(C^\infty\) in \(I \times \Omega \times (\R^n - \{0\})\) (\(I\) open subset of \(\R\), \(\Omega\) open subset of \(\R^n\)), positively homogeneous or degree 1 in \(\xi\), \emph{and such that for} \(j \neq k, q_j(t,x,\xi) \neq q_k(t,x,\xi)\) \emph{everywhere}. The Cauchy problem to be solved is to find a function \(v(t,x)\) such that \(P \cdot v = f\) and \(\pder{^j}{t^j} v(t_0, x) = g_j(x) (0 \leq j \leq m-1)\) for a \(t_0 \in I\), in a convenient neighborhood of \((t_0,x_0) \in I \times \Omega, f\) and \(g\) being \(C^\infty\) functions. Taking \eqref{eq:9.54} as a model, one introduces \(m^2\) operators \(E_{jh}(s) (0 \leq j, h \leq m-1)\) for s in a neighborhood of \(t_0\) in \(I\), such that, if \(E_h(s) = \sum\limits_{j=0}^{m-1} E_{jh}(s)\) for \(0 \leq h \leq m-1\), one has (locally)
+\begin{equation}
+    \label{eq:9.57}
+    PE_h(s) = R_h(s), \quad \left(\pder{}{t}\right)^k E_h(s) = \delta_{hk}I \text{ for } t=s \text{ and } 0 \leq k \leq m-1,
+\end{equation}
+where the \(R_h(s)\) are \emph{smoothing} operators. If one writes
+\[
+    (L \cdot u)(t, x) = \int_{t_0}^t \left( E_{m-1}(s) \cdot u(s, \cdot) \right)(t,x) ds
+\]
+one has \(\left(\pder{}{t}\right)^k (L \cdot u)(t_0, x) = 0\) for \(0 \leq k \leq m-1\), and \(P \cdot (L \cdot u) = u - V \cdot u\), where \(V\) is a \emph{Volterra integral operator}
+\begin{equation}
+    \label{eq:9.58}
+    (V \cdot u)(t, x) = \int_{t_0}^t ds \int_U K(t,s,x,y)u(s,y)dy
+\end{equation}
+\(U\) being a neighborhood of \(x_0\) in \(\Omega\) and \(K\) a \(C^\infty\) function. It is easy to see that \(I + V\) is inverted by \(I + W\), where \(W\) is a similar Volterra operator. The Cauchy problem is then solved by taking in a sufficiently small neighborhood of \((t_0, x_0)\)
+\begin{equation}
+    \label{eq:9.59}
+    v = \sum_{j=0}^{m-1} E_j(t_0) \cdot g_j + L \cdot \left( (I+W) \cdot \left( f - \sum_{j=0}^{m-1} R_j(t_0) \cdot g_j \right) \right).
+\end{equation}
+The construction of the \(E_h\) follows an idea introduced by P. Lax in 1957, and patterned after the known behavior of the solutions of the wave equation, which ``propagate'' along ``rays''. For operators \eqref{eq:9.25} with analytic coefficients, it follows from the Cauchy--Kowalewska theorem that the Cauchy problem for data given on a hypersurface will fail to have a unique solution if the hypersurface is given locally by an equation \(z(x_1, \ldots, x_n) =\) const., where \(z\) is a solution of the partial differential equation of order 1
+\begin{equation}
+    \label{eq:9.60}
+    \Phi\left(x_1, \ldots, x_n, \pder{z}{x_1}, \ldots, \pder{z}{x_n}\right) = 0
+\end{equation}
+in which \(\Phi\) is obtained from the principal symbol \(\sigma^0_P(x, \xi)\) by replacing the vector \(\xi\) by \(\left(\pder{z}{x_1}, \ldots, \pder{z}{x_n}\right)\); such hypersurfaces are called \emph{characteristic} for the operator \(P\). For strictly hyperbolic operators \eqref{eq:9.55}, it follows from \eqref{eq:9.56} that the equation of characteristic hypersurfaces \eqref{eq:9.60} splits into \(m\) equations
+\begin{equation}
+    \label{eq:9.61}
+    \pder{z}{t} - q_j(t, x, \grad_x{z}) = 0, \qquad 0 \leq j \leq m-1
+\end{equation}
+(with \(\grad_x{z} = \left(\pder{z}{x_1}, \ldots, \pder{z}{x_n}\right)\)). For the wave operator \eqref{eq:9.53} the equations \eqref{eq:9.61} are
+\[
+    \pder{z}{t} = \pm |\grad_x{z}|
+\]
+with solutions
+\[
+    z = 2\pi ((x | \xi) \pm |\xi|t)
+\]
+which reduce to \(2\pi(x|\xi)\) for \(t = 0\); they are precisely the ``phase functions'' which enter in Cauchy's formula \eqref{eq:9.54}. For general strictly hyperbolic operators \eqref{eq:9.54}, one therefore in troduces the \(m^2\) operators \(F_{jh}(s)\) defined by
+\begin{equation}
+    \label{eq:9.62}
+    (F_{jh}(s) \cdot u)(t,x) =
+    \iint_{U \times \R^n} \exp\left( i(\psi_j(t,s,x,\xi) - 2\pi(y|\xi)) \right) a_{jh}(t,s,x,y,\xi) u(y) dy d\xi
+\end{equation}
+where \(\psi_j(t,s,x,\xi)\) is the unique solution of \eqref{eq:9.61} satisfying the initial condition
+\begin{equation}
+    \label{eq:9.63}
+    \psi_j(s,s,x,\xi) = 2\pi(x | \xi)
+\end{equation}
+and \(a_{jh}\) is a symbol of order \(-h\) (in the sense defined for pseudo-differential operators). The goal is to determine the \(a_{jh}\) in such a way that, if one writes \(F_h(s) = \sum\limits_{j=0}^{m-1} F_{jh}(s)\), the following conditions are satisfied:
+
+1° \(Q_h(s) = P \circ F_h(s)\) is a smoothing operator;
+
+2° for each \(g \in \mathcal{D}(U)\), the restriction to the hyperplane \(t=s\) of the function \(\pder{^k}{t^k} \left(F_h(s) \cdot g\right)\) has the form \((s,x) \mapsto \delta_{hk} g(x) + \left(Q_{hk}(s) \cdot g\right)(x)\) where \(Q_{hk}(s)\) is a smoothing operator, for \(0 \leq h, k \leq m-1\).
+
+The conditions \eqref{eq:9.57} are then met by taking
+\[
+    (R_h(s) \cdot g)(t,x) = \sum_{k=0}^{m-1} \frac{(t-s)^k}{k!} (Q_{hk}(s) \cdot g)(x)
+\]
+and
+\[
+    E_h(s) = F_h(s) - R_h(s).
+\]
+
+To achieve that goal, one defines the \(a_{jh}\) by \emph{asymptotic expansions}
+\[
+    a_{jh} \sim{} \sum_{l=0}^\infty a^{(l)}_{jh}
+\]
+where \(a^{(l)}_{jh}\) is a symbol of order \(-h-l\); the \(a^{(l)}_{jh}\) are determined by \emph{induction on} \(l\), in such a way that if one writes
+\[
+        (F_{jhN}(s) \cdot u)(t,x) =
+        \sum_{l=0}^N \widetilde{\iint}_{U \times \R^n} \exp(i(\psi_j(t,s,x,\xi) - 2\pi(y|\xi))) a^{(l)}_{jh}(t,s,x,y,\xi) u(y) dy d\xi
+\]
+then:
+
+1° Each operator \(P \circ F_{jhN}(s)\) is defined by a symbol of order \(m-h-N-2\).
+
+2° If \(F_{hN}(s) = \sum\limits_{j=0}^{m-1} F_{jhN}(s)\), the restriction to \(t=s\) of the function \(\pder{^k}{t^k}(F_{hN}(s) \cdot g)\) has the form \((s, x) \mapsto \delta_{hk} g(x) + (Q_{hkN}(s) \cdot g)(x)\), where \(Q_{hkN}(s)\) is a pseudo-differential operator of order \(k-h-N-1\), for \(0 \leq h,k \leq m-1\).
+
+It is in this inductive process that the analogs of the ``rays'' enter. The classical Cauchy method for integration of partial differential equations of order 1 consists, for each equation \eqref{eq:9.61}, in considering, in the space \(I \times \Omega \times \R^{n+1}\), the ``characteristic'' curves
+\[
+    t \mapsto (t, x_1(t), \ldots, x_n(t), p_0(t), p_1(t), \ldots, p_n(t))
+\]
+solutions of the system of ordinary differential equations
+\begin{equation}
+    \label{eq:9.65}
+    \begin{dcases}
+        \der{x_k}{t} = -\pder{q_j}{\xi_k} (t, x_1, \ldots, x_n, p_1, \ldots, p_n) \\
+        \der{p_k}{t} = \pder{q_j}{x_k} (t, x_1, \ldots, x_n, p_1, \ldots, p_n)
+    \end{dcases}
+    \qquad
+    1 \leq k \leq n
+\end{equation}
+and verifying the condition \(p_0 = q_j(t, x_1, \ldots, x_n, p_1, \ldots, p_n)\); one says that their projections \(t \mapsto (t, x_1(t), \ldots, x_n(t))\) on \(I \times \Omega\) constitute the \(j\)-th family of \emph{bicharacteristic curves} for the operator \(P\). For the wave operator, the bicharacteristic curves which are such that \(x_k(s) = y_k\) for \(1 \leq k \leq n\) are in fact the classical ``rays''
+\[
+    t \mapsto y_k \pm \frac{\xi_k}{|\xi_k|}(t-s) \qquad (1 \leq k \leq n).
+\]
+
+In the general theory, each \(a^{(N)}_{jh}(t,s,x,\xi)\) is taken inde pendent of \(y\), and is obtained by \emph{integrating, along each bicharacteristic curve, an ordinary linear differential equation of the first order} (in the variable \(t\)), whose coefficients are determined when the \(a^{(l)}_{jh}\) are known for \(l \leq N-1\); finally the induction starts with the values of the \(a^{(0)}_{jh}(s,s,x,\xi)\), which are given by the linear system
+\begin{equation}
+    \label{eq:9.66}
+    \sum_{j=0}^{m-1} (i q'_j(s,x,\xi))^k a^{0}_{jh}(s,s,x,\xi) = \delta_{jh} \qquad (0 \leq k \leq m-1)
+\end{equation}
+where \(q'_j(s,x,\xi) = q_j(s,x,\grad_x{\psi_j(s,s,x,\xi)}\)); the determinant of that system is \(\neq 0\) because the \(q_j\) have been supposed to be \emph{distinct}.
+
+One of the consequences of this remarkable construction is that, in the explicit formula \eqref{eq:9.59} for \(f = 0\), one may replace the ``initial conditions'' \(g_j\) by arbitrary \emph{distributions} \(S_j\) on \(\Omega\); \(v\) is then replaced by a distribution \(T\) solution of \(P \cdot T = 0\). For these equations, the ``trace'' \(T_t\) of such a distribution on the hyperplane \(\{t\} \times \Omega\) may be defined (although \(T\) is not a function) as a distribution \emph{on} \(\Omega\), varying with \(t\), and which may be said to ``propagate'' with the ``time'' \(t\), starting from the ``initial'' distribution \(T_{t_0} = S_0\). It is then possible to show that the singular support of \(T_t\) is contained in a set \(M_t\) obtained in the following way: one considers the union \(M_0\) of the singular supports of the distributions \(S_j\) and all the bicharacteristics issued from points of \(M_0\); \(M_t\) is the set of all points on these bicharacteristics at time \(t\). This gives a precise meaning to a phenomenon which had been well known for second order strictly hyperbolic equations, and particular types of ``initial values'': \emph{the singularities propagate along the bicharacteristics}.
+
+Under additional assumptions, it is possible to extend these results when in the decomposition \eqref{eq:9.56}, some of the \(q_j\) are equal \cite{041}.
+
+II) Another important application of operators generalizing the pseudo-differential operators is the problem of \emph{local existence} of solutions for a partial differential equation \(P \cdot u = f\), which has stimulated much research after H. Lewy's discovery (chap. \ref{ch:2}, \ref{sec:2.2}). Over a period of more than 15 years, the combined efforts of Hörmander, Nirenberg and Trèves succeded in formulating a system of conditions which were finally proved to be necessary and sufficient for local existence by Beals and Fefferman \cite{020}, using new types of operators \cite{019}. We cannot here do more than refer the reader to these papers.
 
 \nocite{*}
 \printbibliography[title=References,notkeyword={noprint}]
