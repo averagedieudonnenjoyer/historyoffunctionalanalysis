@@ -26,6 +26,7 @@ Pages and rows are referred to the original book. Equations are not considered a
 - "surprizingly", p. 243, seventh-to-last line
 - "or", p. 255, fifth line
 - "or", p. 256, seventeenth line
+- "or", p. 276, first line after equation 9.64
 
 # Punctuation
 
