@@ -3248,49 +3248,32 @@ and the restriction of the measure \(p_{11} \cdot \nu\) to \(H\) is the given me
 \section[Sobolev spaces and a priori inequalities]{Sobolev spaces and \emph{a priori} inequalities}
 \label{sec:9.4}
 
-% Until 1940, there was no general theory of lincear partial differential equations(or systems of such equations) of arbi trary order. With the exception of a few special types of
-% equations with constant coefficients (such as the "biharmo nic" equation A%u = 0), the bulk of papers were concerned
-% with second order equations in any number of variables, to which must be added a much smaller number of results on
-% APPLICATIONS OF FUNCTIONAL ANALYSIS 249
-% equations of arbitrary order in two independent variables. When mathematicians began to be interested in "weak" solu tions, and later with the arrival of the theory of distribu
-% tions (chap. VIII), the scope of the theory of linear partial (25) u+—= Peu = z a D*u
-% differential equations was greatly widened; if
-% lo|gm &
-% . (*) . n . .
-% is a linear differential operator with complex C° coeffi- cients in an open subset (2 of R, then for any distri bution T € 8’ (), each product %ngT is defined, hence
-% also P*T, and it makes sense to ask for solutions T of (26) P*T = S
-% the equation
-% where S is any given distribution in ’(Q). In particular, one may take for S a ¢” function in 2, and then one asks if this imposes conditions on the distributions T solutions of (26). 1In some cases, solutions of P+T = O may be distri
-% butions of arbitrary order (i.e. as "irregular" as possible); this happens for instance for P = where not only ar
-% 22
-% 3xdy ’
-% bitrary locally integrable functions A(x) + B(y) are solu tions, but also arbitrary distributiomsof type A®1 + 18B, where A and B are arbitrary distributions of 8’ (R). On the other hand, it may happen that for all ¢” functions f
-% (*)The interest shown to equations with ¢® coefficients (or ¢’ coefficients generally) is chiefly due to the pioneering efforts of Hadamard, who repeatedly emphasized that for appli cations to Physics it was unreasonable to study exclusively equation with analytic coefficients [93].
+Until 1940, there was no general theory of lincear partial differential equations (or systems of such equations) of \emph{arbitrary order}. With the exception of a few special types of equations with constant coefficients (such as the ``biharmonic'' equation \(\Delta^2 u = 0\)), the bulk of papers were concerned with \emph{second order} equations in any number of variables, to which must be added a much smaller number of results on equations of arbitrary order in \emph{two} independent variables.
 
-% 250 CHAPTER IX
-% in Q, all solutions of P+T = f are necessarily ¢” func
-% tionsj; such operators P are now called hypoelliptic. This is the case, for instance, when n =1 and P = P 4 ale-l + + oo et ap is any linear differential operator with leading coefficient 1, an elementary result which follows by inductim from the case p = 1, which is du Bois-Reymond's lemma (chap. VITI, 3). 1In 1927, S. Zaremba [ 233] proved a result which, in modern language, means that the laplacian A is hypo elliptic, and H. Weyl in 1940 gave another proof of that result ([227], vol.III, p.758-791).
-% After 1950, such questions, as well as extensions of the classical boundary problems, began to be studied for operators (25) of arbitrary order, heralding a period of unprecedented expansion in tlie theory of partial differential equations. Among the many methods developed during that period, we shall postpone to 5 those linked to the concepts of elementary so lution and parametrix, and consider here the applications of the "a priori inequalities" which were made possible by the appearance of new tools linked to the theory of distributions, the Sobolev spaces and their generalizations.
-% We have already seen (1) that Schauder had considered the space of functions f of class Cp in such that all de rivatives D*f for |a| < p belong to LZ(Q), and had used
-% the norm |f||_ = (I’( X IDbg'f(x)lz)dx)l/2 on that space, b
-% 0 1&|=p
-% which unfortunately was not complete for that norm, 1In 1936, Sobolev had the idea of considering the functions f € 1?(0) which have weak (= distributional) derivatives D"f belong
-% &
-% ing also to LZ(Q) for |a| < p, and this time this space
+When mathematicians began to be interested in ``weak'' solutions, and later with the arrival of the theory of distributions (chap. \ref{ch:8}), the scope of the theory of linear partial differential equations was greatly widened; if
+\begin{equation}
+    \label{eq:9.25}
+    u \mapsto P \cdot u = \sum_{|\alpha| \leq m} a_\alpha D^\alpha u
+\end{equation}
+is a linear differential operator with complex \(C^\infty\) coefficients\footnote{The interest shown to equations with \(C^\infty\) coefficients (or \(C^r\) coefficients generally) is chiefly due to the pioneering efforts of Hadamard, who repeatedly emphasized that for applications to Physics it was unreasonable to study exclusively equation with analytic coefficients \cite{093}.} in an open subset \(\Omega\) of \(\R^n\), then for any distribution \(T \in \mathcal{D}'(\Omega)\), each product \(a_\alpha D^\alpha T\) is defined, hence also \(P \cdot T\), and it makes sense to ask for solutions \(T\) of the equation
+\begin{equation}
+    \label{eq:9.26}
+    P \cdot T = S
+\end{equation}
+where \(S\) is any given distribution in \(\mathcal{D}'(\Omega)\). In particular, one may take for \(S\) a \(C^\infty\) function in \(\Omega\), and then one asks if this imposes conditions on the distributions \(T\) solutions of \eqref{eq:9.26}. in some cases, solutions of \(P \cdot T = 0\) may be distributions of arbitrary order (i.e. as ``irregular'' as possible); this happens for instance for \(P = \pder{^2}{x \partial y}\), where not only arbitrary locally integrable functions \(A(x) + B(y)\) are solutions, but also arbitrary distributions of type \(A \otimes 1 + 1 \otimes B\), where \(A\) and \(B\) are arbitrary distributions of \(\mathcal{D}'(\Omega)\). On the other hand, it may happen that for \emph{all} \(C^\infty\) functions \(f\) in \(\Omega\), \emph{all} solutions of \(P \cdot T = f\) are necessarily \(C^\infty\) functions; such operators \(P\) are now called \emph{hypoelliptic}. This is the case, for instance, when \(n=1\) and \(P = D^p + a_1 D^{p-1} + \ldots + a_p\) is any linear differential operator with leading coefficient 1, an elementary result which follows by induction from the case \(p = 1\), which is du Bois-Reymond's lemma (chap. \ref{ch:8}, \ref{sec:8.3}). In 1927, S. Zaremba \cite{233} proved a result which, in modern language, means that the laplacian \(\Delta\) is hypoelliptic, and H. Weyl in 1940 gave another proof of that result (\cite{227}, vol.~III, p.~758--791).
 
-% APPLICATIONS OF ‘'FUNCTIONAL ANALYSIS 251
-% (with the same norm) HP(Q) is complete (i.e. a Hilbert space) moreover, Sobolev observed that the larger the number p, the more regular are the functions of Hp(Q); for p > Eg] + 1, they are functions of class C with r = p - [g] - 1, hence the intersection of all Hp(Q) consists of the functions of class C~ such that all their derivatives are in LZ(Q) [201]. Later, it was realized that the H°(R") could be defined
-% using the Fourier transform, as the space of distributions T € S'(Rn) such that the Fourier transform JT dis a locally
-% integrable function for which the function
-% g (1 + ||2)S |3T()|2 is integrable. It is then clear that the definition may be extended to all real numbers s,
-% These properties were the source of what one may call the "bootstrap" method to prove that a function is c’: it is enough to show that if it belongs to some Sobolev space 1 (q), it also belongs to H*+1(Q). The first idea of this method is apparently due to K. Friedrichs [77], who applied it to prove that elliptic operators (25) (see 5) are hypoelliptic, a question which we postpone until 5; his tool is a new
-% type of a priori inequality, which was the starting point of a very large number of similar results, for elliptic(*) and other types of operators. We shall only mention here one of the most refined ones [117, p.207]; it concerns what are cal led "principally normal" operators P, which we shall not attempt to describe more precisely here, but which include operators with real coefficients and operators with constant
-% *
-% ( )For a description of the various methods based on a priori inequalities in 1956, see [168].
+After 1950, such questions, as well as extensions of the classical boundary problems, began to be studied for operators \eqref{eq:9.25} of \emph{arbitrary} order, heralding a period of unprecedented expansion in the theory of partial differential equations. Among the many methods developed during that period, we shall postpone to \ref{sec:9.5} those linked to the concepts of elementary solution and parametrix, and consider here the applications of the ``\emph{a priori} inequalities'' which were made possible by the appearance of new tools linked to the theory of distributions, the \emph{Sobolev spaces} and their generalizations.
 
-% 252 CHAPTER IX
-% coefficients; under assumptions on ()} 1in relation with the characteristic hyperplanes of the operator P, too compli=- cated to reproduce here, the fundamental result is that if u is a distribution on ()} having a compact support K, and such that Pe+*u Dbelongs to some HS(Q), then u necessarily belongs to Hs+m-l(Q), and there is a constant CS,K inde pendent of wu and such that
-% (27) ”u”s+m—l = Cs,K(”P.u”s * ”u”s+m-2)° The "bootstrap" method shows that if Peu = f where f is a C° function, then u itself is a €~ function. But from inequality (27) one may derive much more information: for instance the space of solutions of Peu = O having sup=- port in K dis finite dimensional and consists of ¢” func tionsy if f is a ¢” function such that f f(x)u(x)dx = O for all these functions u, then there is a QCoo function v in 2 solution of the adjoint equation tP-V = f din K (ibid., p.210)., Similar uses of such inequalities have been successful in proving existence and uniqueness of Cauchy problems for hyperbolic (see 5) equations of arbitrary order ([62], vol.II, p.1748-1766).
+We have already seen (\ref{sec:9.1}) that Schauder had considered the space of functions \(f\) of class \(C^p\) in such that all derivatives \(D^\alpha f\) for \(|\alpha| \leq p\) belong to \(L^2(\Omega)\), and had used the norm \(\norm{f}_p = \left( \int_\Omega \left( \sum_{|\alpha| \leq p} |D^\alpha f(x)|^2 \right) dx \right)^{1/2}\) on that space, which unfortunately was not complete for that norm. In 1936, Sobolev had the idea of considering the functions \(f \in L^2(\Omega)\) which have \emph{weak} (= distributional) derivatives \(D^\alpha f\) belonging also to \(L^2(\Omega)\) for \(|\alpha| \leq p\), and this time this space (with the same norm) \(H^p(\Omega)\) is complete (i.e. a Hilbert space); moreover, Sobolev observed that the larger the number \(p\), the more regular are the functions of \(H^p(\Omega)\); for \(p > \left[ \frac{n}{2} \right] + 1\), they are functions of class \(C^r\) with \(r = p - \left[ \frac{n}{2} \right] - 1\), hence the intersection of all \(H^p(\Omega)\) consists of the functions of class \(C^\infty\) such that all their derivatives are in \(L^2(\Omega)\) \cite{201}.
+
+Later, it was realized that the \(H^s(\R^n)\) could be defined using the Fourier transform, as the space of distributions \(T \in \mathcal{S}'(\R^n)\) such that the Fourier transform \(\mathcal{F}T\) is a locally integrable function for which the function \(\xi \mapsto (1 + |\xi|^2)^s |\mathcal{F}T(\xi)|^2\) is integrable. It is then clear that the definition may be extended to \emph{all real numbers} \(s\).
+
+These properties were the source of what one may call the ``bootstrap'' method to prove that a function is \(C^\infty\): it is enough to show that if it belongs to \emph{some} Sobolev space \(H^r(\Omega)\), it \emph{also} belongs to \(H^{r+1}(\Omega)\). The first idea of this method is apparently due to K. Friedrichs \cite{077}, who applied it to prove that elliptic operators \eqref{eq:9.25} (see \ref{sec:9.5}) are hypoelliptic, a question which we postpone until \ref{sec:9.5}; his tool is a new type of \emph{a priori} inequality, which was the starting point of a very large number of similar results, for elliptic\footnote{For a description of the various methods based on a priori inequalities in 1956, see \cite{168}.} and other types of operators. We shall only mention here one of the most refined ones \cite[p.~207]{117}; it concerns what are called ``principally normal'' operators \(P\), which we shall not attempt to describe more precisely here, but which include operators with real coefficients and operators with constant coefficients; under assumptions on \(\Omega\) in relation with the characteristic hyperplanes of the operator \(P\), too complicated to reproduce here, the fundamental result is that if \(u\) is a distribution on \(\Omega\) having a compact support \(K\), and such that \(P \cdot u\) belongs to some \(H^s(\Omega)\), then \(u\) necessarily belongs to \(H^{s+m-1}(\Omega)\), and there is a constant \(C_{s,K}\) independent of \(u\) and such that
+\begin{equation}
+    \label{eq:9.27}
+    \norm{u}_{s+m-1} \leq C_{s,K}(\norm{P \cdot u}_s + \norm{u}_{s+m-2}).
+\end{equation}
+The ``bootstrap'' method shows that if \(P \cdot u = f\) where \(f\) is a \(C^\infty\) function, then \(u\) itself is a \(C^\infty\) function. But from inequality \eqref{eq:9.27} one may derive much more information: for instance the space of solutions of \(P \cdot u = 0\) having support in \(K\) is finite dimensional and consists of \(C^\infty\) functions if \(f\) is a \(C^\infty\) function such that \(\int_\Omega f(x)u(x)dx = 0\) for all these functions \(u\), then there is a \(C^\infty\) function \(v\) in \(\Omega\) solution of the adjoint equation \(\prescript{t}{}P \cdot v = f\) (ibid., p.~210). Similar uses of such inequalities have been successful in proving existence and uniqueness of Cauchy problems for hyperbolic (see \ref{sec:9.5}) equations of arbitrary order (\cite{062}, vol.~II, p.~1748--1766).
 
 \section{Elementary solutions, parametrices and pseudo-differential operators}
 \label{sec:9.5}
