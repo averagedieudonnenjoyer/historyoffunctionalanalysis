@@ -15,17 +15,32 @@ Pages and rows are referred to the original book. Equations are not considered a
 - "funcionals", p. 135, third line in the footnote
 - "periodc", p. 139, seventh-to-last line
 - "chap. V", p. 157, first line (it is actually chapter VI)
+- "condtion", p. 166, seventh-to-last line
 - "objetive", p. 166, second-to-last line
+- "writting", p. 169, ninth line
+- "spetrum", p. 172, third-to-last line
+- "anwer", p. 174, first line
 - "strognly", p. 176, second-to-last line
+- "Neuamnn", p. 180, sixth-to-last line
 - "indes", p. 184, fifteenth line
+- "Neuamnn", p. 188, twelfth-to-last line
 - "if", p. 189, tenth-to-last line
 - "it", p. 191, second-to-last line (without considering the footnote)
+- "neighbourhood", p. 192, fourth line (correct in British English, but the author uses American English, so we consider it a typo)
 - "mapping", p. 197, fifth line of the second paragraph
+- "surprizingly", p. 211, first line
+- "ultil", p. 211, seventh line
+- "distribtuions", p. 227, second-to-last line in the footnote
+- "substracts", p. 229, tenth-to-last line
+- "inverval", p. 238, seventh line
 - "or", p. 242, second-to-last line
 - $_P$, p. 243, third line before equation 9.14
 - "surprizingly", p. 243, seventh-to-last line
 - "or", p. 255, fifth line
 - "or", p. 256, seventeenth line
+- "interable", p. 261, third-to-last line
+- "behaviour", p. 267, third line (correct in British English, but the author uses American English, so we consider it a typo)
+- "fibres", p. 267, tenth-to-last line (correct in British English, but the author uses American English, so we consider it a typo)
 - "or", p. 276, first line after equation 9.64
 
 # Punctuation
