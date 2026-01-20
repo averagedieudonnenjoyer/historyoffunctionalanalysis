@@ -17,7 +17,7 @@ Pages and rows are referred to the original book. Equations are not considered a
 - "chap. V", p. 157, first line (it is actually chapter VI)
 - "condtion", p. 166, seventh-to-last line
 - "objetive", p. 166, second-to-last line
-- "writting", p. 169, ninth line
+- "writting", p. 169, eight line
 - "spetrum", p. 172, third-to-last line
 - "anwer", p. 174, first line
 - "strognly", p. 176, second-to-last line
@@ -31,7 +31,7 @@ Pages and rows are referred to the original book. Equations are not considered a
 - "surprizingly", p. 211, first line
 - "ultil", p. 211, seventh line
 - "distribtuions", p. 227, second-to-last line in the footnote
-- "substracts", p. 229, tenth-to-last line
+- "substracts", p. 229, eight-to-last line
 - "inverval", p. 238, seventh line
 - "or", p. 242, second-to-last line
 - $_P$, p. 243, third line before equation 9.14
