@@ -55,6 +55,7 @@
 \titleformat{\section}[block]{\centering\bfseries}{\S\arabic{section}. #1.}{0em}{}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{#1}} % a hack needed for fancyhdr to display just the chapter name
 \renewcommand{\headrulewidth}{0pt} % remove all header rules
+\setlength{\headheight}{15pt} % fix warning by fancyhdr, the output PDF seems exactly the same
 
 \usepackage{perpage}
 \MakePerPage{footnote}
