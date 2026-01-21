@@ -33,7 +33,7 @@
 \usepackage[backend=biber,maxnames=2,mcite,sorting=custom]{biblatex}
 \addbibresource{bibliography.bib}
 \DeclareFieldFormat{pages}{p.~#1} % Dieudonné used "p." instead of "pp." even for multiple pages
-\DeclareSortingScheme{custom}{\sort{\field{entrykey}}}
+\DeclareSortingTemplate{custom}{\sort{\field{entrykey}}}
 \DefineBibliographyStrings{english}{
     andothers = {\mkbibemph{et\addabbrvspace al\adddot}} % "et al." in italics
 }
