@@ -43,9 +43,9 @@ Pages and rows are referred to the original book. Equations are not considered a
 - "behaviour", p. 267, third line (correct in British English, but the author uses American English, so we consider it a typo)
 - "fibres", p. 267, tenth-to-last line (correct in British English, but the author uses American English, so we consider it a typo)
 - "or", p. 276, first line after equation 9.64
-- "Sturm-Liouvillesche", p. 294, [180]
-- "Prospacts", p. 295, [199]
-- "Handlinger", p. 297, [220]
+- "Sturm-Liouvillesche", p. 294, reference [180]
+- "Prospacts", p. 295, reference [199]
+- "Handlinger", p. 297, reference [220]
 
 # Punctuation
 
